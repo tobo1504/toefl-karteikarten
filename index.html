@@ -1,0 +1,1133 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f4f5f3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131716" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="TOEFL">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<title>TOEFL Karteikarten</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+[hidden]{display:none!important}
+/* Layout: eine ruhige Lernspalte; die Karte ist das einzige hervorgehobene Objekt, alles andere tritt zurück */
+:root{
+  --bg:#f4f5f3; --surface:#ffffff; --surface-2:#f0f1ee; --ink:#1c2321; --muted:#6c7471; --faint:#9aa19e; --line:#e2e5e1;
+  --accent:#2e5e57; --accent-soft:#e6eeec; --mark:#b39a5c; --good:#3f7a5a; --bad:#a5524a;
+  --f-display:"Newsreader",Georgia,"Times New Roman",serif;
+  --f-body:"Hanken Grotesk","Helvetica Neue",Arial,system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --shadow:0 1px 2px rgba(28,35,33,.04),0 8px 24px -12px rgba(28,35,33,.10);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#131716; --surface:#1b201f; --surface-2:#222827; --ink:#e7ebe9; --muted:#9aa3a0; --faint:#6f7875; --line:#2c3331;
+  --accent:#8fbcb3; --accent-soft:#22302d; --mark:#cdb57a; --good:#7fbf98; --bad:#e08f86;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px -14px rgba(0,0,0,.6); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#131716; --surface:#1b201f; --surface-2:#222827; --ink:#e7ebe9; --muted:#9aa3a0; --faint:#6f7875; --line:#2c3331;
+  --accent:#8fbcb3; --accent-soft:#22302d; --mark:#cdb57a; --good:#7fbf98; --bad:#e08f86;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px -14px rgba(0,0,0,.6); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:660px;margin:0 auto;padding-block:40px 64px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:28px}
+header h1{font-family:var(--f-display);font-weight:500;font-size:2rem;line-height:1.15;margin:0;letter-spacing:-.01em;text-wrap:balance}
+header p{margin:8px 0 0;color:var(--muted);font-size:.92rem;max-width:56ch}
+
+/* Tabs als ruhige Unterstreichung */
+.tabs{display:flex;gap:22px;border-bottom:1px solid var(--line);overflow-x:auto}
+.tab{background:none;border:0;border-bottom:1.5px solid transparent;margin-bottom:-1px;padding:10px 0;font:500 .92rem var(--f-body);color:var(--muted);cursor:pointer;white-space:nowrap}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{color:var(--ink);border-color:var(--ink)}
+
+/* Filter */
+#filters{gap:10px!important}
+.label{font:600 .68rem var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:5px 12px;font:500 .82rem var(--f-body);cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.chip:hover{color:var(--ink);border-color:var(--faint)}
+.chip[aria-pressed="true"]{background:var(--accent-soft);border-color:transparent;color:var(--accent)}
+#decks{background:var(--surface-2);border-radius:999px;padding:3px;gap:2px;align-self:flex-start}
+.chip.deck{border:0;padding:6px 14px;font-weight:600;color:var(--muted)}
+.chip.deck[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.chips.sub .chip{font-size:.78rem;padding:3px 10px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+#poolinfo{font:500 .78rem var(--f-mono);letter-spacing:0;text-transform:none;color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* Karte */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:36px 32px 30px;min-height:240px;display:flex;flex-direction:column;gap:16px;cursor:pointer}
+@media (max-width:520px){.card{padding:28px 22px 24px}}
+.card:focus-visible,.btn:focus-visible,.chip:focus-visible,.tab:focus-visible,.opt:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.front{font-family:var(--f-display);font-size:1.6rem;font-weight:500;line-height:1.3;letter-spacing:-.005em;text-wrap:balance}
+.gloss{font:500 .8rem var(--f-body);color:var(--accent);align-self:flex-start;letter-spacing:.01em}
+.gloss::before{content:"";display:inline-block;width:14px;height:1px;background:currentColor;vertical-align:middle;margin-right:8px;opacity:.6}
+.back{font-family:var(--f-display);font-size:1.3rem;font-weight:500;color:var(--accent);line-height:1.35}
+.note{color:var(--muted);font-size:.88rem}
+.hint{color:var(--faint);font-size:.82rem;margin-top:auto}
+#c-back{display:flex;flex-direction:column;gap:4px;padding-top:4px}
+#ans{width:100%;box-sizing:border-box;border:0;border-bottom:1.5px solid var(--line);background:transparent;color:var(--ink);border-radius:0;padding:10px 2px;font:400 1.1rem var(--f-body)}
+#ans::placeholder{color:var(--faint)}
+#ans:focus{outline:none;border-color:var(--ink)}
+#ans.ok{border-color:var(--good)}#ans.no{border-color:var(--bad)}
+#ans:disabled{opacity:1;color:var(--ink)}
+.verdict{font-weight:500;font-size:.9rem;display:flex;align-items:center;gap:8px}
+.verdict::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.verdict.ok{color:var(--good)}
+.verdict.near,.verdict.no{color:var(--bad)}
+.verdict.self{color:var(--accent)}
+.explain{background:var(--surface-2);border-radius:12px;padding:14px 16px;font-size:.9rem}
+.explain ul{margin:6px 0 0;padding-left:16px;display:flex;flex-direction:column;gap:4px}
+.explain li::marker{color:var(--faint)}
+.terms{margin:12px 0 0;padding-top:10px;border-top:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:.82rem;color:var(--muted)}
+.terms dt{font-weight:600;color:var(--ink)}.terms dd{margin:0;min-width:0}
+@media (max-width:440px){.terms{grid-template-columns:1fr}.terms dd{margin-bottom:6px}}
+
+/* Buttons */
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{flex:1 1 140px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:12px;padding:12px 16px;font:500 .92rem var(--f-body);cursor:pointer;transition:background .15s,border-color .15s}
+.btn:hover{border-color:var(--faint)}
+.btn.primary{background:var(--ink);border-color:var(--ink);color:var(--surface)}
+.btn.primary:hover{opacity:.92}
+.btn.good{background:var(--ink);border-color:var(--ink);color:var(--surface)}
+.btn.bad{color:var(--bad)}
+.btn[disabled]{opacity:.4;cursor:default}
+
+/* Lernstufen: Zahlenleiste statt Kästen */
+.boxes{display:flex;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.box{flex:1;min-width:0;padding:10px 4px;text-align:center}
+.box+.box{border-left:1px solid var(--line)}
+.box b{display:block;font:500 1.15rem var(--f-display);font-variant-numeric:tabular-nums;color:var(--ink)}
+.box span{font-size:.68rem;color:var(--faint);line-height:1.3;display:block}
+
+/* Quiz */
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{text-align:left;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:12px;padding:12px 16px;font:400 .95rem var(--f-body);cursor:pointer}
+.opt:hover{border-color:var(--faint)}
+.opt.right{border-color:var(--good);color:var(--good)}
+.opt.wrong{border-color:var(--bad);color:var(--bad)}
+.progress{height:2px;background:var(--line);border-radius:1px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--ink);transition:width .3s}
+.score{font-family:var(--f-display);font-size:2.6rem;font-weight:500}
+
+/* Übersicht */
+.tablewrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+table{border-collapse:collapse;width:100%;font-size:.86rem}
+th{font:600 .66rem var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+th,td{padding:10px 14px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+.list{display:flex;flex-direction:column}
+.li{padding:10px 0;border-bottom:1px solid var(--line)}
+.li .de{font-weight:500}.li .en{color:var(--accent);font-size:.92rem}
+.confirm{display:flex;gap:8px;align-items:center;flex-wrap:wrap;color:var(--bad);font-size:.9rem}
+
+/* Schemas */
+.schema{display:flex;flex-direction:column;gap:18px}
+.sbox{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px 24px 22px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.sbox h2{font-family:var(--f-display);font-weight:500;font-size:1.35rem;margin:0}
+.sbox h3{font:600 .7rem var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:8px 0 0}
+.meta{display:flex;flex-wrap:wrap;gap:6px}
+.meta span{font:500 .74rem var(--f-body);color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 10px}
+.tpl{font:400 .82rem/1.65 var(--f-mono);background:var(--surface-2);border-radius:10px;padding:14px 16px;white-space:pre-wrap;overflow-x:auto;margin:0;color:var(--ink)}
+.tpl b{color:var(--accent);font-weight:500}
+.sbox ul,.sbox ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.step{padding:10px 10px;min-width:0}
+.step+.step{border-left:1px solid var(--line)}
+.step b{display:block;font:500 .95rem var(--f-display);color:var(--ink)}
+.step span{font-size:.76rem;color:var(--muted)}
+@media (max-width:520px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.step:nth-child(3){border-left:0}.step:nth-child(n+3){border-top:1px solid var(--line)}}
+textarea,select{font-family:var(--f-body)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>TOEFL Karteikarten</h1>
+    <p>TOEFL iBT 2026 · Master &amp; Business. Jeden Tag zuerst die fälligen Karten, dann neue.</p>
+  </header>
+
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" id="t-cards" aria-selected="true">Karteikarten</button>
+    <button class="tab" role="tab" id="t-quiz" aria-selected="false">Quiz</button>
+    <button class="tab" role="tab" id="t-schema" aria-selected="false">Schemas</button>
+    <button class="tab" role="tab" id="t-stats" aria-selected="false">Übersicht</button>
+  </div>
+
+  <div id="filters" style="display:flex;flex-direction:column;gap:8px">
+    <div class="label">Stapel</div>
+    <div class="chips" id="decks"></div>
+    <div class="label" style="margin-top:4px">Bereich</div>
+    <div class="chips" id="areas"></div>
+    <div class="chips sub" id="chips"></div>
+  </div>
+
+  <section id="v-cards">
+    <div class="row" style="margin-bottom:12px">
+      <div class="chips">
+        <button class="chip" id="m-type" aria-pressed="true">Eintippen</button>
+        <button class="chip" id="m-flip" aria-pressed="false">Aufdecken</button>
+      </div>
+      <div class="chips" id="dirchips">
+        <button class="chip" id="dir-de" aria-pressed="true">DE → EN</button>
+        <button class="chip" id="dir-en" aria-pressed="false">EN → DE</button>
+      </div>
+      <span class="label" id="poolinfo"></span>
+    </div>
+    <div class="card" id="card" tabindex="0" role="button" aria-label="Karte">
+      <span class="label" id="c-cat"></span>
+      <div class="gloss" id="c-gloss" hidden></div>
+      <div class="front" id="c-front"></div>
+      <div id="typearea" hidden>
+        <input id="ans" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Auf Englisch eintippen …" aria-label="Deine Antwort">
+      </div>
+      <div class="verdict" id="verdict" hidden></div>
+      <div id="c-back" hidden>
+        <div class="label" style="margin-bottom:2px">Lösung</div>
+        <div class="back" id="c-answer"></div>
+        <div class="note" id="c-note"></div>
+      </div>
+      <div class="explain" id="explain" hidden></div>
+      <div class="hint" id="c-hint"></div>
+    </div>
+    <div class="btns" id="gradebtns" style="margin-top:12px">
+      <button class="btn bad" id="b-again" disabled>Nochmal (1)</button>
+      <button class="btn good" id="b-known" disabled>Gewusst (2)</button>
+    </div>
+    <div class="btns" id="donebtns" style="margin-top:12px" hidden>
+      <button class="btn primary" id="b-more">10 weitere neue Karten</button>
+      <button class="btn" id="b-ahead">Nächste Wiederholungen vorziehen</button>
+    </div>
+    <div class="btns" id="typebtns" style="margin-top:12px" hidden>
+      <button class="btn primary" id="b-check">Prüfen (Enter)</button>
+      <button class="btn" id="b-skip">Weiß ich nicht</button>
+      <button class="btn" id="b-override" hidden>War doch richtig</button>
+    </div>
+    <div style="margin-top:16px">
+      <div class="label" style="margin-bottom:6px">Lernstufen in dieser Auswahl · Abstand bis zur nächsten Wiederholung</div>
+      <div class="boxes" id="boxes"></div>
+    </div>
+  </section>
+
+  <section id="v-quiz" hidden></section>
+
+  <section id="v-schema" class="schema" hidden>
+    <div class="sbox">
+      <h2>Write an Email</h2>
+      <div class="meta"><span>7 Min.</span><span>0–5 Punkte</span><span>120–150 Wörter</span></div>
+      <div class="steps">
+        <div class="step"><b>1 Min.</b><span>Lesen, 3 Bullets + Ton notieren</span></div>
+        <div class="step"><b>5 Min.</b><span>Schreiben</span></div>
+        <div class="step"><b>1 Min.</b><span>Korrektur</span></div>
+        <div class="step"><b>Regel</b><span>Jeder Bullet: Aussage + Detail</span></div>
+      </div>
+<pre class="tpl"><b>Dear Professor Lee, / Dear Ms. Carter, / Hi Sam,</b>
+
+<b>[Opener]</b>   I hope you're doing well. I'm writing about ...
+<b>[Bullet 1]</b> So far, I've really enjoyed ..., especially ...
+<b>[Bullet 2]</b> Unfortunately, I've just found out that ...
+           As a result, I wouldn't be able to ...
+<b>[Bullet 3]</b> Would it be possible to ...?
+           Alternatively, I could ...
+<b>[Closing]</b>  Thank you for your time and understanding.
+           I look forward to hearing from you.
+
+<b>Best regards,</b>
+Tom</pre>
+      <h3>Korrektur-Checkliste (letzte Minute)</h3>
+      <ol>
+        <li>Anrede und Name wie im Prompt?</li>
+        <li>„I“ überall groß?</li>
+        <li>so far / since / just → Present Perfect?</li>
+        <li>Lehnübersetzung aus dem Deutschen? (submit, same-minded, eventually)</li>
+        <li>Alle 3 Bullets beantwortet, Bullet 3 mit 2 Vorschlägen?</li>
+      </ol>
+    </div>
+
+    <div class="sbox">
+      <h2>Email-Schemas nach Szenario</h2>
+      <ul>
+        <li><b>Bitte / Erlaubnis:</b> Anlass → Grund + Detail → konkrete Bitte (<i>I was wondering if …</i>) → Alternative → Dank</li>
+        <li><b>Beschwerde / Problem:</b> positiver Einstieg → Problem sachlich + Detail (<i>It seems that …</i>) → Folge → Lösungsvorschlag → Bitte um Rückmeldung</li>
+        <li><b>Absage / Entschuldigung:</b> klare Absage (<i>I'm afraid I won't be able to …</i>) → Grund → Entschuldigung → Ersatz anbieten</li>
+        <li><b>Vorschlag / Einladung:</b> Anlass → Idee (<i>I'd like to suggest …</i>) → Nutzen → Details (wann, wo) → <i>Let me know if you're interested.</i></li>
+        <li><b>Feedback / Dank:</b> Dank + was konkret gut war → warum es geholfen hat → ein Verbesserungsvorschlag → Abschluss</li>
+        <li><b>Information anfragen:</b> wer du bist + Anlass → was du schon weißt → 2 konkrete Fragen → Dank</li>
+      </ul>
+    </div>
+
+    <div class="sbox">
+      <h2>Academic Discussion</h2>
+      <div class="meta"><span>10 Min.</span><span>0–5 Punkte</span><span>120–160 Wörter (mind. 100)</span></div>
+      <div class="steps">
+        <div class="step"><b>1,5 Min.</b><span>Professor + 2 Posts lesen</span></div>
+        <div class="step"><b>1 Min.</b><span>Position + Beispiel festlegen</span></div>
+        <div class="step"><b>6 Min.</b><span>Schreiben</span></div>
+        <div class="step"><b>1,5 Min.</b><span>Korrektur</span></div>
+      </div>
+<pre class="tpl"><b>[1 Bezug + Position]</b>
+While Paul makes a fair point that ..., I believe that ...
+
+<b>[2 Hauptgrund]</b>
+The main reason is that ..., which means that ...
+
+<b>[3 Neuer Aspekt – entscheidend für 5/5]</b>
+Another factor that hasn't been mentioned is ...
+
+<b>[4 Konkretes Beispiel]</b>
+For instance, when I was studying industrial engineering, I ...
+As a result, ...
+
+<b>[5 Abschluss]</b>
+For these reasons, I'm convinced that ...</pre>
+      <ul>
+        <li>Welche Seite du wählst, ist egal. Nur die Studierenden wiederholen deckelt die Note.</li>
+        <li>Mindestens 2 komplexe Sätze: Relativsatz, Konditional, Konzession (<i>Admittedly …; however …</i>).</li>
+        <li>Einfache Zeitformen halten die Fehlerquote niedrig.</li>
+      </ul>
+      <h3>Varianten je Haltung</h3>
+      <ul>
+        <li><b>Einem Studierenden zustimmen:</b> Zustimmung mit Namen → Grund vertiefen oder neuen ergänzen → Beispiel → Gegenargument des anderen entkräften → Abschluss</li>
+        <li><b>Beiden widersprechen:</b> beide kurz anerkennen → eigene dritte Position → Grund → Beispiel → Abschluss</li>
+      </ul>
+    </div>
+
+    <div class="sbox">
+      <h2>Take an Interview</h2>
+      <div class="meta"><span>4 Fragen</span><span>45 Sek. je Frage</span><span>keine Vorbereitungszeit</span><span>90–110 Wörter</span></div>
+      <div class="steps">
+        <div class="step"><b>Commit</b><span>0–5 s · direkte Antwort</span></div>
+        <div class="step"><b>Detail</b><span>5–20 s · Hauptgrund</span></div>
+        <div class="step"><b>Elaborate</b><span>20–38 s · konkretes Beispiel</span></div>
+        <div class="step"><b>Finish</b><span>38–45 s · Abschluss</span></div>
+      </div>
+<pre class="tpl"><b>Commit</b>     Honestly, I'd say ... / If I had to answer right now, I'd say ...
+<b>Detail</b>     The biggest reason is that ...
+<b>Elaborate</b>  For example, last year when I ... In the end, ...
+           That showed me that ...
+<b>Finish</b>     So overall, that's why ... / So that's my take.</pre>
+      <h3>Varianten je Fragetyp</h3>
+      <ul>
+        <li><b>Erfahrung</b> (Fragen 1–2): Situation → was ich gemacht habe → Ergebnis → was ich gelernt habe</li>
+        <li><b>Präferenz</b> („X or Y?“): Wahl → Vorteil von X → kurzer Nachteil von Y → Beispiel → Abschluss</li>
+        <li><b>Meinung</b> (Fragen 3–4): Position → Grund → <i>Some people argue …, but …</i> → Beispiel → Abschluss</li>
+        <li><b>Zukunft / Hypothese</b>: Plan → Grund → wie konkret → erwartetes Ergebnis</li>
+      </ul>
+      <h3>Deine Beispiel-Geschichten (vorbereiten, flexibel einsetzen)</h3>
+      <ul>
+        <li>Atlantiküberquerung: Teamwork, Herausforderung, Risiko, Planung</li>
+        <li>Capgemini: Arbeit im Team, Technologie und KI, Deadlines, Präsentieren</li>
+        <li>Bachelorarbeit: Zeitmanagement, Selbstdisziplin, Forschung</li>
+        <li>Vorstand im Wassersportverein: Verantwortung, Organisieren, Ehrenamt</li>
+      </ul>
+    </div>
+
+    <div class="sbox">
+      <h2>Listen and Repeat</h2>
+      <div class="meta"><span>7 Sätze</span><span>8–12 Sek.</span><span>wird länger</span></div>
+      <ol>
+        <li>Auf das Gerüst hören: Subjekt – Verb – Objekt.</li>
+        <li>Den Satz in 2–3 Sinnblöcke zerlegen.</li>
+        <li>Sofort nach dem Ton beginnen, Intonation kopieren.</li>
+        <li>Kein Wort ersetzen. Endungen (-s, -ed) und Artikel deutlich sprechen.</li>
+        <li>Training: täglich 10 Min. Shadowing über Lautsprecher, ohne Kopfhörer.</li>
+      </ol>
+    </div>
+
+    <div class="sbox">
+      <h2>Build a Sentence</h2>
+      <div class="meta"><span>10 Items</span><span>ca. 35 Sek. je Item</span><span>alles oder nichts</span></div>
+      <ol>
+        <li>Kontextsatz → Zeitform und Satztyp (Frage oder Aussage)</li>
+        <li>Subjekt + finites Verb zuerst setzen</li>
+        <li>Blöcke einordnen: Präpositionalphrase, Relativsatz, Adverb</li>
+        <li>Indirekte Frage ohne Inversion: <i>… where the library is</i></li>
+        <li>Einmal komplett im Kopf lesen</li>
+      </ol>
+    </div>
+
+    <div class="sbox">
+      <h2>Reading und Listening</h2>
+      <ul>
+        <li><b>Adaptiv:</b> Das erste Modul fast fehlerfrei lösen, sonst kommt das leichtere zweite Modul mit niedrigerer Obergrenze.</li>
+        <li><b>Complete the Words:</b> Unterstriche zählen → Wortart aus dem Satz → Suffix-Familie (-tion, -ment, -al, -ly) → nie leer lassen → Rechtschreibung prüfen.</li>
+        <li><b>Listen and Choose a Response:</b> Die richtige Antwort ist oft indirekt oder idiomatisch.</li>
+        <li><b>Notizen:</b> nur Thema → Beispiel → Haltung des Sprechers.</li>
+      </ul>
+    </div>
+  </section>
+  <section id="v-stats" hidden></section>
+</div>
+
+<script>
+const CARDS=[
+["Template","Ich hoffe, es geht Ihnen gut.","I hope you're doing well.","Standard-Einstieg nach der Anrede"],
+["Template","Ich schreibe Ihnen wegen …","I'm writing about … / I'm writing regarding …","Anlass in einem Satz"],
+["Template","Ich wollte Ihnen mitteilen, dass …","I wanted to let you know that …",""],
+["Template","Bisher hat mir … wirklich gefallen.","So far, I've really enjoyed …","so far → Present Perfect"],
+["Template","Was ich am meisten geschätzt habe, ist …","What I've appreciated most is …",""],
+["Template","Leider habe ich gerade erfahren, dass …","Unfortunately, I've just found out that …","Einstieg für das Problem-Bullet"],
+["Template","Infolgedessen könnte ich nicht …","As a result, I wouldn't be able to …",""],
+["Template","Wäre es möglich, … ?","Would it be possible to …?","Vorschlag 1"],
+["Template","Alternativ könnte ich …","Alternatively, I could …","Vorschlag 2 – immer zwei Optionen anbieten"],
+["Template","Könnten Sie mir mitteilen, ob …?","Could you let me know whether …?",""],
+["Template","Ich wäre Ihnen dankbar, wenn Sie … könnten.","I'd appreciate it if you could …",""],
+["Template","Vielen Dank für Ihre Zeit und Ihr Verständnis.","Thank you for your time and understanding.",""],
+["Template","Ich freue mich auf Ihre Antwort.","I look forward to hearing from you.","nicht: I looking forward / I'm looking forward hearing"],
+["Szenarien","Ich habe mich gefragt, ob ich … dürfte.","I was wondering if I could …","Bitte / Erlaubnis"],
+["Szenarien","Hätten Sie etwas dagegen, wenn ich …?","Would you mind if I …?","Bitte / Erlaubnis"],
+["Szenarien","Ich wäre Ihnen sehr dankbar, wenn Sie … könnten.","I'd be very grateful if you could …","Bitte / Erlaubnis"],
+["Szenarien","Ich möchte Sie auf ein Problem aufmerksam machen.","I'd like to bring an issue to your attention.","Problem / Beschwerde"],
+["Szenarien","Es scheint, dass …","It seems that …","Problem / Beschwerde – sachlich statt vorwurfsvoll"],
+["Szenarien","Das hat es schwierig gemacht, … zu …","This has made it difficult to …","Problem / Beschwerde"],
+["Szenarien","Ich fürchte, ich werde nicht … können.","I'm afraid I won't be able to …","Absage"],
+["Szenarien","Entschuldigen Sie die Unannehmlichkeiten.","I'm sorry for any inconvenience.","Absage / Entschuldigung"],
+["Szenarien","Ich hätte Ihnen früher Bescheid geben sollen.","I should have let you know earlier.","Entschuldigung"],
+["Szenarien","Ich möchte vorschlagen, …","I'd like to suggest …","Vorschlag / Einladung"],
+["Szenarien","Es wäre toll, wenn wir … könnten.","It would be great if we could …","Vorschlag / Einladung"],
+["Szenarien","Sag mir Bescheid, ob du Interesse hast.","Let me know if you're interested.","Einladung an Kommilitonen"],
+["Szenarien","Es hat einen großen Unterschied gemacht, weil …","It made a big difference because …","Feedback / Dank"],
+["Szenarien","Eine Sache, die verbessert werden könnte, ist …","One thing that could be improved is …","Feedback"],
+["Szenarien","Ich würde gern mehr über … erfahren.","I'd like to know more about …","Information anfragen"],
+["Szenarien","Besteht die Möglichkeit, dass …?","Is there any chance that …?","Information anfragen"],
+["Verben","teilnehmen (an Veranstaltung, Reise)","attend / join","nicht: submit"],
+["Verben","verschieben (Termin)","postpone / reschedule",""],
+["Verben","absagen","cancel",""],
+["Verben","(eine Aufgabe) abgeben","submit (an assignment)","submit nur für Abgaben, Formulare, Anträge"],
+["Verben","sich anmelden für (Kurs, Event)","sign up for / register for",""],
+["Verben","sich bewerben um","apply for",""],
+["Verben","bestätigen","confirm",""],
+["Verben","sich entschuldigen für","apologize for",""],
+["Verben","aus einem Kurs austreten","drop / withdraw from a course",""],
+["Verben","Verpasstes aufarbeiten","catch up on",""],
+["Verben","etwas wiedergutmachen / ausgleichen","make up for",""],
+["Verben","organisieren, vereinbaren","arrange",""],
+["Nomen","Frist","deadline",""],
+["Nomen","Fristverlängerung","extension",""],
+["Nomen","Termin (bei Professor, Arzt)","appointment","nicht: date (= Verabredung)"],
+["Nomen","Sprechstunde","office hours",""],
+["Nomen","Kursplan / Lehrplan","syllabus",""],
+["Nomen","Kaution","deposit",""],
+["Nomen","Rückerstattung","refund",""],
+["Nomen","Wartung, Instandhaltung","maintenance",""],
+["Nomen","Vermieter","landlord",""],
+["Nomen","Mitbewohner","roommate",""],
+["Nomen","Hausarbeit, Abgabe","assignment",""],
+["Kollokationen","einen Terminkonflikt haben","have a scheduling conflict",""],
+["Kollokationen","die Frist einhalten","meet the deadline",""],
+["Kollokationen","um eine Fristverlängerung bitten","ask for an extension",""],
+["Kollokationen","eine Prüfung schreiben","take an exam","nicht: make / write an exam"],
+["Kollokationen","sein Geld zurückbekommen","get a refund",""],
+["Kollokationen","kurzfristig","on short notice",""],
+["Kollokationen","das Problem beheben","fix the issue",""],
+["Kollokationen","eine Reservierung machen","make a reservation",""],
+["Verbinder","Leider, …","Unfortunately, …",""],
+["Verbinder","Außerdem, …","In addition, … / What's more, …",""],
+["Verbinder","Folglich, …","As a result, …",""],
+["Verbinder","Alternativ, …","Alternatively, …",""],
+["Verbinder","damit (Zweck)","so that …","I left early so that I could catch the bus."],
+["Höflichkeit","wenn das für Sie in Ordnung ist","if that's okay with you",""],
+["Höflichkeit","wann immer es Ihnen passt","whenever it's convenient for you",""],
+["Höflichkeit","Ich verstehe vollkommen, wenn …","I completely understand if …",""],
+["Höflichkeit","Anrede: Professor Lee","Dear Professor Lee,",""],
+["Höflichkeit","Anrede: Kommilitone Sam","Hi Sam,",""],
+["Höflichkeit","Anrede: unbekannte Stelle","Dear Sir or Madam, / Dear Housing Office,",""],
+["Höflichkeit","Grußformel formell","Best regards, / Kind regards,",""],
+["False Friends","eventuell","possibly / maybe","eventually = schließlich"],
+["False Friends","aktuell","current","actual = tatsächlich"],
+["False Friends","eine Antwort bekommen","get / receive an answer","become = werden"],
+["False Friends","an der Reise teilnehmen","join the trip","nicht: submit the trip (eigener Fehler)"],
+["False Friends","gleichgesinnte Leute","like-minded people","nicht: same-minded (eigener Fehler)"],
+["False Friends","sensibel","sensitive","sensible = vernünftig"],
+["False Friends","Chef, Vorgesetzte","boss / manager","chief = Häuptling, Leiter (selten)"],
+["Grammatik","Die Erfahrung, die ich bisher gemacht habe","the experience I've had so far","so far → Present Perfect (eigener Fehler)"],
+["Grammatik","Ich bin gerade dem Club beigetreten.","I've just joined the club.","just → Present Perfect"],
+["Grammatik","Ich bin seit September im Club.","I've been in the club since September.","seit → Present Perfect, nicht: I am since"],
+["Grammatik","Ich kann nicht teilnehmen.","I can't attend. / I cannot attend.","cannot zusammen, nicht: can not"],
+/* --- Schemas (freie Wiedergabe, selbst bewerten) --- */
+["Schema Writing","Email: Wie ist der Opener aufgebaut?","Anrede passend zum Empfänger → I hope you're doing well. → Anlass in einem Satz (I'm writing about …)","","s"],
+["Schema Writing","Email: die Bausteine in Reihenfolge?","Anrede · Opener (Anlass) · Bullet 1 + Detail · Bullet 2 + Detail · Bullet 3 mit 2 Vorschlägen · Closing · Grußformel","","s"],
+["Schema Writing","Email: Regel für jeden Bullet?","1 Aussage + 1 konkretes Detail (Datum, Name, Zahl)","","s"],
+["Schema Writing","Email: Wie ist der Lösungs-Bullet aufgebaut?","Vorschlag 1 (Would it be possible to …?) → Alternative (Alternatively, I could …) → Bitte um Rückmeldung (Could you let me know …?)","","s"],
+["Schema Writing","Email: Wie ist der Problem-Bullet aufgebaut?","Unfortunately, … (Problem + Detail) → As a result, … (Folge für dich) → Überleitung zur Lösung","","s"],
+["Schema Writing","Email: Was ändert sich zwischen Professor und Kommilitone?","Nur Anrede, Abschluss und Ton (Dear Professor Lee / Best regards ↔ Hi Sam / Thanks again)","Struktur bleibt gleich","s"],
+["Schema Writing","Discussion: Wie ist Baustein 1 (Bezug + Position) aufgebaut?","Einen Studierenden namentlich aufgreifen + eigene klare Position: While Paul makes a fair point that …, I believe that …","","s"],
+["Schema Writing","Discussion: die 5 Bausteine?","Bezug + Position · Hauptgrund · neuer Aspekt · konkretes Beispiel · Abschluss","","s"],
+["Schema Writing","Discussion: Wie ist das Beispiel (Baustein 4) aufgebaut?","For instance, when I … (Situation) → was passiert ist → As a result, … (Ergebnis, das deine Position stützt)","","s"],
+["Schema Writing","Discussion: Welcher Baustein entscheidet über 5/5?","Der eigene neue Aspekt, den keiner der Studierenden genannt hat","Nur paraphrasieren deckelt die Note","s"],
+["Schema Writing","Build a Sentence: die 5 Schritte?","Kontext → Zeitform/Satztyp · Subjekt + finites Verb · Blöcke einordnen · indirekte Frage ohne Inversion · im Kopf lesen","","s"],
+["Schema Writing","Build a Sentence: Wortstellung in indirekten Fragen?","Fragewort + Subjekt + Verb, keine Inversion: Do you know where the library is?","","s"],
+["Schema Speaking","Interview: wofür steht C-D-E-F?","Commit · Detail · Elaborate · Finish","","s"],
+["Schema Speaking","Interview: Was sagst du im Commit?","Direkte Antwort in einem Satz, ohne Einleitung: Honestly, I'd say … / I'd definitely go with …","","s"],
+["Schema Speaking","Interview: Was sagst du im Elaborate?","Ein konkretes persönliches Beispiel mit Ort, Zeit und Ergebnis: For example, last year when I …","","s"],
+["Schema Speaking","Interview: Welches Schema für Fragen 1–2, welches für 3–4?","1–2: Erfahrungs- oder Präferenz-Schema · 3–4: Meinungs-Schema mit Gegenargument","","s"],
+["Schema Speaking","Interview-Schema: Erfahrung?","Situation → was ich gemacht habe → Ergebnis → was ich gelernt habe","","s"],
+["Schema Speaking","Interview-Schema: Präferenz (X oder Y)?","Wahl → Vorteil von X → kurzer Nachteil von Y → Beispiel → Abschluss","","s"],
+["Schema Speaking","Interview-Schema: Meinung?","Position → Grund → Gegenargument + Entkräftung → Beispiel → Abschluss","","s"],
+["Schema Speaking","Interview-Schema: Zukunft / Hypothese?","Plan → Grund → wie konkret → erwartetes Ergebnis","","s"],
+["Schema Speaking","Listen and Repeat: die Technik?","Gerüst hören · 2–3 Sinnblöcke · sofort starten · Intonation kopieren · Endungen und Artikel sprechen","","s"],
+["Schema Speaking","Listen and Repeat: Wie zerlegst du einen langen Satz?","In 2–3 Sinnblöcke: Subjekt-Block · Verb + Objekt · Ergänzung (Ort, Zeit, Nebensatz)","","s"],
+["Schema R/L","Academic Talk: Notiz-Schema?","Thema → Hauptpunkte → Beispiele → Haltung oder Schlussfolgerung des Sprechers","","s"],
+["Schema R/L","Complete the Words: Strategie?","Unterstriche zählen · Wortart aus dem Satz · Suffix-Familie · nie leer lassen · Rechtschreibung prüfen","","s"],
+["Schema R/L","Listen and Choose a Response: die Falle?","Die richtige Antwort ist oft indirekt oder idiomatisch, nicht wörtlich","","s"],
+["Schema R/L","Read in Daily Life: Lösungs-Schema?","Erst die Frage lesen → Textsorte erkennen (Email, Aushang, Chat) → Detail suchen → bei Inferenz: was gemeint ist, nicht was dasteht","","s"],
+/* --- Interview-Phrasen --- */
+["Interview: Commit","Ehrlich gesagt würde ich sagen, …","Honestly, I'd say …",""],
+["Interview: Commit","Für mich ist es definitiv …","For me, it's definitely …",""],
+["Interview: Commit","Ich tendiere zu …","I lean toward …",""],
+["Interview: Commit","Wenn ich jetzt sofort antworten müsste, würde ich sagen …","If I had to answer right now, I'd say …","Rettet den Einstieg ohne Vorbereitungszeit"],
+["Interview: Commit","Ich würde mich auf jeden Fall für … entscheiden.","I'd definitely go with …","Präferenzfragen"],
+["Interview: Detail","Der wichtigste Grund ist, dass …","The biggest reason is that …",""],
+["Interview: Detail","Hauptsächlich, weil …","Mainly because …",""],
+["Interview: Detail","Was ich daran wirklich mag, ist …","What I really like about it is …",""],
+["Interview: Detail","Ein weiterer Punkt ist, dass …","Another thing is that …",""],
+["Interview: Beispiel","Zum Beispiel, letztes Jahr, als ich …","For example, last year when I …",""],
+["Interview: Beispiel","Ich erinnere mich an eine Zeit, als …","I remember a time when …",""],
+["Interview: Beispiel","Am Ende …","In the end, …",""],
+["Interview: Beispiel","Das hat mir gezeigt, dass …","That showed me that …",""],
+["Interview: Beispiel","Seitdem habe ich …","Since then, I've …","since → Present Perfect"],
+["Interview: Abschluss","Also insgesamt ist das der Grund, warum …","So overall, that's why …",""],
+["Interview: Abschluss","Das ist also meine Sicht.","So that's my take.",""],
+["Interview: Meinung","Manche Leute argumentieren, dass …, aber ich denke …","Some people argue that …, but I think …","Gegenargument für Fragen 3–4"],
+["Interview: Meinung","Einerseits … andererseits …","On the one hand, … On the other hand, …",""],
+["Interview: Meinung","Ich verstehe, warum …, aber …","I can see why …, but …",""],
+["Interview: Meinung","Das hängt wirklich davon ab, …","It really depends on …",""],
+["Interview: Meinung","Auf lange Sicht …","In the long run, …",""],
+["Interview: Meinung","Insgesamt überwiegen die Vorteile die Nachteile.","Overall, the benefits outweigh the drawbacks.",""],
+["Interview: Meinung","Wie ich vorhin erwähnt habe, …","As I mentioned earlier, …","Bezug auf eine frühere Antwort → kohärenter"],
+["Interview: Meinung","Ich bin fest davon überzeugt, dass …","I strongly believe that …",""],
+/* --- Discussion-Phrasen --- */
+["Discussion","Obwohl ich Pauls Punkt verstehe, glaube ich, dass …","While I see Paul's point, I believe that …","Baustein 1"],
+["Discussion","Ich stimme Kelly teilweise zu, aber …","I partially agree with Kelly, but …","Baustein 1"],
+["Discussion","Pauls Argument übersieht …","Paul's argument overlooks …","Baustein 1"],
+["Discussion","Der Hauptgrund ist, dass …","The main reason is that …","Baustein 2"],
+["Discussion","Das liegt vor allem daran, dass …","This is mainly because …","Baustein 2"],
+["Discussion","Das bedeutet, dass …","This means that …","Baustein 2"],
+["Discussion","Ein weiterer Faktor, der noch nicht erwähnt wurde, ist …","Another factor that hasn't been mentioned is …","Baustein 3"],
+["Discussion","Über das Gesagte hinaus …","Beyond what's been said, …","Baustein 3"],
+["Discussion","Ein gutes Beispiel dafür ist …","A good illustration of this is …","Baustein 4"],
+["Discussion","Nehmen wir zum Beispiel …","Take, for example, …","Baustein 4"],
+["Discussion","Zugegeben, …; jedoch …","Admittedly, …; however, …","Konzession = komplexer Satz"],
+["Discussion","Im Gegensatz dazu …","In contrast, …",""],
+["Discussion","Aus diesen Gründen bin ich überzeugt, dass …","For these reasons, I'm convinced that …","Baustein 5"],
+["Discussion","Insgesamt überwiegen die Vorteile von … deutlich.","Overall, the benefits of … clearly outweigh …","Baustein 5"],
+/* --- Wortschatz akademisch --- */
+["Akademisch","Vorteil","advantage / benefit",""],
+["Akademisch","Nachteil","disadvantage / drawback",""],
+["Akademisch","beeinflussen","affect / influence","affect = Verb, effect = Nomen"],
+["Akademisch","Auswirkung","impact / effect",""],
+["Akademisch","fördern, ermutigen","promote / encourage",""],
+["Akademisch","verringern","reduce / decrease",""],
+["Akademisch","erhöhen","increase",""],
+["Akademisch","Nachhaltigkeit","sustainability",""],
+["Akademisch","Regierung","government","Rechtschreibung: govern-ment"],
+["Akademisch","Gesellschaft","society",""],
+["Akademisch","Forschung","research","unzählbar: nicht „researches“"],
+["Akademisch","Beweise, Belege","evidence","unzählbar: nicht „evidences“"],
+["Akademisch","entscheidend","crucial",""],
+["Akademisch","erheblich","significant / considerable",""],
+["Akademisch","zuverlässig","reliable",""],
+["Akademisch","verpflichtend","mandatory / compulsory",""],
+["Akademisch","unerlässlich","essential",""],
+["Akademisch","Fähigkeit","skill / ability",""],
+["Akademisch","Arbeitsbelastung","workload",""],
+["Akademisch","Ablenkung","distraction",""],
+["Akademisch","Zusammenarbeit","collaboration / cooperation",""],
+["Akademisch","Fortschritt","progress","unzählbar"],
+["Akademisch","(ein Problem) angehen","address / tackle",""],
+["Akademisch","in Betracht ziehen","consider",""],
+["Akademisch","priorisieren","prioritize",""],
+["Akademisch","langfristig","long-term / in the long run",""],
+["Akademisch","Zugang zu","access to","nicht: access for"],
+["Akademisch","Datenschutz, Privatsphäre","privacy",""],
+["Akademisch","kosteneffizient","cost-effective",""],
+["Akademisch","Ergebnis","outcome / result",""],
+["Akademisch","Ansatz","approach","approach to sth"],
+["Akademisch","Einschränkung","limitation / restriction",""],
+["Akademisch","Umwelt","environment","Rechtschreibung: enviro-n-ment"],
+["Akademisch","Wettbewerb","competition",""],
+/* --- Campus --- */
+["Campus","Studentenwohnheim","dormitory / residence hall",""],
+["Campus","Mensa","dining hall / cafeteria",""],
+["Campus","Studienberater","academic advisor",""],
+["Campus","Hauptfach","major",""],
+["Campus","Nebenfach","minor",""],
+["Campus","Pflichtkurs","required course",""],
+["Campus","Wahlfach","elective",""],
+["Campus","Studiengebühren","tuition / tuition fees",""],
+["Campus","Stipendium","scholarship",""],
+["Campus","Leistungspunkte","credits",""],
+["Campus","Abschlussprüfung (Semesterende)","final exam / final",""],
+["Campus","Zwischenprüfung","midterm / midterm exam",""],
+["Campus","überfällig (Buch)","overdue",""],
+["Campus","Anmeldeschluss","registration deadline",""],
+["Campus","Schwarzes Brett","bulletin board",""],
+["Campus","Lehrassistent, Tutor","teaching assistant / TA",""],
+["Campus","Lerngruppe","study group",""],
+["Campus","Praktikum","internship",""],
+["Campus","Abschlussarbeit","thesis",""],
+/* --- Wortbildung (Complete the Words) --- */
+["Wortbildung","Nomen zu „decide“","decision",""],
+["Wortbildung","Nomen zu „develop“","development",""],
+["Wortbildung","Nomen zu „analyze“","analysis",""],
+["Wortbildung","Nomen zu „require“","requirement",""],
+["Wortbildung","Nomen zu „able“","ability",""],
+["Wortbildung","Nomen zu „reduce“","reduction",""],
+["Wortbildung","Nomen zu „fail“","failure",""],
+["Wortbildung","Nomen zu „explain“","explanation","kein i: explAnation"],
+["Wortbildung","Nomen zu „argue“","argument","ohne e"],
+["Wortbildung","Nomen zu „maintain“","maintenance","ohne ai"],
+["Wortbildung","Nomen zu „pronounce“","pronunciation","ohne o"],
+["Wortbildung","Nomen zu „responsible“","responsibility",""],
+["Wortbildung","Adjektiv zu „success“","successful",""],
+["Wortbildung","Adjektiv zu „environment“","environmental",""],
+["Wortbildung","Adjektiv zu „benefit“","beneficial",""],
+["Wortbildung","Adjektiv „wirtschaftlich“ (economy)","economic","economical = sparsam"],
+["Wortbildung","Adverb zu „significant“","significantly",""],
+["Wortbildung","Adverb zu „basic“","basically",""],
+["Wortbildung","Verb zu „solution“","solve",""],
+/* --- Idiome Listening (EN → DE, selbst bewerten) --- */
+["Idiome","As a matter of fact, …","Tatsächlich, … / In der Tat, …","","s"],
+["Idiome","I'm swamped.","Ich bin total überlastet.","","s"],
+["Idiome","It slipped my mind.","Ich habe es vergessen.","","s"],
+["Idiome","I'll take a rain check.","Gern ein andermal.","","s"],
+["Idiome","Count me in.","Ich bin dabei.","","s"],
+["Idiome","That works for me.","Das passt mir.","","s"],
+["Idiome","I'm running late.","Ich bin spät dran.","","s"],
+["Idiome","It's up to you.","Du entscheidest.","","s"],
+["Idiome","Don't bother.","Mach dir keine Mühe.","","s"],
+["Idiome","I couldn't agree more.","Ganz meiner Meinung.","","s"],
+["Idiome","Not that I know of.","Nicht dass ich wüsste.","","s"],
+["Idiome","You can say that again.","Das kannst du laut sagen.","","s"],
+["Idiome","Hang in there.","Halte durch.","","s"],
+["Idiome","It's a long shot.","Das ist eher unwahrscheinlich.","","s"],
+["Idiome","I'm on my way.","Ich bin unterwegs.","","s"],
+["Idiome","Let me get back to you.","Ich melde mich wieder bei dir.","","s"],
+/* --- Satzbau (Build a Sentence) --- */
+["Satzbau","Weißt du, wo die Bibliothek ist?","Do you know where the library is?","Indirekte Frage: keine Inversion"],
+["Satzbau","Kannst du mir sagen, wann der Kurs beginnt?","Can you tell me when the course starts?","Indirekte Frage: keine Inversion"],
+["Satzbau","Ich frage mich, ob er kommt.","I wonder whether he is coming. / I wonder if he is coming.",""],
+["Satzbau","Der Professor, der den Kurs leiten sollte, wurde krank.","The professor who was supposed to lead the course got sick.","Relativsatz direkt hinter dem Nomen"],
+["Satzbau","Die Ergebnisse wurden noch nicht hochgeladen.","The results haven't been uploaded yet.","Passiv im Present Perfect"],
+["Satzbau","Ich gehe selten in die Bibliothek.","I rarely go to the library.","Häufigkeitsadverb vor dem Vollverb"],
+["Satzbau","Ich bin es gewohnt, früh aufzustehen.","I'm used to getting up early.","used to + -ing"],
+["Satzbau","Sie fragte mich, ob ich darüber nachgedacht hätte, weniger Kurse zu belegen.","She asked me whether I had considered taking fewer courses.","Backshift + consider + -ing"],
+["Satzbau","Kaum hatte ich angefangen, als der Alarm losging.","Hardly had I started when the alarm went off.","Inversion nach Hardly"],
+["Satzbau","Erst als ich nach Hause kam, bemerkte ich es.","Only when I got home did I notice it.","Inversion nach Only when"],
+["Schema Writing","Email-Schema: Bitte / Erlaubnis?","Anlass → Grund für die Bitte + Detail → konkrete Bitte (I was wondering if …) → Alternative anbieten → Dank","","s"],
+["Schema Writing","Email-Schema: Beschwerde / Problem?","Positiver Einstieg → Problem sachlich + Detail (It seems that …) → Folge für dich → Lösungsvorschlag → Bitte um Rückmeldung","","s"],
+["Schema Writing","Email-Schema: Absage / Entschuldigung?","Klare Absage (I'm afraid I won't be able to …) → Grund → Entschuldigung → Ersatz anbieten (nachholen, anderer Termin)","","s"],
+["Schema Writing","Email-Schema: Vorschlag / Einladung?","Anlass → Idee (I'd like to suggest …) → Nutzen für den Empfänger → Details (wann, wo) → Let me know if you're interested.","","s"],
+["Schema Writing","Email-Schema: Feedback / Dank?","Dank + was konkret gut war → warum es geholfen hat → ein Verbesserungsvorschlag → Abschluss","","s"],
+["Schema Writing","Email-Schema: Information anfragen?","Wer du bist + Anlass → was du schon weißt → 2 konkrete Fragen → Dank","","s"],
+["Schema Writing","Discussion: Schema, wenn du einem Studierenden zustimmst?","Zustimmung mit Namen → seinen Grund vertiefen oder neuen Grund ergänzen → Beispiel → Gegenargument des anderen entkräften → Abschluss","","s"],
+["Schema Writing","Discussion: Schema, wenn du beiden widersprichst?","Beide kurz anerkennen → eigene dritte Position → Grund → Beispiel → Abschluss","","s"]
+];
+const AREA={"Template":"Email","Szenarien":"Email","Höflichkeit":"Email","Verbinder":"Email",
+"Schema Writing":"Schemas","Schema Speaking":"Schemas","Schema R/L":"Schemas",
+"Discussion":"Discussion",
+"Interview: Commit":"Speaking","Interview: Detail":"Speaking","Interview: Beispiel":"Speaking","Interview: Abschluss":"Speaking","Interview: Meinung":"Speaking",
+"Verben":"Wortschatz","Nomen":"Wortschatz","Kollokationen":"Wortschatz","False Friends":"Wortschatz","Akademisch":"Wortschatz","Campus":"Wortschatz","Wortbildung":"Wortschatz","Idiome":"Wortschatz",
+"Grammatik":"Grammatik","Satzbau":"Grammatik"};
+const MORE=[["AWL 1", "analysieren", "analyze / analyse", "Nomen: analysis · Adj.: analytical"], ["AWL 1", "bewerten, einschätzen", "assess", "Nomen: assessment"], ["AWL 1", "annehmen, voraussetzen", "assume", "Nomen: assumption"], ["AWL 1", "Behörde; Autorität", "authority", "the authorities = die Behörden"], ["AWL 1", "verfügbar", "available", "Nomen: availability"], ["AWL 1", "Konzept, Begriff", "concept", "Adj.: conceptual"], ["AWL 1", "bestehen aus", "consist of", "consistent = beständig, widerspruchsfrei"], ["AWL 1", "ausmachen, darstellen", "constitute", "Nomen: constitution"], ["AWL 1", "Zusammenhang, Kontext", "context", "in this context"], ["AWL 1", "Vertrag", "contract", "Adj.: contractual"], ["AWL 1", "definieren, festlegen", "define", "Nomen: definition"], ["AWL 1", "ableiten, herleiten (von)", "derive from", "Nomen: derivation"], ["AWL 1", "verteilen", "distribute", "Nomen: distribution"], ["AWL 1", "Wirtschaft (eines Landes)", "economy", "economic = wirtschaftlich · economical = sparsam"], ["AWL 1", "gründen; festlegen; nachweisen", "establish", "Nomen: establishment"], ["AWL 1", "schätzen (Zahl)", "estimate", "an estimated 20 %"], ["AWL 1", "offensichtlich, erkennbar", "evident", "Nomen: evidence"], ["AWL 1", "Finanzen; finanzieren", "finance", "Adj.: financial"], ["AWL 1", "erkennen, identifizieren", "identify", "Nomen: identification"], ["AWL 1", "Einkommen", "income", "low-income households"], ["AWL 1", "hinweisen auf, anzeigen", "indicate", "Nomen: indication · indicator"], ["AWL 1", "einzeln; Einzelperson", "individual", "individually"], ["AWL 1", "auslegen, deuten", "interpret", "Nomen: interpretation"], ["AWL 1", "beinhalten, mit sich bringen", "involve", "Nomen: involvement"], ["AWL 1", "Problem, Thema, Streitfrage", "issue", "address an issue"], ["AWL 1", "Arbeit, Arbeitskräfte", "labor / labour", "labor market = Arbeitsmarkt"], ["AWL 1", "rechtlich", "legal", "illegal = rechtswidrig"], ["AWL 1", "Gesetzgebung", "legislation", "Verb: legislate"], ["AWL 1", "bedeutend, Haupt-", "major", "Nomen: majority"], ["AWL 1", "auftreten, vorkommen", "occur", "Nomen: occurrence (rr)"], ["AWL 1", "politische Maßnahme, Richtlinie", "policy", "politics = Politik allgemein"], ["AWL 1", "Grundsatz, Prinzip", "principle", "principal = Haupt-, Schulleiter"], ["AWL 1", "fortfahren, vorgehen", "proceed", "Nomen: procedure"], ["AWL 1", "verarbeiten; Prozess", "process", "processing"], ["AWL 1", "antworten, reagieren", "respond", "Nomen: response"], ["AWL 1", "Sektor, Branche", "sector", "the private sector"], ["AWL 1", "ähnlich (wie)", "similar to", "Nomen: similarity"], ["AWL 1", "Quelle", "source", "a reliable source"], ["AWL 1", "bestimmt, spezifisch", "specific", "Verb: specify"], ["AWL 1", "variieren, sich unterscheiden", "vary", "various, variety, variable"], ["AWL 2", "erreichen, erzielen", "achieve", "Nomen: achievement"], ["AWL 2", "erwerben, sich aneignen", "acquire", "Nomen: acquisition"], ["AWL 2", "Verwaltung", "administration", "Adj.: administrative"], ["AWL 2", "angemessen, passend", "appropriate", "inappropriate"], ["AWL 2", "Aspekt, Gesichtspunkt", "aspect", "in every aspect"], ["AWL 2", "unterstützen, helfen", "assist", "Nomen: assistance"], ["AWL 2", "Gemeinschaft, Gemeinde", "community", "the scientific community"], ["AWL 2", "vielschichtig, komplex", "complex", "Nomen: complexity"], ["AWL 2", "schlussfolgern; abschließen", "conclude", "Nomen: conclusion"], ["AWL 2", "durchführen (Studie, Umfrage)", "conduct", "conduct research"], ["AWL 2", "Folge, Konsequenz", "consequence", "consequently = folglich"], ["AWL 2", "verbrauchen, konsumieren", "consume", "Nomen: consumption (p)"], ["AWL 2", "deutlich unterscheidbar", "distinct", "Verb: distinguish"], ["AWL 2", "gleichsetzen", "equate", "Nomen: equation"], ["AWL 2", "bewerten, auswerten", "evaluate", "Nomen: evaluation"], ["AWL 2", "Merkmal, Eigenschaft", "feature", "Verb: to feature = aufweisen"], ["AWL 2", "sich konzentrieren auf", "focus on", "the focus of"], ["AWL 2", "verletzen", "injure", "Nomen: injury"], ["AWL 2", "Einrichtung, Institution", "institution", "Verb: institute = einführen"], ["AWL 2", "investieren in", "invest in", "Nomen: investment"], ["AWL 2", "Fachzeitschrift", "journal", "a peer-reviewed journal"], ["AWL 2", "aufrechterhalten; behaupten", "maintain", "Nomen: maintenance"], ["AWL 2", "erhalten, erlangen", "obtain", "formeller als get"], ["AWL 2", "teilnehmen an", "participate in", "Nomen: participant, participation"], ["AWL 2", "wahrnehmen", "perceive", "Nomen: perception"], ["AWL 2", "möglich; Potenzial", "potential", "potentially"], ["AWL 2", "vorherig", "previous", "previously"], ["AWL 2", "hauptsächlich, Haupt-", "primary", "primarily"], ["AWL 2", "kaufen, erwerben", "purchase", "formeller als buy"], ["AWL 2", "Bandbreite, Spektrum", "range", "a wide range of"], ["AWL 2", "regulieren", "regulate", "Nomen: regulation"], ["AWL 2", "wohnhaft sein", "reside", "resident, residence"], ["AWL 2", "Ressource, Mittel", "resource", "limited resources"], ["AWL 2", "einschränken", "restrict", "Nomen: restriction"], ["AWL 2", "sichern, beschaffen", "secure", "Nomen: security"], ["AWL 2", "suchen, anstreben", "seek", "seek – sought – sought"], ["AWL 2", "auswählen", "select", "Nomen: selection"], ["AWL 2", "Standort, Gelände", "site", "on site = vor Ort"], ["AWL 2", "Umfrage", "survey", "conduct a survey"], ["AWL 2", "übertragen, versetzen", "transfer", "transfer students"], ["AWL 3", "Umstand", "circumstance", "under these circumstances"], ["AWL 3", "ausgleichen, entschädigen", "compensate for", "Nomen: compensation"], ["AWL 3", "Bestandteil, Komponente", "component", "a key component"], ["AWL 3", "Zustimmung, Einwilligung", "consent", "without consent"], ["AWL 3", "beträchtlich", "considerable", "considerate = rücksichtsvoll"], ["AWL 3", "ständig, gleichbleibend", "constant", "constantly"], ["AWL 3", "Beschränkung, Zwang", "constraint", "time constraints"], ["AWL 3", "beitragen zu", "contribute to", "Nomen: contribution"], ["AWL 3", "koordinieren", "coordinate", "Nomen: coordination"], ["AWL 3", "Kern-, zentral", "core", "core values"], ["AWL 3", "Unternehmens-, Konzern-", "corporate", "Nomen: corporation"], ["AWL 3", "entsprechen", "correspond to", "corresponding"], ["AWL 3", "Kriterien", "criteria", "Singular: criterion"], ["AWL 3", "folgern, ableiten", "deduce", "Nomen: deduction"], ["AWL 3", "zeigen, nachweisen", "demonstrate", "Nomen: demonstration"], ["AWL 3", "beherrschen, dominieren", "dominate", "Adj.: dominant"], ["AWL 3", "Betonung, Schwerpunkt", "emphasis", "Verb: emphasize"], ["AWL 3", "sicherstellen", "ensure", "nicht: insure (versichern)"], ["AWL 3", "ausschließen", "exclude", "Nomen: exclusion"], ["AWL 3", "Rahmen, Rahmenwerk", "framework", "a theoretical framework"], ["AWL 3", "finanzieren; Fonds", "fund", "Nomen: funding"], ["AWL 3", "veranschaulichen", "illustrate", "Nomen: illustration"], ["AWL 3", "andeuten, implizieren", "imply", "Nomen: implication · infer = schließen"], ["AWL 3", "anfänglich", "initial", "initially"], ["AWL 3", "Fall, Beispiel", "instance", "for instance"], ["AWL 3", "interagieren mit", "interact with", "Nomen: interaction"], ["AWL 3", "rechtfertigen", "justify", "Nomen: justification"], ["AWL 3", "ausfindig machen", "locate", "be located in = liegen in"], ["AWL 3", "geringfügig, unbedeutend", "minor", "Nomen: minority"], ["AWL 3", "körperlich", "physical", "physically"], ["AWL 3", "Anteil, Verhältnis", "proportion", "proportional"], ["AWL 3", "veröffentlichen", "publish", "Nomen: publication"], ["AWL 3", "sich verlassen auf", "rely on", "reliable, reliance"], ["AWL 3", "entfernen, beseitigen", "remove", "Nomen: removal"], ["AWL 3", "Abfolge, Reihenfolge", "sequence", "sequential"], ["AWL 3", "Verschiebung, Wandel", "shift", "a shift in attitudes"], ["AWL 3", "genau angeben", "specify", "specific"], ["AWL 3", "ausreichend", "sufficient", "insufficient"], ["AWL 3", "Technik, Verfahren", "technique", "technology = Technologie"], ["AWL 3", "gültig, stichhaltig", "valid", "Nomen: validity"], ["AWL 3", "Umfang, Menge", "volume", "trading volume"], ["AWL 4", "angemessen, ausreichend", "adequate", "adequately"], ["AWL 4", "jährlich", "annual", "annually"], ["AWL 4", "offensichtlich; scheinbar", "apparent", "apparently"], ["AWL 4", "ungefähr", "approximately", "Adj.: approximate"], ["AWL 4", "Einstellung, Haltung", "attitude", "attitude toward"], ["AWL 4", "zuschreiben", "attribute to", "attributable"], ["AWL 4", "sich verpflichten zu", "commit to", "Nomen: commitment"], ["AWL 4", "sich konzentrieren auf", "concentrate on", "Nomen: concentration"], ["AWL 4", "Gegensatz", "contrast", "in contrast to"], ["AWL 4", "Debatte", "debate", "a heated debate"], ["AWL 4", "trotz", "despite", "nicht: despite of"], ["AWL 4", "Dimension, Ausmaß", "dimension", "dimensional"], ["AWL 4", "inländisch; häuslich", "domestic", "domestic market"], ["AWL 4", "entstehen, auftauchen", "emerge", "Nomen: emergence"], ["AWL 4", "gewähren; Fördergeld", "grant", "take for granted"], ["AWL 4", "daher, folglich", "hence", "formell"], ["AWL 4", "Hypothese", "hypothesis", "Plural: hypotheses"], ["AWL 4", "umsetzen", "implement", "Nomen: implementation"], ["AWL 4", "auferlegen, durchsetzen", "impose", "impose on"], ["AWL 4", "integrieren in", "integrate into", "Nomen: integration"], ["AWL 4", "untersuchen", "investigate", "Nomen: investigation"], ["AWL 4", "offensichtlich", "obvious", "obviously"], ["AWL 4", "besetzen, beschäftigen", "occupy", "occupation = Beruf"], ["AWL 4", "Ertrag, Leistung", "output", "input – output"], ["AWL 4", "insgesamt", "overall", "overall, …"], ["AWL 4", "vorhersagen", "predict", "Nomen: prediction"], ["AWL 4", "Haupt-; Schulleiter", "principal", "principle = Grundsatz"], ["AWL 4", "vor (zeitlich, formell)", "prior to", "= before"], ["AWL 4", "lösen; beschließen", "resolve", "Nomen: resolution"], ["AWL 4", "behalten, bewahren", "retain", "Nomen: retention"], ["AWL 4", "Reihe, Serie", "series", "Singular = Plural"], ["AWL 4", "nachfolgend", "subsequent", "subsequently"], ["AWL 4", "Zusammenfassung", "summary", "Verb: summarize"], ["AWL 4", "unternehmen, übernehmen", "undertake", "undertake a project"], ["Hedging", "Man könnte argumentieren, dass …", "It could be argued that …", ""], ["Hedging", "Das deutet darauf hin, dass …", "This suggests that …", ""], ["Hedging", "bis zu einem gewissen Grad", "to some extent / to a certain extent", ""], ["Hedging", "im Großen und Ganzen", "on the whole / by and large", ""], ["Hedging", "Es ist allgemein anerkannt, dass …", "It is widely accepted that …", ""], ["Hedging", "Es scheint, dass …", "It appears that …", ""], ["Hedging", "neigen dazu, tendenziell", "tend to", ""], ["Hedging", "Es ist erwähnenswert, dass …", "It is worth noting that …", ""], ["Hedging", "in Bezug auf", "in terms of / with regard to", ""], ["Hedging", "Allerdings sollte man bedenken, dass …", "However, it should be noted that …", ""], ["Hedging", "aus meiner Sicht", "from my perspective / in my view", ""], ["Hedging", "Das wirft die Frage auf, ob …", "This raises the question of whether …", ""], ["Hedging", "Das hängt weitgehend davon ab, …", "This largely depends on …", ""], ["Hedging", "Ein überzeugendes Argument dafür ist …", "A compelling argument for this is …", ""], ["Hedging", "Ein häufiger Einwand ist, dass …", "A common objection is that …", ""], ["Hedging", "Es spricht viel für …", "There is a strong case for …", ""], ["Hedging", "nicht unbedingt", "not necessarily", ""], ["Hedging", "vermutlich", "presumably", ""], ["Hedging", "Kurz gesagt, …", "In short, …", ""], ["Hedging", "Folglich …", "Consequently, … / Therefore, …", ""], ["Hedging", "Das gilt besonders für …", "This is particularly true of …", ""], ["Hedging", "Entgegen der verbreiteten Meinung …", "Contrary to popular belief, …", ""], ["Präpositionen", "abhängen von", "depend on", ""], ["Präpositionen", "führen zu", "result in / lead to", ""], ["Präpositionen", "resultieren aus", "result from", ""], ["Präpositionen", "verantwortlich für", "responsible for", ""], ["Präpositionen", "sich befassen mit", "deal with", ""], ["Präpositionen", "interessiert an", "interested in", ""], ["Präpositionen", "gut in", "good at", ""], ["Präpositionen", "anders als", "different from", ""], ["Präpositionen", "Einfluss auf", "impact on / influence on", ""], ["Präpositionen", "Grund für", "reason for", ""], ["Präpositionen", "Lösung für", "solution to", "nicht: solution for"], ["Präpositionen", "Zunahme an", "increase in", ""], ["Präpositionen", "Nachfrage nach", "demand for", ""], ["Präpositionen", "Wirkung auf", "effect on", ""], ["Präpositionen", "im Vergleich zu", "compared to / in comparison with", ""], ["Präpositionen", "sich einigen auf", "agree on", ""], ["Präpositionen", "einer Person zustimmen", "agree with", ""], ["Präpositionen", "sich beschweren über", "complain about", ""], ["Präpositionen", "sich erholen von", "recover from", ""], ["Präpositionen", "bestehen auf", "insist on", ""], ["Präpositionen", "sich spezialisieren auf", "specialize in", ""], ["Präpositionen", "bekannt für", "known for", ""], ["Präpositionen", "Kenntnisse in", "knowledge of", ""], ["Präpositionen", "erfahren in", "experienced in", ""], ["Präpositionen", "am Montag", "on Monday", ""], ["Präpositionen", "im Juli", "in July", ""], ["Präpositionen", "an der Uni (studieren)", "at university", ""], ["Präpositionen", "per E-Mail", "by email", ""], ["Präpositionen", "in Zukunft", "in the future", ""], ["Präpositionen", "am Ende des Semesters", "at the end of the semester", ""], ["Kollokationen akademisch", "Forschung betreiben", "conduct research / do research", ""], ["Kollokationen akademisch", "eine Studie durchführen", "carry out a study / conduct a study", ""], ["Kollokationen akademisch", "Bewusstsein schaffen", "raise awareness", ""], ["Kollokationen akademisch", "berücksichtigen", "take into account / take into consideration", ""], ["Kollokationen akademisch", "eine Rolle spielen", "play a role", ""], ["Kollokationen akademisch", "eine Entscheidung treffen", "make a decision", ""], ["Kollokationen akademisch", "Fortschritte machen", "make progress", ""], ["Kollokationen akademisch", "Maßnahmen ergreifen", "take measures / take action", ""], ["Kollokationen akademisch", "ein Ziel erreichen", "achieve a goal / reach a goal", ""], ["Kollokationen akademisch", "Aufmerksamkeit erregen", "attract attention", ""], ["Kollokationen akademisch", "einen Beitrag leisten", "make a contribution", ""], ["Kollokationen akademisch", "Wert legen auf", "place emphasis on", ""], ["Kollokationen akademisch", "eine Frage aufwerfen", "raise a question", ""], ["Kollokationen akademisch", "einen Vortrag halten", "give a presentation / give a talk", ""], ["Kollokationen akademisch", "Erfahrung sammeln", "gain experience", ""], ["Kollokationen akademisch", "Kosten senken", "cut costs / reduce costs", ""], ["Kollokationen akademisch", "Druck ausüben auf", "put pressure on", ""], ["Kollokationen akademisch", "einen Kompromiss finden", "reach a compromise", ""], ["Kollokationen akademisch", "eine Ausnahme machen", "make an exception", ""], ["Kollokationen akademisch", "Bedenken äußern", "raise concerns / express concerns", ""], ["Kollokationen akademisch", "eine Lücke schließen", "bridge a gap / close a gap", ""], ["Kollokationen akademisch", "Schritt halten mit", "keep up with", ""], ["C1-Grammatik", "Es ist nicht nur billiger, sondern auch schneller. (mit Inversion)", "Not only is it cheaper, but it is also faster.", "Inversion nach Not only"], ["C1-Grammatik", "Selten habe ich so eine gute Vorlesung gehört.", "Rarely have I heard such a good lecture.", "Inversion nach Rarely"], ["C1-Grammatik", "Solltest du Hilfe brauchen, ruf mich an.", "Should you need help, call me.", "Konditional ohne if"], ["C1-Grammatik", "Was ich brauche, ist mehr Zeit.", "What I need is more time.", "Cleft Sentence"], ["C1-Grammatik", "Es war Paul, der den Fehler gefunden hat.", "It was Paul who found the mistake.", "Cleft Sentence"], ["C1-Grammatik", "Wenn ich mehr gelernt hätte, wäre ich jetzt nicht so nervös.", "If I had studied more, I wouldn't be so nervous now.", "Mixed Conditional"], ["C1-Grammatik", "Wenn ich du wäre, würde ich das Angebot annehmen.", "If I were you, I would accept the offer.", "were für alle Personen"], ["C1-Grammatik", "Ich wünschte, ich hätte früher angefangen.", "I wish I had started earlier.", ""], ["C1-Grammatik", "Es ist höchste Zeit, dass wir gehen.", "It's high time we left.", "Past nach it's time"], ["C1-Grammatik", "Der Professor schlug vor, dass er den Kurs wiederholt.", "The professor suggested that he repeat the course.", "Subjunctive: repeat ohne s"], ["C1-Grammatik", "Nachdem ich den Bericht beendet hatte, ging ich nach Hause. (Partizip)", "Having finished the report, I went home.", "Partizipialsatz"], ["C1-Grammatik", "Angesichts der Kosten ist das unrealistisch.", "Given the costs, this is unrealistic.", ""], ["C1-Grammatik", "Ich lerne seit drei Monaten Englisch.", "I have been learning English for three months.", "for = Zeitraum, since = Zeitpunkt"], ["C1-Grammatik", "Ich habe ihn letzte Woche getroffen.", "I met him last week.", "Zeitangabe → Past Simple"], ["C1-Grammatik", "Wenn ich morgen Zeit habe, rufe ich dich an.", "If I have time tomorrow, I'll call you.", "kein will nach if"], ["C1-Grammatik", "Sobald ich fertig bin, schicke ich es dir.", "As soon as I finish, I'll send it to you. / As soon as I've finished, I'll send it to you.", "kein will nach as soon as"], ["C1-Grammatik", "Bildung ist wichtig für die Gesellschaft.", "Education is important for society.", "kein Artikel bei abstrakten Nomen"], ["C1-Grammatik", "Die meisten Studierenden arbeiten nebenbei.", "Most students work part-time.", "nicht: the most students"], ["C1-Grammatik", "Ich habe viele Informationen gefunden.", "I found a lot of information.", "information ist unzählbar"], ["C1-Grammatik", "Er gab mir einen guten Rat.", "He gave me some good advice. / He gave me a good piece of advice.", "advice ist unzählbar"], ["C1-Grammatik", "Ich habe einen Fehler gemacht.", "I made a mistake.", "make a mistake, do homework"], ["C1-Grammatik", "Ich möchte, dass du mir hilfst.", "I want you to help me.", "nicht: I want that you"], ["C1-Grammatik", "Ich ließ mein Fahrrad reparieren.", "I had my bike repaired.", "have sth done"], ["C1-Grammatik", "Er soll sehr klug sein.", "He is said to be very clever.", ""], ["C1-Grammatik", "Es wird erwartet, dass die Preise steigen.", "Prices are expected to rise.", ""], ["C1-Grammatik", "Je mehr ich übe, desto besser werde ich.", "The more I practice, the better I get.", ""], ["C1-Grammatik", "Früher bin ich oft gesegelt.", "I used to sail a lot.", "used to = früher (jetzt nicht mehr)"], ["C1-Grammatik", "Obwohl es regnete, sind wir gesegelt.", "Although it was raining, we went sailing.", ""], ["C1-Grammatik", "Trotz des Regens sind wir gesegelt.", "Despite the rain, we went sailing.", "despite + Nomen"], ["C1-Grammatik", "Ich freue mich darauf, dich zu sehen.", "I'm looking forward to seeing you.", "to + -ing"], ["C1-Grammatik", "Hätte ich das gewusst, wäre ich gekommen.", "Had I known, I would have come.", "Inversion statt if"], ["AWL 5–10", "zuteilen, zuweisen", "allocate", "Nomen: allocation"], ["AWL 5–10", "anerkennen, einräumen", "acknowledge", "Nomen: acknowledgement"], ["AWL 5–10", "verbessern, steigern", "enhance", "Nomen: enhancement"], ["AWL 5–10", "erleichtern, ermöglichen", "facilitate", "Nomen: facilitator"], ["AWL 5–10", "grundlegend", "fundamental", "fundamentally"], ["AWL 5–10", "erzeugen", "generate", "Nomen: generation"], ["AWL 5–10", "Anreiz", "incentive", "financial incentives"], ["AWL 5–10", "einbeziehen, aufnehmen", "incorporate", "Nomen: incorporation"], ["AWL 5–10", "Perspektive, Sichtweise", "perspective", "from a … perspective"], ["AWL 5–10", "aufrechterhalten, tragen", "sustain", "sustainable"], ["AWL 5–10", "Ziel (formell); sachlich", "objective", "objectively"], ["AWL 5–10", "Einnahmen, Erlöse", "revenue", "revenue growth"], ["AWL 5–10", "zurückgehen; ablehnen", "decline", "a decline in sales"], ["AWL 5–10", "übersteigen", "exceed", "Nomen: excess"], ["AWL 5–10", "ausdrücklich", "explicit", "explicitly"], ["AWL 5–10", "stillschweigend, implizit", "implicit", "implicitly"], ["AWL 5–10", "flexibel", "flexible", "Nomen: flexibility"], ["AWL 5–10", "dennoch", "nevertheless", "formell"], ["AWL 5–10", "Umfang, Reichweite", "scope", "beyond the scope of"], ["AWL 5–10", "enthüllen, zeigen", "reveal", "Nomen: revelation"], ["AWL 5–10", "umwandeln", "transform", "Nomen: transformation"], ["AWL 5–10", "zugrunde liegen", "underlie", "underlying causes"], ["AWL 5–10", "befürworten; Befürworter", "advocate", "advocate for"], ["AWL 5–10", "umfassend", "comprehensive", "comprehensively"], ["AWL 5–10", "bestehen aus, umfassen", "comprise", "nicht: comprise of"], ["AWL 5–10", "gegenteilig", "contrary", "on the contrary"], ["AWL 5–10", "beseitigen", "eliminate", "Nomen: elimination"], ["AWL 5–10", "empirisch", "empirical", "empirical evidence"], ["AWL 5–10", "schließen, folgern", "infer", "Nomen: inference"], ["AWL 5–10", "eingreifen", "intervene", "Nomen: intervention"], ["AWL 5–10", "Paradigma", "paradigm", "paradigm shift"], ["AWL 5–10", "Phänomen", "phenomenon", "Plural: phenomena"], ["AWL 5–10", "mehrdeutig", "ambiguous", "Nomen: ambiguity"], ["AWL 5–10", "Voreingenommenheit, Verzerrung", "bias", "biased"], ["AWL 5–10", "klären, verdeutlichen", "clarify", "Nomen: clarification"], ["AWL 5–10", "widersprechen", "contradict", "Nomen: contradiction"], ["AWL 5–10", "zeitgenössisch, modern", "contemporary", ""], ["AWL 5–10", "unvermeidlich", "inevitable", "inevitably"], ["AWL 5–10", "verstärken", "reinforce", "Nomen: reinforcement"], ["AWL 5–10", "weit verbreitet", "widespread", ""], ["AWL 5–10", "vorwegnehmen, erwarten", "anticipate", "Nomen: anticipation"], ["AWL 5–10", "schlüssig, zusammenhängend", "coherent", "Nomen: coherence"], ["AWL 5–10", "Kontroverse", "controversy", "Adj.: controversial"], ["AWL 5–10", "innewohnend", "inherent", "inherently"], ["AWL 5–10", "Einblick, Erkenntnis", "insight", "Adj.: insightful"], ["AWL 5–10", "gegenseitig", "mutual", "mutually"], ["AWL 5–10", "vorläufig, Vor-", "preliminary", "preliminary results"], ["AWL 5–10", "Szenario", "scenario", "worst-case scenario"], ["AWL 5–10", "auslösen; Auslöser", "trigger", ""], ["AWL 5–10", "wenn auch, obgleich", "albeit", "formell"], ["AWL 5–10", "begegnen, stoßen auf", "encounter", ""], ["AWL 5–10", "laufend, andauernd", "ongoing", "ongoing research"], ["AWL 5–10", "fortbestehen, anhalten", "persist", "persistent"], ["AWL 5–10", "darstellen (Problem, Risiko)", "pose", "pose a risk"], ["AWL 5–10", "unkompliziert", "straightforward", ""], ["AWL 5–10", "durchlaufen, sich unterziehen", "undergo", "undergo changes"], ["AWL 5–10", "wodurch", "whereby", "formell"], ["AWL 5–10", "nichtsdestotrotz", "nonetheless", ""], ["AWL 5–10", "ebenso", "likewise", ""], ["AWL 5–10", "verringern, schwinden", "diminish", ""], ["AWL 5–10", "unterbringen; berücksichtigen", "accommodate", "zwei c, zwei m"], ["Business: Finanzen", "Umsatz", "revenue / turnover", "turnover (BrE) auch = Fluktuation"], ["Business: Finanzen", "Gewinn", "profit", ""], ["Business: Finanzen", "Gewinnspanne", "profit margin", ""], ["Business: Finanzen", "Ausgaben, Kosten", "expenses / costs", ""], ["Business: Finanzen", "Fixkosten", "fixed costs", ""], ["Business: Finanzen", "Rendite, Kapitalrendite", "return on investment / ROI", ""], ["Business: Finanzen", "Bilanz", "balance sheet", ""], ["Business: Finanzen", "Gewinn-und-Verlust-Rechnung", "income statement / profit and loss statement", ""], ["Business: Finanzen", "Vermögenswerte", "assets", ""], ["Business: Finanzen", "Verbindlichkeiten", "liabilities", ""], ["Business: Finanzen", "Abschreibung", "depreciation", ""], ["Business: Finanzen", "Prognose", "forecast", ""], ["Business: Finanzen", "Quartal", "quarter", "Q3 = third quarter"], ["Business: Finanzen", "Geschäftsjahr", "fiscal year / financial year", ""], ["Business: Finanzen", "Aktionär", "shareholder", ""], ["Business: Finanzen", "Interessengruppe", "stakeholder", ""], ["Business: Finanzen", "Kennzahl", "key performance indicator / KPI / metric", ""], ["Business: Finanzen", "Marktanteil", "market share", ""], ["Business: Finanzen", "Lieferkette", "supply chain", ""], ["Business: Finanzen", "Lagerbestand", "inventory / stock", ""], ["Business: Finanzen", "Beschaffung, Einkauf", "procurement", ""], ["Business: Finanzen", "Lieferant", "supplier", ""], ["Business: Finanzen", "Rechnung", "invoice", ""], ["Business: Finanzen", "Kostenvoranschlag, Angebot", "quote / quotation", ""], ["Business: Finanzen", "Ausschreibung", "tender / request for proposal", ""], ["Business: Strategie & Projekte", "Wettbewerbsvorteil", "competitive advantage", ""], ["Business: Strategie & Projekte", "Geschäftsmodell", "business model", ""], ["Business: Strategie & Projekte", "Zielgruppe", "target group / target audience", ""], ["Business: Strategie & Projekte", "Markteinführung", "market launch / go-to-market", ""], ["Business: Strategie & Projekte", "Kundenbindung", "customer retention", ""], ["Business: Strategie & Projekte", "Mehrwert", "added value", ""], ["Business: Strategie & Projekte", "Skaleneffekte", "economies of scale", ""], ["Business: Strategie & Projekte", "Geschäftsführer", "managing director / CEO", ""], ["Business: Strategie & Projekte", "Vorstand", "executive board / board of directors", ""], ["Business: Strategie & Projekte", "Abteilung", "department", ""], ["Business: Strategie & Projekte", "Personalabteilung", "human resources / HR", ""], ["Business: Strategie & Projekte", "Meilenstein", "milestone", ""], ["Business: Strategie & Projekte", "Arbeitsergebnis, Liefergegenstand", "deliverable", ""], ["Business: Strategie & Projekte", "Engpass", "bottleneck", ""], ["Business: Strategie & Projekte", "Ressourcenplanung, Ressourcenzuteilung", "resource allocation", ""], ["Business: Strategie & Projekte", "Risikobewertung", "risk assessment", ""], ["Business: Strategie & Projekte", "Machbarkeitsstudie", "feasibility study", ""], ["Business: Strategie & Projekte", "Anforderungen", "requirements", ""], ["Business: Strategie & Projekte", "Statusbericht", "status report / progress report", ""], ["Business: Strategie & Projekte", "Prioritäten setzen", "set priorities / prioritize", ""], ["Business: Strategie & Projekte", "Entscheidungsträger", "decision-maker", ""], ["Business: Strategie & Projekte", "digitale Transformation", "digital transformation", ""], ["Business: Strategie & Projekte", "Prozessoptimierung", "process optimization", ""], ["Business: Strategie & Projekte", "innerbetriebliche Logistik", "intralogistics / in-plant logistics", ""], ["Business: Strategie & Projekte", "Durchlaufzeit", "lead time / throughput time", ""], ["Business: Strategie & Projekte", "Auslastung", "capacity utilization / utilization", ""], ["Business: Strategie & Projekte", "Lager", "warehouse", ""], ["Meetings & Präsentation", "Lassen Sie uns anfangen.", "Let's get started.", ""], ["Meetings & Präsentation", "Auf der Tagesordnung steht heute …", "On the agenda today is …", ""], ["Meetings & Präsentation", "Darf ich kurz einhaken?", "Could I just come in here? / May I interrupt for a moment?", ""], ["Meetings & Präsentation", "Wie sehen Sie das?", "What's your view on this?", ""], ["Meetings & Präsentation", "Ich sehe das etwas anders.", "I see it slightly differently.", ""], ["Meetings & Präsentation", "Da stimme ich voll zu.", "I completely agree.", ""], ["Meetings & Präsentation", "Lassen Sie uns das separat besprechen.", "Let's take this offline. / Let's discuss this separately.", ""], ["Meetings & Präsentation", "Zusammenfassend …", "To sum up, …", ""], ["Meetings & Präsentation", "Wer kümmert sich darum?", "Who will follow up on this? / Who will take care of this?", ""], ["Meetings & Präsentation", "Ich melde mich bis Freitag.", "I'll get back to you by Friday.", ""], ["Meetings & Präsentation", "Können wir einen Termin vereinbaren?", "Can we schedule a meeting? / Can we set up a meeting?", ""], ["Meetings & Präsentation", "Wie viel Spielraum haben Sie beim Preis?", "How much flexibility do you have on the price?", ""], ["Meetings & Präsentation", "Wir könnten Ihnen entgegenkommen, wenn …", "We could meet you halfway if …", ""], ["Meetings & Präsentation", "Das ist unser letztes Angebot.", "This is our final offer.", ""], ["Meetings & Präsentation", "Lassen Sie mich kurz erklären …", "Let me briefly explain …", ""], ["Meetings & Präsentation", "Auf dieser Folie sehen Sie …", "On this slide, you can see …", ""], ["Meetings & Präsentation", "Damit komme ich zum nächsten Punkt.", "This brings me to my next point.", ""], ["Meetings & Präsentation", "Gibt es Fragen?", "Are there any questions?", ""], ["Meetings & Präsentation", "Gute Frage, darauf komme ich gleich.", "Good question, I'll come to that in a moment.", ""], ["Meetings & Präsentation", "Ich fasse die nächsten Schritte zusammen.", "Let me summarize the next steps.", ""], ["Meetings & Präsentation", "Kurz zum Hintergrund: …", "To give you some background, …", ""], ["C2-Grammatik", "Wäre er nicht gewesen, hätten wir verloren.", "Had it not been for him, we would have lost.", ""], ["C2-Grammatik", "Unter keinen Umständen solltest du …", "Under no circumstances should you …", "Inversion"], ["C2-Grammatik", "So schwierig es auch war, wir haben es geschafft.", "Difficult as it was, we managed it.", ""], ["C2-Grammatik", "Erst nachdem ich es gelesen hatte, verstand ich es.", "Only after I had read it did I understand it.", "Inversion nach Only after"], ["C2-Grammatik", "Was auch immer passiert, …", "Whatever happens, …", ""], ["C2-Grammatik", "Es ist unerlässlich, dass jeder Student teilnimmt.", "It is essential that every student attend.", "Subjunctive"], ["C2-Grammatik", "Wenn ich nicht so beschäftigt wäre, hätte ich dir geholfen.", "If I weren't so busy, I would have helped you.", "Mixed Conditional"], ["C2-Grammatik", "Nicht dass ich dir nicht glaube, aber …", "Not that I don't believe you, but …", ""], ["C2-Grammatik", "Er hätte kommen sollen.", "He should have come.", ""], ["C2-Grammatik", "Sie muss es vergessen haben.", "She must have forgotten.", ""], ["C2-Grammatik", "Du hättest es mir sagen können.", "You could have told me.", ""], ["C2-Grammatik", "das Projekt, dessen Ergebnisse wir besprechen", "the project whose results we are discussing", ""], ["C2-Grammatik", "…, was mich überrascht hat.", "…, which surprised me.", "which bezieht sich auf den ganzen Satz"], ["C2-Grammatik", "Mir wäre lieber, du kämst morgen.", "I'd rather you came tomorrow.", ""], ["C2-Grammatik", "Er tat so, als wüsste er nichts.", "He acted as if he knew nothing.", ""], ["C2-Grammatik", "Als wir ankamen, war der Zug schon weg.", "By the time we arrived, the train had already left.", ""], ["C2-Grammatik", "Bis Ende des Jahres werde ich fertig sein.", "By the end of the year, I will have finished.", "Future Perfect"], ["C2-Grammatik", "Berichten zufolge expandiert das Unternehmen.", "The company is reported to be expanding.", ""], ["C2-Grammatik", "Je früher, desto besser.", "The sooner, the better.", ""]];
+CARDS.push(...MORE);
+Object.assign(AREA,{"AWL 1": "AWL", "AWL 2": "AWL", "AWL 3": "AWL", "AWL 4": "AWL", "Hedging": "Discussion", "Präpositionen": "Wortschatz", "Kollokationen akademisch": "Wortschatz", "C1-Grammatik": "Grammatik", "AWL 5–10": "Akademisch+", "Business: Finanzen": "Business", "Business: Strategie & Projekte": "Business", "Meetings & Präsentation": "Business", "C2-Grammatik": "C2-Grammatik"});
+const CLOZE={"analyze / analyse": "Researchers [analyzed/analysed] data from over 2,000 students.", "assess": "Teachers use short quizzes to [assess] how much students have learned.", "assume": "Many people [assume] that online courses are easier, but this is not always true.", "authority": "The local [authorities] closed the road after the storm.", "available": "Study rooms are [available] until midnight during exam week.", "concept": "The [concept] of sustainability is central to modern business.", "consist of": "The final exam [consists of] three short essays.", "constitute": "Women [constitute] almost half of the workforce in this sector.", "context": "Words often change their meaning depending on the [context].", "contract": "Both companies signed a three-year [contract].", "define": "It is difficult to [define] success in a single sentence.", "derive from": "Many English words are [derived from] Latin.", "distribute": "The professor will [distribute] the handouts at the start of class.", "economy": "Tourism is an important part of the local [economy].", "establish": "The university was [established] in 1965.", "estimate": "Experts [estimate] that sales will grow by five percent next year.", "evident": "It was [evident] from her answers that she had prepared well.", "finance": "The project is [financed] by a government grant.", "identify": "The study [identified] three main causes of the problem.", "income": "Students with a low [income] can apply for financial aid.", "indicate": "Recent surveys [indicate] that most students prefer hybrid classes.", "individual": "Each [individual] student receives personal feedback.", "interpret": "Historians [interpret] the same events in different ways.", "involve": "The job [involves] a lot of travel.", "issue": "Climate change is one of the most pressing [issues] of our time.", "labor / labour": "Rising [labor/labour] costs have forced many factories to move abroad.", "legal": "You should get [legal] advice before signing the lease.", "legislation": "New [legislation] requires companies to report their emissions.", "major": "Cost was a [major] factor in their decision.", "occur": "Most accidents [occur] at home.", "policy": "The university has a strict [policy] on plagiarism.", "principle": "The course covers the basic [principles] of economics.", "proceed": "After the introduction, the speaker [proceeded] to the main topic.", "process": "Applying for a visa can be a long [process].", "respond": "Please [respond] to this email by Friday.", "sector": "Jobs in the public [sector] are usually more secure.", "similar to": "My experience was very [similar to] yours.", "source": "Wikipedia is not considered a reliable academic [source].", "specific": "Could you give me a [specific] example?", "vary": "Prices [vary] depending on the season.", "achieve": "She worked hard to [achieve] her goals.", "acquire": "Children [acquire] languages more easily than adults.", "administration": "Please contact the [administration] office about your enrollment.", "appropriate": "Jeans are not [appropriate] for a job interview.", "aspect": "Cost is only one [aspect] of the problem.", "assist": "A tutor will [assist] you with your writing.", "community": "The new park benefits the whole [community].", "complex": "The relationship between diet and health is very [complex].", "conclude": "The researchers [concluded] that the new method was more effective.", "conduct": "The survey was [conducted] among 500 first-year students.", "consequence": "Skipping classes can have serious [consequences].", "consume": "Data centers [consume] huge amounts of electricity.", "distinct": "There is a [distinct] difference between the two approaches.", "equate": "Many people [equate] success with money.", "evaluate": "We need to [evaluate] the results before making a decision.", "feature": "The new phone has several useful [features].", "focus on": "Today's lecture will [focus on] renewable energy.", "injure": "Two players were [injured] during the match.", "institution": "Universities are among the oldest [institutions] in Europe.", "invest in": "The company plans to [invest in] new technology.", "journal": "Her article was published in a leading scientific [journal].", "maintain": "It is important to [maintain] a healthy work-life balance.", "obtain": "You must [obtain] permission before using the lab.", "participate in": "More than 300 students [participated in] the study.", "perceive": "Customers often [perceive] expensive products as higher quality.", "potential": "The new drug has the [potential] to save many lives.", "previous": "Unlike the [previous] version, the new app works offline.", "primary": "The [primary] goal of the course is to improve writing skills.", "purchase": "Tickets can be [purchased] online.", "range": "The library offers a wide [range] of services.", "regulate": "Governments [regulate] the use of pesticides.", "reside": "Most international students [reside] on campus.", "resource": "We have limited [resources], so we must set priorities.", "restrict": "The library [restricts] access to rare books.", "secure": "She managed to [secure] an internship at a large bank.", "seek": "Many graduates [seek] jobs abroad.", "select": "Only ten students were [selected] for the program.", "site": "The new campus will be built on the [site] of an old factory.", "survey": "According to a recent [survey], most employees want flexible hours.", "transfer": "He [transferred] to another university after his first year.", "circumstance": "Under these [circumstances], we have to cancel the trip.", "compensate for": "Nothing can [compensate for] a lack of sleep.", "component": "Teamwork is a key [component] of the course.", "consent": "Participants gave their written [consent] before the study.", "considerable": "The project required a [considerable] amount of time.", "constant": "The city is in a state of [constant] change.", "constraint": "Due to time [constraints], we could not interview everyone.", "contribute to": "Several factors [contributed to] the company's success.", "coordinate": "She [coordinates] the work of three teams.", "core": "Communication is a [core] skill for managers.", "corporate": "Many graduates hope to work in a [corporate] environment.", "correspond to": "The numbers in the table [correspond to] the chapters.", "criteria": "The applications were judged on three [criteria].", "deduce": "From the evidence, the detective [deduced] who the thief was.", "demonstrate": "The experiment [demonstrated] that the theory was correct.", "dominate": "A few large firms [dominate] the market.", "emphasis": "The program places great [emphasis] on practical experience.", "ensure": "Please [ensure] that all doors are locked.", "exclude": "Students who cheat will be [excluded] from the exam.", "framework": "The study uses a well-known theoretical [framework].", "fund": "The research is [funded] by the European Union.", "illustrate": "Let me [illustrate] this point with an example.", "imply": "His silence seemed to [imply] that he disagreed.", "initial": "Our [initial] plan was too expensive.", "instance": "There are many [instances] where technology has improved education.", "interact with": "Online courses make it harder to [interact with] classmates.", "justify": "Can you [justify] the high cost of this project?", "locate": "The library is [located] in the center of campus.", "minor": "We only had to make a few [minor] changes.", "physical": "Regular [physical] activity improves concentration.", "proportion": "A large [proportion] of students work part-time.", "publish": "The results will be [published] next month.", "rely on": "Many students [rely on] their phones for everything.", "remove": "Please [remove] your bags from the seats.", "sequence": "Put the events in the correct [sequence].", "shift": "There has been a [shift] toward remote work.", "specify": "The instructions do not [specify] how long the essay should be.", "sufficient": "One week is not [sufficient] to prepare for the exam.", "technique": "She learned a new [technique] for memorizing vocabulary.", "valid": "Your student ID is [valid] until the end of the year.", "volume": "The [volume] of online sales has doubled.", "adequate": "The apartment was small but [adequate] for one person.", "annual": "The club holds an [annual] meeting in March.", "apparent": "It soon became [apparent] that the plan would not work.", "approximately": "The trip takes [approximately] three hours.", "attitude": "Her positive [attitude] helped the whole team.", "attribute to": "The success was [attributed to] good planning.", "commit to": "The company has [committed to] reducing its emissions.", "concentrate on": "It is hard to [concentrate on] work in a noisy office.", "contrast": "In [contrast] to last year, sales have risen.", "debate": "There is an ongoing [debate] about social media and mental health.", "despite": "[Despite] the rain, the event was a success.", "dimension": "The crisis has an international [dimension].", "domestic": "[Domestic] flights are often more expensive than trains.", "emerge": "New problems [emerged] during the second phase of the project.", "grant": "The university [granted] her a scholarship.", "hence": "The roads were icy; [hence] the delay.", "hypothesis": "The data supported our [hypothesis].", "implement": "The new rules will be [implemented] next semester.", "impose": "The government [imposed] a tax on sugary drinks.", "integrate into": "It can take time to [integrate into] a new culture.", "investigate": "Police are [investigating] the cause of the fire.", "obvious": "The answer seems [obvious], but it is not.", "occupy": "All the seats in the lecture hall were [occupied].", "output": "The factory increased its [output] by 20 percent.", "overall": "[Overall], the conference was a success.", "predict": "It is impossible to [predict] the future.", "principal": "The [principal] reason for the delay was bad weather.", "prior to": "Please arrive ten minutes [prior to] the exam.", "resolve": "We need to [resolve] this conflict quickly.", "retain": "Companies try hard to [retain] their best employees.", "series": "The professor gave a [series] of lectures on climate change.", "subsequent": "[Subsequent] studies confirmed the results.", "summary": "Please write a short [summary] of the article.", "undertake": "The university will [undertake] a major renovation next year.", "allocate": "The budget was [allocated] to three departments.", "acknowledge": "The author [acknowledges] the limitations of the study.", "enhance": "Good lighting can [enhance] productivity.", "facilitate": "Technology can [facilitate] communication between teams.", "fundamental": "There is a [fundamental] difference between the two theories.", "generate": "Solar panels [generate] electricity from sunlight.", "incentive": "Lower taxes are an [incentive] for companies to invest.", "incorporate": "The final version [incorporates] feedback from users.", "perspective": "From an economic [perspective], the plan makes sense.", "sustain": "Such rapid growth is difficult to [sustain].", "objective": "The main [objective] of the study was to measure stress levels.", "revenue": "The company's [revenue] rose by 12 percent.", "decline": "The number of applicants has [declined] steadily.", "exceed": "Demand [exceeded] our expectations.", "explicit": "The rules are not [explicit] about the use of AI tools.", "implicit": "There was an [implicit] agreement between them.", "flexible": "Many employees want more [flexible] working hours.", "nevertheless": "The task was difficult. [Nevertheless], we finished on time.", "scope": "This question is beyond the [scope] of our study.", "reveal": "The survey [revealed] some surprising results.", "transform": "The internet has [transformed] the way we work.", "underlie": "We need to understand the [underlying] causes of the problem.", "advocate": "She is a strong [advocate] of renewable energy.", "comprehensive": "The report gives a [comprehensive] overview of the market.", "comprise": "The committee [comprises] five members.", "contrary": "On the [contrary], the results were very positive.", "eliminate": "The new system [eliminates] the need for paper forms.", "empirical": "There is little [empirical] evidence for this claim.", "infer": "From the data, we can [infer] that demand will rise.", "intervene": "The government had to [intervene] to stabilize prices.", "paradigm": "The discovery led to a [paradigm] shift in physics.", "phenomenon": "Remote work is a relatively new [phenomenon].", "ambiguous": "The wording of the question was [ambiguous].", "bias": "The results may contain some [bias] because the sample was small.", "clarify": "Could you [clarify] what you mean?", "contradict": "The new findings [contradict] earlier research.", "contemporary": "The museum focuses on [contemporary] art.", "inevitable": "Some delays are [inevitable] in large projects.", "reinforce": "Regular practice [reinforces] what you have learned.", "widespread": "The use of smartphones is [widespread] among teenagers.", "anticipate": "We did not [anticipate] such high demand.", "coherent": "Your essay needs a more [coherent] structure.", "controversy": "The decision caused a lot of [controversy].", "inherent": "Every investment carries some [inherent] risk.", "insight": "The interviews provided valuable [insights] into student life.", "mutual": "The partnership is based on [mutual] trust.", "preliminary": "[Preliminary] results suggest the drug is effective.", "scenario": "In the worst-case [scenario], we would lose the client.", "trigger": "Stress can [trigger] headaches.", "albeit": "The plan worked, [albeit] more slowly than expected.", "encounter": "We [encountered] several problems during the project.", "ongoing": "The research is still [ongoing].", "persist": "If the symptoms [persist], see a doctor.", "pose": "Rising sea levels [pose] a serious threat to coastal cities.", "straightforward": "The application process is quite [straightforward].", "undergo": "The city center is [undergoing] major changes.", "whereby": "They introduced a system [whereby] students can rate their courses.", "nonetheless": "It was expensive; [nonetheless], it was worth it.", "likewise": "He apologized, and she did [likewise].", "diminish": "The pain [diminished] after a few days.", "accommodate": "The hall can [accommodate] up to 500 people.", "revenue / turnover": "The company's annual [revenue/turnover] exceeded 50 million euros.", "profit": "The firm made a [profit] for the first time in three years.", "profit margin": "Luxury brands usually have a high [profit margin].", "expenses / costs": "Travel [expenses/costs] will be reimbursed.", "fixed costs": "Rent and salaries are typical [fixed costs].", "return on investment / ROI": "We expect a high [return on investment/ROI] from this project.", "balance sheet": "Cash appears on the asset side of the [balance sheet].", "income statement / profit and loss statement": "The [income statement/profit and loss statement] shows revenue and expenses for the year.", "assets": "The company's [assets] include buildings and machines.", "liabilities": "Bank loans are recorded as [liabilities].", "depreciation": "The value of the truck decreases each year through [depreciation].", "forecast": "The sales [forecast] for next year looks optimistic.", "quarter": "Sales rose sharply in the third [quarter].", "fiscal year / financial year": "Our [fiscal year/financial year] ends on 31 March.", "shareholder": "The [shareholders] approved the merger.", "stakeholder": "We need to involve all [stakeholders] early in the project.", "key performance indicator / KPI / metric": "Delivery time is our most important [KPI/metric/key performance indicator].", "market share": "The company increased its [market share] to 15 percent.", "supply chain": "The pandemic disrupted global [supply chains].", "inventory / stock": "We need to reduce our [inventory/stock] before the new models arrive.", "procurement": "The [procurement] department negotiates with suppliers.", "supplier": "We switched to a cheaper [supplier].", "invoice": "Please send the [invoice] to our accounting department.", "quote / quotation": "We asked three companies for a [quote/quotation].", "tender / request for proposal": "The city published a [tender/request for proposal] for the new bridge.", "competitive advantage": "Fast delivery is our main [competitive advantage].", "business model": "Subscription services have changed the [business model] of the software industry.", "target group / target audience": "Our [target group/target audience] is young professionals.", "market launch / go-to-market": "The [market launch] is planned for spring.", "customer retention": "Good service is the key to [customer retention].", "added value": "The new feature offers real [added value] to users.", "economies of scale": "Large factories benefit from [economies of scale].", "managing director / CEO": "The [CEO/managing director] presented the annual results.", "executive board / board of directors": "The [board of directors/executive board] approved the budget.", "department": "She works in the marketing [department].", "human resources / HR": "Please send your application to [HR/human resources].", "milestone": "Finishing the prototype was an important [milestone].", "deliverable": "The first [deliverable] is due at the end of the month.", "bottleneck": "The testing phase has become a [bottleneck] in the project.", "resource allocation": "Better [resource allocation] could save time and money.", "risk assessment": "A [risk assessment] must be completed before the project starts.", "feasibility study": "The [feasibility study] showed that the plan was too expensive.", "requirements": "The software must meet all customer [requirements].", "status report / progress report": "The team sends a weekly [status report/progress report] to management.", "set priorities / prioritize": "When time is short, you have to [prioritize/set priorities].", "decision-maker": "We need to convince the key [decision-makers].", "digital transformation": "Many companies are in the middle of a [digital transformation].", "process optimization": "[Process optimization] reduced production time by 15 percent.", "intralogistics / in-plant logistics": "Automated guided vehicles are widely used in [intralogistics/in-plant logistics].", "lead time / throughput time": "We reduced the [lead time/throughput time] from ten days to six.", "capacity utilization / utilization": "The plant is running at 90 percent [capacity utilization/utilization].", "warehouse": "The goods are stored in a [warehouse] near the port."};
+const DECKS={toefl:{name:"TOEFL",areas:["Schemas","Email","Discussion","Speaking","Wortschatz","AWL","Grammatik"]},
+master:{name:"Master & Business",areas:["Akademisch+","Business","C2-Grammatik"]}};
+const deckOf=c=>DECKS.toefl.areas.includes(AREA[c[0]])?"toefl":"master";
+let AREAS=["Alle",...DECKS.toefl.areas];
+CARDS.forEach((c,i)=>c.id="c"+i);
+const CATS=["Alle",...[...new Set(CARDS.map(c=>c[0]))]];
+const KEY="toefl-email-cards-v1";
+let store={boxes:{},cat:"Alle",area:"Alle",dir:"de"};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null");if(s)store=Object.assign(store,s)}catch(e){}
+if(!DECKS[store.deck])store.deck="toefl";
+AREAS=["Alle",...DECKS[store.deck].areas];
+if(!AREAS.includes(store.area))store.area="Alle";
+if(store.cat!=="Alle"&&!CATS.includes(store.cat))store.cat="Alle";
+function save(){try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e){}}
+const $=id=>document.getElementById(id);
+const inArea=c=>deckOf(c)===store.deck&&(store.area==="Alle"||AREA[c[0]]===store.area);
+const pool=()=>CARDS.filter(c=>inArea(c)&&(store.cat==="Alle"||c[0]===store.cat));
+function refresh(){nextCard();if(view==="quiz")startQuiz();if(view==="stats")renderStats()}
+function renderChips(){
+  const dk=$("decks");dk.innerHTML="";
+  Object.keys(DECKS).forEach(k=>{const b=document.createElement("button");b.className="chip deck";
+    b.textContent=DECKS[k].name+" · "+CARDS.filter(c=>deckOf(c)===k).length;b.setAttribute("aria-pressed",k===store.deck);
+    b.onclick=()=>{store.deck=k;AREAS=["Alle",...DECKS[k].areas];store.area="Alle";store.cat="Alle";save();renderChips();refresh()};dk.appendChild(b)});
+  const ar=$("areas");ar.innerHTML="";
+  AREAS.forEach(a=>{const b=document.createElement("button");b.className="chip";
+    const n=a==="Alle"?CARDS.filter(c=>deckOf(c)===store.deck).length:CARDS.filter(c=>AREA[c[0]]===a).length;b.textContent=a+" · "+n;
+    b.setAttribute("aria-pressed",a===store.area);b.onclick=()=>{store.area=a;store.cat="Alle";save();renderChips();refresh()};ar.appendChild(b)});
+  const el=$("chips");el.innerHTML="";
+  const cats=store.area==="Alle"?[]:["Alle",...CATS.slice(1).filter(c=>AREA[c]===store.area)];
+  el.hidden=cats.length<3;
+  cats.forEach(cat=>{const b=document.createElement("button");b.className="chip";b.textContent=cat==="Alle"?"Alle in "+store.area:cat;
+    b.setAttribute("aria-pressed",cat===store.cat);b.onclick=()=>{store.cat=cat;save();renderChips();refresh()};el.appendChild(b)});
+}
+
+/* ---------- Lernplan: Leitner mit Fälligkeitsdatum ---------- */
+const INTERVAL={2:1,3:3,4:7,5:16};      /* Tage bis zur nächsten Wiederholung je Stufe */
+const MASTER_INTERVAL=35;                /* Stufe 5 erneut gewusst */
+const RELEARN_GAP=4;                     /* falsche Karte kommt nach 4 anderen Karten wieder */
+const today=()=>Math.floor((Date.now()-new Date().getTimezoneOffset()*60000)/86400000);
+if(!store.due)store.due={};
+if(!store.newLog)store.newLog={};
+if(!store.newPerDay)store.newPerDay=25;
+/* Altbestand ohne Datum: heute fällig */
+Object.keys(store.boxes).forEach(id=>{if(store.due[id]===undefined)store.due[id]=today()});
+const seen=c=>store.boxes[c.id]!==undefined;
+function newLog(){const d=today();let l=store.newLog[store.deck];if(!l||l.day!==d){l={day:d,n:0,extra:0};store.newLog[store.deck]=l}return l}
+const newLimit=()=>{const l=newLog();return store.newPerDay+l.extra};
+
+/* Lücken-Sätze */
+const CLOZE_CATS=new Set(["AWL 1","AWL 2","AWL 3","AWL 4","AWL 5–10","Business: Finanzen","Business: Strategie & Projekte"]);
+const clozeOf=c=>CLOZE_CATS.has(c[0])&&CLOZE[c[2]]?CLOZE[c[2]]:null;
+function clozeParts(s){const m=s.match(/^(.*)\[(.+?)\](.*)$/);return {pre:m[1],ans:m[2],post:m[3]}}
+
+/* Sitzung */
+let current=null,revealed=false,last=null,checked=false,prevState=null,isNew=false;
+let relearn=[],answered=0,ahead=false;
+function relearnIds(){return new Set(relearn.map(r=>r.id))}
+function dueCards(){const t=today(),rl=relearnIds();return pool().filter(c=>seen(c)&&store.due[c.id]<=t&&!rl.has(c.id))}
+function newCards(){
+  const rl=relearnIds();const fresh=pool().filter(c=>!seen(c)&&!rl.has(c.id));
+  /* abwechselnd aus den Kategorien ziehen (Interleaving) */
+  const groups={};fresh.forEach(c=>(groups[c[0]]=groups[c[0]]||[]).push(c));
+  const keys=Object.keys(groups);const out=[];let i=0;
+  while(out.length<fresh.length){const g=groups[keys[i%keys.length]];if(g.length)out.push(g.shift());i++}
+  return out;
+}
+function pick(){
+  const byId=id=>CARDS[+id.slice(1)];
+  const pids=new Set(pool().map(c=>c.id));const rq=relearn.filter(r=>pids.has(r.id));
+  const ready=rq.find(r=>r.after<=answered);
+  if(ready)return byId(ready.id);
+  const due=dueCards().filter(c=>c!==last).sort((a,b)=>store.due[a.id]-store.due[b.id]||Math.random()-.5);
+  if(due.length)return due[0];
+  if(newLog().n<newLimit()){const n=newCards();if(n.length)return n[0]}
+  if(rq.length)return byId(rq.slice().sort((a,b)=>a.after-b.after)[0].id);
+  if(ahead){const rl=relearnIds();const fut=pool().filter(c=>seen(c)&&!rl.has(c.id)&&c!==last).sort((a,b)=>store.due[a.id]-store.due[b.id]);if(fut.length)return fut[0]}
+  return null;
+}
+function apply(ok){
+  const c=current;prevState={box:store.boxes[c.id],due:store.due[c.id],inRelearn:relearn.findIndex(r=>r.id===c.id)>=0,counted:isNew};
+  if(isNew){newLog().n++;isNew=false}
+  relearn=relearn.filter(r=>r.id!==c.id);
+  const b=store.boxes[c.id]||1;
+  if(ok){
+    const wasRelearn=prevState.inRelearn;
+    const nb=wasRelearn?2:(prevState.box===undefined?2:Math.min(5,b+1));
+    store.boxes[c.id]=nb;
+    store.due[c.id]=today()+((!wasRelearn&&prevState.box===5)?MASTER_INTERVAL:INTERVAL[nb]);
+  }else{
+    store.boxes[c.id]=1;store.due[c.id]=today();
+    relearn.push({id:c.id,after:answered+RELEARN_GAP});
+  }
+  answered++;save();
+}
+function undoToCorrect(){
+  const c=current;relearn=relearn.filter(r=>r.id!==c.id);
+  const b=prevState.box;const nb=prevState.inRelearn?2:(b===undefined?2:Math.min(5,b+1));
+  store.boxes[c.id]=nb;store.due[c.id]=today()+((!prevState.inRelearn&&b===5)?MASTER_INTERVAL:INTERVAL[nb]);save();
+}
+
+const typing=()=>store.mode!=="flip";
+function showDone(){
+  current=null;
+  $("c-cat").textContent="Für heute erledigt";
+  $("c-gloss").hidden=true;
+  $("c-front").textContent=pool().length?"Alle fälligen Karten und dein Tageslimit an neuen Karten sind durch.":"In dieser Auswahl gibt es keine Karten.";
+  $("c-back").hidden=true;$("verdict").hidden=true;$("explain").hidden=true;$("typearea").hidden=true;$("typebtns").hidden=true;$("gradebtns").hidden=true;
+  $("c-hint").hidden=false;
+  const t=today(),tm=pool().filter(c=>seen(c)&&store.due[c.id]===t+1).length;
+  $("c-hint").textContent="Morgen fällig: "+tm+". Wiederholen in Abständen wirkt besser als viel auf einmal.";
+  $("donebtns").hidden=false;renderBoxes();
+}
+function nextCard(){
+  current=pick();
+  $("donebtns").hidden=true;
+  if(!current){showDone();return}
+  last=current;revealed=false;checked=false;isNew=!seen(current);
+  const cz=clozeOf(current);const self=current[4]==="s";
+  const de=typing()||store.dir==="de"||cz;
+  const inRl=relearn.some(r=>r.id===current.id);
+  $("c-cat").textContent=current[0]+(isNew?" · neu":inRl?" · wiederholen":"");
+  if(cz){
+    const p=clozeParts(cz);
+    $("c-gloss").hidden=false;$("c-gloss").textContent=current[1];
+    $("c-front").textContent=p.pre+"_____"+p.post;
+    $("c-answer").textContent=p.pre+p.ans.split("/")[0]+p.post;
+    $("c-note").textContent="Grundform: "+current[2]+(current[3]?" · "+current[3]:"");
+  }else{
+    $("c-gloss").hidden=true;
+    $("c-front").textContent=de?current[1]:current[2];
+    $("c-answer").textContent=de?current[2]:current[1];
+    $("c-note").textContent=current[3]||"";
+  }
+  $("c-back").hidden=true;$("verdict").hidden=true;$("explain").hidden=true;$("c-note").hidden=false;$("c-hint").hidden=false;
+  $("b-again").disabled=true;$("b-known").disabled=true;
+  $("typearea").hidden=!typing();$("typebtns").hidden=!typing();$("gradebtns").hidden=typing();$("dirchips").hidden=typing();
+  $("b-override").hidden=true;$("b-skip").hidden=false;
+  const a=$("ans");a.value="";a.className="";a.disabled=false;
+  a.placeholder=self?"Aus dem Kopf aufschreiben …":cz?"Fehlendes Wort in der passenden Form …":"Auf Englisch eintippen …";
+  $("b-check").textContent=self?"Lösung zeigen (Enter)":"Prüfen (Enter)";
+  $("c-hint").textContent=typing()?(self?"Freie Wiedergabe: aufschreiben, Enter, dann selbst mit der Lösung vergleichen."
+    :cz?"Das englische Wort für die Lücke eintippen, in der Form, die der Satz braucht (z. B. -ed, -s, -ing)."
+    :"Groß/Kleinschreibung und Satzzeichen zählen nicht, Rechtschreibung schon. Bei mehreren Lösungen (/) reicht eine. „…“ weglassen.")
+    :"Erst laut formulieren, dann tippen oder Leertaste zum Aufdecken.";
+  renderBoxes();
+  if(typing()&&view==="cards")setTimeout(()=>a.focus(),0);
+}
+const CONTR={"i'm":"i am","you're":"you are","we're":"we are","they're":"they are","it's":"it is","that's":"that is","i've":"i have","we've":"we have","you've":"you have","i'd":"i would","you'd":"you would","we'd":"we would","i'll":"i will","won't":"will not","can't":"cannot","wouldn't":"would not","couldn't":"could not","don't":"do not","didn't":"did not","isn't":"is not","let's":"let us","what's":"what is","hasn't":"has not","haven't":"have not","weren't":"were not"};
+function norm(s){
+  s=s.toLowerCase().replace(/[’‘`´]/g,"'").replace(/…|\.\.\./g," ").replace(/[.,!?;:"„“]/g," ").replace(/\s+/g," ").trim();
+  return s.split(" ").map(w=>CONTR[w]||w).join(" ");
+}
+function variants(ans){
+  const out=new Set();
+  ans.split(" / ").forEach(v=>{out.add(norm(v.replace(/\(.*?\)/g," ")));out.add(norm(v.replace(/[()]/g,"")))});
+  return [...out].filter(Boolean);
+}
+function answersFor(c){const cz=clozeOf(c);return cz?clozeParts(cz).ans.split("/").map(norm):variants(c[2])}
+function lev(a,b){const m=a.length,n=b.length;let p=Array.from({length:n+1},(_,j)=>j);
+  for(let i=1;i<=m;i++){const c=[i];for(let j=1;j<=n;j++)c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));p=c}return p[n]}
+function check(skip){
+  if(!current)return;
+  if(checked){nextCard();return}
+  checked=true;const a=$("ans");
+  if(current[4]==="s"){
+    revealed=true;a.disabled=true;
+    const v=$("verdict");v.hidden=false;v.className="verdict self";v.textContent="Vergleiche selbst: Hattest du alle Punkte?";
+    $("c-back").hidden=false;$("c-hint").hidden=true;
+    $("typebtns").hidden=true;$("gradebtns").hidden=false;$("b-again").disabled=false;$("b-known").disabled=false;$("b-known").focus();
+    return;
+  }
+  const given=norm(a.value);const vs=answersFor(current);
+  const ok=!skip&&!!given&&vs.includes(given);
+  const dist=given?Math.min(...vs.map(v=>lev(given,v))):99;
+  const near=!ok&&!skip&&dist<=Math.max(2,Math.round(given.length*0.08));
+  apply(ok);
+  const v=$("verdict");v.hidden=false;
+  v.className="verdict "+(ok?"ok":near?"near":"no");
+  v.textContent=ok?"Richtig · nächste Wiederholung in "+(store.due[current.id]-today())+" Tag(en)"
+    :near?"Fast: Tippfehler oder falsche Form. Im Test zählt das als Fehler. Kommt gleich nochmal."
+    :skip?"Nicht gewusst. Kommt in dieser Sitzung nochmal.":"Falsch. Kommt in dieser Sitzung nochmal.";
+  a.className=ok?"ok":"no";a.disabled=true;
+  if(!ok){showExplain(explainFor(a.value,current,skip));if(CARD_RULE[current.id])$("c-note").hidden=true}
+  $("c-back").hidden=false;$("c-hint").hidden=true;$("b-skip").hidden=true;
+  $("b-override").hidden=ok||skip;$("b-check").textContent="Weiter (Enter)";
+  renderBoxes();$("b-check").focus();
+}
+$("ans").addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();check(false)}});
+$("b-check").onclick=()=>check(false);
+$("b-skip").onclick=()=>check(true);
+$("b-override").onclick=()=>{undoToCorrect();$("explain").hidden=true;const v=$("verdict");v.className="verdict ok";v.textContent="Als richtig gewertet · nächste Wiederholung in "+(store.due[current.id]-today())+" Tag(en)";$("b-override").hidden=true;renderBoxes();$("b-check").focus()};
+$("b-more").onclick=()=>{newLog().extra+=10;save();ahead=false;nextCard()};
+$("b-ahead").onclick=()=>{ahead=true;nextCard()};
+function setMode(m){store.mode=m;save();$("m-type").setAttribute("aria-pressed",m!=="flip");$("m-flip").setAttribute("aria-pressed",m==="flip");nextCard()}
+$("m-type").onclick=()=>setMode("type");$("m-flip").onclick=()=>setMode("flip");
+function reveal(){if(!current||typing()||revealed)return;revealed=true;showExplain(ruleLines(current));if(CARD_RULE[current.id])$("c-note").hidden=true;$("c-back").hidden=false;$("c-hint").hidden=true;$("b-again").disabled=false;$("b-known").disabled=false;$("b-known").focus()}
+function grade(ok){if(!current||!revealed)return;apply(ok);nextCard();if(typing())$("ans").focus();else $("card").focus()}
+function renderBoxes(){
+  const p=pool();const t=today();const n=[0,0,0,0,0,0];
+  p.forEach(c=>{if(!seen(c))n[0]++;else n[store.boxes[c.id]]++});
+  const labels=["neu","Stufe 1","Stufe 2","Stufe 3","Stufe 4","Stufe 5"];
+  const days=["","heute","1 Tag","3 Tage","7 Tage","16+ Tage"];
+  $("boxes").innerHTML=n.map((v,i)=>`<div class="box"><b>${v}</b><span>${labels[i]}${i?"<br>"+days[i]:""}</span></div>`).join("");
+  const due=dueCards().length,rl=relearn.length,l=newLog();
+  $("poolinfo").textContent="Fällig "+due+" · Neu "+Math.min(l.n,newLimit())+"/"+newLimit()+(rl?" · Wiederholen "+rl:"");
+}
+$("card").onclick=reveal;
+$("card").onkeydown=e=>{if(typing()||e.target!==$("card"))return;if(e.key===" "||e.key==="Enter"){e.preventDefault();reveal()}};
+$("b-again").onclick=()=>grade(false);$("b-known").onclick=()=>grade(true);
+document.addEventListener("keydown",e=>{if(view!=="cards"||e.target.tagName==="INPUT"||e.target.tagName==="TEXTAREA"||e.target.tagName==="SELECT")return;if(typing()&&!(checked&&current&&current[4]==="s"))return;if(e.key==="1")grade(false);if(e.key==="2")grade(true)});
+function setDir(d){store.dir=d;save();$("dir-de").setAttribute("aria-pressed",d==="de");$("dir-en").setAttribute("aria-pressed",d==="en");nextCard()}
+$("dir-de").onclick=()=>setDir("de");$("dir-en").onclick=()=>setDir("en");
+/* ---------- Erklärungen bei Fehlern: nur Regeln ---------- */
+const CAT_RULE={
+  "Verbinder":"Verbinder am Satzanfang + Komma: Unfortunately, …",
+  "Präpositionen":"Präpositionen nach Verb, Adjektiv oder Nomen sind fest und folgen nicht dem Deutschen. Zeit: on + Tag, in + Monat/Jahr, at + Uhrzeit.",
+  "Kollokationen":"Nomen + festes Verb, nicht aus dem Deutschen übersetzen: make a decision, take an exam, meet a deadline.",
+  "Kollokationen akademisch":"Nomen + festes Verb, nicht aus dem Deutschen übersetzen: conduct research, raise awareness, make progress.",
+  "Wortbildung":"Nomen: -tion, -ment, -ance/-ence, -ity, -ure · Adjektiv: -al, -ful, -ic, -ive, -ous · Adverb: + -ly. Der Stamm ändert sich oft mit (explain → explanation)."
+};
+const CARD_RULE={
+  c79:"so far / already / yet / just / ever → Present Perfect.",
+  c80:"just = gerade eben → Present Perfect.",
+  c81:"seit + Präsens → Present Perfect: I've been here since …",
+  c82:"cannot zusammen oder can't.",
+  c235:"Indirekte Frage: nach dem Fragewort Subjekt vor Verb (where the library is).",
+  c236:"Indirekte Frage: Subjekt vor Verb, kein do/does (when the course starts).",
+  c237:"Indirekte Ja/Nein-Frage: whether/if + Subjekt + Verb.",
+  c238:"Relativsatz direkt hinter dem Nomen, das er beschreibt; Hauptverb danach.",
+  c239:"Passiv Present Perfect: have/has + been + Partizip.",
+  c240:"Häufigkeitsadverb vor dem Vollverb, aber nach be (I rarely go / I am rarely late).",
+  c241:"be used to + -ing = gewöhnt sein. used to + Grundform = früher.",
+  c242:"Indirekte Rede: Zeitform eine Stufe zurück, whether/if, Subjekt vor Verb.",
+  c243:"Negatives Adverb am Satzanfang (Hardly, Rarely, Never) → Inversion: had I started.",
+  c244:"Only when/after am Satzanfang → Inversion im Hauptsatz: did I notice.",
+  c482:"Not only am Satzanfang → Inversion (is it), dann but … also.",
+  c483:"Rarely / Seldom / Never am Satzanfang → Inversion mit Hilfsverb (have I heard).",
+  c484:"Should + Subjekt + Grundform = If … should …",
+  c485:"What + Subjekt + Verb + is + Betontes.",
+  c486:"It is/was + Betontes + who/that + Rest.",
+  c487:"If + Past Perfect (Vergangenheit) → would + Grundform (jetzt).",
+  c488:"Irreal Gegenwart: If + Past, would + Grundform. be → were für alle Personen.",
+  c489:"wish + Past Perfect = Bedauern über Vergangenes. wish + Past = Gegenwart.",
+  c490:"It's (high) time + Subjekt + Past.",
+  c491:"suggest / recommend / insist that + Grundform ohne -s.",
+  c492:"Having + Partizip = nachdem … (gleiches Subjekt).",
+  c493:"Given + Nomen = angesichts.",
+  c494:"for + Zeitraum, since + Zeitpunkt; seit + Präsens → Present Perfect (Continuous).",
+  c495:"Abgeschlossene Zeitangabe (last week, ago, in 2020) → Past Simple.",
+  c496:"if + Present Simple, Hauptsatz will. Kein will im if-Teil.",
+  c497:"Nach as soon as / when / before / after / until kein will, sondern Present Simple.",
+  c498:"Abstrakte und unzählbare Nomen allgemein ohne the: education, society.",
+  c499:"die meisten = most + Nomen, ohne the.",
+  c500:"information ist unzählbar: kein -s, kein an.",
+  c501:"advice ist unzählbar: some advice / a piece of advice.",
+  c502:"make = herstellen, verursachen (a mistake, a decision); do = Tätigkeit (homework, research).",
+  c503:"want + Person + to + Grundform; kein that-Satz.",
+  c504:"have + Objekt + Partizip = machen lassen.",
+  c505:"be said / thought to + Grundform = soll … sein.",
+  c506:"Subjekt + be expected to + Grundform.",
+  c507:"the + Komparativ …, the + Komparativ … = je … desto …",
+  c508:"used to + Grundform = früher, heute nicht mehr.",
+  c509:"although + Satz; despite + Nomen / -ing.",
+  c510:"despite + Nomen / -ing, ohne of; mit ganzem Satz: although.",
+  c511:"look forward to + -ing (to ist Präposition).",
+  c512:"Had + Subjekt + Partizip = If … had … (Inversion).",
+  c647:"Had it not been for + Nomen = wäre … nicht gewesen.",
+  c648:"Under no circumstances / Not until am Satzanfang → Inversion.",
+  c649:"Adjektiv + as + Subjekt + Verb = so … auch.",
+  c650:"Only after + Nebensatz → Inversion im Hauptsatz.",
+  c651:"whatever / whoever + Present Simple, kein will.",
+  c652:"essential / important that + Grundform ohne -s.",
+  c653:"If + Past (jetzt) → would have + Partizip (Vergangenheit).",
+  c654:"Not that … = nicht dass …",
+  c655:"should have + Partizip = hätte … sollen.",
+  c656:"must have + Partizip = muss … haben (Vermutung).",
+  c657:"could have + Partizip = hätte … können.",
+  c658:"whose = dessen/deren, direkt vor dem Nomen.",
+  c659:", which bezieht sich auf den ganzen Satz (= was).",
+  c660:"I'd rather + Person + Past.",
+  c661:"as if + Past für irreale Vergleiche.",
+  c662:"by the time + Past Simple → Hauptsatz Past Perfect.",
+  c663:"by + Zeitpunkt → will have + Partizip.",
+  c664:"be reported to be + -ing = berichten zufolge gerade.",
+  c665:"the + Komparativ, the + Komparativ."
+};
+const PATTERNS=[
+  [/\b(know|tell me|tell us|wonder|asked?( me| him| her)?|explain|remember)\b.*\b(where|when|what|why|how|who|whether|if)\s+(is|are|was|were|do|does|did|can|will|has|have)\b/,"Indirekte Frage: Subjekt vor Verb, kein do/does/did."],
+  [/\bif (i|he|she|it) (would be|was)\b/,"Irrealer if-Satz: If I were …, kein would im if-Teil."],
+  [/\bif\b[^,]*\bwould\b[^,]*,/,"Kein would im if-Teil."],
+  [/\b(if|when|as soon as|once|before|after|until)\s+(\w+\s+)?will\b/,"Nach if / when / as soon as / before / after / until kein will."],
+  [/\blook(ing|s)? forward to (\w+)\b/,"look forward to + -ing.",m=>!/ing$/.test(m[2])],
+  [/\b(be|am|is|are|get|got) used to (\w+)\b/,"be used to + -ing.",m=>!/ing$/.test(m[2])],
+  [/\bthe (society|education|nature|life|research|technology|sustainability|progress)\b/,"Abstrakte Nomen allgemein ohne the."],
+  [/\bthe most (\w+s)\b/,"die meisten = most, ohne the."],
+  [/\b(informations|advices|researches|evidences|knowledges|progresses|equipments|furnitures|feedbacks)\b/,"Unzählbares Nomen: kein -s, kein a/an."],
+  [/\bsince (two|three|four|five|six|seven|eight|nine|ten|a|one|\d+|several|many) (day|week|month|year|hour|minute)s?\b/,"since + Zeitpunkt, for + Zeitraum."],
+  [/\b(i|we|you|they|he|she|i'm|we're|you're|they're) ?(am|is|are)? [^,.]{0,25}\bsince\b/,"seit + Präsens → Present Perfect."],
+  [/\bwant(s|ed)? that\b/,"want + Person + to + Grundform."],
+  [/\bmake (my|your|his|her|our|the) homework\b|\bdo (a|the) (mistake|decision)\b|\bmake (an|the) exam\b|\bwrite (an|the) exam\b/,"make a mistake / a decision, do homework, take an exam."],
+  [/\bdespite of\b/,"despite ohne of."],
+  [/\bcomprises? of\b/,"comprise ohne of."],
+  [/\bdiscuss(es|ed)? about\b/,"discuss ohne about."],
+  [/\bsolution for\b/,"solution to."],
+  [/\bcan not\b/,"cannot zusammen."],
+  [/\b(he|she|it|the \w+) (have|do|go|make|need|want|seem|involve)\b(?! to)/,"he/she/it im Present Simple: Verb + -s."]
+];
+const PREPS=new Set(["on","in","at","to","for","of","from","with","about","by","into","onto","over","under","toward","towards","between","among","through","during","since","as"]);
+const ARTS=new Set(["a","an","the"]);
+const AUX_PART=new Set(["was","were","been","be","is","are","being","am"]);
+const AUX_PERF=new Set(["has","have","had"]);
+const BASE_TRIG=new Set(["to","will","can","must","should","could","may","might","would","please","not","cannot","let"]);
+function stemClose(a,b){let i=0;while(i<a.length&&i<b.length&&a[i]===b[i])i++;return i>=3&&i>=Math.min(a.length,b.length)-3}
+function formRule(given,ans,prev){
+  if(ans.endsWith("ing")&&!given.endsWith("ing"))return prev&&AUX_PART.has(prev)?"be + -ing = Verlaufsform.":"-ing nach Präposition, nach be oder als Adjektiv.";
+  if(/(ed|en)$/.test(ans)&&!/(ed|en)$/.test(given)){
+    if(prev&&AUX_PART.has(prev))return "be + Partizip = Passiv.";
+    if(prev&&AUX_PERF.has(prev))return "have/has + Partizip = Present Perfect.";
+    return "Abgeschlossene Vergangenheit → Past Simple (-ed).";
+  }
+  if(/s$/.test(ans)&&!/s$/.test(given))return "Verb: he/she/it + -s · Nomen: Plural + -s.";
+  if(/s$/.test(given)&&!/s$/.test(ans))return prev&&BASE_TRIG.has(prev)?"Nach „"+prev+"“ Grundform.":"-s nur bei he/she/it (Verb) oder Plural (Nomen).";
+  if(/(ed|ing)$/.test(given)&&!/(ed|ing)$/.test(ans))return prev&&BASE_TRIG.has(prev)?"Nach „"+prev+"“ Grundform.":"Present Simple: Grundform.";
+  if(ans.endsWith("ly")!==given.endsWith("ly"))return ans.endsWith("ly")?"Adverb (-ly) beschreibt Verb, Adjektiv oder Satz.":"Adjektiv (ohne -ly) beschreibt Nomen oder steht nach be.";
+  return null;
+}
+function bag(arr){const m={};arr.forEach(w=>m[w]=(m[w]||0)+1);return m}
+function diffWords(g,a){const bg=bag(g),ba=bag(a);const miss=[],extra=[];
+  Object.keys(ba).forEach(w=>{for(let i=0;i<ba[w]-(bg[w]||0);i++)miss.push(w)});
+  Object.keys(bg).forEach(w=>{for(let i=0;i<bg[w]-(ba[w]||0);i++)extra.push(w)});return {miss,extra}}
+function diagnose(givenRaw,card){
+  const out=[];const given=norm(givenRaw);if(!given)return out;
+  const cz=clozeOf(card);const answers=answersFor(card);
+  if(answers.includes(given))return out;
+  const low=givenRaw.toLowerCase().replace(/[’‘]/g,"'")+(/[,]/.test(givenRaw)?"":",");
+  const raw=(cz?clozeParts(cz).ans.split("/"):card[2].split(" / ")).map(x=>x.toLowerCase().replace(/[’‘]/g,"'")+",");
+  const hit=(re,cond,t)=>{const m=t.match(re);return !!m&&(!cond||cond(m))};
+  PATTERNS.forEach(([re,msg,cond])=>{if(hit(re,cond,low)&&!raw.some(a=>hit(re,cond,a))&&!out.includes(msg))out.push(msg)});
+  if(out.length)return out.slice(0,2);
+  const best=answers.slice().sort((x,y)=>lev(given,x)-lev(given,y))[0];
+  let prev=null;if(cz){const pre=norm(clozeParts(cz).pre).split(" ");prev=pre[pre.length-1]||null}
+  const g=given.split(" "),a=best.split(" ");
+  if(g.length===a.length&&g.slice().sort().join(" ")===a.slice().sort().join(" ")){out.push("Wortstellung: Subjekt – Verb – Objekt; Häufigkeitsadverb vor dem Vollverb.");return out}
+  const {miss,extra}=diffWords(g,a);
+  if(miss.length===1&&extra.length===1){
+    const x=extra[0],y=miss[0];
+    if(PREPS.has(x)&&PREPS.has(y))out.push("Feste Verbindung: "+card[2].split(" / ")[0]+".");
+    else if(ARTS.has(x)&&ARTS.has(y))out.push(y==="the"?"the = etwas Bestimmtes oder Bekanntes.":"a/an = etwas Unbestimmtes; an vor Vokallaut.");
+    else if(stemClose(x,y)){const r=formRule(x,y,prev);if(r)out.push(r)}
+  }else if(!miss.length&&extra.length===1&&ARTS.has(extra[0]))out.push("Kein Artikel bei abstrakten / unzählbaren Nomen und Plural im allgemeinen Sinn.");
+  else if(!extra.length&&miss.length===1&&ARTS.has(miss[0]))out.push("Zählbares Nomen im Singular braucht einen Artikel.");
+  else if(!extra.length&&miss.length===1&&PREPS.has(miss[0]))out.push("Feste Verbindung: "+card[2].split(" / ")[0]+".");
+  else if(!miss.length&&extra.length===1&&PREPS.has(extra[0]))out.push("Ohne Präposition: "+card[2].split(" / ")[0]+".");
+  return out;
+}
+function explainFor(givenRaw,card,skip){
+  if(CARD_RULE[card.id])return [CARD_RULE[card.id]];
+  const d=(skip||card[0]==="Präpositionen")?[]:diagnose(givenRaw,card);
+  return [...d,...ruleLines(card)];
+}
+function ruleLines(card){
+  if(CARD_RULE[card.id])return [CARD_RULE[card.id]];
+  if(CAT_RULE[card[0]])return [CAT_RULE[card[0]]];
+  return [];
+}
+const TERMS=[
+  [/Present Perfect \(Continuous\)|Present Perfect Continuous/,"Present Perfect Continuous","have/has been + -ing (I have been learning): dauert seit einem Zeitpunkt bis jetzt an."],
+  [/Present Perfect/,"Present Perfect","have/has + 3. Form (I have finished): Vergangenes mit Bezug zu jetzt, ohne genauen Zeitpunkt."],
+  [/Past Perfect/,"Past Perfect","had + 3. Form (I had left): war vor einem anderen Zeitpunkt in der Vergangenheit schon passiert."],
+  [/Past Simple|\bPast\b/,"Past Simple","2. Form (I worked, I went, I were): abgeschlossen, zu einem Zeitpunkt in der Vergangenheit."],
+  [/Present Simple/,"Present Simple","Grundform, bei he/she/it + -s (she works): Gewohnheiten, Fakten."],
+  [/Future Perfect|will have \+ Partizip/,"Future Perfect","will have + 3. Form (I will have finished): bis zu einem Zeitpunkt in der Zukunft abgeschlossen."],
+  [/Partizip/,"Partizip","3. Verbform (done, written, conducted)."],
+  [/Grundform/,"Grundform","Verb ohne Endung und ohne to (go, be, repeat)."],
+  [/Passiv/,"Passiv","be + 3. Form (was conducted = wurde durchgeführt): Die Handlung ist wichtiger als wer sie ausführt."],
+  [/Verlaufsform/,"Verlaufsform","be + -ing (she is working): passiert gerade."],
+  [/Inversion/,"Inversion","Hilfsverb vor dem Subjekt wie in einer Frage (have I, did she)."],
+  [/Relativsatz/,"Relativsatz","Nebensatz mit who/which/that, beschreibt ein Nomen genauer."],
+  [/Indirekte (Ja\/Nein-)?Frage/,"Indirekte Frage","Frage eingebettet in einen Satz (Do you know where …, I wonder if …)."],
+  [/Indirekte Rede/,"Indirekte Rede","wiedergegebene Aussage oder Frage (She asked me whether …)."],
+  [/[Ii]rreal/,"Irreal","gedachte, nicht zutreffende Situation (If I were rich …)."],
+  [/Komparativ/,"Komparativ","Steigerungsform (bigger, more important)."],
+  [/Häufigkeitsadverb/,"Häufigkeitsadverb","always, usually, often, sometimes, rarely, never."],
+  [/Vollverb/,"Vollverb","Hauptverb (go, work), nicht be/have/do oder Modalverb."],
+  [/Hilfsverb/,"Hilfsverb","be, have, do, will, can, should …"],
+  [/[Uu]nzählbar/,"Unzählbar","kein Plural, kein a/an (information, advice, research)."],
+  [/Abstrakte/,"Abstraktes Nomen","Begriff ohne Gegenstand (education, society, freedom)."]
+];
+function termsIn(lines){let t=lines.join(" ");const out=[];
+  TERMS.forEach(([re,label,def])=>{if(re.test(t)){out.push([label,def]);t=t.replace(new RegExp(re.source,"g")," ")}});return out}
+function showExplain(lines){
+  const el=$("explain");
+  lines=[...new Set(lines)];
+  if(!lines.length){el.hidden=true;return}
+  const esc=x=>x.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+  const tm=termsIn(lines);
+  el.innerHTML='<div class="label">Regel</div><ul>'+lines.map(l=>"<li>"+esc(l)+"</li>").join("")+"</ul>"
+    +(tm.length?'<dl class="terms">'+tm.map(([l,d])=>"<dt>"+esc(l)+"</dt><dd>"+esc(d)+"</dd>").join("")+"</dl>":"");
+  el.hidden=false;
+}
+
+
+
+/* Quiz */
+let quiz=null;
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function startQuiz(){
+  const p=pool();const qs=shuffle(p).slice(0,Math.min(10,p.length));
+  quiz={qs,i:0,right:0,wrong:[],answered:false};renderQuiz();
+}
+function renderQuiz(){
+  const v=$("v-quiz");const q=quiz.qs[quiz.i];
+  if(!q){
+    v.innerHTML=`<div class="card" style="cursor:default"><span class="label">Ergebnis</span><div class="score">${quiz.right} / ${quiz.qs.length}</div>
+    <div class="note">${quiz.wrong.length?"Diese Karten solltest du dir nochmal ansehen (das Quiz ändert deinen Lernplan nicht):":"Alles richtig. Diese Kategorie sitzt."}</div>
+    <div class="list">${quiz.wrong.map(c=>`<div class="li"><div class="de">${c[1]}</div><div class="en">${c[2]}</div></div>`).join("")}</div></div>
+    <div class="btns" style="margin-top:12px"><button class="btn primary" id="q-again">Neues Quiz</button></div>`;
+    $("q-again").onclick=startQuiz;return;
+  }
+  const distractPool=(pool().length>=4?pool():CARDS).filter(c=>c!==q&&c[2]!==q[2]);
+  const opts=shuffle([q,...shuffle(distractPool).slice(0,3)]);
+  v.innerHTML=`<div class="progress" style="margin-bottom:12px"><i style="width:${quiz.i/quiz.qs.length*100}%"></i></div>
+  <div class="card" style="cursor:default"><span class="label">Frage ${quiz.i+1} von ${quiz.qs.length} · ${q[0]}</span>
+  <div class="front">${q[1]}</div><div class="opts" id="opts"></div><div class="note" id="q-note"></div></div>
+  <div class="btns" style="margin-top:12px"><button class="btn primary" id="q-next" disabled>Weiter</button></div>`;
+  quiz.answered=false;
+  opts.forEach(o=>{const b=document.createElement("button");b.className="opt";b.textContent=o[2];
+    b.onclick=()=>{if(quiz.answered)return;quiz.answered=true;
+      const ok=o===q;if(ok){quiz.right++}else{quiz.wrong.push(q);b.classList.add("wrong")}
+      [...$("opts").children].forEach((x,k)=>{if(opts[k]===q)x.classList.add("right")});
+      $("q-note").textContent=q[3]||"";$("q-next").disabled=false;$("q-next").focus()};
+    $("opts").appendChild(b)});
+  $("q-next").onclick=()=>{quiz.i++;renderQuiz()};
+}
+
+/* Stats */
+function renderStats(){
+  const t=today();
+  const rows=AREAS.slice(1).filter(a=>store.area==="Alle"||a===store.area).flatMap(a=>CATS.slice(1).filter(cat=>AREA[cat]===a).map(cat=>{const p=CARDS.filter(c=>c[0]===cat);
+    const nw=p.filter(c=>!seen(c)).length,lo=p.filter(c=>seen(c)&&store.boxes[c.id]<=2).length,mid=p.filter(c=>store.boxes[c.id]===3).length,hi=p.filter(c=>store.boxes[c.id]>=4).length,du=p.filter(c=>seen(c)&&store.due[c.id]<=t).length;
+    return `<tr><td>${a}</td><td>${cat}</td><td class="n">${p.length}</td><td class="n">${nw}</td><td class="n">${lo}</td><td class="n">${mid}</td><td class="n">${hi}</td><td class="n">${du}</td></tr>`})).join("");
+  const dp=CARDS.filter(c=>deckOf(c)===store.deck&&seen(c));
+  const fc=[0,1,2,3,4,5,6].map(i=>dp.filter(c=>i===0?store.due[c.id]<=t:store.due[c.id]===t+i).length);
+  const dn=["heute","morgen","+2","+3","+4","+5","+6"];
+  const weak=CARDS.filter(c=>inArea(c)&&seen(c)&&store.boxes[c.id]===1);
+  $("v-stats").innerHTML=`<div class="label" style="margin-bottom:8px">Fällige Wiederholungen · ${DECKS[store.deck].name}</div>
+  <div class="boxes" style="margin-bottom:18px">${fc.map((v,i)=>`<div class="box"><b>${v}</b><span>${dn[i]}</span></div>`).join("")}</div>
+  <div class="row" style="margin-bottom:18px"><label class="label" for="npd">Neue Karten pro Tag</label>
+    <select id="npd" style="font:500 .9rem var(--f-body);background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:6px 12px">${[10,15,20,25,30,40,50].map(n=>`<option${n===store.newPerDay?" selected":""}>${n}</option>`).join("")}</select></div>
+  <div class="tablewrap"><table><thead><tr><th>Bereich</th><th>Kategorie</th><th class="n">Karten</th><th class="n">neu</th><th class="n">Stufe 1–2</th><th class="n">Stufe 3</th><th class="n">Stufe 4–5</th><th class="n">fällig</th></tr></thead><tbody>${rows}</tbody></table></div>
+  <div class="label" style="margin:18px 0 8px">Zuletzt falsch (${weak.length})</div>
+  <div class="list">${weak.length?weak.map(c=>`<div class="li"><div class="de">${c[1]}</div><div class="en">${c[2]}</div></div>`).join(""):`<div class="note">Keine Karte steht gerade auf Stufe 1.</div>`}</div>
+  <div class="sbox" style="margin-top:20px">
+    <h2>Lernstand übertragen</h2>
+    <div class="note">Zum Wechseln zwischen Online-Version, Offline-Datei und anderen Geräten: hier kopieren, auf dem anderen Gerät einfügen und übernehmen. Enthält Stufen und Wiederholungstermine.</div>
+    <textarea id="sync" rows="3" spellcheck="false" style="width:100%;box-sizing:border-box;font:400 .76rem var(--f-mono);background:var(--surface-2);color:var(--ink);border:0;border-radius:10px;padding:12px" aria-label="Lernstand-Code"></textarea>
+    <div class="btns"><button class="btn" id="exp">Code kopieren</button><button class="btn primary" id="imp">Eingefügten Code übernehmen</button></div>
+    <div class="note" id="syncmsg" aria-live="polite"></div>
+  </div>
+  <div style="margin-top:20px" id="reset-area"><button class="btn bad" id="reset" style="flex:none">Fortschritt zurücksetzen</button></div>`;
+  $("npd").onchange=e=>{store.newPerDay=+e.target.value;save();renderBoxes()};
+  const code="TOEFL2:"+btoa(JSON.stringify({b:store.boxes,d:store.due,n:store.newLog,p:store.newPerDay}));
+  $("sync").value=code;
+  $("exp").onclick=()=>{$("sync").value=code;const done=()=>$("syncmsg").textContent="Kopiert. Jetzt auf dem anderen Gerät einfügen.";
+    try{navigator.clipboard.writeText(code).then(done,()=>{$("sync").select();$("syncmsg").textContent="Code markiert: mit Strg+C / Cmd+C kopieren."})}catch(e){$("sync").select();$("syncmsg").textContent="Code markiert: mit Strg+C / Cmd+C kopieren."}};
+  $("imp").onclick=()=>{const t=$("sync").value.trim();
+    try{let b,d={},n={},pp=store.newPerDay;
+      if(t.startsWith("TOEFL2:")){const o=JSON.parse(atob(t.slice(7)));b=o.b;d=o.d||{};n=o.n||{};pp=o.p||pp}
+      else if(t.startsWith("TOEFL1:")){b=JSON.parse(atob(t.slice(7)))}else throw 0;
+      if(typeof b!=="object"||!b)throw 0;
+      Object.keys(b).forEach(id=>{if(d[id]===undefined)d[id]=today()});
+      store.boxes=b;store.due=d;store.newLog=n;store.newPerDay=pp;relearn=[];save();renderStats();nextCard();
+      $("syncmsg").textContent="Übernommen: "+Object.keys(b).length+" Karten mit Lernstufe."}
+    catch(e){$("syncmsg").textContent="Der Code ist ungültig. Er muss mit TOEFL2: oder TOEFL1: beginnen und vollständig kopiert sein."}};
+  $("reset").onclick=()=>{$("reset-area").innerHTML=`<div class="confirm">Alle Lernstufen und Termine löschen? <button class="btn bad" id="r-yes" style="flex:none">Ja, zurücksetzen</button><button class="btn" id="r-no" style="flex:none">Abbrechen</button></div>`;
+    $("r-yes").onclick=()=>{store.boxes={};store.due={};store.newLog={};relearn=[];save();renderStats();nextCard()};$("r-no").onclick=renderStats};
+}
+
+/* Tabs */
+let view="cards";
+function show(v){view=v;["cards","quiz","schema","stats"].forEach(x=>{$("t-"+x).setAttribute("aria-selected",x===v);$("v-"+x).hidden=x!==v});
+  $("filters").hidden=v==="schema";
+  if(v==="quiz")startQuiz();if(v==="stats")renderStats();if(v==="cards"){renderBoxes();if(typing()&&!checked)$("ans").focus()}}
+$("t-cards").onclick=()=>show("cards");$("t-quiz").onclick=()=>show("quiz");$("t-schema").onclick=()=>show("schema");$("t-stats").onclick=()=>show("stats");
+
+if(!store.mode)store.mode="type";
+$("m-type").setAttribute("aria-pressed",store.mode!=="flip");$("m-flip").setAttribute("aria-pressed",store.mode==="flip");
+renderChips();setDir(store.dir||"de");
+</script>
+
+<script>
+if("serviceWorker" in navigator){window.addEventListener("load",()=>{navigator.serviceWorker.register("sw.js").catch(()=>{})})}
+</script>

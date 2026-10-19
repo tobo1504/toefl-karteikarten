@@ -1,0 +1,30 @@
+{
+ "name": "TOEFL Karteikarten",
+ "short_name": "TOEFL",
+ "description": "Karteikarten mit Wiederholungsplan für das TOEFL iBT 2026",
+ "lang": "de",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "portrait",
+ "background_color": "#f4f5f3",
+ "theme_color": "#2e5e57",
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
