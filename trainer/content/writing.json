@@ -1,0 +1,538 @@
+{
+ "bas": [
+  {
+   "id": "bas01",
+   "level": 1,
+   "prompt": "What did you think of the new library?",
+   "answer": "The study rooms on the third floor are much quieter than before.",
+   "chunks": [
+    "the study rooms",
+    "on the third floor",
+    "are",
+    "much quieter",
+    "than before"
+   ],
+   "why": "Vergleich: Komparativ + than (much quieter than)."
+  },
+  {
+   "id": "bas02",
+   "level": 2,
+   "prompt": "Why weren't you at the meeting yesterday?",
+   "answer": "I didn't know that it had been moved to the afternoon.",
+   "chunks": [
+    "I",
+    "didn't know",
+    "that",
+    "it had been",
+    "moved",
+    "to the afternoon"
+   ],
+   "why": "Vorvergangenheit im Passiv: had been + Partizip."
+  },
+  {
+   "id": "bas03",
+   "level": 2,
+   "prompt": "Do you know when the assignment is due?",
+   "answer": "The professor said it has to be submitted by Friday.",
+   "chunks": [
+    "the professor",
+    "said",
+    "it",
+    "has to be",
+    "submitted",
+    "by Friday"
+   ],
+   "why": "Passiv mit Modal: has to be + Partizip."
+  },
+  {
+   "id": "bas04",
+   "level": 2,
+   "prompt": "Where should we meet before the concert?",
+   "answer": "Let's meet at the café where we had lunch last week.",
+   "chunks": [
+    "let's meet",
+    "at the café",
+    "where",
+    "we had",
+    "lunch",
+    "last week"
+   ],
+   "why": "Relativsatz mit where direkt hinter dem Ort."
+  },
+  {
+   "id": "bas05",
+   "level": 3,
+   "prompt": "Have you decided which course to take?",
+   "answer": "I'm still trying to figure out which one fits my schedule.",
+   "chunks": [
+    "I'm still",
+    "trying to",
+    "figure out",
+    "which one",
+    "fits",
+    "my schedule"
+   ],
+   "why": "Indirekte Frage: which one + Verb, keine Inversion."
+  },
+  {
+   "id": "bas06",
+   "level": 2,
+   "prompt": "How was your internship this summer?",
+   "answer": "It was the most useful experience I have ever had.",
+   "chunks": [
+    "it was",
+    "the most",
+    "useful experience",
+    "I",
+    "have ever",
+    "had"
+   ],
+   "why": "Superlativ + Relativsatz ohne that: the most … I have ever had."
+  },
+  {
+   "id": "bas07",
+   "level": 3,
+   "prompt": "Can you help me move on Saturday?",
+   "answer": "I would if I didn't have to work that day.",
+   "chunks": [
+    "I would",
+    "if",
+    "I",
+    "didn't have",
+    "to work",
+    "that day"
+   ],
+   "why": "Irrealer if-Satz: would …, if + Past."
+  },
+  {
+   "id": "bas08",
+   "level": 2,
+   "prompt": "Why is the cafeteria so crowded today?",
+   "answer": "They are offering free coffee to anyone who brings a mug.",
+   "chunks": [
+    "they are offering",
+    "free coffee",
+    "to anyone",
+    "who",
+    "brings",
+    "a mug"
+   ],
+   "why": "Relativsatz who + Verb mit -s (anyone = Singular)."
+  },
+  {
+   "id": "bas09",
+   "level": 1,
+   "prompt": "Did you finish the lab report?",
+   "answer": "Not yet, but I should be done by tonight.",
+   "chunks": [
+    "not yet",
+    "but",
+    "I",
+    "should be",
+    "done",
+    "by tonight"
+   ],
+   "why": "Modal + be + Partizip: should be done."
+  },
+  {
+   "id": "bas10",
+   "level": 3,
+   "prompt": "What did the advisor tell you?",
+   "answer": "She asked me whether I had thought about studying abroad.",
+   "chunks": [
+    "she asked me",
+    "whether",
+    "I",
+    "had thought",
+    "about",
+    "studying abroad"
+   ],
+   "why": "Indirekte Frage: whether + Subjekt + Verb; Präposition + -ing."
+  },
+  {
+   "id": "bas11",
+   "level": 1,
+   "prompt": "Is the bookstore still open?",
+   "answer": "I think it closes at six on weekdays.",
+   "chunks": [
+    "I think",
+    "it",
+    "closes",
+    "at six",
+    "on weekdays"
+   ],
+   "why": "Zeitangaben: at + Uhrzeit, on + Tage."
+  },
+  {
+   "id": "bas12",
+   "level": 2,
+   "prompt": "Who is giving the guest lecture?",
+   "answer": "It is a scientist who worked for NASA for twenty years.",
+   "chunks": [
+    "it is",
+    "a scientist",
+    "who",
+    "worked",
+    "for NASA",
+    "for twenty years"
+   ],
+   "why": "Relativsatz direkt hinter dem Nomen (a scientist who …)."
+  },
+  {
+   "id": "bas13",
+   "level": 1,
+   "prompt": "How do you usually get to campus?",
+   "answer": "I usually ride my bike unless it is raining.",
+   "chunks": [
+    "I",
+    "usually",
+    "ride my bike",
+    "unless",
+    "it is",
+    "raining"
+   ],
+   "why": "Häufigkeitsadverb vor dem Vollverb (I usually ride)."
+  },
+  {
+   "id": "bas14",
+   "level": 3,
+   "prompt": "Why did you choose this university?",
+   "answer": "Its engineering program is known for its close ties to industry.",
+   "chunks": [
+    "its engineering program",
+    "is known",
+    "for",
+    "its close ties",
+    "to industry"
+   ],
+   "why": "Feste Verbindung: be known for; ties to."
+  },
+  {
+   "id": "bas15",
+   "level": 1,
+   "prompt": "Can you tell me where the registrar's office is?",
+   "answer": "It is located on the second floor of the administration building.",
+   "chunks": [
+    "it is",
+    "located",
+    "on the second floor",
+    "of",
+    "the administration building"
+   ],
+   "why": "be located on the … floor."
+  },
+  {
+   "id": "bas16",
+   "level": 1,
+   "prompt": "What should I bring to the job fair?",
+   "answer": "You should bring several copies of your resume.",
+   "chunks": [
+    "you should",
+    "bring",
+    "several copies",
+    "of",
+    "your resume"
+   ],
+   "why": "Modal + Grundform: should bring."
+  },
+  {
+   "id": "bas17",
+   "level": 2,
+   "prompt": "Has the professor graded our exams yet?",
+   "answer": "She said the results would be posted next Monday.",
+   "chunks": [
+    "she said",
+    "the results",
+    "would be",
+    "posted",
+    "next Monday"
+   ],
+   "why": "Indirekte Rede: will → would; Passiv would be posted."
+  },
+  {
+   "id": "bas18",
+   "level": 3,
+   "prompt": "Why are you studying in the hallway?",
+   "answer": "The room I reserved was already being used by another group.",
+   "chunks": [
+    "the room",
+    "I reserved",
+    "was already",
+    "being used",
+    "by",
+    "another group"
+   ],
+   "why": "Passiv Verlaufsform: was being used."
+  },
+  {
+   "id": "bas19",
+   "level": 3,
+   "prompt": "Are you going to the conference in March?",
+   "answer": "Only if my department agrees to pay for the trip.",
+   "chunks": [
+    "only if",
+    "my department",
+    "agrees",
+    "to pay",
+    "for the trip"
+   ],
+   "why": "agree + to + Grundform; Present Simple nach if."
+  },
+  {
+   "id": "bas20",
+   "level": 3,
+   "prompt": "What surprised you most about the city?",
+   "answer": "What surprised me most was how friendly everyone was.",
+   "chunks": [
+    "what surprised me",
+    "most",
+    "was",
+    "how friendly",
+    "everyone",
+    "was"
+   ],
+   "why": "Cleft Sentence What … was + indirekte Frage how friendly everyone was."
+  },
+  {
+   "id": "bas21",
+   "level": 2,
+   "prompt": "Did you enjoy the book I lent you?",
+   "answer": "I enjoyed it so much that I finished it in two days.",
+   "chunks": [
+    "I enjoyed it",
+    "so much",
+    "that",
+    "I finished it",
+    "in two days"
+   ],
+   "why": "so … that = so sehr, dass."
+  },
+  {
+   "id": "bas22",
+   "level": 2,
+   "prompt": "Should we take the train or drive?",
+   "answer": "Taking the train would be faster than driving in this traffic.",
+   "chunks": [
+    "taking the train",
+    "would be",
+    "faster",
+    "than",
+    "driving",
+    "in this traffic"
+   ],
+   "why": "-ing-Form als Subjekt (Taking the train …)."
+  },
+  {
+   "id": "bas23",
+   "level": 3,
+   "prompt": "Why did the event get canceled?",
+   "answer": "Not enough people had signed up by the deadline.",
+   "chunks": [
+    "not enough",
+    "people",
+    "had signed up",
+    "by",
+    "the deadline"
+   ],
+   "why": "by + Zeitpunkt → Past Perfect (had signed up)."
+  },
+  {
+   "id": "bas24",
+   "level": 1,
+   "prompt": "Do you mind if I open the window?",
+   "answer": "Not at all, as long as it doesn't get too cold.",
+   "chunks": [
+    "not at all",
+    "as long as",
+    "it",
+    "doesn't get",
+    "too cold"
+   ],
+   "why": "as long as + Present Simple = solange."
+  }
+ ],
+ "email": [
+  {
+   "id": "em01",
+   "level": 2,
+   "situation": "You recently bought a used bicycle through your university's online marketplace. When it arrived, you discovered that the brakes do not work properly, although the listing described the bicycle as being in \"excellent condition.\"",
+   "recipient": "the seller, Chris",
+   "tasks": [
+    "Explain why you chose to buy this bicycle.",
+    "Describe the problem with the bicycle.",
+    "Suggest a way to resolve the situation."
+   ]
+  },
+  {
+   "id": "em02",
+   "level": 2,
+   "situation": "You are taking an online course. The course website says that the final project can be completed alone or in pairs. You would like to work with a classmate who is enrolled in a different section of the same course.",
+   "recipient": "your instructor, Dr. Patel",
+   "tasks": [
+    "Explain your idea for the project.",
+    "Explain why you want to work with this classmate.",
+    "Ask whether this arrangement is allowed."
+   ]
+  },
+  {
+   "id": "em03",
+   "level": 2,
+   "situation": "Your neighbor in your apartment building often plays loud music late at night. You have important exams next week and need to sleep well.",
+   "recipient": "your neighbor, Alex",
+   "tasks": [
+    "Introduce yourself and explain why you are writing.",
+    "Describe how the noise affects you.",
+    "Suggest a solution that would work for both of you."
+   ]
+  },
+  {
+   "id": "em04",
+   "level": 2,
+   "situation": "Last week you attended a free career workshop organized by your university. You found it very helpful, but one session ran out of time before the speaker could answer questions from the audience.",
+   "recipient": "the workshop organizer, Ms. Romero",
+   "tasks": [
+    "Explain what you found most helpful.",
+    "Describe the problem with the session.",
+    "Suggest an improvement for future workshops."
+   ]
+  },
+  {
+   "id": "em05",
+   "level": 2,
+   "situation": "A friend who lives in another city is visiting you next month and has asked for advice about what to do during the visit. You have just started a new part-time job and will have to work on one of the days of the visit.",
+   "recipient": "your friend, Jamie",
+   "tasks": [
+    "Recommend two things to do in your city.",
+    "Explain the problem with your schedule.",
+    "Suggest how you could still spend time together."
+   ]
+  },
+  {
+   "id": "em06",
+   "level": 2,
+   "situation": "Two weeks ago, you ordered a textbook from an online store for a class that starts on Monday. The store's website says the order has been shipped, but you have not received it, and the tracking number does not work.",
+   "recipient": "the store's customer service team",
+   "tasks": [
+    "Give the details of your order.",
+    "Explain why you need the book urgently.",
+    "Ask for a specific solution."
+   ]
+  }
+ ],
+ "discussion": [
+  {
+   "id": "di01",
+   "level": 2,
+   "course": "education",
+   "professor": {
+    "name": "Dr. Lin",
+    "text": "Many universities now record their lectures and post them online. Some educators believe this helps students learn, while others worry that it reduces class attendance and engagement. Should universities record all lectures and make them available online? Why or why not?"
+   },
+   "students": [
+    {
+     "name": "Mia",
+     "text": "I think recording lectures is essential. Students who are sick or have to work can still keep up, and everyone can rewatch difficult parts before exams. Learning shouldn't depend on being in a room at a certain time."
+    },
+    {
+     "name": "Lucas",
+     "text": "I disagree. When lectures are online, many students stop coming to class and fall behind because they never actually watch the recordings. Being there in person also makes it possible to ask questions and discuss ideas with classmates."
+    }
+   ]
+  },
+  {
+   "id": "di02",
+   "level": 2,
+   "course": "urban planning",
+   "professor": {
+    "name": "Dr. Okafor",
+    "text": "City governments have limited budgets. Some people argue that money should be spent on improving public transportation, while others think it is more important to create more parks and green spaces. Which do you think should be the priority for city spending, and why?"
+   },
+   "students": [
+    {
+     "name": "Sara",
+     "text": "Public transportation should come first. Good buses and trains reduce traffic and pollution, and they help people without cars get to jobs and schools."
+    },
+    {
+     "name": "Kevin",
+     "text": "I'd choose parks. People need places to relax and exercise, especially in crowded cities. Green spaces also make neighborhoods more attractive and improve mental health."
+    }
+   ]
+  },
+  {
+   "id": "di03",
+   "level": 2,
+   "course": "business management",
+   "professor": {
+    "name": "Prof. Harris",
+    "text": "Some companies have introduced a four-day work week, in which employees work fewer hours for the same pay. Supporters say this increases productivity and well-being; critics say it is not practical for many businesses. Do you think more companies should adopt a four-day work week? Explain your view."
+   },
+   "students": [
+    {
+     "name": "Anna",
+     "text": "Yes. Studies show that people are more focused when they have more time to rest, so they get the same amount of work done in four days. Companies would also attract better employees."
+    },
+    {
+     "name": "Ben",
+     "text": "I'm not convinced. Businesses like hospitals or stores need to be open every day, and fewer working days could mean customers wait longer for service."
+    }
+   ]
+  },
+  {
+   "id": "di04",
+   "level": 2,
+   "course": "sociology",
+   "professor": {
+    "name": "Dr. Nguyen",
+    "text": "Social media allows people to stay in contact with friends and family around the world. However, some researchers argue that it actually makes people feel lonelier. In your opinion, does social media bring people closer together or push them apart? Why?"
+   },
+   "students": [
+    {
+     "name": "Emily",
+     "text": "It brings people closer. I keep in touch with friends from my hometown every day, which would be impossible without social media."
+    },
+    {
+     "name": "Ryan",
+     "text": "I think it pushes people apart. People spend so much time scrolling that they have less time for real conversations with the people around them."
+    }
+   ]
+  },
+  {
+   "id": "di05",
+   "level": 2,
+   "course": "environmental science",
+   "professor": {
+    "name": "Prof. Garcia",
+    "text": "To reduce waste, some cities have banned single-use plastic bags and require stores to charge for paper bags. Other cities prefer education campaigns that encourage people to change their habits voluntarily. Which approach is more effective in reducing waste? Why?"
+   },
+   "students": [
+    {
+     "name": "Hannah",
+     "text": "Bans work better. People are busy and rarely change their habits unless they have to. After my city banned plastic bags, almost everyone started bringing reusable ones."
+    },
+    {
+     "name": "Omar",
+     "text": "I prefer education. Bans can feel unfair, and they don't teach people why reducing waste matters. If people understand the problem, they'll make better choices in many areas, not just with bags."
+    }
+   ]
+  },
+  {
+   "id": "di06",
+   "level": 2,
+   "course": "psychology",
+   "professor": {
+    "name": "Dr. Brooks",
+    "text": "Some people believe students learn best when they study one subject for a long period, while others think it is better to switch between several subjects during a study session. Which approach do you think is more effective for learning? Explain why."
+   },
+   "students": [
+    {
+     "name": "Julia",
+     "text": "Focusing on one subject for a long time works better for me. I need time to really get into a topic, and switching makes me lose concentration."
+    },
+    {
+     "name": "Marcus",
+     "text": "Switching between subjects keeps me fresh. After an hour on the same thing, I stop absorbing information, so changing topics helps me stay alert."
+    }
+   ]
+  }
+ ]
+}

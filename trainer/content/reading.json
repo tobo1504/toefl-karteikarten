@@ -1,0 +1,940 @@
+{
+ "ctw": [
+  {
+   "id": "ctw01",
+   "level": 2,
+   "text": "Scientists have long suspected that sleep plays an important role in learning. During de{ep} sleep, t{he} brain rep{lays} information th{at} was gath{ered} during t{he} day a{nd} moves i{t} from temp{orary} to perm{anent} storage. In one experiment, students who slept after studying remembered more words than students who stayed awake. Researchers believe that certain brain waves help strengthen the connections between neurons. This may explain why students who sleep poorly often struggle in exams."
+  },
+  {
+   "id": "ctw02",
+   "level": 1,
+   "text": "Public libraries offer much more than books. Many o{f} them le{nd} laptops, cam{eras}, and ev{en} musical instr{uments} to th{eir} members. So{me} libraries al{so} run fr{ee} classes o{n} topics such as cooking, coding, and personal finance. Because these services cost nothing, they are especially helpful for families with small budgets. In many towns, the library has become a meeting place where people of all ages can study, work, or simply relax."
+  },
+  {
+   "id": "ctw03",
+   "level": 3,
+   "text": "Cities are often several degrees warmer than the surrounding countryside. This pheno{menon}, known a{s} the ur{ban} heat isl{and} effect, ari{ses} because asp{halt} and conc{rete} absorb so{lar} radiation dur{ing} the d{ay} and release it slowly at night. The scarcity of vegetation intensifies the problem, since plants cool their surroundings through evaporation. Municipal planners increasingly counteract the effect by installing reflective roofing materials and expanding green spaces, measures that can substantially reduce energy consumption during summer heat waves."
+  },
+  {
+   "id": "ctw04",
+   "level": 2,
+   "text": "Honeybees have a remarkable way of sharing information. When a wor{ker} bee disc{overs} a go{od} source o{f} food, i{t} returns t{o} the hi{ve} and perf{orms} a spe{cial} dance. T{he} direction of the dance shows other bees which way to fly, while its length indicates how far away the flowers are. Scientists first described this behavior many decades ago, and later studies confirmed that bees can follow these instructions with surprising accuracy."
+  },
+  {
+   "id": "ctw05",
+   "level": 1,
+   "text": "More people are riding bicycles to work than ever before. In ma{ny} cities, n{ew} bike la{nes} make t{he} trip sa{fer} and fas{ter}. Cycling i{s} cheap, a{nd} it al{so} helps peo{ple} stay fit without going to a gym. Some companies even pay workers a small bonus for leaving their cars at home. However, bad weather and long distances still keep many commuters from making the switch."
+  },
+  {
+   "id": "ctw06",
+   "level": 3,
+   "text": "The placebo effect remains one of the most intriguing phenomena in medicine. Patients w{ho} receive a{n} inactive subs{tance} sometimes rep{ort} genuine improv{ements} in th{eir} symptoms, partic{ularly} when t{he} condition invo{lves} pain o{r} anxiety. Researchers attribute this response to expectation, which appears to trigger the release of natural chemicals in the brain. Consequently, clinical trials must compare new drugs against placebos rather than against no treatment at all, ensuring that observed benefits exceed those produced by belief alone."
+  }
+ ],
+ "daily": [
+  {
+   "id": "d01",
+   "level": 2,
+   "genre": "notice",
+   "title": "Library notice",
+   "text": "# Notice to All Library Users\nThe second floor of Hartwell Library will be closed from March 4 to March 18 while new study rooms are built.\nDuring this time, the group study area will move to Room 105 on the first floor. Printers from the second floor have been relocated next to the main desk on the first floor.\nBooks from the second-floor collection can still be requested online and picked up within 24 hours. We apologize for the inconvenience.",
+   "questions": [
+    {
+     "q": "What is the main purpose of the notice?",
+     "options": [
+      "To inform users about a temporary closure",
+      "To ask users to return books early",
+      "To announce new library opening hours",
+      "To advertise study rooms that can be rented"
+     ],
+     "answer": 0,
+     "why": "Der Aushang kündigt an, dass der 2. Stock vom 4. bis 18. März geschlossen ist."
+    },
+    {
+     "q": "According to the notice, how can users get books from the second floor during the closure?",
+     "options": [
+      "By waiting until March 18",
+      "By requesting them online",
+      "By asking a librarian on the second floor",
+      "By going to Room 105"
+     ],
+     "answer": 1,
+     "why": "„Books … can still be requested online and picked up within 24 hours.“"
+    },
+    {
+     "q": "The word \"relocated\" in the notice is closest in meaning to",
+     "options": [
+      "replaced",
+      "removed",
+      "moved",
+      "repaired"
+     ],
+     "answer": 2,
+     "why": "relocate = an einen anderen Ort bringen."
+    }
+   ]
+  },
+  {
+   "id": "d02",
+   "level": 2,
+   "genre": "email",
+   "title": "Team lunch",
+   "text": "From: Dana Whitfield\nTo: All Marketing Staff\nSubject: Friday's team lunch\nHi everyone,\nJust a reminder that our team lunch is this Friday at 12:30 at Rosa's Kitchen on Elm Street. The restaurant has asked for final numbers by Wednesday, so please reply to this email if you haven't already.\nVegetarian and gluten-free options are available, but let me know about any other dietary needs. The company will cover the cost of meals, though drinks other than water and soft drinks will not be reimbursed.\nThanks,\nDana",
+   "questions": [
+    {
+     "q": "What does Dana ask the staff to do?",
+     "options": [
+      "Bring food to the office on Friday",
+      "Choose a restaurant for the lunch",
+      "Pay for their meals in advance",
+      "Confirm whether they are coming by Wednesday"
+     ],
+     "answer": 3,
+     "why": "Das Restaurant braucht bis Mittwoch die finale Zahl – wer noch nicht geantwortet hat, soll antworten."
+    },
+    {
+     "q": "What is indicated about drinks?",
+     "options": [
+      "Employees must pay for some drinks themselves",
+      "The company will pay for all drinks",
+      "Only water will be served",
+      "Drinks must be ordered by Wednesday"
+     ],
+     "answer": 0,
+     "why": "Getränke außer Wasser und Softdrinks werden nicht erstattet."
+    }
+   ]
+  },
+  {
+   "id": "d03",
+   "level": 2,
+   "genre": "chat",
+   "title": "Study session",
+   "text": "Maya: Hey, are you still coming to the study session tonight?\nJordan: Yes, but I might be 15 minutes late. My lab runs until 7.\nMaya: No problem. We moved it to the third-floor lounge, by the way. The library was packed.\nJordan: Good to know. Should I bring anything?\nMaya: If you still have the practice problems from last week, bring those. Nobody else saved them.",
+   "questions": [
+    {
+     "q": "Why will Jordan be late?",
+     "options": [
+      "The library is too crowded.",
+      "His lab ends at 7.",
+      "He has to find the practice problems.",
+      "He forgot about the session."
+     ],
+     "answer": 1,
+     "why": "„My lab runs until 7.“"
+    },
+    {
+     "q": "Why did the group change the location of the session?",
+     "options": [
+      "The lounge has better equipment.",
+      "The library closes early.",
+      "The library was too full.",
+      "Jordan asked them to."
+     ],
+     "answer": 2,
+     "why": "„The library was packed.“ – packed = überfüllt."
+    },
+    {
+     "q": "What does Maya ask Jordan to bring?",
+     "options": [
+      "A copy of the textbook",
+      "Notes from his lab",
+      "Snacks for the group",
+      "Practice problems from the previous week"
+     ],
+     "answer": 3,
+     "why": "„If you still have the practice problems from last week, bring those.“"
+    }
+   ],
+   "me": "Jordan"
+  },
+  {
+   "id": "d04",
+   "level": 2,
+   "genre": "menu",
+   "title": "Café specials",
+   "text": "# Green Fork Café – Weekday Lunch Specials\nItem | Price\nSoup of the day | $4.50\nGrilled chicken wrap | $8.75\nQuinoa salad bowl | $9.25\nCombo: any half sandwich + soup | $9.00\nSpecials are served Monday through Friday from 11:00 a.m. to 2:30 p.m. Show a valid student ID to receive 10% off any combo.\nOnline orders placed before 10:30 a.m. are guaranteed to be ready by noon.",
+   "questions": [
+    {
+     "q": "How much would a student with a valid ID pay for the combo?",
+     "options": [
+      "$8.10",
+      "$9.90",
+      "$8.75",
+      "$9.00"
+     ],
+     "answer": 0,
+     "why": "10 % Rabatt auf $9.00 = $8.10."
+    },
+    {
+     "q": "What is true about online orders?",
+     "options": [
+      "They must be paid for in cash.",
+      "Orders placed early will be ready by midday.",
+      "They are delivered to campus.",
+      "They are only available for combos."
+     ],
+     "answer": 1,
+     "why": "Vor 10:30 bestellt = garantiert bis 12 Uhr fertig."
+    },
+    {
+     "q": "When can a customer NOT order the specials?",
+     "options": [
+      "On Friday at 11:30 a.m.",
+      "On Monday at 2:00 p.m.",
+      "On Saturday at noon",
+      "On Tuesday at 1:00 p.m."
+     ],
+     "answer": 2,
+     "why": "Die Specials gibt es nur Montag bis Freitag."
+    }
+   ]
+  },
+  {
+   "id": "d05",
+   "level": 2,
+   "genre": "post",
+   "title": "Garden volunteers",
+   "text": "# Riverside Community Garden\nPosted by Riverside Garden Club\nVolunteers needed! This Saturday from 9 a.m. to noon we'll be preparing the beds for spring planting. No experience necessary – we'll provide gloves and tools. Just wear clothes you don't mind getting dirty.\nAnyone who volunteers three times this season will get their own small plot for free next year. Coffee and pastries will be provided by Main Street Bakery.",
+   "questions": [
+    {
+     "q": "What is the purpose of the post?",
+     "options": [
+      "To sell plots in a garden",
+      "To advertise a local bakery",
+      "To announce a gardening class",
+      "To find people to help in a garden"
+     ],
+     "answer": 3,
+     "why": "„Volunteers needed!“ – es werden Helfer gesucht."
+    },
+    {
+     "q": "What will people who volunteer three times receive?",
+     "options": [
+      "A garden plot at no cost",
+      "Free coffee for a year",
+      "A discount at a bakery",
+      "A set of garden tools"
+     ],
+     "answer": 0,
+     "why": "„… will get their own small plot for free next year.“"
+    }
+   ]
+  },
+  {
+   "id": "d06",
+   "level": 2,
+   "genre": "receipt",
+   "title": "Bookstore receipt",
+   "text": "# Campus Bookstore – Receipt\nSept. 3 · Transaction #40217\nItem | Price\nIntro to Psychology (used) | $62.00\nLab notebook | $11.50\nGraphing calculator (rental, 1 semester) | $25.00\nTotal | $98.50\nUsed books may be returned for a full refund within 14 days with this receipt. Rental items must be returned by December 20, or the full purchase price will be charged.",
+   "questions": [
+    {
+     "q": "What will happen if the calculator is returned on December 22?",
+     "options": [
+      "The rental period will be extended.",
+      "The student will be charged the calculator's full price.",
+      "Nothing, because the semester is over.",
+      "The student will receive a partial refund."
+     ],
+     "answer": 1,
+     "why": "Leihartikel bis 20.12. zurück, sonst wird der volle Kaufpreis berechnet."
+    },
+    {
+     "q": "What is indicated about the psychology book?",
+     "options": [
+      "It was bought new.",
+      "It is a rental item.",
+      "It can be returned for a refund for two weeks.",
+      "It must be returned by December 20."
+     ],
+     "answer": 2,
+     "why": "Gebrauchte Bücher: volle Erstattung innerhalb von 14 Tagen."
+    }
+   ]
+  },
+  {
+   "id": "d07",
+   "level": 1,
+   "genre": "notice",
+   "title": "Pool closed",
+   "text": "# Pool Closed\nThe campus swimming pool will be closed on Monday, October 14, for cleaning. It will open again on Tuesday at 6:00 a.m.\nSwim classes planned for Monday will take place on Wednesday at the same time. Thank you for your patience!",
+   "questions": [
+    {
+     "q": "Why is the pool closed?",
+     "options": [
+      "It is a holiday.",
+      "The weather is bad.",
+      "There is a swim competition.",
+      "It is being cleaned."
+     ],
+     "answer": 3,
+     "why": "„… closed … for cleaning.“"
+    },
+    {
+     "q": "What will happen to Monday's swim classes?",
+     "options": [
+      "They will be held on Wednesday.",
+      "They are canceled.",
+      "They will be held on Tuesday.",
+      "They will start at 6:00 a.m."
+     ],
+     "answer": 0,
+     "why": "„… will take place on Wednesday at the same time.“"
+    }
+   ]
+  },
+  {
+   "id": "d08",
+   "level": 1,
+   "genre": "chat",
+   "title": "Movie tonight",
+   "text": "Lena: Are you going to the movie tonight?\nSam: I want to, but I have to finish my essay first.\nLena: It starts at 8. Can you make it?\nSam: Probably. Save me a seat just in case!",
+   "questions": [
+    {
+     "q": "What does Sam need to do before the movie?",
+     "options": [
+      "Meet a professor",
+      "Finish an essay",
+      "Buy tickets",
+      "Eat dinner"
+     ],
+     "answer": 1,
+     "why": "„I have to finish my essay first.“"
+    },
+    {
+     "q": "What does Sam ask Lena to do?",
+     "options": [
+      "Help him with his essay",
+      "Change the movie time",
+      "Keep a seat for him",
+      "Wait outside the theater"
+     ],
+     "answer": 2,
+     "why": "„Save me a seat“ = halte mir einen Platz frei."
+    }
+   ],
+   "me": "Sam"
+  },
+  {
+   "id": "d09",
+   "level": 1,
+   "genre": "ad",
+   "title": "Room for rent",
+   "text": "# Room for Rent\nQuiet room available in a shared apartment, 10 minutes from campus by bus. $550 per month, including electricity and internet. Shared kitchen and bathroom. No pets.\nAvailable from January 1. Contact Mark at 555-0147 after 5 p.m.",
+   "questions": [
+    {
+     "q": "What is included in the rent?",
+     "options": [
+      "Parking",
+      "Meals",
+      "A bus pass",
+      "Internet"
+     ],
+     "answer": 3,
+     "why": "„$550 per month, including electricity and internet.“"
+    },
+    {
+     "q": "When should people call Mark?",
+     "options": [
+      "In the evening",
+      "At lunchtime",
+      "In the morning",
+      "Only on January 1"
+     ],
+     "answer": 0,
+     "why": "„after 5 p.m.“"
+    },
+    {
+     "q": "Who would NOT be able to rent the room?",
+     "options": [
+      "Someone who cooks often",
+      "A person who has a cat",
+      "A student without a car",
+      "Someone who wants to move in in January"
+     ],
+     "answer": 1,
+     "why": "„No pets.“"
+    }
+   ]
+  },
+  {
+   "id": "d10",
+   "level": 1,
+   "genre": "email",
+   "title": "No class",
+   "text": "From: Prof. Alvarez\nTo: BIO 101 Students\nSubject: No class on Thursday\nDear students,\nI will be at a conference this week, so there is no class on Thursday. Please read Chapter 6 instead. We will discuss it next Tuesday.\nThe quiz planned for Thursday will also take place on Tuesday.\nBest,\nProfessor Alvarez",
+   "questions": [
+    {
+     "q": "Why is there no class on Thursday?",
+     "options": [
+      "It is a holiday.",
+      "The professor is sick.",
+      "The professor is attending a conference.",
+      "The classroom is being repaired."
+     ],
+     "answer": 2,
+     "why": "„I will be at a conference this week.“"
+    },
+    {
+     "q": "What will students do next Tuesday?",
+     "options": [
+      "Read Chapter 6 in class",
+      "Hand in a lab report",
+      "Go to a conference",
+      "Discuss Chapter 6 and take a quiz"
+     ],
+     "answer": 3,
+     "why": "Kapitel 6 wird besprochen, und das Quiz findet ebenfalls Dienstag statt."
+    }
+   ]
+  },
+  {
+   "id": "d11",
+   "level": 1,
+   "genre": "schedule",
+   "title": "Shuttle bus",
+   "text": "# Shuttle Bus: Campus to Downtown\nStop | Weekdays | Weekends\nMain Gate | every 15 min | every 30 min\nScience Building | every 15 min | every 30 min\nDowntown Station | every 15 min | every 30 min\nThe last bus leaves Main Gate at 11:45 p.m. Students ride free with their ID card.",
+   "questions": [
+    {
+     "q": "How often does the shuttle run on Saturdays?",
+     "options": [
+      "Every 30 minutes",
+      "Every 15 minutes",
+      "It does not run on Saturdays.",
+      "Every hour"
+     ],
+     "answer": 0,
+     "why": "Wochenende: every 30 min."
+    },
+    {
+     "q": "What do students need in order to ride for free?",
+     "options": [
+      "A paper ticket",
+      "Their ID card",
+      "A monthly pass",
+      "Nothing at all"
+     ],
+     "answer": 1,
+     "why": "„Students ride free with their ID card.“"
+    }
+   ]
+  },
+  {
+   "id": "d12",
+   "level": 3,
+   "genre": "email",
+   "title": "Water outage",
+   "text": "From: Facilities Management\nTo: Residents of Whitmore Hall\nSubject: Scheduled water outage – please read\nDear residents,\nContractors will be replacing a corroded main valve in Whitmore Hall on Thursday. To complete the work safely, the water supply to the entire building will be shut off between 8:00 a.m. and approximately 2:00 p.m.\nAlthough we anticipate finishing on schedule, residents should be aware that unforeseen complications occasionally prolong such repairs. Shower facilities in the adjacent Recreation Center will remain open to Whitmore residents throughout the day.\nWe recommend filling containers with drinking water the night before.\nFacilities Management",
+   "questions": [
+    {
+     "q": "Why will the water be shut off?",
+     "options": [
+      "The building's water tanks are being cleaned.",
+      "The building is being connected to the Recreation Center.",
+      "A damaged part of the water system is being replaced.",
+      "A new shower system is being tested."
+     ],
+     "answer": 2,
+     "why": "„replacing a corroded main valve“ – ein beschädigtes Ventil wird ersetzt."
+    },
+    {
+     "q": "What does Facilities Management suggest about the repair?",
+     "options": [
+      "It has already been postponed several times.",
+      "It requires residents to leave the building.",
+      "It will definitely end before 2:00 p.m.",
+      "It might take longer than planned."
+     ],
+     "answer": 3,
+     "why": "„unforeseen complications occasionally prolong such repairs“ – es kann länger dauern."
+    },
+    {
+     "q": "The word \"adjacent\" in the email is closest in meaning to",
+     "options": [
+      "nearby",
+      "public",
+      "newly built",
+      "larger"
+     ],
+     "answer": 0,
+     "why": "adjacent = angrenzend, benachbart."
+    }
+   ]
+  },
+  {
+   "id": "d13",
+   "level": 3,
+   "genre": "post",
+   "title": "Sustainability office",
+   "text": "# Campus Sustainability Office\nLast semester's \"Bring Your Own Mug\" campaign exceeded every expectation: disposable cup use in campus cafés fell by 38 percent.\nEncouraged by these results, we are extending the 25-cent discount for reusable containers to all dining halls starting next month. We are also piloting a deposit system in two cafés, in which customers pay $1 for a reusable cup and get their dollar back when the cup is returned.\nShould the pilot prove successful, it will be introduced campus-wide in the fall.",
+   "questions": [
+    {
+     "q": "What is the main purpose of the post?",
+     "options": [
+      "To explain why prices in dining halls are rising",
+      "To report the results of a campaign and announce next steps",
+      "To criticize students for using disposable cups",
+      "To announce that cafés will stop selling coffee"
+     ],
+     "answer": 1,
+     "why": "Ergebnis der Kampagne (−38 %) plus Ausweitung und Pilotprojekt."
+    },
+    {
+     "q": "What can be inferred about the deposit system?",
+     "options": [
+      "It is already used in all dining halls.",
+      "It costs customers 25 cents per cup.",
+      "Whether it is expanded depends on how well it works at first.",
+      "It has replaced the discount for reusable containers."
+     ],
+     "answer": 2,
+     "why": "„Should the pilot prove successful, it will be introduced campus-wide.“"
+    },
+    {
+     "q": "The phrase \"exceeded every expectation\" means that the campaign was",
+     "options": [
+      "more expensive than expected",
+      "less popular than expected",
+      "shorter than expected",
+      "more successful than expected"
+     ],
+     "answer": 3,
+     "why": "exceed = übertreffen."
+    }
+   ]
+  },
+  {
+   "id": "d14",
+   "level": 3,
+   "genre": "chat",
+   "title": "Draft feedback",
+   "text": "Daniel: Did you get a chance to look at the draft I sent?\nPriya: I did. The data section is really strong.\nDaniel: And the introduction?\nPriya: Well… I think a reader who isn't in our field might have a hard time figuring out why the topic matters.\nDaniel: So, back to the drawing board?\nPriya: Not entirely – just a couple of paragraphs. I can go over it with you tomorrow if you want.",
+   "questions": [
+    {
+     "q": "What does Priya imply about the introduction?",
+     "options": [
+      "It does not clearly explain why the topic is important.",
+      "It is ready to be submitted.",
+      "It is too long.",
+      "It contains incorrect data."
+     ],
+     "answer": 0,
+     "why": "Leser außerhalb des Fachs verstehen nicht, warum das Thema wichtig ist."
+    },
+    {
+     "q": "What does Daniel mean when he says \"back to the drawing board\"?",
+     "options": [
+      "He disagrees with Priya's opinion.",
+      "He thinks he has to start over.",
+      "He plans to meet in the art room.",
+      "He wants to add some drawings."
+     ],
+     "answer": 1,
+     "why": "back to the drawing board = noch einmal von vorn anfangen."
+    },
+    {
+     "q": "What does Priya offer to do?",
+     "options": [
+      "Explain the topic to other readers",
+      "Send Daniel her own paper",
+      "Review the draft together with Daniel",
+      "Rewrite the data section"
+     ],
+     "answer": 2,
+     "why": "„I can go over it with you tomorrow.“"
+    }
+   ],
+   "me": "Priya"
+  },
+  {
+   "id": "d15",
+   "level": 3,
+   "genre": "webpage",
+   "title": "Extension policy",
+   "text": "# Requesting an Extension on a Final Paper\nStudents who cannot meet a final paper deadline because of circumstances beyond their control may request an extension of up to seven days.\nRequests must be submitted through the Student Portal no later than 48 hours before the original deadline and should be accompanied by supporting documentation where possible. Instructors are not obligated to grant extensions requested after this point, except in documented emergencies.\nApproved extensions do not affect a student's eligibility for honors, but papers submitted after an extended deadline will be penalized at the instructor's discretion.",
+   "questions": [
+    {
+     "q": "According to the page, when must most extension requests be made?",
+     "options": [
+      "At the start of the semester",
+      "On the day of the deadline",
+      "Within seven days after the deadline",
+      "At least two days before the original deadline"
+     ],
+     "answer": 3,
+     "why": "„no later than 48 hours before the original deadline“."
+    },
+    {
+     "q": "What is true about requests made later than this?",
+     "options": [
+      "Instructors may refuse them unless there is a documented emergency.",
+      "They reduce the student's chance of receiving honors.",
+      "They are always rejected.",
+      "They are usually accepted with documentation."
+     ],
+     "answer": 0,
+     "why": "„not obligated to grant … except in documented emergencies“."
+    },
+    {
+     "q": "The phrase \"at the instructor's discretion\" means that the penalty",
+     "options": [
+      "must be approved by the university",
+      "is decided by the instructor",
+      "is the same for all students",
+      "is explained in the Student Portal"
+     ],
+     "answer": 1,
+     "why": "discretion = Ermessen."
+    }
+   ]
+  },
+  {
+   "id": "d16",
+   "level": 3,
+   "genre": "review",
+   "title": "Restaurant review",
+   "text": "# Review: The Lantern Room ★★★☆☆\nI had high hopes for this new place after reading so much praise online. The setting is undeniably charming – exposed brick, soft lighting, and a view of the harbor.\nUnfortunately, the food did not live up to the atmosphere. My grilled fish arrived lukewarm, and the much-advertised seasonal vegetables were little more than a handful of overcooked carrots.\nTo be fair, our server was attentive and apologized sincerely, even removing the fish from our bill. I might return for drinks on the terrace, but I would think twice before ordering dinner again.",
+   "questions": [
+    {
+     "q": "What is the reviewer's overall opinion of the restaurant?",
+     "options": [
+      "It is excellent in every way.",
+      "The service was the main problem.",
+      "The atmosphere is better than the food.",
+      "It is too expensive for what it offers."
+     ],
+     "answer": 2,
+     "why": "„the food did not live up to the atmosphere“."
+    },
+    {
+     "q": "Why does the reviewer mention the server?",
+     "options": [
+      "To complain about slow service",
+      "To recommend a specific employee for promotion",
+      "To explain why the food was cold",
+      "To give a fair, balanced picture of the visit"
+     ],
+     "answer": 3,
+     "why": "„To be fair …“ leitet einen positiven Gegenpunkt ein."
+    }
+   ]
+  }
+ ],
+ "academic": [
+  {
+   "id": "ac01",
+   "level": 2,
+   "title": "Mangrove Forests",
+   "text": "Mangroves are trees that grow in the salty, shallow waters along tropical coastlines. Few plants can survive in such conditions, but mangroves have developed several unusual adaptations. Some species filter salt out of seawater through their roots, while others store excess salt in older leaves that eventually fall off. Because the muddy soil contains very little oxygen, many mangroves also grow special roots that stick up out of the mud like pencils, allowing the trees to absorb air directly.\nThese forests provide important benefits to both wildlife and people. Their dense root systems act as nurseries for young fish, which hide from predators among the roots until they are large enough to survive in open water. Mangroves also protect coastal communities: during storms, the tangled roots reduce the force of waves and help prevent the erosion of shorelines.\nDespite these benefits, mangrove forests have declined significantly in recent decades. Large areas have been cleared to make room for shrimp farms and coastal development. Scientists warn that losing mangroves not only harms fish populations but also leaves coastal towns more vulnerable to storm damage.",
+   "questions": [
+    {
+     "q": "According to paragraph 1, why do some mangroves have roots that stick up out of the mud?",
+     "options": [
+      "To take in oxygen from the air",
+      "To collect rainwater",
+      "To store excess salt",
+      "To hold the trees in place during storms"
+     ],
+     "answer": 0,
+     "why": "Der Schlamm enthält kaum Sauerstoff; die Wurzeln „absorb air directly“."
+    },
+    {
+     "q": "The word \"dense\" in paragraph 2 is closest in meaning to",
+     "options": [
+      "shallow",
+      "thick",
+      "ancient",
+      "fragile"
+     ],
+     "answer": 1,
+     "why": "dense = dicht."
+    },
+    {
+     "q": "Why does the author mention young fish in paragraph 2?",
+     "options": [
+      "To describe a threat to mangrove forests",
+      "To compare mangroves with coral reefs",
+      "To show one way mangroves benefit wildlife",
+      "To explain how mangroves obtain nutrients"
+     ],
+     "answer": 2,
+     "why": "Junge Fische nutzen die Wurzeln als „nurseries“ – Beispiel für Nutzen für Tiere."
+    },
+    {
+     "q": "Which of the following is NOT mentioned as a way mangroves deal with salt?",
+     "options": [
+      "Filtering it out through their roots",
+      "Losing it when old leaves fall off",
+      "Storing it in older leaves",
+      "Releasing it through their flowers"
+     ],
+     "answer": 3,
+     "why": "Blüten werden im Text nicht erwähnt."
+    },
+    {
+     "q": "What can be inferred from paragraph 3?",
+     "options": [
+      "Clearing mangroves may increase storm damage to coastal towns.",
+      "Mangrove forests are expanding in most regions.",
+      "Shrimp farms help protect shorelines.",
+      "Scientists generally support coastal development."
+     ],
+     "answer": 0,
+     "why": "Ohne Mangroven sind Küstenorte „more vulnerable to storm damage“."
+    }
+   ]
+  },
+  {
+   "id": "ac02",
+   "level": 1,
+   "title": "Why Do We Yawn?",
+   "text": "Everyone yawns, but scientists are still not sure why. For many years, people believed that yawning brings more oxygen into the body when we are tired. However, experiments have shown that breathing extra oxygen does not make people yawn less, so this explanation is probably wrong.\nA newer idea is that yawning helps cool the brain. When we yawn, we take in a large amount of air, and the jaw stretches widely. This movement increases blood flow to the head and may lower the temperature of the brain slightly. In one study, people yawned less often when they held a cold pack against their forehead.\nYawning is also contagious. Seeing, hearing, or even reading about someone yawning can make us yawn too. Interestingly, people are more likely to \"catch\" a yawn from a family member or a close friend than from a stranger. Some researchers think this shows that contagious yawning is connected to empathy, the ability to understand how others feel.",
+   "questions": [
+    {
+     "q": "What is the passage mainly about?",
+     "options": [
+      "The connection between sleep and body temperature",
+      "Different explanations for why people yawn",
+      "Why tired people need more oxygen",
+      "Ways to stop yawning"
+     ],
+     "answer": 1,
+     "why": "Der Text stellt mehrere Erklärungen für das Gähnen vor."
+    },
+    {
+     "q": "According to paragraph 1, why is the oxygen explanation probably wrong?",
+     "options": [
+      "Yawning lowers the amount of oxygen in the body.",
+      "Only tired people yawn.",
+      "Breathing extra oxygen does not reduce yawning.",
+      "Scientists have never tested it."
+     ],
+     "answer": 2,
+     "why": "„breathing extra oxygen does not make people yawn less“."
+    },
+    {
+     "q": "The word \"contagious\" in paragraph 3 is closest in meaning to",
+     "options": [
+      "dangerous",
+      "common in families",
+      "difficult to stop",
+      "easily passed to others"
+     ],
+     "answer": 3,
+     "why": "contagious = ansteckend."
+    },
+    {
+     "q": "What did people do in the study mentioned in paragraph 2?",
+     "options": [
+      "They held something cold against their forehead.",
+      "They breathed extra oxygen.",
+      "They read about yawning.",
+      "They watched family members yawn."
+     ],
+     "answer": 0,
+     "why": "„held a cold pack against their forehead“."
+    },
+    {
+     "q": "What can be inferred about contagious yawning?",
+     "options": [
+      "Strangers cause the most yawns.",
+      "It happens more often between people who are close.",
+      "It is a sign that a person is tired.",
+      "It only happens when people see someone yawn."
+     ],
+     "answer": 1,
+     "why": "Man „fängt“ das Gähnen eher bei Familie und Freunden."
+    }
+   ]
+  },
+  {
+   "id": "ac03",
+   "level": 3,
+   "title": "The Paradox of Choice",
+   "text": "Conventional economic thinking holds that having more options is always beneficial: if an option is added that no one wants, people can simply ignore it. Yet a growing body of psychological research suggests that an abundance of options can, under certain conditions, undermine both decision-making and satisfaction.\nIn a widely cited field experiment, shoppers encountered a tasting booth offering either six or twenty-four varieties of jam. Although the larger display attracted more visitors, those who saw the smaller selection were roughly ten times more likely to make a purchase. The researchers proposed that comparing many similar alternatives imposes a cognitive burden that can lead people to postpone or avoid decisions altogether.\nEven when people do choose, an extensive range of options may diminish their contentment. With more alternatives available, it becomes easier to imagine that a different selection would have been superior, and this anticipated regret can reduce the pleasure derived from the chosen item.\nSubsequent studies, however, have complicated the picture. Several attempts to replicate the original findings produced weak or inconsistent effects, and analyses suggest that choice overload emerges mainly when options are difficult to compare or when decision-makers lack clear preferences. Experts in a particular domain, for instance, appear largely immune to it.",
+   "questions": [
+    {
+     "q": "According to paragraph 1, what does conventional economic thinking assume?",
+     "options": [
+      "Satisfaction depends mainly on price.",
+      "People generally prefer fewer options.",
+      "Additional options never make people worse off.",
+      "Unwanted options should be removed from stores."
+     ],
+     "answer": 2,
+     "why": "„having more options is always beneficial“ – man kann Unerwünschtes ignorieren."
+    },
+    {
+     "q": "What was surprising about the result of the jam experiment?",
+     "options": [
+      "Shoppers preferred jams with fewer ingredients.",
+      "Fewer people visited the smaller display.",
+      "Visitors tasted more jam at the smaller display.",
+      "The larger display led to fewer purchases even though it attracted more visitors."
+     ],
+     "answer": 3,
+     "why": "Mehr Besucher, aber zehnmal weniger Käufe bei 24 Sorten."
+    },
+    {
+     "q": "The word \"diminish\" in paragraph 3 is closest in meaning to",
+     "options": [
+      "reduce",
+      "replace",
+      "reveal",
+      "delay"
+     ],
+     "answer": 0,
+     "why": "diminish = verringern."
+    },
+    {
+     "q": "Why does the author mention experts in the final paragraph?",
+     "options": [
+      "To suggest that shoppers should consult experts",
+      "To show that choice overload does not affect everyone equally",
+      "To explain why the jam study was repeated",
+      "To argue that experts make worse decisions"
+     ],
+     "answer": 1,
+     "why": "Experten sind „largely immune“ – der Effekt hängt von Bedingungen ab."
+    },
+    {
+     "q": "Which statement best describes the author's view of the original findings?",
+     "options": [
+      "They apply to all decisions people make.",
+      "They are irrelevant to economics.",
+      "They may hold only under certain conditions.",
+      "They have been completely disproven."
+     ],
+     "answer": 2,
+     "why": "Wiederholungen zeigten schwache Effekte; der Effekt tritt „mainly when …“ auf."
+    }
+   ]
+  },
+  {
+   "id": "ac04",
+   "level": 3,
+   "title": "Life at Hydrothermal Vents",
+   "text": "In 1977, researchers exploring the floor of the Pacific Ocean made a discovery that overturned long-standing assumptions about life on Earth. Near volcanic openings called hydrothermal vents, where water heated by magma bursts from the seafloor at temperatures exceeding 350°C, they found thriving communities of giant tube worms, clams, and crabs.\nThe finding was puzzling because sunlight never penetrates these depths, and nearly all known ecosystems ultimately depend on photosynthesis. The explanation turned out to lie in chemosynthesis. Bacteria living around the vents derive energy from chemical reactions involving hydrogen sulfide, a compound abundant in the vent fluid but toxic to most organisms. These bacteria form the base of the food web; giant tube worms, which lack both a mouth and a digestive system, host billions of them inside their bodies and absorb the nutrients they produce.\nThe implications extend beyond marine biology. Because vent ecosystems function independently of the sun, some scientists have proposed that life on Earth may have originated in similar environments. The discovery has also encouraged the search for life on moons such as Europa and Enceladus, whose ice-covered oceans may conceal comparable hydrothermal activity.",
+   "questions": [
+    {
+     "q": "Why was the 1977 discovery surprising?",
+     "options": [
+      "The water near the vents was colder than expected.",
+      "Clams had never been observed before.",
+      "The vents were located in the Pacific Ocean.",
+      "The animals survived without depending on sunlight."
+     ],
+     "answer": 3,
+     "why": "Fast alle Ökosysteme hängen an Photosynthese – hier gibt es kein Licht."
+    },
+    {
+     "q": "The word \"abundant\" in paragraph 2 is closest in meaning to",
+     "options": [
+      "plentiful",
+      "hidden",
+      "dangerous",
+      "rare"
+     ],
+     "answer": 0,
+     "why": "abundant = reichlich vorhanden."
+    },
+    {
+     "q": "According to paragraph 2, how do giant tube worms obtain food?",
+     "options": [
+      "Through photosynthesis in their skin",
+      "From bacteria living inside their bodies",
+      "By eating smaller animals near the vents",
+      "By filtering plankton from the water"
+     ],
+     "answer": 1,
+     "why": "Sie beherbergen Bakterien und nehmen deren Nährstoffe auf."
+    },
+    {
+     "q": "What does the author indicate about hydrogen sulfide?",
+     "options": [
+      "It is produced by the tube worms.",
+      "It is found mainly on Europa.",
+      "It is harmful to most living things.",
+      "It cools the vent fluid."
+     ],
+     "answer": 2,
+     "why": "„toxic to most organisms“."
+    },
+    {
+     "q": "Why does the author mention Europa and Enceladus?",
+     "options": [
+      "To explain where vents were first discovered",
+      "To argue that life definitely exists there",
+      "To compare their temperatures with Earth's oceans",
+      "To show that the discovery influenced the search for life elsewhere"
+     ],
+     "answer": 3,
+     "why": "Die Entdeckung „encouraged the search for life on moons such as …“."
+    }
+   ]
+  },
+  {
+   "id": "ac05",
+   "level": 2,
+   "title": "The Origins of Paper Money",
+   "text": "Paper money first appeared in China more than a thousand years ago. Merchants during the Tang dynasty found heavy metal coins inconvenient for large transactions, so they began leaving their coins with trusted agents in exchange for paper receipts. These receipts could be traded among merchants and later exchanged back for coins.\nBy the eleventh century, the Song government had recognized the usefulness of this system and began issuing official paper notes. Government control brought both advantages and risks. On the one hand, official notes were accepted throughout the empire. On the other hand, the government could print as many notes as it wished, and during times of war it often printed far more than it could support. The result was inflation: prices rose sharply, and the notes lost much of their value.\nEuropean travelers such as Marco Polo described Chinese paper money with amazement, but the idea spread slowly. It was not until the seventeenth century that banks in Sweden and England began issuing paper notes of their own. Today, paper money is used everywhere, although electronic payments are steadily replacing it in many countries.",
+   "questions": [
+    {
+     "q": "Why did merchants in the Tang dynasty begin using paper receipts?",
+     "options": [
+      "Metal coins were inconvenient for large payments.",
+      "The government required them to.",
+      "Paper was cheaper to produce than metal.",
+      "Foreign traders refused to accept coins."
+     ],
+     "answer": 0,
+     "why": "„found heavy metal coins inconvenient for large transactions“."
+    },
+    {
+     "q": "The word \"issuing\" in paragraph 2 is closest in meaning to",
+     "options": [
+      "collecting",
+      "officially giving out",
+      "destroying",
+      "designing"
+     ],
+     "answer": 1,
+     "why": "issue = (offiziell) ausgeben."
+    },
+    {
+     "q": "According to paragraph 2, what was a disadvantage of government-controlled paper money?",
+     "options": [
+      "It was accepted only in a few cities.",
+      "Criminals could copy it easily.",
+      "The government sometimes printed too much, which caused prices to rise.",
+      "Merchants could not exchange it for coins."
+     ],
+     "answer": 2,
+     "why": "Zu viel gedrucktes Geld → Inflation."
+    },
+    {
+     "q": "Why does the author mention Marco Polo?",
+     "options": [
+      "To describe a famous Chinese merchant",
+      "To argue that paper money was invented in Europe",
+      "To explain how paper money quickly reached Europe",
+      "To show that Europeans found Chinese paper money remarkable"
+     ],
+     "answer": 3,
+     "why": "Er beschrieb das Papiergeld „with amazement“."
+    },
+    {
+     "q": "What can be inferred from the last sentence of the passage?",
+     "options": [
+      "Paper money may become less common in the future.",
+      "Sweden was the first country to stop using paper money.",
+      "Paper money is no longer printed.",
+      "Electronic payments are less secure than cash."
+     ],
+     "answer": 0,
+     "why": "Elektronische Zahlungen ersetzen Papiergeld „steadily“."
+    }
+   ]
+  }
+ ]
+}
