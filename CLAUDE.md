@@ -34,7 +34,12 @@ Live: https://tobo1504.github.io/toefl-karteikarten/ und …/trainer/
   Lernstand-Export/Import per Code (`TT1:` + base64), wie bei den Karteikarten.
 - KI-Bewertung (Writing, Interview): nur in der Claude-Version über `claude.use("sample")`.
   In der PWA: Button „Bewertungs-Prompt kopieren“ → Tom fügt ihn in Claude ein.
-- Listening/Speaking-Audio: `speechSynthesis` (Stimmen en-US/en-GB/en-AU je nach Item-id, Mann/Frau per Namensliste;
+- Listening/Speaking-Audio: **MP3-Dateien** in `trainer/audio/` (natürliche Stimmen, erzeugt mit `tools/gen_audio.py` über Kokoro-TTS,
+  offline; Modelle per GitHub-Release ladbar, Anleitung im Skript). Schlüssel: Item-id bzw. `<id>-<satz/frage>` für Repeat/Interview;
+  `audio/manifest.json` (Text-Hash, Dauer) wird beim Build als `DATA.audio` eingebettet. Nach neuen Listening-/Speaking-Inhalten
+  **immer** `gen_audio.py` ausführen. Die Claude-Version veröffentlicht die MP3s als `files` (`audio/<key>.mp3`).
+  Fallback ohne Datei: `speechSynthesis`, nur englische Stimmen (sonst kein Vorlesen, sondern Transkript).
+- Alte Fallback-Beschreibung: `speechSynthesis` (Stimmen en-US/en-GB/en-AU je nach Item-id, Mann/Frau per Namensliste;
   Fallback über Tonhöhe). Texte werden satzweise gesprochen (Chrome bricht lange Äußerungen sonst ab).
   Im Test wird Audio einmal abgespielt und „Next“ ist währenddessen gesperrt; im Training gibt es „Nochmal anhören“ und Transkript.
 - Speaking-Eingabe: in der PWA Web-Speech-Spracherkennung, wenn vorhanden; sonst (und immer in der Claude-Version,

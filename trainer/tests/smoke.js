@@ -4,7 +4,8 @@ const FILE='file://'+path.resolve(__dirname,'../index.html');
 const MOCK=`window.__TT_SPEED=40;
 Object.defineProperty(window,"speechSynthesis",{configurable:true,value:{speaking:false,getVoices:()=>[{name:"Samantha",lang:"en-US"},{name:"Daniel",lang:"en-GB"}],cancel(){},addEventListener(){},
   speak(u){setTimeout(()=>u.onend&&u.onend(),5)}}});
-Object.defineProperty(window,"SpeechSynthesisUtterance",{configurable:true,value:function(t){this.text=t}});`;
+Object.defineProperty(window,"SpeechSynthesisUtterance",{configurable:true,value:function(t){this.text=t}});
+window.Audio=class{constructor(){this.src=""}play(){setTimeout(()=>this.onended&&this.onended(),5);return Promise.resolve()}pause(){}};`;
 (async()=>{
   const b=await chromium.launch();const ctx=await b.newContext({viewport:{width:1200,height:900}});await ctx.addInitScript(MOCK);
   const p=await ctx.newPage();

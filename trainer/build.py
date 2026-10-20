@@ -101,6 +101,8 @@ if errors:
 style = (SRC / "styles.css").read_text(encoding="utf8")
 appjs = (SRC / "app.js").read_text(encoding="utf8")
 shell = (SRC / "shell.html").read_text(encoding="utf8")
+AUDIO = ROOT / "audio" / "manifest.json"
+data["audio"] = {k: v["dur"] for k, v in json.loads(AUDIO.read_text()).items() if (ROOT / "audio" / f"{k}.mp3").exists()} if AUDIO.exists() else {}
 content = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
 def build(artifact):
@@ -137,5 +139,6 @@ self.addEventListener("fetch",e=>{{const r=e.request;if(r.method!=="GET")return;
   "icons": [{"src": "../icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "../icon-512.png", "sizes": "512x512", "type": "image/png"},
             {"src": "../icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}]}, ensure_ascii=False, indent=1), encoding="utf8")
 
-counts = {sec: {k: len(v) for k, v in d.items()} for sec, d in data.items() if d}
+counts = {sec: {k: len(v) for k, v in d.items()} for sec, d in data.items() if d and sec != "audio"}
+counts["audio"] = len(data["audio"])
 print("OK", counts, "Antwortverteilung A–D:", dist, f"| richtige Antwort am längsten: {100*longest[0]//max(1,longest[1])} % (Ziel < 40 %)")
