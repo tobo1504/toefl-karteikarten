@@ -57,6 +57,30 @@ for x in W.get("discussion", []):
     uid(x, "discussion")
     if len(x.get("students", [])) != 2: err(f"{x['id']}: braucht 2 students")
 
+L = data["listening"]
+for x in L.get("choose", []):
+    uid(x, "choose")
+    if len(x.get("options", [])) != 4 or x.get("answer") not in (0,1,2,3) or not x.get("prompt") or not x.get("why"): err(f"{x['id']}: prompt, 4 Optionen, answer, why nötig")
+    if x.get("voice") not in ("M", "W"): err(f"{x['id']}: voice M oder W")
+for x in L.get("conversation", []):
+    uid(x, "conversation"); check_mcq(x["id"], x.get("questions", []), 2)
+    if any(l.get("who") not in ("M", "W") for l in x.get("lines", [])): err(f"{x['id']}: who muss M oder W sein")
+for x in L.get("announcement", []):
+    uid(x, "announcement"); check_mcq(x["id"], x.get("questions", []), 2)
+    wc = len(x["text"].split())
+    if not 35 <= wc <= 95: err(f"{x['id']}: {wc} Wörter (Ziel 40–85)")
+for x in L.get("talk", []):
+    uid(x, "talk"); check_mcq(x["id"], x.get("questions", []), 4)
+    wc = len(x["text"].split())
+    if not 100 <= wc <= 260: err(f"{x['id']}: {wc} Wörter (Ziel 100–250)")
+SP = data["speaking"]
+for x in SP.get("repeat", []):
+    uid(x, "repeat")
+    if len(x.get("sentences", [])) != 7: err(f"{x['id']}: braucht 7 Sätze")
+for x in SP.get("interview", []):
+    uid(x, "interview")
+    if len(x.get("questions", [])) != 4: err(f"{x['id']}: braucht 4 Fragen")
+
 # Antwortverteilung prüfen (Hinweis, kein Fehler)
 dist = [0, 0, 0, 0]
 for sec in ("reading", "listening"):

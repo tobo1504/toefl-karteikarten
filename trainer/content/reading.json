@@ -29,6 +29,21 @@
    "id": "ctw06",
    "level": 3,
    "text": "The placebo effect remains one of the most intriguing phenomena in medicine. Patients w{ho} receive a{n} inactive subs{tance} sometimes rep{ort} genuine improv{ements} in th{eir} symptoms, partic{ularly} when t{he} condition invo{lves} pain o{r} anxiety. Researchers attribute this response to expectation, which appears to trigger the release of natural chemicals in the brain. Consequently, clinical trials must compare new drugs against placebos rather than against no treatment at all, ensuring that observed benefits exceed those produced by belief alone."
+  },
+  {
+   "id": "ctw07",
+   "level": 2,
+   "text": "Many animals use camouflage to avoid predators. Some ins{ects} look alm{ost} exactly li{ke} leaves o{r} twigs, wh{ich} makes th{em} very diff{icult} to s{ee}. Other ani{mals} can cha{nge} their colors to match their surroundings, as octopuses and some lizards do. Camouflage is not only useful for prey, however. Predators such as tigers use their striped coats to hide in tall grass while they wait for the right moment to attack."
+  },
+  {
+   "id": "ctw08",
+   "level": 1,
+   "text": "Drinking enough water is important for good health. Our bod{ies} use wa{ter} to con{trol} temperature a{nd} to ca{rry} nutrients t{o} our ce{lls}. Many peo{ple} only dr{ink} when th{ey} feel thirsty, but by then the body may already need more water. Doctors suggest keeping a bottle nearby during the day. Fruits and vegetables also contain a lot of water, so they can help too."
+  },
+  {
+   "id": "ctw09",
+   "level": 3,
+   "text": "Language extinction has accelerated dramatically over the past century. Linguists esti{mate} that rou{ghly} half o{f} the wor{ld's} languages co{uld} disappear wit{hin} the ne{xt} hundred ye{ars}. When a lang{uage} vanishes, commu{nities} frequently lose irreplaceable knowledge about local ecosystems, medicinal plants, and cultural traditions. Revitalization programs, which typically combine immersive schooling with digital archives, have achieved notable success in several regions, demonstrating that the decline is not necessarily irreversible when communities receive sustained institutional support."
   }
  ],
  "daily": [
@@ -618,6 +633,458 @@
      "why": "„To be fair …“ leitet einen positiven Gegenpunkt ein."
     }
    ]
+  },
+  {
+   "id": "d17",
+   "level": 2,
+   "genre": "email",
+   "title": "Soccer schedule",
+   "text": "From: Campus Recreation\nTo: Intramural Soccer Participants\nSubject: Schedule change for Sunday\nHello players,\nBecause heavy rain is forecast for Sunday afternoon, all intramural soccer games scheduled between 1 p.m. and 5 p.m. will be moved indoors to the Field House. Please note that indoor games are shortened to two 20-minute halves, and cleats are not permitted on the indoor surface – flat-soled shoes only.\nEvening games will be played outdoors as planned unless you receive another update by noon on Sunday.\nCampus Recreation",
+   "questions": [
+    {
+     "q": "Why are some games being moved?",
+     "options": [
+      "Too many teams have signed up.",
+      "The Field House is closer to campus.",
+      "Heavy rain is expected.",
+      "The fields are being repaired."
+     ],
+     "answer": 2,
+     "why": "„Because heavy rain is forecast …“"
+    },
+    {
+     "q": "What must players do for indoor games?",
+     "options": [
+      "Register again online",
+      "Bring their own ball",
+      "Arrive 20 minutes early",
+      "Wear shoes without cleats"
+     ],
+     "answer": 3,
+     "why": "„cleats are not permitted … flat-soled shoes only“."
+    },
+    {
+     "q": "What can be inferred about the evening games?",
+     "options": [
+      "Their plans could still change.",
+      "They will be shortened.",
+      "They will take place in the Field House.",
+      "They have been canceled."
+     ],
+     "answer": 0,
+     "why": "„as planned unless you receive another update“."
+    }
+   ]
+  },
+  {
+   "id": "d18",
+   "level": 2,
+   "genre": "notice",
+   "title": "Lost and found",
+   "text": "# Lost & Found – Student Union\nItems turned in at the Student Union are kept for 30 days. After that, clothing is donated to local charities, and electronics are recycled.\nTo claim an item, visit the Information Desk (Mon–Fri, 8 a.m.–6 p.m.) and describe it in detail. Phones, laptops, and wallets will only be returned after you show a photo ID.\nWe cannot hold items for other people or mail them to you.",
+   "questions": [
+    {
+     "q": "What happens to a jacket that nobody claims within a month?",
+     "options": [
+      "It is recycled.",
+      "It is given to a charity.",
+      "It is sold online.",
+      "It is mailed to the owner."
+     ],
+     "answer": 1,
+     "why": "Kleidung wird nach 30 Tagen gespendet."
+    },
+    {
+     "q": "What is required to claim a lost wallet?",
+     "options": [
+      "An online form",
+      "A friend's signature",
+      "A photo ID",
+      "A receipt"
+     ],
+     "answer": 2,
+     "why": "Telefone, Laptops und Geldbörsen nur gegen Lichtbildausweis."
+    }
+   ]
+  },
+  {
+   "id": "d19",
+   "level": 2,
+   "genre": "chat",
+   "title": "Bus pass",
+   "text": "Leo: Did you see that the bus pass price is going up next semester?\nAva: Seriously? By how much?\nLeo: From $90 to $120. But if you buy before December 1, you still get the old price.\nAva: Then I'm buying mine this week. Thanks for the heads-up!\nLeo: No worries. You can do it online – it only takes a minute.",
+   "questions": [
+    {
+     "q": "What will happen to the price of the bus pass?",
+     "options": [
+      "It will double.",
+      "It will decrease to $90.",
+      "It will stay the same.",
+      "It will increase by $30."
+     ],
+     "answer": 3,
+     "why": "Von $90 auf $120."
+    },
+    {
+     "q": "What does Ava decide to do?",
+     "options": [
+      "Buy her pass soon to save money",
+      "Ask for a refund",
+      "Stop taking the bus",
+      "Wait until December"
+     ],
+     "answer": 0,
+     "why": "Vor dem 1. Dezember gilt noch der alte Preis."
+    },
+    {
+     "q": "What does Ava mean by \"Thanks for the heads-up\"?",
+     "options": [
+      "Thanks for helping with my homework.",
+      "Thanks for the warning.",
+      "Thanks for paying for me.",
+      "Thanks for the ride."
+     ],
+     "answer": 1,
+     "why": "heads-up = Vorwarnung, Hinweis."
+    }
+   ],
+   "me": "Ava"
+  },
+  {
+   "id": "d20",
+   "level": 2,
+   "genre": "schedule",
+   "title": "Writing Center hours",
+   "text": "# Writing Center – Fall Hours\nDay | In person | Online\nMonday–Thursday | 10 a.m.–7 p.m. | 10 a.m.–10 p.m.\nFriday | 10 a.m.–3 p.m. | 10 a.m.–3 p.m.\nWeekend | closed | 2 p.m.–8 p.m.\nAppointments are 45 minutes long. Please bring a printed copy of your draft to in-person sessions. Students may book up to two appointments per week.",
+   "questions": [
+    {
+     "q": "How can a student get help from the Writing Center on a Saturday?",
+     "options": [
+      "Not at all",
+      "In person in the morning",
+      "Online in the afternoon or evening",
+      "In person until 3 p.m."
+     ],
+     "answer": 2,
+     "why": "Wochenende: nur online, 14–20 Uhr."
+    },
+    {
+     "q": "What should students bring to an in-person appointment?",
+     "options": [
+      "A completed booking form",
+      "Their laptop",
+      "Two copies of the assignment",
+      "A printed copy of their draft"
+     ],
+     "answer": 3,
+     "why": "„bring a printed copy of your draft“."
+    },
+    {
+     "q": "What is the maximum number of appointments a student can have in one week?",
+     "options": [
+      "Two",
+      "One",
+      "Three",
+      "As many as needed"
+     ],
+     "answer": 0,
+     "why": "„up to two appointments per week“."
+    }
+   ]
+  },
+  {
+   "id": "d21",
+   "level": 1,
+   "genre": "notice",
+   "title": "Flu shots",
+   "text": "# Free Flu Shots\nThe Student Health Center is offering free flu shots for all students next week, Monday to Thursday, from 9 a.m. to 4 p.m.\nNo appointment is needed. Just bring your student ID. The shots take about five minutes.",
+   "questions": [
+    {
+     "q": "What is being offered?",
+     "options": [
+      "Free health check-ups",
+      "Free flu shots",
+      "A health class",
+      "Cheap medicine"
+     ],
+     "answer": 1,
+     "why": "„free flu shots for all students“."
+    },
+    {
+     "q": "What do students need to bring?",
+     "options": [
+      "Some money",
+      "A doctor's note",
+      "Their student ID",
+      "An appointment card"
+     ],
+     "answer": 2,
+     "why": "„Just bring your student ID.“"
+    }
+   ]
+  },
+  {
+   "id": "d22",
+   "level": 1,
+   "genre": "chat",
+   "title": "Shopping",
+   "text": "Noah: Hey, I'm at the store. Do we need anything for dinner?\nKim: Yes, can you get some rice and onions?\nNoah: Sure. Anything else?\nKim: Maybe some apples for tomorrow. Thanks!",
+   "questions": [
+    {
+     "q": "Where is Noah?",
+     "options": [
+      "In a restaurant",
+      "At school",
+      "At home",
+      "At a store"
+     ],
+     "answer": 3,
+     "why": "„I'm at the store.“"
+    },
+    {
+     "q": "What does Kim want for tomorrow?",
+     "options": [
+      "Apples",
+      "Rice",
+      "Onions",
+      "Dinner"
+     ],
+     "answer": 0,
+     "why": "„some apples for tomorrow“."
+    }
+   ],
+   "me": "Kim"
+  },
+  {
+   "id": "d23",
+   "level": 1,
+   "genre": "ad",
+   "title": "Guitar lessons",
+   "text": "# Guitar Lessons\nLearn to play the guitar! Lessons for beginners every Tuesday and Thursday evening at the Music Building, Room 12. Each lesson is one hour.\n$15 per lesson, or $50 for four lessons. Guitars are available to borrow. Email Ms. Torres to sign up.",
+   "questions": [
+    {
+     "q": "How much do four lessons cost?",
+     "options": [
+      "$15",
+      "$50",
+      "$60",
+      "$45"
+     ],
+     "answer": 1,
+     "why": "„$50 for four lessons“."
+    },
+    {
+     "q": "What is true about the lessons?",
+     "options": [
+      "They last two hours.",
+      "They are on weekends.",
+      "Students can borrow a guitar.",
+      "They are for advanced players."
+     ],
+     "answer": 2,
+     "why": "„Guitars are available to borrow.“"
+    }
+   ]
+  },
+  {
+   "id": "d24",
+   "level": 1,
+   "genre": "email",
+   "title": "Book club",
+   "text": "From: Jenna\nTo: Book Club Members\nSubject: Next meeting\nHi all,\nOur next meeting is on Friday at 6 p.m. in the café on Pine Street, not in the library this time. We will talk about the first half of the book. Please let me know if you can't come.\nSee you soon,\nJenna",
+   "questions": [
+    {
+     "q": "Where will the next meeting take place?",
+     "options": [
+      "In the library",
+      "Online",
+      "At Jenna's house",
+      "In a café"
+     ],
+     "answer": 3,
+     "why": "„in the café on Pine Street, not in the library“."
+    },
+    {
+     "q": "What will the club talk about?",
+     "options": [
+      "Part of the book",
+      "A new book",
+      "The whole book",
+      "The café's menu"
+     ],
+     "answer": 0,
+     "why": "„the first half of the book“."
+    }
+   ]
+  },
+  {
+   "id": "d25",
+   "level": 3,
+   "genre": "email",
+   "title": "Graduate application",
+   "text": "From: Office of Graduate Admissions\nTo: Applicant\nSubject: Application materials\nDear applicant,\nOur records indicate that your application is complete with the exception of one letter of recommendation. Please note that applications lacking any required document by January 15 will not be forwarded to the admissions committee.\nRecommenders who experience difficulty with the online portal may email their letters directly to our office, provided the message originates from an institutional email address.\nShould you wish to replace a recommender, you may do so through your applicant dashboard at any time before the deadline.\nOffice of Graduate Admissions",
+   "questions": [
+    {
+     "q": "Why did the applicant receive this email?",
+     "options": [
+      "The application was rejected.",
+      "A letter of recommendation is still missing.",
+      "The online portal has been closed.",
+      "The deadline has been extended."
+     ],
+     "answer": 1,
+     "why": "„complete with the exception of one letter of recommendation“."
+    },
+    {
+     "q": "What will happen if the application is still incomplete on January 15?",
+     "options": [
+      "The deadline will be extended automatically.",
+      "The applicant will be charged a fee.",
+      "It will not be reviewed by the committee.",
+      "The committee will contact the recommender."
+     ],
+     "answer": 2,
+     "why": "„will not be forwarded to the admissions committee“."
+    },
+    {
+     "q": "What condition applies to letters sent by email?",
+     "options": [
+      "They must be sent by the applicant.",
+      "They must be sent before January 1.",
+      "They must be signed by hand.",
+      "They must come from an institutional email address."
+     ],
+     "answer": 3,
+     "why": "„provided the message originates from an institutional email address“."
+    }
+   ]
+  },
+  {
+   "id": "d26",
+   "level": 3,
+   "genre": "post",
+   "title": "Library hours",
+   "text": "# From the Desk of the Dean\nSeveral students have asked why the library's 24-hour schedule ends after midterms. The answer is simple: usage data show that overnight attendance drops by more than 80 percent once exams are over, and staffing the building around the clock is costly.\nThat said, we recognize that some students rely on late-night study space. Beginning this semester, the ground-floor study lounge will remain accessible with a student ID until 2 a.m. throughout the term.\nWe will continue to monitor demand and adjust hours accordingly.",
+   "questions": [
+    {
+     "q": "Why does the library stop opening 24 hours a day after midterms?",
+     "options": [
+      "Few students use it at night then, and staffing is expensive.",
+      "Staff members go on vacation.",
+      "The building needs repairs.",
+      "Students complained about noise."
+     ],
+     "answer": 0,
+     "why": "Nutzung −80 % und hohe Personalkosten."
+    },
+    {
+     "q": "What change is announced?",
+     "options": [
+      "The library will be open 24 hours all term.",
+      "A study lounge will stay open late throughout the semester.",
+      "Students will need a new type of ID.",
+      "The library will close earlier than before."
+     ],
+     "answer": 1,
+     "why": "Lounge bis 2 Uhr mit Studierendenausweis."
+    },
+    {
+     "q": "What does the dean suggest about future opening hours?",
+     "options": [
+      "They are final and will not change.",
+      "They will be decided by a student vote.",
+      "They may change depending on how much the space is used.",
+      "They will be reduced next year."
+     ],
+     "answer": 2,
+     "why": "„monitor demand and adjust hours accordingly“."
+    }
+   ]
+  },
+  {
+   "id": "d27",
+   "level": 3,
+   "genre": "chat",
+   "title": "Presentation sources",
+   "text": "Owen: Are you presenting first or second on Thursday?\nGrace: Second, thank goodness. I need every minute I can get.\nOwen: Isn't your part pretty much done?\nGrace: The slides are, but the professor wants us to cite at least five peer-reviewed sources, and I've only got three.\nOwen: Have you tried the interlibrary loan service? It's usually quicker than people think.\nGrace: I hadn't thought of that. I'll put in a request tonight.",
+   "questions": [
+    {
+     "q": "Why is Grace relieved to present second?",
+     "options": [
+      "She is nervous about speaking in public.",
+      "Her slides are not finished.",
+      "She wants to see Owen's presentation first.",
+      "She needs more time to prepare."
+     ],
+     "answer": 3,
+     "why": "„I need every minute I can get.“"
+    },
+    {
+     "q": "What problem does Grace have?",
+     "options": [
+      "She does not have enough academic sources.",
+      "Her partner has left the group.",
+      "She cannot open her slides.",
+      "She has missed the deadline."
+     ],
+     "answer": 0,
+     "why": "Fünf Fachquellen gefordert, sie hat drei."
+    },
+    {
+     "q": "What does Owen imply about the interlibrary loan service?",
+     "options": [
+      "It is usually too slow to be useful.",
+      "It might solve her problem in time.",
+      "It is expensive for students.",
+      "It is only available to professors."
+     ],
+     "answer": 1,
+     "why": "„usually quicker than people think“."
+    }
+   ],
+   "me": "Grace"
+  },
+  {
+   "id": "d28",
+   "level": 3,
+   "genre": "instructions",
+   "title": "3D printing lab",
+   "text": "# Using the 3D Printing Lab\nBefore printing for the first time, all users must complete a 30-minute safety orientation, offered every Wednesday at noon.\nPrints longer than four hours require advance approval from lab staff and are scheduled overnight. Users are responsible for removing completed prints within 24 hours; unclaimed items will be discarded.\nMaterial costs are charged to your student account at $0.10 per gram.",
+   "questions": [
+    {
+     "q": "What must new users do before printing?",
+     "options": [
+      "Buy their own material",
+      "Pay a fee in advance",
+      "Attend a safety orientation",
+      "Get approval from a professor"
+     ],
+     "answer": 2,
+     "why": "Pflicht: 30-minütige Sicherheitseinweisung."
+    },
+    {
+     "q": "What happens to a print job that takes six hours?",
+     "options": [
+      "It is not allowed.",
+      "It must be printed on a Wednesday.",
+      "It is free of charge.",
+      "It needs approval and is printed overnight."
+     ],
+     "answer": 3,
+     "why": "Über vier Stunden: Genehmigung, Druck über Nacht."
+    },
+    {
+     "q": "How much would a 50-gram print cost?",
+     "options": [
+      "$5.00",
+      "$0.50",
+      "$10.00",
+      "$50.00"
+     ],
+     "answer": 0,
+     "why": "50 × $0,10 = $5,00."
+    }
+   ]
   }
  ],
  "academic": [
@@ -933,6 +1400,195 @@
      ],
      "answer": 0,
      "why": "Elektronische Zahlungen ersetzen Papiergeld „steadily“."
+    }
+   ]
+  },
+  {
+   "id": "ac06",
+   "level": 2,
+   "title": "The Science of Habits",
+   "text": "Psychologists define a habit as a behavior that has become automatic through repetition. According to one widely used model, every habit consists of three parts: a cue, a routine, and a reward. The cue is a trigger, such as a time of day or a feeling. The routine is the behavior itself, and the reward is the benefit the brain receives, which makes it more likely that the behavior will be repeated.\nResearch suggests that habits form gradually. In one study, participants who tried to adopt a new daily behavior, such as eating fruit at lunch, needed an average of about two months before the action felt automatic. The time varied widely, however, from less than three weeks to almost a year, depending on the person and the complexity of the behavior.\nBecause cues are so powerful, experts often recommend changing the environment rather than relying on willpower alone. Someone who wants to snack less, for example, might simply avoid keeping chips at home. Likewise, placing running shoes next to the door can serve as a cue that makes exercise easier to start.",
+   "questions": [
+    {
+     "q": "According to paragraph 1, what is the role of the reward?",
+     "options": [
+      "It replaces the cue.",
+      "It makes the behavior more likely to be repeated.",
+      "It reduces the need for repetition.",
+      "It signals the start of a routine."
+     ],
+     "answer": 1,
+     "why": "Die Belohnung macht Wiederholung wahrscheinlicher."
+    },
+    {
+     "q": "The word \"gradually\" in paragraph 2 is closest in meaning to",
+     "options": [
+      "suddenly",
+      "easily",
+      "slowly over time",
+      "rarely"
+     ],
+     "answer": 2,
+     "why": "gradually = allmählich."
+    },
+    {
+     "q": "What did the study described in paragraph 2 find?",
+     "options": [
+      "Complex habits form faster than simple ones.",
+      "Eating fruit is the easiest habit to form.",
+      "All habits form in exactly two months.",
+      "The time needed to form a habit differed greatly between people."
+     ],
+     "answer": 3,
+     "why": "Von unter drei Wochen bis fast ein Jahr."
+    },
+    {
+     "q": "Why does the author mention running shoes?",
+     "options": [
+      "To give an example of using the environment as a cue",
+      "To recommend a particular type of shoe",
+      "To show that exercise is a difficult habit",
+      "To compare exercise with snacking"
+     ],
+     "answer": 0,
+     "why": "Schuhe an der Tür als Auslöser."
+    },
+    {
+     "q": "What can be inferred about willpower?",
+     "options": [
+      "It increases with repetition.",
+      "It may be less effective than changing one's surroundings.",
+      "It has no connection to habits.",
+      "It is the most important factor in forming habits."
+     ],
+     "answer": 1,
+     "why": "„changing the environment rather than relying on willpower alone“."
+    }
+   ]
+  },
+  {
+   "id": "ac07",
+   "level": 1,
+   "title": "The Journey of Coffee",
+   "text": "Coffee is one of the most popular drinks in the world, and it has a surprisingly long history. According to a well-known story, a goat herder in Ethiopia noticed that his goats became very energetic after eating red berries from a certain bush. He tried the berries himself and felt more awake.\nWhether or not the story is true, we know that by the fifteenth century, people in Yemen were roasting coffee beans and making a drink from them. Coffee houses soon opened in cities across the Middle East. They became popular places where people met to talk, listen to music, and share news.\nIn the seventeenth century, coffee arrived in Europe. At first, some people were suspicious of the new drink, but it quickly became fashionable. Today, coffee is grown in more than fifty countries, and Brazil produces more coffee than any other nation.",
+   "questions": [
+    {
+     "q": "What is the passage mainly about?",
+     "options": [
+      "Coffee houses in modern cities",
+      "How to grow coffee plants",
+      "The history of coffee",
+      "Why goats like berries"
+     ],
+     "answer": 2,
+     "why": "Der Text erzählt die Geschichte des Kaffees."
+    },
+    {
+     "q": "According to the story, what did the goat herder notice?",
+     "options": [
+      "The bush grew very quickly.",
+      "The berries tasted sweet.",
+      "His goats became sick.",
+      "His goats had more energy after eating certain berries."
+     ],
+     "answer": 3,
+     "why": "„became very energetic after eating red berries“."
+    },
+    {
+     "q": "What does the author say about the goat herder story?",
+     "options": [
+      "It might not be true.",
+      "It took place in Yemen.",
+      "It is only told in Europe.",
+      "It is definitely true."
+     ],
+     "answer": 0,
+     "why": "„Whether or not the story is true …“"
+    },
+    {
+     "q": "According to paragraph 2, what did people do in coffee houses?",
+     "options": [
+      "They studied medicine.",
+      "They talked and shared news.",
+      "They roasted beans for export.",
+      "They grew coffee plants."
+     ],
+     "answer": 1,
+     "why": "„met to talk, listen to music, and share news“."
+    },
+    {
+     "q": "Which country produces the most coffee today?",
+     "options": [
+      "Italy",
+      "Ethiopia",
+      "Brazil",
+      "Yemen"
+     ],
+     "answer": 2,
+     "why": "„Brazil produces more coffee than any other nation“."
+    }
+   ]
+  },
+  {
+   "id": "ac08",
+   "level": 3,
+   "title": "The Problem of Antibiotic Resistance",
+   "text": "Since their introduction in the 1940s, antibiotics have transformed medicine, turning once-fatal infections into routine illnesses. Yet their very success has created a formidable problem. Bacteria reproduce rapidly, and random genetic mutations occasionally render some individuals less vulnerable to a particular drug. When an antibiotic is administered, susceptible bacteria die, but resistant ones survive and multiply, gradually producing populations that the drug can no longer control.\nCompounding this process, bacteria can exchange genetic material directly, sometimes even across species, through a mechanism known as horizontal gene transfer. A resistance gene that arises in one organism may therefore spread far more quickly than inheritance alone would allow.\nHuman behavior accelerates the problem. Antibiotics are frequently prescribed for viral infections, against which they are entirely ineffective, and patients often stop treatment once symptoms subside, potentially leaving the hardiest bacteria alive. Meanwhile, pharmaceutical companies have little financial incentive to develop new antibiotics, which are typically used sparingly and for short periods, making them far less profitable than medications for chronic conditions.",
+   "questions": [
+    {
+     "q": "According to paragraph 1, why do resistant bacteria become more common?",
+     "options": [
+      "Antibiotics cause them to mutate.",
+      "They attack susceptible bacteria.",
+      "They reproduce more slowly than other bacteria.",
+      "They survive treatment while other bacteria die."
+     ],
+     "answer": 3,
+     "why": "Empfindliche sterben, resistente vermehren sich."
+    },
+    {
+     "q": "The word \"formidable\" in paragraph 1 is closest in meaning to",
+     "options": [
+      "serious and difficult",
+      "temporary",
+      "unexpected",
+      "minor"
+     ],
+     "answer": 0,
+     "why": "formidable = gewaltig, schwerwiegend."
+    },
+    {
+     "q": "What does paragraph 2 suggest about horizontal gene transfer?",
+     "options": [
+      "It makes bacteria more vulnerable to drugs.",
+      "It lets resistance spread faster than through reproduction alone.",
+      "It only occurs within a single species.",
+      "It prevents mutations."
+     ],
+     "answer": 1,
+     "why": "„far more quickly than inheritance alone would allow“."
+    },
+    {
+     "q": "Why does the author mention viral infections?",
+     "options": [
+      "To compare the size of viruses and bacteria",
+      "To show that antibiotics work against viruses",
+      "To give an example of antibiotics being used inappropriately",
+      "To explain how viruses become resistant"
+     ],
+     "answer": 2,
+     "why": "Antibiotika wirken nicht gegen Viren, werden aber verschrieben."
+    },
+    {
+     "q": "What can be inferred about why few new antibiotics are developed?",
+     "options": [
+      "Scientists believe enough antibiotics already exist.",
+      "They are illegal in many countries.",
+      "They cannot be tested on patients.",
+      "They are not very profitable for drug companies."
+     ],
+     "answer": 3,
+     "why": "„little financial incentive … far less profitable“."
     }
    ]
   }

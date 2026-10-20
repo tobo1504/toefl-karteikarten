@@ -1,0 +1,1313 @@
+{
+ "choose": [
+  {
+   "id": "c01",
+   "level": 1,
+   "voice": "W",
+   "prompt": "Do you know what time the library closes tonight?",
+   "options": [
+    "Yes, I read that book last week.",
+    "I think it's open until ten.",
+    "No, I don't have a library card.",
+    "It's on the second floor."
+   ],
+   "answer": 1,
+   "why": "Gefragt ist nach der Uhrzeit – nur diese Antwort nennt eine Zeit."
+  },
+  {
+   "id": "c02",
+   "level": 1,
+   "voice": "M",
+   "prompt": "Would you like to get lunch after class?",
+   "options": [
+    "No, the class is in Room 12.",
+    "I had a class this morning.",
+    "Sure, I'm starving.",
+    "It was a really good lunch."
+   ],
+   "answer": 2,
+   "why": "Einladung → Zusage. starving = sehr hungrig."
+  },
+  {
+   "id": "c03",
+   "level": 1,
+   "voice": "W",
+   "prompt": "Where did you park your car?",
+   "options": [
+    "It's a blue car.",
+    "Yes, I parked it.",
+    "About twenty minutes ago.",
+    "Right behind the science building."
+   ],
+   "answer": 3,
+   "why": "Where → Ortsangabe."
+  },
+  {
+   "id": "c04",
+   "level": 1,
+   "voice": "M",
+   "prompt": "How was your weekend?",
+   "options": [
+    "Pretty relaxing, thanks.",
+    "It's on Saturday.",
+    "I'll be away next weekend.",
+    "Two days, I think."
+   ],
+   "answer": 0,
+   "why": "How was …? → Bewertung des vergangenen Wochenendes."
+  },
+  {
+   "id": "c05",
+   "level": 1,
+   "voice": "W",
+   "prompt": "Can you lend me a pen?",
+   "options": [
+    "No, I didn't send it.",
+    "Here, you can keep it.",
+    "Yes, it's a long essay.",
+    "I wrote it yesterday."
+   ],
+   "answer": 1,
+   "why": "Bitte um einen Stift → Stift wird gegeben."
+  },
+  {
+   "id": "c06",
+   "level": 1,
+   "voice": "M",
+   "prompt": "Is this seat taken?",
+   "options": [
+    "The seats are blue.",
+    "Yes, I took the class last year.",
+    "No, go ahead.",
+    "It's very comfortable."
+   ],
+   "answer": 2,
+   "why": "Is this seat taken? = Ist hier frei? → No, go ahead."
+  },
+  {
+   "id": "c07",
+   "level": 1,
+   "voice": "W",
+   "prompt": "Have you finished reading the article for tomorrow?",
+   "options": [
+    "Yes, I wrote the article.",
+    "It was published in a journal.",
+    "I'll read it to you tomorrow.",
+    "Almost. I just have a few pages left."
+   ],
+   "answer": 3,
+   "why": "Frage nach dem Stand → fast fertig."
+  },
+  {
+   "id": "c08",
+   "level": 1,
+   "voice": "M",
+   "prompt": "Why is the bus so late today?",
+   "options": [
+    "There's construction on Main Street.",
+    "It usually comes every ten minutes.",
+    "I take the bus every day.",
+    "Yes, it's very late."
+   ],
+   "answer": 0,
+   "why": "Why → Grund (Baustelle)."
+  },
+  {
+   "id": "c09",
+   "level": 2,
+   "voice": "W",
+   "prompt": "Didn't you say you were going to the career fair?",
+   "options": [
+    "Yes, I said it to the professor.",
+    "I was, but my shift got moved.",
+    "The fair was held in the gym last year.",
+    "I'm planning to apply for that job."
+   ],
+   "answer": 1,
+   "why": "Indirekt: Plan geändert, weil die Schicht verlegt wurde."
+  },
+  {
+   "id": "c10",
+   "level": 2,
+   "voice": "M",
+   "prompt": "I can't believe how long this line is.",
+   "options": [
+    "The line is on the next page.",
+    "I can lend you a longer one.",
+    "Tell me about it. We've been here for twenty minutes.",
+    "I believe it's correct."
+   ],
+   "answer": 2,
+   "why": "Tell me about it = Das kannst du laut sagen (Zustimmung)."
+  },
+  {
+   "id": "c11",
+   "level": 2,
+   "voice": "W",
+   "prompt": "Do you want me to save you a seat at the lecture?",
+   "options": [
+    "The lecture was about economics.",
+    "I saved all my notes on my laptop.",
+    "No, I don't have any money left.",
+    "That would be great. I'm running a bit late."
+   ],
+   "answer": 3,
+   "why": "save a seat = Platz freihalten; die anderen spielen mit „save“ (speichern, sparen)."
+  },
+  {
+   "id": "c12",
+   "level": 2,
+   "voice": "M",
+   "prompt": "Has anyone seen the remote for the projector?",
+   "options": [
+    "Check the drawer under the desk.",
+    "I've never been to that room.",
+    "Yes, I saw that movie.",
+    "The projector is brand new."
+   ],
+   "answer": 0,
+   "why": "Indirekte Hilfe: Hinweis, wo sie sein könnte."
+  },
+  {
+   "id": "c13",
+   "level": 2,
+   "voice": "W",
+   "prompt": "I heard the professor is giving us an extra week for the paper.",
+   "options": [
+    "She teaches on Mondays and Wednesdays.",
+    "Really? That's a relief.",
+    "I'd like to read it again.",
+    "The paper is ten pages long."
+   ],
+   "answer": 1,
+   "why": "Reaktion auf eine gute Nachricht: relief = Erleichterung."
+  },
+  {
+   "id": "c14",
+   "level": 2,
+   "voice": "M",
+   "prompt": "You're not still working on that lab report, are you?",
+   "options": [
+    "The lab is on the third floor.",
+    "No, I've never worked in a lab.",
+    "I'm afraid so. The data took forever to analyze.",
+    "The report has ten pages."
+   ],
+   "answer": 2,
+   "why": "I'm afraid so = leider ja; Grund folgt."
+  },
+  {
+   "id": "c15",
+   "level": 2,
+   "voice": "W",
+   "prompt": "Why don't we split the cost of the textbook?",
+   "options": [
+    "The textbook costs about eighty dollars.",
+    "I don't know why it's so expensive.",
+    "I split it into three chapters.",
+    "Good idea. We can take turns using it."
+   ],
+   "answer": 3,
+   "why": "Why don't we …? ist ein Vorschlag, keine Frage nach dem Grund."
+  },
+  {
+   "id": "c16",
+   "level": 2,
+   "voice": "M",
+   "prompt": "Would you mind proofreading my cover letter?",
+   "options": [
+    "Not at all. Send it over.",
+    "I don't mind the weather.",
+    "Yes, I'd love to write one.",
+    "I covered that topic in class."
+   ],
+   "answer": 0,
+   "why": "Would you mind …? → Not at all = gern (ich habe nichts dagegen)."
+  },
+  {
+   "id": "c17",
+   "level": 2,
+   "voice": "W",
+   "prompt": "Weren't you supposed to meet with your advisor today?",
+   "options": [
+    "I'm supposed to graduate in May.",
+    "She had to reschedule for Thursday.",
+    "I've had the same advisor for two years.",
+    "My advisor teaches chemistry."
+   ],
+   "answer": 1,
+   "why": "Indirekt: Das Treffen wurde verschoben."
+  },
+  {
+   "id": "c18",
+   "level": 2,
+   "voice": "M",
+   "prompt": "The printer in the computer lab is out of paper again.",
+   "options": [
+    "I printed my essay yesterday.",
+    "The lab closes at nine.",
+    "I'll let the front desk know.",
+    "Paper is cheaper online."
+   ],
+   "answer": 2,
+   "why": "Problem gemeldet → Lösung anbieten."
+  },
+  {
+   "id": "c19",
+   "level": 3,
+   "voice": "W",
+   "prompt": "I could have sworn the meeting was at three.",
+   "options": [
+    "It lasted about three hours.",
+    "I swear I'll be there at three.",
+    "The meeting room has three windows.",
+    "So could I, but the email says two."
+   ],
+   "answer": 3,
+   "why": "I could have sworn = ich war mir ganz sicher; So could I = ich auch."
+  },
+  {
+   "id": "c20",
+   "level": 3,
+   "voice": "M",
+   "prompt": "You might want to double-check those figures before you submit the report.",
+   "options": [
+    "Good point. I rushed through the last section.",
+    "I'll check out a book later.",
+    "The figures are in the appendix.",
+    "I submitted my application last week."
+   ],
+   "answer": 0,
+   "why": "Höflicher Rat (You might want to …) → Zustimmung mit Begründung."
+  },
+  {
+   "id": "c21",
+   "level": 3,
+   "voice": "W",
+   "prompt": "I'm thinking of dropping statistics this semester.",
+   "options": [
+    "I dropped my phone yesterday.",
+    "Are you sure? You'd have to take it eventually anyway.",
+    "This semester ends in December.",
+    "Statistics show that most students pass."
+   ],
+   "answer": 1,
+   "why": "drop a course = einen Kurs abwählen; die Antwort hinterfragt die Entscheidung."
+  },
+  {
+   "id": "c22",
+   "level": 3,
+   "voice": "M",
+   "prompt": "Do you happen to know if the gym is open on holidays?",
+   "options": [
+    "It happened last year as well.",
+    "I usually work out on weekends.",
+    "I'm not sure, but there's a schedule posted at the entrance.",
+    "Happy holidays to you too."
+   ],
+   "answer": 2,
+   "why": "Nicht wissen, aber Hinweis auf eine Informationsquelle geben."
+  },
+  {
+   "id": "c23",
+   "level": 3,
+   "voice": "W",
+   "prompt": "That presentation went better than I expected.",
+   "options": [
+    "I expect to finish it by Friday.",
+    "It's better to present in the morning.",
+    "The presentation is next week.",
+    "You certainly didn't look nervous."
+   ],
+   "answer": 3,
+   "why": "Reaktion auf eine Aussage über die Vergangenheit mit passendem Kommentar."
+  },
+  {
+   "id": "c24",
+   "level": 3,
+   "voice": "M",
+   "prompt": "If you're heading to the café, could you grab me a coffee?",
+   "options": [
+    "Sure. The usual?",
+    "The coffee machine was fixed yesterday.",
+    "The café has new chairs.",
+    "I grabbed the wrong bag."
+   ],
+   "answer": 0,
+   "why": "grab sb a coffee = jemandem einen Kaffee mitbringen; The usual? = wie immer?"
+  },
+  {
+   "id": "c25",
+   "level": 3,
+   "voice": "W",
+   "prompt": "I don't suppose you've had a chance to look at my draft yet?",
+   "options": [
+    "I suppose the draft is due soon.",
+    "Actually, I read it last night. It's really strong.",
+    "I haven't drafted anything yet.",
+    "There's a chance of rain later."
+   ],
+   "answer": 1,
+   "why": "I don't suppose … = höfliche, zurückhaltende Frage; Actually = doch."
+  },
+  {
+   "id": "c26",
+   "level": 3,
+   "voice": "M",
+   "prompt": "Isn't it about time we started on the group project?",
+   "options": [
+    "The group has four members.",
+    "We started the course in September.",
+    "Definitely. How about Monday after class?",
+    "It's about three o'clock."
+   ],
+   "answer": 2,
+   "why": "Isn't it about time …? = Wir sollten langsam anfangen → Terminvorschlag."
+  }
+ ],
+ "conversation": [
+  {
+   "id": "cv01",
+   "level": 1,
+   "lines": [
+    {
+     "who": "W",
+     "text": "Hi, I'd like to renew these two books, please."
+    },
+    {
+     "who": "M",
+     "text": "Sure. Can I see your student ID?"
+    },
+    {
+     "who": "W",
+     "text": "Here you go. Oh, and is it possible to renew them online next time?"
+    },
+    {
+     "who": "M",
+     "text": "Yes. Just log in to the library website and click on My Account. You can renew each book up to three times."
+    },
+    {
+     "who": "W",
+     "text": "Great, that'll save me a trip."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What does the woman want to do?",
+     "options": [
+      "Get a new student ID",
+      "Return some books",
+      "Buy a book",
+      "Renew two library books"
+     ],
+     "answer": 3,
+     "why": "„I'd like to renew these two books.“"
+    },
+    {
+     "q": "What does the man tell the woman?",
+     "options": [
+      "She can renew books online.",
+      "She needs to create a new account.",
+      "She must come to the library to renew books.",
+      "She can renew a book only once."
+     ],
+     "answer": 0,
+     "why": "Über „My Account“ online verlängern, bis zu dreimal."
+    }
+   ]
+  },
+  {
+   "id": "cv02",
+   "level": 1,
+   "lines": [
+    {
+     "who": "M",
+     "text": "Do you want to go grocery shopping this afternoon?"
+    },
+    {
+     "who": "W",
+     "text": "I can't. I have to work until six."
+    },
+    {
+     "who": "M",
+     "text": "Okay. Do you need anything? I can pick it up for you."
+    },
+    {
+     "who": "W",
+     "text": "Could you get some milk and bread? I'll pay you back tonight."
+    },
+    {
+     "who": "M",
+     "text": "No problem."
+    }
+   ],
+   "questions": [
+    {
+     "q": "Why can't the woman go shopping?",
+     "options": [
+      "She is feeling sick.",
+      "She has to work.",
+      "The store is closed.",
+      "She already went this morning."
+     ],
+     "answer": 1,
+     "why": "„I have to work until six.“"
+    },
+    {
+     "q": "What will the man probably do?",
+     "options": [
+      "Lend the woman some money",
+      "Cook dinner for the woman",
+      "Buy milk and bread for the woman",
+      "Wait until six to go shopping"
+     ],
+     "answer": 2,
+     "why": "Er bietet an, etwas mitzubringen; sie bittet um Milch und Brot."
+    }
+   ]
+  },
+  {
+   "id": "cv03",
+   "level": 2,
+   "lines": [
+    {
+     "who": "M",
+     "text": "Professor Kim, do you have a minute? It's about the research paper."
+    },
+    {
+     "who": "W",
+     "text": "Of course, Daniel. What's on your mind?"
+    },
+    {
+     "who": "M",
+     "text": "I've found plenty of sources on renewable energy, but my topic feels too broad. I'm not sure where to focus."
+    },
+    {
+     "who": "W",
+     "text": "That's a common problem. Why not pick one country and look at how its energy policy has changed over the last ten years?"
+    },
+    {
+     "who": "M",
+     "text": "That makes sense. Germany might be interesting. I've read a lot about their solar programs."
+    },
+    {
+     "who": "W",
+     "text": "Good choice. Just make sure you use at least two academic journals, not only news articles."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What is the man's problem?",
+     "options": [
+      "He missed the deadline.",
+      "He can't find enough sources.",
+      "He doesn't understand solar energy.",
+      "His topic is too general."
+     ],
+     "answer": 3,
+     "why": "„my topic feels too broad“."
+    },
+    {
+     "q": "What does the professor remind him to do?",
+     "options": [
+      "Include articles from academic journals",
+      "Avoid writing about Germany",
+      "Use only news articles",
+      "Write about at least two countries"
+     ],
+     "answer": 0,
+     "why": "„use at least two academic journals, not only news articles“."
+    }
+   ]
+  },
+  {
+   "id": "cv04",
+   "level": 2,
+   "lines": [
+    {
+     "who": "W",
+     "text": "Hi, I submitted a maintenance request last week, but nobody has come to fix my heater yet."
+    },
+    {
+     "who": "M",
+     "text": "I'm sorry about that. Let me check. It looks like your request was sent to the wrong building."
+    },
+    {
+     "who": "W",
+     "text": "Oh no. It's been really cold at night."
+    },
+    {
+     "who": "M",
+     "text": "I'll mark it as urgent and send it to the right team now. Someone should be there by tomorrow afternoon. In the meantime, you can pick up a portable heater at the front desk."
+    },
+    {
+     "who": "W",
+     "text": "That would help a lot. Thanks."
+    }
+   ],
+   "questions": [
+    {
+     "q": "Why hasn't the heater been fixed yet?",
+     "options": [
+      "A replacement part had to be ordered.",
+      "The request was sent to the wrong building.",
+      "The woman forgot to submit a request.",
+      "The repair team was too busy."
+     ],
+     "answer": 1,
+     "why": "„your request was sent to the wrong building“."
+    },
+    {
+     "q": "What does the man suggest the woman do?",
+     "options": [
+      "Move to another room",
+      "Wait until next week",
+      "Borrow a portable heater",
+      "Submit a new request online"
+     ],
+     "answer": 2,
+     "why": "„you can pick up a portable heater at the front desk“."
+    }
+   ]
+  },
+  {
+   "id": "cv05",
+   "level": 2,
+   "lines": [
+    {
+     "who": "W",
+     "text": "Are you ready for our presentation tomorrow?"
+    },
+    {
+     "who": "M",
+     "text": "Mostly. I finished my slides, but I still have to practice my part."
+    },
+    {
+     "who": "W",
+     "text": "Want to do a run-through tonight? We could book a study room."
+    },
+    {
+     "who": "M",
+     "text": "I'd love to, but I promised to help my brother move. How about early tomorrow, before class?"
+    },
+    {
+     "who": "W",
+     "text": "Hmm. I'm not really a morning person. But okay, let's meet at eight."
+    }
+   ],
+   "questions": [
+    {
+     "q": "Why can't the man practice tonight?",
+     "options": [
+      "He has a class tonight.",
+      "He hasn't finished his slides.",
+      "All the study rooms are booked.",
+      "He promised to help his brother."
+     ],
+     "answer": 3,
+     "why": "„I promised to help my brother move.“"
+    },
+    {
+     "q": "What does the woman imply?",
+     "options": [
+      "She doesn't like early meetings but will agree to one.",
+      "She thinks they don't need to practice.",
+      "She would rather practice alone.",
+      "She can't meet before class."
+     ],
+     "answer": 0,
+     "why": "not a morning person = kein Frühaufsteher; trotzdem „okay“."
+    }
+   ]
+  },
+  {
+   "id": "cv06",
+   "level": 3,
+   "lines": [
+    {
+     "who": "M",
+     "text": "So, did you hear back from the consulting firm?"
+    },
+    {
+     "who": "W",
+     "text": "I did. They offered me the internship. The thing is, the bank I interviewed with last week might make an offer too, and they pay considerably more."
+    },
+    {
+     "who": "M",
+     "text": "Did the bank give you a timeline?"
+    },
+    {
+     "who": "W",
+     "text": "Only that they'd decide soon. Meanwhile, the consulting firm wants an answer by Friday."
+    },
+    {
+     "who": "M",
+     "text": "Well, a bird in the hand. Unless you'd honestly prefer the bank, I wouldn't risk losing a sure thing."
+    },
+    {
+     "who": "W",
+     "text": "That's what I'm afraid of. Although the consulting work does sound more interesting, to be honest."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What is the woman's dilemma?",
+     "options": [
+      "Whether to ask for a higher salary",
+      "Whether to accept one offer before hearing from another employer",
+      "Which of two offers pays more",
+      "Whether to cancel an interview"
+     ],
+     "answer": 1,
+     "why": "Die Beratung will bis Freitag eine Antwort, die Bank hat noch nicht entschieden."
+    },
+    {
+     "q": "What does the man mean when he says \"a bird in the hand\"?",
+     "options": [
+      "She should accept both internships.",
+      "She should ask the bank to decide faster.",
+      "A certain opportunity is better than an uncertain one.",
+      "Consulting work is more interesting."
+     ],
+     "answer": 2,
+     "why": "Sprichwort: Lieber den Spatz in der Hand …"
+    }
+   ]
+  },
+  {
+   "id": "cv07",
+   "level": 3,
+   "lines": [
+    {
+     "who": "W",
+     "text": "Can I talk to you about the lab report? I noticed the discussion section is still empty."
+    },
+    {
+     "who": "M",
+     "text": "Right. I've been swamped with midterms. I was going to get to it this weekend."
+    },
+    {
+     "who": "W",
+     "text": "The thing is, it's due Monday morning, and I'd like time to read it over before we submit. Last time we lost points because the sections didn't match."
+    },
+    {
+     "who": "M",
+     "text": "Fair enough. How about I send you a draft by Saturday noon?"
+    },
+    {
+     "who": "W",
+     "text": "That works. And if you get stuck on the error analysis, just let me know. I've got my notes from the review session."
+    }
+   ],
+   "questions": [
+    {
+     "q": "Why is the woman concerned?",
+     "options": [
+      "The man made mistakes in the data.",
+      "She missed the review session.",
+      "The report is already late.",
+      "She wants time to check the report before it is due."
+     ],
+     "answer": 3,
+     "why": "Sie will es vor der Abgabe gegenlesen; letztes Mal gab es Punktabzug."
+    },
+    {
+     "q": "What does the woman offer to do?",
+     "options": [
+      "Share her notes if the man needs help",
+      "Meet the man on Monday morning",
+      "Ask the professor for an extension",
+      "Write the discussion section herself"
+     ],
+     "answer": 0,
+     "why": "„I've got my notes from the review session.“"
+    }
+   ]
+  }
+ ],
+ "announcement": [
+  {
+   "id": "an01",
+   "level": 1,
+   "voice": "W",
+   "text": "Attention, students. The cafeteria in the Student Center will close early today, at 3 p.m., because of a staff training session. Dinner will be served as usual in the North Dining Hall from 5 to 8 p.m. We're sorry for any inconvenience.",
+   "questions": [
+    {
+     "q": "What is the announcement mainly about?",
+     "options": [
+      "A change in dinner prices",
+      "A cafeteria closing early",
+      "A training course for students",
+      "A new dining hall opening"
+     ],
+     "answer": 1,
+     "why": "Die Cafeteria schließt heute früher."
+    },
+    {
+     "q": "Where can students eat dinner today?",
+     "options": [
+      "Nowhere on campus",
+      "In the staff room",
+      "In the North Dining Hall",
+      "In the Student Center"
+     ],
+     "answer": 2,
+     "why": "„Dinner will be served as usual in the North Dining Hall.“"
+    }
+   ]
+  },
+  {
+   "id": "an02",
+   "level": 1,
+   "voice": "M",
+   "text": "Good morning, everyone. Today's field trip to the science museum will leave from the main entrance at nine thirty, not nine o'clock as planned. Please bring your student ID for free entry, and remember that lunch is not provided, so pack a snack or bring some money.",
+   "questions": [
+    {
+     "q": "What has changed?",
+     "options": [
+      "The entrance fee",
+      "The date of the trip",
+      "The destination",
+      "The departure time"
+     ],
+     "answer": 3,
+     "why": "9:30 statt 9:00."
+    },
+    {
+     "q": "What should students bring?",
+     "options": [
+      "Their student ID",
+      "A packed lunch for the whole group",
+      "Their textbooks",
+      "A museum ticket"
+     ],
+     "answer": 0,
+     "why": "„Please bring your student ID for free entry.“"
+    }
+   ]
+  },
+  {
+   "id": "an03",
+   "level": 2,
+   "voice": "W",
+   "text": "Hello, this is an announcement for all residents of Maple Hall. The fire alarm system will be tested tomorrow between 10 a.m. and noon. You do not need to leave the building during the test. However, if the alarm sounds at any other time, it is a real emergency, and you must exit immediately using the nearest stairway.",
+   "questions": [
+    {
+     "q": "What will happen tomorrow?",
+     "options": [
+      "New stairways will be built.",
+      "The fire alarm system will be tested.",
+      "Residents will attend a safety meeting.",
+      "The building will be evacuated."
+     ],
+     "answer": 1,
+     "why": "Test der Brandmeldeanlage zwischen 10 und 12 Uhr."
+    },
+    {
+     "q": "What should residents do if they hear the alarm in the afternoon?",
+     "options": [
+      "Take the elevator to the ground floor",
+      "Wait for further instructions",
+      "Leave the building immediately",
+      "Ignore it because it is a test"
+     ],
+     "answer": 2,
+     "why": "Außerhalb des Testfensters ist es ein echter Notfall."
+    }
+   ]
+  },
+  {
+   "id": "an04",
+   "level": 2,
+   "voice": "M",
+   "text": "Welcome to the Riverside Art Museum. Please note that the second-floor gallery is currently closed while we install our new photography exhibition, which opens next Saturday. In the meantime, visitors can enjoy a free guided tour of our sculpture garden, starting every hour at the information desk. Photography without flash is permitted in all open areas.",
+   "questions": [
+    {
+     "q": "Why is the second-floor gallery closed?",
+     "options": [
+      "It is reserved for a private event.",
+      "It is being repaired.",
+      "The sculptures are being cleaned.",
+      "A new exhibition is being set up."
+     ],
+     "answer": 3,
+     "why": "„while we install our new photography exhibition“."
+    },
+    {
+     "q": "What is true about taking photos?",
+     "options": [
+      "It is allowed without a flash.",
+      "It is not allowed anywhere.",
+      "It costs extra.",
+      "It is allowed only on guided tours."
+     ],
+     "answer": 0,
+     "why": "„Photography without flash is permitted“."
+    }
+   ]
+  },
+  {
+   "id": "an05",
+   "level": 2,
+   "voice": "W",
+   "text": "This is a reminder that the Economics Department's guest lecture, The Future of Remote Work, has been moved from Room 210 to the larger auditorium in Hayes Hall because of high interest. The talk begins at 4 p.m. Students who attend can earn one point of extra credit in Economics 101 by submitting a one-page summary by Friday.",
+   "questions": [
+    {
+     "q": "Why has the lecture been moved?",
+     "options": [
+      "The time of the lecture has changed.",
+      "Many people want to attend.",
+      "The speaker asked for a larger room.",
+      "Room 210 is being renovated."
+     ],
+     "answer": 1,
+     "why": "„because of high interest“."
+    },
+    {
+     "q": "How can students earn extra credit?",
+     "options": [
+      "By registering online",
+      "By asking a question during the talk",
+      "By writing a short summary of the talk",
+      "By arriving early"
+     ],
+     "answer": 2,
+     "why": "„submitting a one-page summary by Friday“."
+    }
+   ]
+  },
+  {
+   "id": "an06",
+   "level": 3,
+   "voice": "M",
+   "text": "Good afternoon. This is a message from the Office of the Registrar. Due to an unexpected technical issue with the online registration system, the registration period for spring courses has been extended by forty-eight hours and will now close on Thursday at 5 p.m. Students who encountered error messages while enrolling are advised to verify their schedules, as some selections may not have been saved. Course waitlists remain unaffected.",
+   "questions": [
+    {
+     "q": "Why has the registration period been extended?",
+     "options": [
+      "The office will be closed for two days.",
+      "Too few students have registered.",
+      "More courses have been added.",
+      "A technical problem affected the online system."
+     ],
+     "answer": 3,
+     "why": "„Due to an unexpected technical issue“."
+    },
+    {
+     "q": "What are some students advised to do?",
+     "options": [
+      "Check whether their course choices were saved",
+      "Register again for all their courses",
+      "Contact their professors directly",
+      "Join a course waitlist"
+     ],
+     "answer": 0,
+     "why": "„advised to verify their schedules, as some selections may not have been saved“."
+    }
+   ]
+  },
+  {
+   "id": "an07",
+   "level": 3,
+   "voice": "W",
+   "text": "Attention, passengers. Due to signal maintenance between Central Station and Harbor Point, Blue Line trains are running every twenty minutes rather than every eight this weekend. Passengers traveling to the airport are encouraged to allow additional time or to use the express shuttle bus, which departs from Platform 3. Weekly passes will be honored on the shuttle at no additional charge.",
+   "questions": [
+    {
+     "q": "What is the main purpose of the announcement?",
+     "options": [
+      "To advertise a new airport bus",
+      "To inform passengers about reduced train service",
+      "To explain changes to ticket prices",
+      "To announce new train routes"
+     ],
+     "answer": 1,
+     "why": "Züge fahren nur alle 20 statt alle 8 Minuten."
+    },
+    {
+     "q": "What is indicated about the shuttle bus?",
+     "options": [
+      "It costs more than the train.",
+      "It only goes to Harbor Point.",
+      "Passengers with weekly passes can ride it at no extra cost.",
+      "It runs every eight minutes."
+     ],
+     "answer": 2,
+     "why": "„Weekly passes will be honored … at no additional charge.“"
+    }
+   ]
+  }
+ ],
+ "talk": [
+  {
+   "id": "tk01",
+   "level": 1,
+   "voice": "W",
+   "title": "Why Leaves Change Color",
+   "text": "Today I want to explain why leaves change color in the fall. Leaves are green during spring and summer because they contain a lot of chlorophyll. Chlorophyll is the chemical that plants use to turn sunlight into food. But leaves also contain other colors, like yellow and orange. We just can't see them in summer because there is so much green. In the fall, the days get shorter and colder. Trees stop making chlorophyll, and the green color slowly disappears. That's when the yellow and orange colors become visible. Some trees, like maples, also make a new red color in the fall. Scientists think this red color may protect the leaves from too much sunlight while the tree takes back nutrients before the leaves drop.",
+   "questions": [
+    {
+     "q": "What is the talk mainly about?",
+     "options": [
+      "Why some trees lose their leaves in summer",
+      "How trees grow new leaves",
+      "How plants are harmed by sunlight",
+      "Why leaves change color in the fall"
+     ],
+     "answer": 3,
+     "why": "Das Thema wird im ersten Satz genannt."
+    },
+    {
+     "q": "Why are yellow and orange colors hard to see in summer?",
+     "options": [
+      "The green chlorophyll covers them.",
+      "Sunlight destroys them.",
+      "They are stored inside the branches.",
+      "They only form in winter."
+     ],
+     "answer": 0,
+     "why": "„we can't see them in summer because there is so much green“."
+    },
+    {
+     "q": "What happens to chlorophyll in the fall?",
+     "options": [
+      "It moves to the roots.",
+      "Trees stop producing it.",
+      "Trees produce more of it.",
+      "It turns red."
+     ],
+     "answer": 1,
+     "why": "„Trees stop making chlorophyll“."
+    },
+    {
+     "q": "According to the speaker, why might maple leaves turn red?",
+     "options": [
+      "To produce chlorophyll faster",
+      "To attract insects",
+      "To protect the leaves while the tree takes back nutrients",
+      "To keep the tree warm"
+     ],
+     "answer": 2,
+     "why": "Rot schützt vermutlich vor zu viel Sonne, während Nährstoffe zurückgeholt werden."
+    }
+   ]
+  },
+  {
+   "id": "tk02",
+   "level": 1,
+   "voice": "M",
+   "title": "The First Bicycles",
+   "text": "Let's look at the history of the bicycle. The first bicycle-like machine was built in Germany in 1817. It was made of wood and had no pedals. Riders sat on it and pushed themselves along with their feet. It was called a running machine. About fifty years later, pedals were added to the front wheel. These bicycles were faster, but they were also very uncomfortable. People called them boneshakers, because the roads were rough and the wheels were made of iron. Later, some bicycles had a huge front wheel and a tiny back wheel. A bigger wheel meant more speed, but riders often fell. Finally, in the 1880s, the safety bicycle appeared. It had two wheels of the same size and a chain connected to the back wheel, very similar to the bikes we ride today.",
+   "questions": [
+    {
+     "q": "What was special about the first bicycle-like machine?",
+     "options": [
+      "It had a chain.",
+      "It was made of iron.",
+      "It had three wheels.",
+      "It had no pedals."
+     ],
+     "answer": 3,
+     "why": "„It was made of wood and had no pedals.“"
+    },
+    {
+     "q": "Why were some early bicycles called boneshakers?",
+     "options": [
+      "They were very uncomfortable to ride.",
+      "They were extremely fast.",
+      "They were made of bones.",
+      "They were often stolen."
+     ],
+     "answer": 0,
+     "why": "Holprige Straßen und Eisenräder."
+    },
+    {
+     "q": "What was the problem with bicycles that had a huge front wheel?",
+     "options": [
+      "They were too expensive.",
+      "Riders often fell off.",
+      "They had no seats.",
+      "They were too slow."
+     ],
+     "answer": 1,
+     "why": "„riders often fell“."
+    },
+    {
+     "q": "What does the speaker say about the safety bicycle?",
+     "options": [
+      "It had no chain.",
+      "It was only used in Germany.",
+      "It was similar to modern bicycles.",
+      "It was invented in 1817."
+     ],
+     "answer": 2,
+     "why": "„very similar to the bikes we ride today“."
+    }
+   ]
+  },
+  {
+   "id": "tk03",
+   "level": 2,
+   "voice": "W",
+   "title": "Desire Paths",
+   "text": "Have you ever noticed a narrow dirt path cutting across a lawn, even though a paved sidewalk goes around it? Urban planners call these desire paths. They form when enough people decide that the official route is inconvenient and take a shortcut instead. For a long time, many planners saw desire paths as a nuisance. They put up fences or signs to keep people on the sidewalks. More recently, though, some designers have started treating these paths as valuable information. After all, a desire path shows exactly where people actually want to walk. Some universities have even used this idea when designing new campuses. Instead of paving walkways right away, they plant grass everywhere and wait a few months. Then they pave the paths that students have worn into the ground. The result is a network of walkways that matches how people really move around the campus.",
+   "questions": [
+    {
+     "q": "What is the talk mainly about?",
+     "options": [
+      "How to grow grass on university campuses",
+      "The history of paved sidewalks",
+      "Why people should stay on sidewalks",
+      "Paths created by shortcuts and how planners respond to them"
+     ],
+     "answer": 3,
+     "why": "Trampelpfade und der Umgang der Planer damit."
+    },
+    {
+     "q": "How did many planners traditionally respond to desire paths?",
+     "options": [
+      "They tried to stop people from using them.",
+      "They ignored them completely.",
+      "They studied them carefully.",
+      "They paved them immediately."
+     ],
+     "answer": 0,
+     "why": "Zäune und Schilder – „a nuisance“."
+    },
+    {
+     "q": "Why does the speaker mention universities?",
+     "options": [
+      "To show where desire paths are most common",
+      "To give an example of designers using desire paths in planning",
+      "To explain who first described desire paths",
+      "To criticize students for damaging lawns"
+     ],
+     "answer": 1,
+     "why": "Beispiel: erst Gras säen, dann die Trampelpfade pflastern."
+    },
+    {
+     "q": "What can be inferred about the walkways at those universities?",
+     "options": [
+      "They are usually fenced in.",
+      "They are mostly made of dirt.",
+      "They are likely to be convenient for students.",
+      "They were designed before the campus was built."
+     ],
+     "answer": 2,
+     "why": "Sie folgen den Wegen, die Studierende tatsächlich gehen."
+    }
+   ]
+  },
+  {
+   "id": "tk04",
+   "level": 2,
+   "voice": "M",
+   "title": "The Tragedy of the Commons",
+   "text": "In economics, there's an idea called the tragedy of the commons. Imagine a pasture that's open to all the farmers in a village. Each farmer benefits from adding one more cow to the field, because they get the milk and the profit. But the cost, the grass that the extra cow eats, is shared by everyone. So each farmer has a reason to keep adding cows. Eventually, the pasture is overgrazed and becomes useless for everyone. The same pattern shows up in many modern situations: overfishing in the ocean, traffic on public roads, even air pollution. In each case, individuals acting in their own interest end up harming a resource they all depend on. For many years, economists thought the only solutions were government rules or private ownership. But the political scientist Elinor Ostrom found that many communities manage shared resources successfully on their own, by creating local rules and monitoring each other. Her work earned her a Nobel Prize in 2009.",
+   "questions": [
+    {
+     "q": "What is the main purpose of the talk?",
+     "options": [
+      "To argue that all resources should be private",
+      "To describe the history of farming",
+      "To compare cows with fish",
+      "To explain a concept and how the problem can be addressed"
+     ],
+     "answer": 3,
+     "why": "Begriff erklären + Lösungen (Regeln, Ostrom)."
+    },
+    {
+     "q": "Why does each farmer keep adding cows?",
+     "options": [
+      "Each farmer gets the benefit, while the cost is shared.",
+      "Cows produce more milk in large groups.",
+      "The government pays farmers for each cow.",
+      "The pasture keeps growing."
+     ],
+     "answer": 0,
+     "why": "Nutzen privat, Kosten geteilt."
+    },
+    {
+     "q": "Why does the speaker mention traffic on public roads?",
+     "options": [
+      "To explain how roads are funded",
+      "As a modern example of the same problem",
+      "To show a solution to overgrazing",
+      "To describe Ostrom's research"
+     ],
+     "answer": 1,
+     "why": "Aufzählung moderner Beispiele."
+    },
+    {
+     "q": "What did Elinor Ostrom find?",
+     "options": [
+      "Shared resources always fail.",
+      "Government rules are always necessary.",
+      "Communities can manage shared resources with their own rules.",
+      "Private ownership is the only solution."
+     ],
+     "answer": 2,
+     "why": "Lokale Regeln und gegenseitige Kontrolle funktionieren."
+    }
+   ]
+  },
+  {
+   "id": "tk05",
+   "level": 2,
+   "voice": "W",
+   "title": "How Birds Navigate",
+   "text": "How do migrating birds find their way over thousands of kilometers? Researchers have discovered that birds use several tools at once. During the day, many species navigate using the position of the sun. At night, some birds, like the indigo bunting, use the stars. In one famous experiment, young buntings were raised in a planetarium, a building where the night sky is projected onto a ceiling. When the researchers rotated the projected sky, the birds changed the direction they tried to fly. Birds also seem to sense the Earth's magnetic field. Scientists believe that special proteins in birds' eyes may allow them to see magnetic lines. And as they get closer to their destination, birds rely on familiar landmarks, like rivers, coastlines, and mountains, as well as smells. What's remarkable is that birds can switch between these tools depending on the weather. On cloudy nights, when the stars are hidden, they depend more on the magnetic field.",
+   "questions": [
+    {
+     "q": "What is the talk mainly about?",
+     "options": [
+      "How planetariums are built",
+      "Why birds migrate in winter",
+      "Which birds fly the longest distances",
+      "The different ways birds navigate during migration"
+     ],
+     "answer": 3,
+     "why": "Mehrere Orientierungshilfen der Zugvögel."
+    },
+    {
+     "q": "What did the planetarium experiment show?",
+     "options": [
+      "The birds used the stars to choose a direction.",
+      "The birds preferred daylight.",
+      "The birds could not fly indoors.",
+      "The birds ignored the projected sky."
+     ],
+     "answer": 0,
+     "why": "Gedrehter Himmel → andere Flugrichtung."
+    },
+    {
+     "q": "According to the speaker, what may help birds sense the magnetic field?",
+     "options": [
+      "Landmarks such as rivers",
+      "Proteins in their eyes",
+      "The position of the sun",
+      "Their feathers"
+     ],
+     "answer": 1,
+     "why": "„special proteins in birds' eyes“."
+    },
+    {
+     "q": "What do birds do on cloudy nights?",
+     "options": [
+      "They stop flying until morning.",
+      "They follow other birds.",
+      "They rely more on the magnetic field.",
+      "They use the sun instead."
+     ],
+     "answer": 2,
+     "why": "Sterne verdeckt → Magnetfeld."
+    }
+   ]
+  },
+  {
+   "id": "tk06",
+   "level": 3,
+   "voice": "M",
+   "title": "Anchoring",
+   "text": "I'd like to talk about a cognitive bias that affects nearly every negotiation you'll ever take part in: anchoring. Anchoring refers to our tendency to rely too heavily on the first piece of information we receive when making a judgment. In a classic study, participants spun a wheel that was rigged to stop at either ten or sixty-five. They were then asked to estimate the percentage of African countries in the United Nations. Those who'd seen sixty-five gave estimates that were, on average, almost twice as high as those who'd seen ten, even though they knew the number was random. Now, the implications for business are considerable. In salary negotiations, the first figure mentioned tends to shape the entire discussion, which is why some experts advise making the first offer yourself, provided you've done your research. Interestingly, being aware of the bias doesn't eliminate it. Even experienced real estate agents, when given different listing prices for the same house, produced valuations that were pulled toward the listed price, while insisting the price hadn't influenced them.",
+   "questions": [
+    {
+     "q": "What is the speaker mainly discussing?",
+     "options": [
+      "How real estate agents are trained",
+      "Strategies for estimating percentages",
+      "The history of the United Nations",
+      "The tendency for initial information to influence judgments"
+     ],
+     "answer": 3,
+     "why": "Anker-Effekt: erste Information prägt das Urteil."
+    },
+    {
+     "q": "Why does the speaker mention the wheel experiment?",
+     "options": [
+      "To show that even random numbers can affect estimates",
+      "To compare two types of negotiation",
+      "To explain how the United Nations was formed",
+      "To show that people are good at estimating"
+     ],
+     "answer": 0,
+     "why": "Zufallszahl verzerrte die Schätzungen."
+    },
+    {
+     "q": "What advice does the speaker mention for salary negotiations?",
+     "options": [
+      "Never mention a specific number",
+      "Consider making the first offer after doing research",
+      "Accept the first figure that is offered",
+      "Always wait for the employer's offer"
+     ],
+     "answer": 1,
+     "why": "„making the first offer yourself, provided you've done your research“."
+    },
+    {
+     "q": "What does the speaker imply about the real estate agents?",
+     "options": [
+      "They refused to give valuations.",
+      "They deliberately overvalued the houses.",
+      "They were influenced by the bias without realizing it.",
+      "Their experience protected them from the bias."
+     ],
+     "answer": 2,
+     "why": "Beeinflusst, obwohl sie es bestritten."
+    }
+   ]
+  },
+  {
+   "id": "tk07",
+   "level": 3,
+   "voice": "W",
+   "title": "Dating the Past with Tree Rings",
+   "text": "Today we're going to look at dendrochronology, the science of dating events using tree rings. Most of you know that a tree adds one ring per year. What's less obvious is that the width of each ring reflects the growing conditions that year: wet years produce wide rings, while droughts produce narrow ones. Because trees in the same region experience the same weather, they share a distinctive pattern of wide and narrow rings, a bit like a barcode. Researchers can match the pattern in a living tree with the pattern in an old wooden beam, and then overlap that with even older samples. By chaining samples together in this way, scientists in Europe have built continuous records stretching back more than twelve thousand years. The applications go well beyond biology. Archaeologists have used tree rings to determine exactly when medieval buildings were constructed, and climate scientists use them to reconstruct rainfall patterns from periods long before weather records existed. Tree rings have even helped calibrate radiocarbon dating, correcting errors in that method of up to several centuries.",
+   "questions": [
+    {
+     "q": "What is the main topic of the talk?",
+     "options": [
+      "Problems with modern weather records",
+      "The history of medieval architecture",
+      "How trees survive droughts",
+      "Using tree rings to date events and reconstruct the past"
+     ],
+     "answer": 3,
+     "why": "Dendrochronologie und ihre Anwendungen."
+    },
+    {
+     "q": "Why does the speaker compare ring patterns to a barcode?",
+     "options": [
+      "To show that the patterns are distinctive and can be matched",
+      "To explain how machines count rings",
+      "To describe how wood is sold",
+      "To show that all trees have the same number of rings"
+     ],
+     "answer": 0,
+     "why": "Unverwechselbares Muster, das man abgleichen kann."
+    },
+    {
+     "q": "How have scientists created records that go back more than 12,000 years?",
+     "options": [
+      "By finding a single very old tree",
+      "By linking overlapping samples of different ages",
+      "By using radiocarbon dating alone",
+      "By studying modern weather records"
+     ],
+     "answer": 1,
+     "why": "„By chaining samples together“."
+    },
+    {
+     "q": "What does the speaker imply about radiocarbon dating?",
+     "options": [
+      "It is more accurate than tree rings.",
+      "It has replaced dendrochronology.",
+      "It was less accurate before tree-ring data was used.",
+      "It can only be used on trees."
+     ],
+     "answer": 2,
+     "why": "Baumringe korrigierten Fehler von bis zu mehreren Jahrhunderten."
+    }
+   ]
+  }
+ ]
+}

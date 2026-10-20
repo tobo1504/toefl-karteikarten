@@ -1,0 +1,192 @@
+{
+ "repeat": [
+  {
+   "id": "rp01",
+   "voice": "W",
+   "scenario": "Campus tour guide",
+   "intro": "You are training to be a campus tour guide. Listen to your supervisor and repeat what she says. Repeat only once.",
+   "sentences": [
+    "Welcome to Westfield University.",
+    "Please stay together as a group.",
+    "The library is on your left.",
+    "Students can study here until midnight.",
+    "The dining hall serves breakfast starting at seven.",
+    "If you have any questions, feel free to ask me during the tour.",
+    "Our next stop is the science center, which opened just two years ago."
+   ]
+  },
+  {
+   "id": "rp02",
+   "voice": "M",
+   "scenario": "Museum gift shop",
+   "intro": "You have a new job at a museum gift shop. Listen to your manager and repeat what he says. Repeat only once.",
+   "sentences": [
+    "Good morning, everyone.",
+    "The shop opens at ten.",
+    "Please check the shelves before we open.",
+    "Members receive a ten percent discount.",
+    "All returns must include the original receipt.",
+    "If a customer asks about tours, send them to the front desk.",
+    "Remember to count the money in the register carefully at the end of your shift."
+   ]
+  },
+  {
+   "id": "rp03",
+   "voice": "W",
+   "scenario": "Library assistant",
+   "intro": "You are working as a library assistant. Listen to the head librarian and repeat what she says. Repeat only once.",
+   "sentences": [
+    "Thanks for helping out today.",
+    "These books need to be returned.",
+    "Put the new magazines on the top shelf.",
+    "The printers are next to the computer lab.",
+    "Quiet study rooms can be reserved online.",
+    "Please remind visitors that food is not allowed upstairs.",
+    "Books that have been damaged should be placed in the box behind the desk."
+   ]
+  },
+  {
+   "id": "rp04",
+   "voice": "M",
+   "scenario": "Fitness center",
+   "intro": "You have started working at the front desk of a fitness center. Listen to your manager and repeat what he says. Repeat only once.",
+   "sentences": [
+    "Hi, welcome to the gym.",
+    "Lockers are in the back.",
+    "Please wipe down the machines after use.",
+    "Yoga classes start every hour on the hour.",
+    "Towels can be picked up at the front desk.",
+    "Anyone using the pool must take a shower first.",
+    "New members are entitled to a free session with a personal trainer during their first month."
+   ]
+  },
+  {
+   "id": "rp05",
+   "voice": "W",
+   "scenario": "Science lab",
+   "intro": "You are a new teaching assistant in a chemistry lab. Listen to the instructor and repeat what she says. Repeat only once.",
+   "sentences": [
+    "Let's begin the lab.",
+    "Put on your safety glasses.",
+    "Never eat or drink in the lab.",
+    "Chemicals must be labeled clearly.",
+    "Report any spills to the instructor immediately.",
+    "Wash your hands thoroughly before you leave the room.",
+    "Broken glass should never go in the regular trash, but in the special container by the sink."
+   ]
+  },
+  {
+   "id": "rp06",
+   "voice": "M",
+   "scenario": "Hotel reception",
+   "intro": "You are training at a hotel reception desk. Listen to your supervisor and repeat what he says. Repeat only once.",
+   "sentences": [
+    "Welcome to the Grand Hotel.",
+    "Breakfast is served downstairs.",
+    "Checkout time is eleven a.m.",
+    "Your room is on the fourth floor.",
+    "The pool is open until nine in the evening.",
+    "If you need extra towels, just call the front desk.",
+    "Guests who would like a late checkout should let us know by eight in the morning."
+   ]
+  }
+ ],
+ "interview": [
+  {
+   "id": "iv01",
+   "voice": "W",
+   "topic": "how students manage their time",
+   "intro": "A researcher is studying how students manage their time. You have agreed to take part in a short interview. Please answer the interviewer's questions.",
+   "questions": [
+    "How do you usually plan your week?",
+    "Tell me about a time when you had too many deadlines at once. What did you do?",
+    "Some people say that being busy all the time is a sign of success. Do you agree?",
+    "Should universities make time-management training a required course? Why or why not?"
+   ]
+  },
+  {
+   "id": "iv02",
+   "voice": "M",
+   "topic": "how technology affects learning",
+   "intro": "A researcher is studying how technology affects learning. You have agreed to take part in a short interview. Please answer the interviewer's questions.",
+   "questions": [
+    "What technology do you use most when you study?",
+    "Describe an app or website that helped you learn something new.",
+    "Do you think students today rely too much on technology? Explain.",
+    "In the future, will online learning replace traditional classrooms? Why or why not?"
+   ]
+  },
+  {
+   "id": "iv03",
+   "voice": "W",
+   "topic": "travel habits",
+   "intro": "A researcher is studying travel habits. You have agreed to take part in a short interview. Please answer the interviewer's questions.",
+   "questions": [
+    "What is the most interesting place you have ever visited?",
+    "Do you prefer to plan every detail of a trip or to be spontaneous? Why?",
+    "Some people think tourism harms local communities. What is your opinion?",
+    "Should governments limit the number of tourists in popular destinations? Explain."
+   ]
+  },
+  {
+   "id": "iv04",
+   "voice": "M",
+   "topic": "attitudes toward work and careers",
+   "intro": "A researcher is studying attitudes toward work and careers. You have agreed to take part in a short interview. Please answer the interviewer's questions.",
+   "questions": [
+    "What kind of job would you like to have in ten years?",
+    "Tell me about a time when you worked as part of a team. What was your role?",
+    "Is a high salary the most important factor when choosing a job? Why or why not?",
+    "Some companies let employees work from home permanently. Is this a good idea for companies?"
+   ]
+  },
+  {
+   "id": "iv05",
+   "voice": "W",
+   "topic": "attitudes toward the environment",
+   "intro": "A researcher is studying attitudes toward the environment. You have agreed to take part in a short interview. Please answer the interviewer's questions.",
+   "questions": [
+    "What do you personally do to protect the environment?",
+    "Describe a change in your hometown that has affected the environment.",
+    "Who should be most responsible for protecting the environment: individuals, companies, or governments?",
+    "Would you support higher taxes on air travel to reduce pollution? Explain."
+   ]
+  },
+  {
+   "id": "iv06",
+   "voice": "M",
+   "topic": "how people spend their free time",
+   "intro": "A researcher is studying how people spend their free time. You have agreed to take part in a short interview. Please answer the interviewer's questions.",
+   "questions": [
+    "What do you usually do in your free time?",
+    "Tell me about a skill you learned outside of school.",
+    "Do people today have less free time than people in the past? Why?",
+    "Should schools give students less homework so they have more time for hobbies? Explain."
+   ]
+  },
+  {
+   "id": "iv07",
+   "voice": "W",
+   "topic": "health habits",
+   "intro": "A researcher is studying health habits. You have agreed to take part in a short interview. Please answer the interviewer's questions.",
+   "questions": [
+    "What do you do to stay healthy?",
+    "Describe a habit you changed to improve your health.",
+    "Should schools do more to teach healthy eating? Why?",
+    "Some people believe governments should tax unhealthy food. What is your view?"
+   ]
+  },
+  {
+   "id": "iv08",
+   "voice": "M",
+   "topic": "how people communicate",
+   "intro": "A researcher is studying how people communicate. You have agreed to take part in a short interview. Please answer the interviewer's questions.",
+   "questions": [
+    "Do you prefer to text or call your friends? Why?",
+    "Tell me about a time when a message caused a misunderstanding.",
+    "How has social media changed the way people communicate?",
+    "Should children be allowed to have smartphones before the age of twelve? Explain."
+   ]
+  }
+ ]
+}

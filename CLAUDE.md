@@ -34,7 +34,16 @@ Live: https://tobo1504.github.io/toefl-karteikarten/ und …/trainer/
   Lernstand-Export/Import per Code (`TT1:` + base64), wie bei den Karteikarten.
 - KI-Bewertung (Writing, Interview): nur in der Claude-Version über `claude.use("sample")`.
   In der PWA: Button „Bewertungs-Prompt kopieren“ → Tom fügt ihn in Claude ein.
-- Listening/Speaking-Audio: `speechSynthesis` (Stimmen en-US/en-GB/en-AU, Mann/Frau getrennt).
+- Listening/Speaking-Audio: `speechSynthesis` (Stimmen en-US/en-GB/en-AU je nach Item-id, Mann/Frau per Namensliste;
+  Fallback über Tonhöhe). Texte werden satzweise gesprochen (Chrome bricht lange Äußerungen sonst ab).
+  Im Test wird Audio einmal abgespielt und „Next“ ist währenddessen gesperrt; im Training gibt es „Nochmal anhören“ und Transkript.
+- Speaking-Eingabe: in der PWA Web-Speech-Spracherkennung, wenn vorhanden; sonst (und immer in der Claude-Version,
+  dort ist das Mikrofon gesperrt) Textfeld für die Diktierfunktion der Tastatur. Antwortfenster: Repeat 8–12 s, Interview 45 s,
+  plus kurze Nachfrist zum Abschließen der Eingabe. Repeat wird automatisch per Wort-Abgleich (0–5) bewertet,
+  Interview per KI (`sample`) mit allen vier Antworten in einem Aufruf.
+- Kompletter Test: Teile aller vier Sections hintereinander (`startFullTest`); Gesamt-Band = Mittel der Section-Bands, auf 0,5 gerundet,
+  sobald Writing und Speaking bewertet sind.
+- Testhilfe: `window.__TT_SPEED` beschleunigt die Speaking-Zeitfenster (nur für `tests/smoke.js`).
 
 ## Offizielles Format (Quelle: ETS „Updated TOEFL iBT Test Overview“, Practice Tests 2026)
 | Section | Aufgaben | Items | Zeit |
@@ -62,7 +71,8 @@ Annahmen (nicht offiziell belegt, bei besseren Quellen anpassen):
 - Adaptiv: ≥ 70 % richtig in Modul 1 → schweres Modul 2, sonst leichtes.
 - Rohpunkte Writing 0–20 (BaS 10 + Email 5 + Discussion 5), Speaking 0–55 (7×5 + 4×5).
 - Band-Umrechnung: Tabellen in `app.js` (`BAND_TABLES`), grob an ETS-Konkordanz angelehnt.
-- Rückwärts-Navigation: innerhalb eines Moduls erlaubt („Back“), wie im Paper-Practice-Test; zwischen Modulen nicht.
+- Rückwärts-Navigation: Reading und Writing innerhalb eines Moduls/Teils erlaubt; Listening und Speaking nie (Audio läuft nur einmal).
+- Speaking-Band: Rohpunkte 0–55 (Repeat 7×5 + Interview 4×5) → Tabelle `speakingBand`.
 
 ## Bewertungs-Rubrics (ETS, 0–5) – Kurzfassung für Prompts
 - Email 5: effektiv, klar, konsequent; Ausarbeitung stützt Zweck; Satzvielfalt, präzise idiomatische Wortwahl,
