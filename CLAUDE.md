@@ -97,5 +97,7 @@ Jede MC-Frage: `{"q": "...", "options": ["A","B","C","D"], "answer": 0-3, "why":
 ## Qualitätsregeln für neue Aufgaben
 - Nie echte ETS-Aufgaben oder Texte anderer Anbieter kopieren. Alles neu schreiben, nach dem Muster der ETS-Beispiele.
 - Fehlantworten plausibel (gleiche Länge, gleicher Stil). Antwortposition gleichmäßig über A–D verteilen.
+  Die richtige Antwort darf nicht systematisch die längste sein (build.py meldet den Anteil, Ziel < 40 %; Korrektur-Beispiel: `tools/fix_lengths_batch1_2.py`).
+- Neue Inhalte: Skript `trainer/tools/gen_<section>_batchN.py` mit `contentlib` (ctw-Lücken, Antwort-Rotation, append) anlegen und ausführen.
 - Englisch: amerikanische Schreibweise, natürlich, fehlerfrei. Begründungen (`why`) auf Deutsch, 1 Satz.
 - Level 3 (schwer) = seltenerer Wortschatz, längere Sätze, mehr Inferenz.

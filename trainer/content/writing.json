@@ -349,6 +349,228 @@
     "too cold"
    ],
    "why": "as long as + Present Simple = solange."
+  },
+  {
+   "id": "bas25",
+   "level": 1,
+   "prompt": "Where did you buy that jacket?",
+   "answer": "I bought it at a small shop near the station.",
+   "chunks": [
+    "I bought it",
+    "at a small shop",
+    "near",
+    "the station"
+   ],
+   "why": "Ortsangabe: at a shop near …"
+  },
+  {
+   "id": "bas26",
+   "level": 1,
+   "prompt": "Are you coming to dinner tonight?",
+   "answer": "I can't, because I have to study for my exam.",
+   "chunks": [
+    "I can't",
+    "because",
+    "I have to",
+    "study",
+    "for my exam"
+   ],
+   "why": "have to + Grundform."
+  },
+  {
+   "id": "bas27",
+   "level": 2,
+   "prompt": "What did the doctor tell you?",
+   "answer": "She told me to get more rest and drink more water.",
+   "chunks": [
+    "she told me",
+    "to get",
+    "more rest",
+    "and",
+    "drink more water"
+   ],
+   "why": "tell sb to + Grundform."
+  },
+  {
+   "id": "bas28",
+   "level": 2,
+   "prompt": "How long have you been learning Spanish?",
+   "answer": "I have been taking classes for almost two years.",
+   "chunks": [
+    "I have been",
+    "taking classes",
+    "for",
+    "almost",
+    "two years"
+   ],
+   "why": "Present Perfect Continuous + for + Zeitraum."
+  },
+  {
+   "id": "bas29",
+   "level": 2,
+   "prompt": "Why didn't you answer my call?",
+   "answer": "My phone was turned off while I was in the library.",
+   "chunks": [
+    "my phone",
+    "was turned off",
+    "while",
+    "I was",
+    "in the library"
+   ],
+   "why": "Passiv Past: was turned off; while + Satz."
+  },
+  {
+   "id": "bas30",
+   "level": 3,
+   "prompt": "What do you think of the new policy?",
+   "answer": "I doubt it will be as effective as the administration hopes.",
+   "chunks": [
+    "I doubt",
+    "it will be",
+    "as effective",
+    "as",
+    "the administration",
+    "hopes"
+   ],
+   "why": "Vergleich: as + Adjektiv + as."
+  },
+  {
+   "id": "bas31",
+   "level": 3,
+   "prompt": "Should I take the advanced course?",
+   "answer": "Only if you have already completed the introductory one.",
+   "chunks": [
+    "only if",
+    "you have",
+    "already completed",
+    "the introductory one"
+   ],
+   "why": "already zwischen have und Partizip."
+  },
+  {
+   "id": "bas32",
+   "level": 2,
+   "prompt": "Where can I find information about scholarships?",
+   "answer": "The financial aid office has a list of all the scholarships available.",
+   "chunks": [
+    "the financial aid office",
+    "has",
+    "a list of",
+    "all the scholarships",
+    "available"
+   ],
+   "why": "available kann nach dem Nomen stehen."
+  },
+  {
+   "id": "bas33",
+   "level": 1,
+   "prompt": "When does the semester start?",
+   "answer": "Classes begin on the first Monday in September.",
+   "chunks": [
+    "classes",
+    "begin",
+    "on the first Monday",
+    "in September"
+   ],
+   "why": "on + Tag, in + Monat."
+  },
+  {
+   "id": "bas34",
+   "level": 3,
+   "prompt": "Why was the experiment repeated?",
+   "answer": "The first results were too unusual to be trusted.",
+   "chunks": [
+    "the first results",
+    "were",
+    "too unusual",
+    "to be",
+    "trusted"
+   ],
+   "why": "too + Adjektiv + to + Infinitiv (Passiv)."
+  },
+  {
+   "id": "bas35",
+   "level": 2,
+   "prompt": "Do you know who left these books here?",
+   "answer": "I think they belong to the student who sat by the window.",
+   "chunks": [
+    "I think",
+    "they belong to",
+    "the student",
+    "who",
+    "sat",
+    "by the window"
+   ],
+   "why": "Relativsatz who direkt hinter dem Nomen."
+  },
+  {
+   "id": "bas36",
+   "level": 3,
+   "prompt": "Has the committee made a decision?",
+   "answer": "Not yet, but they are expected to announce it next week.",
+   "chunks": [
+    "not yet",
+    "but",
+    "they are",
+    "expected to",
+    "announce it",
+    "next week"
+   ],
+   "why": "be expected to + Grundform."
+  },
+  {
+   "id": "bas37",
+   "level": 1,
+   "prompt": "What are you doing this weekend?",
+   "answer": "I am going to visit my grandparents in the country.",
+   "chunks": [
+    "I am going",
+    "to visit",
+    "my grandparents",
+    "in the country"
+   ],
+   "why": "going to + Grundform für Pläne."
+  },
+  {
+   "id": "bas38",
+   "level": 2,
+   "prompt": "Why are you moving to a new apartment?",
+   "answer": "My current one is too far from where I work.",
+   "chunks": [
+    "my current one",
+    "is",
+    "too far",
+    "from",
+    "where I work"
+   ],
+   "why": "too far from + Nebensatz (where I work)."
+  },
+  {
+   "id": "bas39",
+   "level": 3,
+   "prompt": "What would you change about the course?",
+   "answer": "I would have liked more opportunities to discuss the readings.",
+   "chunks": [
+    "I would have liked",
+    "more opportunities",
+    "to discuss",
+    "the readings"
+   ],
+   "why": "would have liked = hätte gern gehabt."
+  },
+  {
+   "id": "bas40",
+   "level": 2,
+   "prompt": "Can you recommend a good place to study?",
+   "answer": "The café on the corner is quiet enough to concentrate.",
+   "chunks": [
+    "the café",
+    "on the corner",
+    "is",
+    "quiet enough",
+    "to concentrate"
+   ],
+   "why": "Adjektiv + enough + to + Grundform."
   }
  ],
  "email": [
@@ -416,6 +638,50 @@
     "Give the details of your order.",
     "Explain why you need the book urgently.",
     "Ask for a specific solution."
+   ]
+  },
+  {
+   "id": "em07",
+   "level": 2,
+   "situation": "You are a member of a student hiking club. The club is planning its first trip of the semester, and the organizer has asked members for ideas. You know a trail near the city that would be suitable, but you will be away on the weekend the trip is currently planned.",
+   "recipient": "the club organizer, Sam",
+   "tasks": [
+    "Describe the trail you would recommend.",
+    "Explain why it would be good for the club.",
+    "Explain your problem with the date and ask about other options."
+   ]
+  },
+  {
+   "id": "em08",
+   "level": 2,
+   "situation": "You recently received your grade for a group project. The grade was lower than you expected, and the feedback says that the group did not include enough data. However, your part of the project contained a large data analysis that does not seem to have been considered.",
+   "recipient": "your professor, Dr. Moore",
+   "tasks": [
+    "Thank the professor for the feedback.",
+    "Explain what you contributed to the project.",
+    "Politely ask whether the grade could be reviewed."
+   ]
+  },
+  {
+   "id": "em09",
+   "level": 2,
+   "situation": "You live in a university apartment. For two weeks, the internet in your building has been very slow, which makes it difficult to attend your online classes. You have already restarted your router several times.",
+   "recipient": "the housing office",
+   "tasks": [
+    "Describe the problem and how long it has lasted.",
+    "Explain how the problem affects your studies.",
+    "Request a specific action."
+   ]
+  },
+  {
+   "id": "em10",
+   "level": 2,
+   "situation": "Your former high school teacher, Mr. Becker, helped you a lot when you were applying to universities. You have just been accepted into a competitive program, and you want to tell him the news.",
+   "recipient": "Mr. Becker",
+   "tasks": [
+    "Share your news.",
+    "Explain how his help made a difference.",
+    "Offer to help his current students in some way."
    ]
   }
  ],
@@ -531,6 +797,82 @@
     {
      "name": "Marcus",
      "text": "Switching between subjects keeps me fresh. After an hour on the same thing, I stop absorbing information, so changing topics helps me stay alert."
+    }
+   ]
+  },
+  {
+   "id": "di07",
+   "level": 2,
+   "course": "public policy",
+   "professor": {
+    "name": "Dr. Ramirez",
+    "text": "Some cities offer free public transportation to all residents, paid for by taxes. Supporters say this reduces traffic and helps people with low incomes; critics say it is too expensive and that people don't value services they don't pay for. Should public transportation be free? Why or why not?"
+   },
+   "students": [
+    {
+     "name": "Leah",
+     "text": "Yes. If buses were free, many more people would leave their cars at home, and cities would be cleaner and less crowded."
+    },
+    {
+     "name": "Daniel",
+     "text": "I don't think so. The money would be better spent improving the service. Many people don't take the bus because it's slow or unreliable, not because of the price."
+    }
+   ]
+  },
+  {
+   "id": "di08",
+   "level": 2,
+   "course": "education",
+   "professor": {
+    "name": "Prof. Kim",
+    "text": "Many universities are considering replacing traditional final exams with projects, such as research papers or presentations. Which is a better way to assess what students have learned: final exams or projects? Explain your view."
+   },
+   "students": [
+    {
+     "name": "Chloe",
+     "text": "Projects are better. They show whether students can actually apply what they've learned, and they're closer to what we'll do in our careers."
+    },
+    {
+     "name": "Ethan",
+     "text": "Exams are fairer. In group projects, some students do all the work while others get the same grade. Exams show what each person really knows."
+    }
+   ]
+  },
+  {
+   "id": "di09",
+   "level": 2,
+   "course": "technology and society",
+   "professor": {
+    "name": "Dr. Shah",
+    "text": "Artificial intelligence tools can now write essays, summarize articles, and solve math problems. Some instructors want to ban these tools in their courses, while others want to teach students how to use them responsibly. What approach should universities take, and why?"
+   },
+   "students": [
+    {
+     "name": "Nina",
+     "text": "They should be banned for assignments. Otherwise, students won't develop their own writing and thinking skills."
+    },
+    {
+     "name": "Jacob",
+     "text": "Banning them is unrealistic. Students will use these tools in their jobs, so universities should teach them to use AI critically and honestly."
+    }
+   ]
+  },
+  {
+   "id": "di10",
+   "level": 2,
+   "course": "economics",
+   "professor": {
+    "name": "Prof. Turner",
+    "text": "Some people argue that young people should work part-time while they are still in high school or university, while others believe students should focus only on their studies. What is your opinion? Should students work while they study?"
+   },
+   "students": [
+    {
+     "name": "Sophia",
+     "text": "Working teaches responsibility and time management, and it gives students experience that employers value."
+    },
+    {
+     "name": "Liam",
+     "text": "Students should focus on their studies. A job takes time and energy away from learning, and grades often suffer."
     }
    ]
   }

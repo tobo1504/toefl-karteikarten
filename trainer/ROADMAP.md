@@ -12,8 +12,13 @@ PWA: https://tobo1504.github.io/toefl-karteikarten/trainer/
 - [x] Inhalte Writing: ≥ 20 Build a Sentence, ≥ 6 Emails, ≥ 6 Discussions
 - [x] Smoke-Test, Veröffentlichung, Push
 
-Stand nach Sitzung 1: Reading 9 CtW / 28 Daily / 8 Academic (reicht für 2 Reading-Tests), Writing 24 BaS / 6 Email / 6 Discussion,
-Listening 26 Choose / 7 Conv / 7 Ann / 7 Talks, Speaking 6 Repeat / 8 Interviews.
+Stand nach Sitzung 1: Reading 9 CtW / 28 Daily / 8 Academic, Writing 40 BaS / 10 Email / 10 Discussion,
+Listening 44 Choose / 12 Conv / 12 Ann / 12 Talks, Speaking 6 Repeat / 8 Interviews → reicht für 2 komplette Tests ohne Wiederholung.
+
+## Nächste Sitzung – Vorschlag
+1. Rückmeldung von Tom einholen (Stimmen am Handy, Diktat, Schwierigkeit, Bewertungsqualität) und Fehler beheben.
+2. Inhalte Batch 3 (Test 3) mit `tools/contentlib.py`.
+3. Band-Tabellen nachjustieren, sobald Tom echte ETS-Practice-Test-Ergebnisse hat.
 Hilfsskripte für neue Inhalte: `trainer/tools/` (u. a. automatische CtW-Lückensetzung und Antwortpositions-Rotation).
 
 ## Etappe 2 – Listening (Sitzung 1)
@@ -30,7 +35,8 @@ Hilfsskripte für neue Inhalte: `trainer/tools/` (u. a. automatische CtW-Lücken
 - [x] Ganzer Test am Stück (R → L → W → S, ~90 Min), Band pro Section + Gesamt
 - [x] Auswertung mit Fehlerliste, Erklärungen, Transkripten
 - [x] Vergleich mit früheren Tests (Trend-Grafik je Section auf der Startseite)
-- [ ] Inhalte für insgesamt 4 vollständige Tests ohne Wiederholung (aktuell reicht der Pool für ca. 1–2)
+- [x] Inhalte für 2 vollständige Tests ohne Wiederholung
+- [ ] Inhalte für Test 3 und 4 (je Test: Reading 3 CtW / 12 Daily / 3 Academic über Level 1–3; Listening 22 Choose / 6 Conv / 6 Ann / 6 Talks; Writing 10 BaS / 1 Email / 1 Discussion; Speaking 1 Repeat / 1 Interview)
 
 ## Etappe 5 – Feinschliff
 - [ ] Statistik je Aufgabentyp (Trend), Schwächen-Training

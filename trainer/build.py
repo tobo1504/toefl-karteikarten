@@ -81,8 +81,14 @@ for x in SP.get("interview", []):
     uid(x, "interview")
     if len(x.get("questions", [])) != 4: err(f"{x['id']}: braucht 4 Fragen")
 
-# Antwortverteilung prüfen (Hinweis, kein Fehler)
-dist = [0, 0, 0, 0]
+# Antwortverteilung und Längen-Hinweis prüfen (Hinweis, kein Fehler)
+dist = [0, 0, 0, 0]; longest = [0, 0]
+for sec in ("reading", "listening"):
+    for lst in data[sec].values():
+        for x in lst:
+            for q in x.get("questions", []) + ([x] if "options" in x else []):
+                L = [len(o) for o in q["options"]]; longest[1] += 1
+                if L[q["answer"]] == max(L) and L.count(max(L)) == 1: longest[0] += 1
 for sec in ("reading", "listening"):
     for lst in data[sec].values():
         for x in lst:
@@ -132,4 +138,4 @@ self.addEventListener("fetch",e=>{{const r=e.request;if(r.method!=="GET")return;
             {"src": "../icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}]}, ensure_ascii=False, indent=1), encoding="utf8")
 
 counts = {sec: {k: len(v) for k, v in d.items()} for sec, d in data.items() if d}
-print("OK", counts, "Antwortverteilung A–D:", dist)
+print("OK", counts, "Antwortverteilung A–D:", dist, f"| richtige Antwort am längsten: {100*longest[0]//max(1,longest[1])} % (Ziel < 40 %)")

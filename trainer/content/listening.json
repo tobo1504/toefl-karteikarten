@@ -36,7 +36,7 @@
    "options": [
     "It's a blue car.",
     "Yes, I parked it.",
-    "About twenty minutes ago.",
+    "About twenty minutes ago, I think.",
     "Right behind the science building."
    ],
    "answer": 3,
@@ -133,7 +133,7 @@
    "prompt": "I can't believe how long this line is.",
    "options": [
     "The line is on the next page.",
-    "I can lend you a longer one.",
+    "I can lend you a longer one if you really need it.",
     "Tell me about it. We've been here for twenty minutes.",
     "I believe it's correct."
    ],
@@ -148,7 +148,7 @@
    "options": [
     "The lecture was about economics.",
     "I saved all my notes on my laptop.",
-    "No, I don't have any money left.",
+    "No, I don't have any money left this month.",
     "That would be great. I'm running a bit late."
    ],
    "answer": 3,
@@ -189,7 +189,7 @@
    "prompt": "You're not still working on that lab report, are you?",
    "options": [
     "The lab is on the third floor.",
-    "No, I've never worked in a lab.",
+    "No, I've never worked in a lab like that before.",
     "I'm afraid so. The data took forever to analyze.",
     "The report has ten pages."
    ],
@@ -275,7 +275,7 @@
     "Good point. I rushed through the last section.",
     "I'll check out a book later.",
     "The figures are in the appendix.",
-    "I submitted my application last week."
+    "I submitted my application for the program last week."
    ],
    "answer": 0,
    "why": "Höflicher Rat (You might want to …) → Zustimmung mit Begründung."
@@ -289,7 +289,7 @@
     "I dropped my phone yesterday.",
     "Are you sure? You'd have to take it eventually anyway.",
     "This semester ends in December.",
-    "Statistics show that most students pass."
+    "Statistics show that most students pass the course easily."
    ],
    "answer": 1,
    "why": "drop a course = einen Kurs abwählen; die Antwort hinterfragt die Entscheidung."
@@ -303,7 +303,7 @@
     "It happened last year as well.",
     "I usually work out on weekends.",
     "I'm not sure, but there's a schedule posted at the entrance.",
-    "Happy holidays to you too."
+    "Happy holidays to you and your whole family as well."
    ],
    "answer": 2,
    "why": "Nicht wissen, aber Hinweis auf eine Informationsquelle geben."
@@ -344,7 +344,7 @@
    "options": [
     "I suppose the draft is due soon.",
     "Actually, I read it last night. It's really strong.",
-    "I haven't drafted anything yet.",
+    "I haven't drafted anything for my own class yet.",
     "There's a chance of rain later."
    ],
    "answer": 1,
@@ -363,6 +363,258 @@
    ],
    "answer": 2,
    "why": "Isn't it about time …? = Wir sollten langsam anfangen → Terminvorschlag."
+  },
+  {
+   "id": "c27",
+   "level": 1,
+   "voice": "M",
+   "prompt": "What time does the next train leave?",
+   "options": [
+    "I took the train yesterday.",
+    "From platform two, I think.",
+    "It's a very long train.",
+    "In about ten minutes."
+   ],
+   "answer": 3,
+   "why": "What time → Zeitangabe."
+  },
+  {
+   "id": "c28",
+   "level": 1,
+   "voice": "W",
+   "prompt": "Do you want to sit inside or outside?",
+   "options": [
+    "Outside, if it's not too cold.",
+    "I sat there the last time we came.",
+    "Yes, I do.",
+    "The inside is new."
+   ],
+   "answer": 0,
+   "why": "Entweder-oder-Frage → eine der Optionen wählen, nicht Yes/No."
+  },
+  {
+   "id": "c29",
+   "level": 1,
+   "voice": "M",
+   "prompt": "Who's teaching the history class this term?",
+   "options": [
+    "It's on Tuesdays and Thursdays.",
+    "A new professor, I think. Dr. Lewis.",
+    "History started in the morning.",
+    "I'm not taking any math classes."
+   ],
+   "answer": 1,
+   "why": "Who → Person."
+  },
+  {
+   "id": "c30",
+   "level": 1,
+   "voice": "W",
+   "prompt": "Could you turn the music down a little?",
+   "options": [
+    "Yes, it's my favorite song.",
+    "I'll turn left at the corner.",
+    "Oh, sorry. Is this better?",
+    "The music starts at eight."
+   ],
+   "answer": 2,
+   "why": "Bitte → der Bitte nachkommen."
+  },
+  {
+   "id": "c31",
+   "level": 1,
+   "voice": "M",
+   "prompt": "How long have you lived in this city?",
+   "options": [
+    "It's a really big city.",
+    "I'm leaving next week.",
+    "Near the university.",
+    "About three years now."
+   ],
+   "answer": 3,
+   "why": "How long → Zeitdauer."
+  },
+  {
+   "id": "c32",
+   "level": 1,
+   "voice": "W",
+   "prompt": "Are you going to the party on Saturday?",
+   "options": [
+    "I'd like to, but I have to work.",
+    "It was a great party.",
+    "On Saturday at seven.",
+    "Yes, I went there last week."
+   ],
+   "answer": 0,
+   "why": "Indirekte Absage mit Grund."
+  },
+  {
+   "id": "c33",
+   "level": 2,
+   "voice": "M",
+   "prompt": "Haven't you already handed in the assignment?",
+   "options": [
+    "I handed out flyers yesterday.",
+    "Not yet. I'm still checking the references.",
+    "Yes, I'll hand it in tomorrow.",
+    "The assignment was easier last year, I think."
+   ],
+   "answer": 1,
+   "why": "Negativ formulierte Frage: „Not yet“ = noch nicht; „Yes … tomorrow“ widerspricht sich."
+  },
+  {
+   "id": "c34",
+   "level": 2,
+   "voice": "W",
+   "prompt": "Why don't you join us for the hike this weekend?",
+   "options": [
+    "The hike is about ten kilometers.",
+    "Because I joined the club last year.",
+    "I'd love to. What time are you leaving?",
+    "I don't know why they left."
+   ],
+   "answer": 2,
+   "why": "Why don't you …? = Einladung, keine Frage nach dem Grund."
+  },
+  {
+   "id": "c35",
+   "level": 2,
+   "voice": "M",
+   "prompt": "I can't find my notes from last week's lecture.",
+   "options": [
+    "I found the lecture hall easily.",
+    "The lecture starts next week.",
+    "My notes are very long.",
+    "You can borrow mine if you want."
+   ],
+   "answer": 3,
+   "why": "Problem → Hilfe anbieten."
+  },
+  {
+   "id": "c36",
+   "level": 2,
+   "voice": "W",
+   "prompt": "Is it okay if I bring a friend to the study group?",
+   "options": [
+    "Sure, the more the merrier.",
+    "I studied with friends in high school.",
+    "Okay, I'll bring the books.",
+    "The group meets in the library."
+   ],
+   "answer": 0,
+   "why": "the more the merrier = je mehr, desto besser (Zustimmung)."
+  },
+  {
+   "id": "c37",
+   "level": 2,
+   "voice": "M",
+   "prompt": "Didn't the professor say the exam would be open-book?",
+   "options": [
+    "She's a very good professor.",
+    "Only for the second part, I think.",
+    "The exam room is closed.",
+    "I opened the book this morning."
+   ],
+   "answer": 1,
+   "why": "Präzisierende Antwort auf eine Rückfrage."
+  },
+  {
+   "id": "c38",
+   "level": 2,
+   "voice": "W",
+   "prompt": "You look exhausted. Late night?",
+   "options": [
+    "No, I'm not late at all.",
+    "I'll be there tonight.",
+    "Yeah, I was up finishing my report.",
+    "It gets dark early these days."
+   ],
+   "answer": 2,
+   "why": "Late night? = Lange aufgeblieben? → Bestätigung mit Grund."
+  },
+  {
+   "id": "c39",
+   "level": 3,
+   "voice": "M",
+   "prompt": "I was under the impression the deadline had been pushed back.",
+   "options": [
+    "The impression was very positive.",
+    "I pushed the door, but it was locked.",
+    "The deadline is printed on the back.",
+    "It was, but only for the graduate students."
+   ],
+   "answer": 3,
+   "why": "under the impression = dachte; pushed back = verschoben."
+  },
+  {
+   "id": "c40",
+   "level": 3,
+   "voice": "W",
+   "prompt": "You wouldn't happen to have a spare charger, would you?",
+   "options": [
+    "I might. What kind of phone do you have?",
+    "No, I don't charge for that.",
+    "My phone is fully charged.",
+    "I happened to see him yesterday."
+   ],
+   "answer": 0,
+   "why": "Sehr höfliche, indirekte Bitte → Gegenfrage, um helfen zu können."
+  },
+  {
+   "id": "c41",
+   "level": 3,
+   "voice": "M",
+   "prompt": "If I were you, I'd ask for an extension.",
+   "options": [
+    "Yes, you were right about the extension cord.",
+    "I might, but I'd hate to fall even further behind.",
+    "The extension is on the second floor.",
+    "I asked him yesterday where you were."
+   ],
+   "answer": 1,
+   "why": "Ratschlag → abwägende Reaktion; die anderen spielen mit „extension“."
+  },
+  {
+   "id": "c42",
+   "level": 3,
+   "voice": "W",
+   "prompt": "It's a shame the concert was canceled.",
+   "options": [
+    "I'll cancel my order for the new speakers tomorrow.",
+    "The tickets are still on sale.",
+    "Tell me about it. I'd been looking forward to it for weeks.",
+    "Yes, it was a great concert."
+   ],
+   "answer": 2,
+   "why": "Tell me about it = volle Zustimmung."
+  },
+  {
+   "id": "c43",
+   "level": 3,
+   "voice": "M",
+   "prompt": "Remind me why we decided to take the scenic route?",
+   "options": [
+    "We decided to take a photo.",
+    "The route is about fifty miles from here, I believe.",
+    "I'll remind you tomorrow.",
+    "Because you said the highway would be packed."
+   ],
+   "answer": 3,
+   "why": "Remind me why … = Warum noch mal …? → Grund."
+  },
+  {
+   "id": "c44",
+   "level": 3,
+   "voice": "W",
+   "prompt": "Don't tell me you've already finished the whole novel.",
+   "options": [
+    "I couldn't put it down.",
+    "I've never read that author.",
+    "The novel has three hundred pages.",
+    "I won't tell anyone."
+   ],
+   "answer": 0,
+   "why": "Don't tell me … drückt Erstaunen aus; couldn't put it down = konnte nicht aufhören."
   }
  ],
  "conversation": [
@@ -613,7 +865,7 @@
       "She doesn't like early meetings but will agree to one.",
       "She thinks they don't need to practice.",
       "She would rather practice alone.",
-      "She can't meet before class."
+      "She can't meet before class because of her schedule."
      ],
      "answer": 0,
      "why": "not a morning person = kein Frühaufsteher; trotzdem „okay“."
@@ -653,7 +905,7 @@
     {
      "q": "What is the woman's dilemma?",
      "options": [
-      "Whether to ask for a higher salary",
+      "Whether to ask the consulting firm for a considerably higher salary",
       "Whether to accept one offer before hearing from another employer",
       "Which of two offers pays more",
       "Whether to cancel an interview"
@@ -665,7 +917,7 @@
      "q": "What does the man mean when he says \"a bird in the hand\"?",
      "options": [
       "She should accept both internships.",
-      "She should ask the bank to decide faster.",
+      "She should ask the bank to make its decision faster.",
       "A certain opportunity is better than an uncertain one.",
       "Consulting work is more interesting."
      ],
@@ -705,7 +957,7 @@
      "options": [
       "The man made mistakes in the data.",
       "She missed the review session.",
-      "The report is already late.",
+      "The report is already later than the professor allowed.",
       "She wants time to check the report before it is due."
      ],
      "answer": 3,
@@ -721,6 +973,256 @@
      ],
      "answer": 0,
      "why": "„I've got my notes from the review session.“"
+    }
+   ]
+  },
+  {
+   "id": "cv08",
+   "level": 1,
+   "lines": [
+    {
+     "who": "W",
+     "text": "Excuse me, do you know how the washing machines work?"
+    },
+    {
+     "who": "M",
+     "text": "Sure. You pay with your student card. Just tap it here and choose the program."
+    },
+    {
+     "who": "W",
+     "text": "How long does it take?"
+    },
+    {
+     "who": "M",
+     "text": "About forty minutes. The dryers take another hour, so don't wait too late at night."
+    }
+   ],
+   "questions": [
+    {
+     "q": "How do students pay for the machines?",
+     "options": [
+      "At the front desk",
+      "With their student card",
+      "Online",
+      "With coins"
+     ],
+     "answer": 1,
+     "why": "„You pay with your student card.“"
+    },
+    {
+     "q": "What does the man suggest?",
+     "options": [
+      "Washing clothes on weekends",
+      "Using a different machine",
+      "Not starting laundry too late",
+      "Drying clothes outside"
+     ],
+     "answer": 2,
+     "why": "„don't wait too late at night“."
+    }
+   ]
+  },
+  {
+   "id": "cv09",
+   "level": 1,
+   "lines": [
+    {
+     "who": "M",
+     "text": "Hi, can I get a large coffee, please?"
+    },
+    {
+     "who": "W",
+     "text": "Sure. Would you like milk or sugar?"
+    },
+    {
+     "who": "M",
+     "text": "Just milk, thanks. Oh, and do you have anything without gluten?"
+    },
+    {
+     "who": "W",
+     "text": "Yes, the banana bread is gluten-free. It's very popular."
+    },
+    {
+     "who": "M",
+     "text": "Great, I'll take a piece."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What does the man order to drink?",
+     "options": [
+      "A small tea",
+      "A hot chocolate",
+      "A coffee with sugar",
+      "A large coffee with milk"
+     ],
+     "answer": 3,
+     "why": "„a large coffee … Just milk“."
+    },
+    {
+     "q": "Why does the man ask about gluten?",
+     "options": [
+      "He is looking for food without gluten.",
+      "He wants to bake bread.",
+      "He works at the café.",
+      "He wants the most popular cake."
+     ],
+     "answer": 0,
+     "why": "Er fragt nach etwas Glutenfreiem und nimmt das Bananenbrot."
+    }
+   ]
+  },
+  {
+   "id": "cv10",
+   "level": 2,
+   "lines": [
+    {
+     "who": "W",
+     "text": "Hi, I'm thinking about studying abroad next year, but I'm worried about the cost."
+    },
+    {
+     "who": "M",
+     "text": "That's a common concern. Many of our exchange programs let you pay your normal tuition here, so the cost isn't much higher than staying home."
+    },
+    {
+     "who": "W",
+     "text": "Really? What about housing and flights?"
+    },
+    {
+     "who": "M",
+     "text": "Those you'd pay yourself, but there are travel grants. The application deadline is in March, and you'll need a short essay and a recommendation from a professor."
+    },
+    {
+     "who": "W",
+     "text": "Okay, I'd better start asking a professor now, then."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What is the woman's main concern?",
+     "options": [
+      "Missing her friends",
+      "How expensive studying abroad will be",
+      "Which country to choose",
+      "Whether her language skills are good enough"
+     ],
+     "answer": 1,
+     "why": "„I'm worried about the cost.“"
+    },
+    {
+     "q": "What will the woman probably do next?",
+     "options": [
+      "Pay her tuition",
+      "Book a flight",
+      "Ask a professor for a recommendation",
+      "Contact the exchange university"
+     ],
+     "answer": 2,
+     "why": "„I'd better start asking a professor now.“"
+    }
+   ]
+  },
+  {
+   "id": "cv11",
+   "level": 3,
+   "lines": [
+    {
+     "who": "M",
+     "text": "Did you end up applying for the research assistant position in Dr. Hale's lab?"
+    },
+    {
+     "who": "W",
+     "text": "I did, but I'm having second thoughts. It's twelve hours a week, and with my course load, I'm not sure I can keep up."
+    },
+    {
+     "who": "M",
+     "text": "Twelve hours is a lot. Still, it'd look great on your grad school applications."
+    },
+    {
+     "who": "W",
+     "text": "That's exactly why I applied. I guess I could drop my elective. It doesn't count toward my major anyway."
+    },
+    {
+     "who": "M",
+     "text": "That seems like a reasonable trade-off, if the position works out."
+    }
+   ],
+   "questions": [
+    {
+     "q": "Why is the woman having second thoughts?",
+     "options": [
+      "The lab is located too far from campus.",
+      "The pay is too low.",
+      "She doesn't like Dr. Hale.",
+      "She is worried she won't have enough time."
+     ],
+     "answer": 3,
+     "why": "Zwölf Stunden pro Woche plus volles Kursprogramm."
+    },
+    {
+     "q": "What does the woman consider doing?",
+     "options": [
+      "Dropping a course that is not required for her major",
+      "Asking to work fewer than twelve hours a week",
+      "Applying to a different lab",
+      "Postponing graduate school"
+     ],
+     "answer": 0,
+     "why": "Das Wahlfach zählt nicht für ihr Hauptfach."
+    }
+   ]
+  },
+  {
+   "id": "cv12",
+   "level": 3,
+   "lines": [
+    {
+     "who": "W",
+     "text": "Hey, are you using your camera this weekend? I'm going to my cousin's wedding, and my phone's camera isn't great."
+    },
+    {
+     "who": "M",
+     "text": "I'm not, but it's not exactly the easiest camera to figure out. Have you used one like it before?"
+    },
+    {
+     "who": "W",
+     "text": "Not really. How hard can it be?"
+    },
+    {
+     "who": "M",
+     "text": "Well, the automatic mode is fine, but the battery drains fast. I'd take the spare one, and maybe practice a bit tomorrow so you're not figuring it out during the ceremony."
+    },
+    {
+     "who": "W",
+     "text": "Good idea. Could you show me the basics tonight?"
+    },
+    {
+     "who": "M",
+     "text": "Sure. Swing by after dinner."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What is the man's concern?",
+     "options": [
+      "He needs the camera himself this weekend.",
+      "The woman may have trouble using the camera.",
+      "The wedding is too far away.",
+      "The camera might get damaged."
+     ],
+     "answer": 1,
+     "why": "„not exactly the easiest camera to figure out“."
+    },
+    {
+     "q": "What does the man recommend?",
+     "options": [
+      "Using only the manual settings for better photos",
+      "Buying a new camera",
+      "Bringing an extra battery and practicing in advance",
+      "Using her phone instead"
+     ],
+     "answer": 2,
+     "why": "Ersatzakku mitnehmen und vorher üben."
     }
    ]
   }
@@ -917,7 +1419,7 @@
      "options": [
       "To advertise a new airport bus",
       "To inform passengers about reduced train service",
-      "To explain changes to ticket prices",
+      "To explain upcoming changes to ticket prices",
       "To announce new train routes"
      ],
      "answer": 1,
@@ -926,13 +1428,163 @@
     {
      "q": "What is indicated about the shuttle bus?",
      "options": [
-      "It costs more than the train.",
+      "It costs more than taking the train to the airport.",
       "It only goes to Harbor Point.",
       "Passengers with weekly passes can ride it at no extra cost.",
       "It runs every eight minutes."
      ],
      "answer": 2,
      "why": "„Weekly passes will be honored … at no additional charge.“"
+    }
+   ]
+  },
+  {
+   "id": "an08",
+   "level": 1,
+   "voice": "W",
+   "text": "Hello, students. The bookstore will have a sale this Friday and Saturday. All T-shirts and sweatshirts will be twenty percent off. Textbooks are not part of the sale. The store will be open from nine in the morning until six in the evening on both days.",
+   "questions": [
+    {
+     "q": "What is on sale?",
+     "options": [
+      "Everything in the store",
+      "Textbooks",
+      "Notebooks",
+      "Clothing"
+     ],
+     "answer": 3,
+     "why": "T-Shirts und Sweatshirts; Lehrbücher nicht."
+    },
+    {
+     "q": "When is the sale?",
+     "options": [
+      "On Friday and Saturday",
+      "Every weekend this month",
+      "Next week",
+      "Only on Friday"
+     ],
+     "answer": 0,
+     "why": "„this Friday and Saturday“."
+    }
+   ]
+  },
+  {
+   "id": "an09",
+   "level": 1,
+   "voice": "M",
+   "text": "Good afternoon. Please remember that the computer lab will be closed tomorrow morning for software updates. It will open again at one o'clock. If you need a computer before then, you can use the computers on the first floor of the library.",
+   "questions": [
+    {
+     "q": "Why will the lab be closed?",
+     "options": [
+      "For cleaning",
+      "For software updates",
+      "Because of a holiday",
+      "For a class"
+     ],
+     "answer": 1,
+     "why": "„closed tomorrow morning for software updates“."
+    },
+    {
+     "q": "Where can students use computers in the morning?",
+     "options": [
+      "In the bookstore",
+      "Nowhere on campus",
+      "In the library",
+      "In the lab"
+     ],
+     "answer": 2,
+     "why": "„the computers on the first floor of the library“."
+    }
+   ]
+  },
+  {
+   "id": "an10",
+   "level": 2,
+   "voice": "W",
+   "text": "Attention, all first-year students. Course advising sessions will take place next week in the Student Services Building. Each session lasts about twenty minutes. Please sign up online by Friday, and bring a list of the courses you are interested in. Students who miss their session will not be able to register until the second registration period.",
+   "questions": [
+    {
+     "q": "What should students bring to the session?",
+     "options": [
+      "Their passport",
+      "A completed form for course registration",
+      "Their transcript",
+      "A list of courses they are interested in"
+     ],
+     "answer": 3,
+     "why": "„bring a list of the courses you are interested in“."
+    },
+    {
+     "q": "What will happen if a student misses the session?",
+     "options": [
+      "The student will have to register later.",
+      "The student will pay a fee.",
+      "The student must change majors.",
+      "The student can register online immediately."
+     ],
+     "answer": 0,
+     "why": "Erst in der zweiten Anmeldephase."
+    }
+   ]
+  },
+  {
+   "id": "an11",
+   "level": 3,
+   "voice": "M",
+   "text": "Good evening, and thank you for attending tonight's performance. Please note that, at the request of the performers, photography and video recording are strictly prohibited throughout the concert. The performance will run for approximately two hours, including a twenty-minute intermission. Latecomers will be seated only during the intermission, and patrons who leave the hall during the first half may not re-enter until then.",
+   "questions": [
+    {
+     "q": "Why is recording not allowed?",
+     "options": [
+      "It disturbs other audience members.",
+      "The performers asked for it to be prohibited.",
+      "Cameras are not allowed in the building.",
+      "The hall has a strict copyright policy."
+     ],
+     "answer": 1,
+     "why": "„at the request of the performers“."
+    },
+    {
+     "q": "What can be inferred about someone who arrives thirty minutes late?",
+     "options": [
+      "They will not be admitted to the concert hall at all that night.",
+      "They will receive a refund.",
+      "They will have to wait until the intermission to be seated.",
+      "They can take their seat immediately."
+     ],
+     "answer": 2,
+     "why": "Zuspätkommende werden nur in der Pause eingelassen."
+    }
+   ]
+  },
+  {
+   "id": "an12",
+   "level": 3,
+   "voice": "W",
+   "text": "This is a message from Campus Dining Services. Following student feedback, we will be piloting extended hours at Cedar Hall beginning Monday: the dining hall will remain open until midnight, Sunday through Thursday. Late-night service will feature a limited menu, and meal swipes will be accepted only until ten p.m. After that, purchases must be made with dining dollars or a credit card.",
+   "questions": [
+    {
+     "q": "What is the main purpose of the announcement?",
+     "options": [
+      "To close a dining hall",
+      "To ask students for feedback on the menu",
+      "To announce new meal prices",
+      "To introduce a trial of longer opening hours"
+     ],
+     "answer": 3,
+     "why": "„piloting extended hours“ = Testphase."
+    },
+    {
+     "q": "What is true about purchases after 10 p.m.?",
+     "options": [
+      "Meal swipes cannot be used.",
+      "Only meal swipes are accepted.",
+      "Only cash is accepted.",
+      "Food is free."
+     ],
+     "answer": 0,
+     "why": "Meal swipes nur bis 22 Uhr."
     }
    ]
   }
@@ -981,7 +1633,7 @@
     {
      "q": "According to the speaker, why might maple leaves turn red?",
      "options": [
-      "To produce chlorophyll faster",
+      "To produce chlorophyll more quickly before the winter begins",
       "To attract insects",
       "To protect the leaves while the tree takes back nutrients",
       "To keep the tree warm"
@@ -1015,7 +1667,7 @@
       "They were very uncomfortable to ride.",
       "They were extremely fast.",
       "They were made of bones.",
-      "They were often stolen."
+      "They were often stolen from their riders."
      ],
      "answer": 0,
      "why": "Holprige Straßen und Eisenräder."
@@ -1055,7 +1707,7 @@
      "q": "What is the talk mainly about?",
      "options": [
       "How to grow grass on university campuses",
-      "The history of paved sidewalks",
+      "The long history of paved sidewalks in modern cities and towns",
       "Why people should stay on sidewalks",
       "Paths created by shortcuts and how planners respond to them"
      ],
@@ -1067,7 +1719,7 @@
      "options": [
       "They tried to stop people from using them.",
       "They ignored them completely.",
-      "They studied them carefully.",
+      "They studied them carefully before making changes.",
       "They paved them immediately."
      ],
      "answer": 0,
@@ -1076,7 +1728,7 @@
     {
      "q": "Why does the speaker mention universities?",
      "options": [
-      "To show where desire paths are most common",
+      "To show where desire paths are most common in large cities",
       "To give an example of designers using desire paths in planning",
       "To explain who first described desire paths",
       "To criticize students for damaging lawns"
@@ -1107,7 +1759,7 @@
     {
      "q": "What is the main purpose of the talk?",
      "options": [
-      "To argue that all resources should be private",
+      "To argue that all shared resources should be privately owned",
       "To describe the history of farming",
       "To compare cows with fish",
       "To explain a concept and how the problem can be addressed"
@@ -1120,7 +1772,7 @@
      "options": [
       "Each farmer gets the benefit, while the cost is shared.",
       "Cows produce more milk in large groups.",
-      "The government pays farmers for each cow.",
+      "The government pays the farmers a fee for each cow they own.",
       "The pasture keeps growing."
      ],
      "answer": 0,
@@ -1143,7 +1795,7 @@
       "Shared resources always fail.",
       "Government rules are always necessary.",
       "Communities can manage shared resources with their own rules.",
-      "Private ownership is the only solution."
+      "Private ownership is the only solution that really works."
      ],
      "answer": 2,
      "why": "Lokale Regeln und gegenseitige Kontrolle funktionieren."
@@ -1162,7 +1814,7 @@
      "options": [
       "How planetariums are built",
       "Why birds migrate in winter",
-      "Which birds fly the longest distances",
+      "Which kinds of birds fly the longest distances",
       "The different ways birds navigate during migration"
      ],
      "answer": 3,
@@ -1174,7 +1826,7 @@
       "The birds used the stars to choose a direction.",
       "The birds preferred daylight.",
       "The birds could not fly indoors.",
-      "The birds ignored the projected sky."
+      "The birds ignored the projected sky completely."
      ],
      "answer": 0,
      "why": "Gedrehter Himmel → andere Flugrichtung."
@@ -1214,7 +1866,7 @@
      "q": "What is the speaker mainly discussing?",
      "options": [
       "How real estate agents are trained",
-      "Strategies for estimating percentages",
+      "Strategies that help people estimate percentages correctly",
       "The history of the United Nations",
       "The tendency for initial information to influence judgments"
      ],
@@ -1226,7 +1878,7 @@
      "options": [
       "To show that even random numbers can affect estimates",
       "To compare two types of negotiation",
-      "To explain how the United Nations was formed",
+      "To explain how the United Nations was originally formed",
       "To show that people are good at estimating"
      ],
      "answer": 0,
@@ -1235,7 +1887,7 @@
     {
      "q": "What advice does the speaker mention for salary negotiations?",
      "options": [
-      "Never mention a specific number",
+      "Never mention a specific number during the negotiation",
       "Consider making the first offer after doing research",
       "Accept the first figure that is offered",
       "Always wait for the employer's offer"
@@ -1266,7 +1918,7 @@
     {
      "q": "What is the main topic of the talk?",
      "options": [
-      "Problems with modern weather records",
+      "Problems with the accuracy of modern weather records",
       "The history of medieval architecture",
       "How trees survive droughts",
       "Using tree rings to date events and reconstruct the past"
@@ -1290,7 +1942,7 @@
      "options": [
       "By finding a single very old tree",
       "By linking overlapping samples of different ages",
-      "By using radiocarbon dating alone",
+      "By using radiocarbon dating alone on old wood",
       "By studying modern weather records"
      ],
      "answer": 1,
@@ -1299,13 +1951,278 @@
     {
      "q": "What does the speaker imply about radiocarbon dating?",
      "options": [
-      "It is more accurate than tree rings.",
+      "It is more accurate than tree rings for recent periods.",
       "It has replaced dendrochronology.",
       "It was less accurate before tree-ring data was used.",
       "It can only be used on trees."
      ],
      "answer": 2,
      "why": "Baumringe korrigierten Fehler von bis zu mehreren Jahrhunderten."
+    }
+   ]
+  },
+  {
+   "id": "tk08",
+   "level": 1,
+   "voice": "M",
+   "title": "Why We Have Leap Years",
+   "text": "Have you ever wondered why February sometimes has twenty-nine days? It's because of something called a leap year. The Earth takes about three hundred sixty-five and a quarter days to travel around the sun. But our calendar year has only three hundred sixty-five days. So every year, the calendar falls about six hours behind. After four years, those extra hours add up to almost one full day. To fix this, we add an extra day, February twenty-ninth, every four years. Without leap years, our seasons would slowly move. After a few hundred years, summer would start in what we now call autumn.",
+   "questions": [
+    {
+     "q": "What is the talk mainly about?",
+     "options": [
+      "How the seasons change",
+      "Why leap years exist",
+      "How long a day is",
+      "The history of February"
+     ],
+     "answer": 1,
+     "why": "Thema im ersten Satz."
+    },
+    {
+     "q": "How long does the Earth take to travel around the sun?",
+     "options": [
+      "366 days",
+      "About 360 days",
+      "About 365¼ days",
+      "Exactly 365 days"
+     ],
+     "answer": 2,
+     "why": "„about three hundred sixty-five and a quarter days“."
+    },
+    {
+     "q": "How often is an extra day added?",
+     "options": [
+      "Every hundred years",
+      "Every two years",
+      "Every year",
+      "Every four years"
+     ],
+     "answer": 3,
+     "why": "„every four years“."
+    },
+    {
+     "q": "What would happen without leap years?",
+     "options": [
+      "The seasons would slowly shift in the calendar.",
+      "February would disappear.",
+      "The Earth would move faster.",
+      "Days would slowly get longer and longer."
+     ],
+     "answer": 0,
+     "why": "Der Sommer würde irgendwann im heutigen Herbst beginnen."
+    }
+   ]
+  },
+  {
+   "id": "tk09",
+   "level": 1,
+   "voice": "W",
+   "title": "How Bees Make Honey",
+   "text": "Today let's talk about how bees make honey. First, worker bees fly from flower to flower and collect a sweet liquid called nectar. They store the nectar in a special stomach and carry it back to the hive. There, they pass the nectar to other bees, who chew it for about half an hour. Then the bees put it into small wax cells. The nectar is still very watery, so the bees fan it with their wings to dry it. When most of the water is gone, the nectar has become honey. Finally, the bees cover each cell with wax to keep the honey clean. One bee makes only about a twelfth of a teaspoon of honey in its whole life.",
+   "questions": [
+    {
+     "q": "What do bees collect from flowers?",
+     "options": [
+      "Honey",
+      "Nectar",
+      "Wax",
+      "Water"
+     ],
+     "answer": 1,
+     "why": "„a sweet liquid called nectar“."
+    },
+    {
+     "q": "Why do bees fan the nectar with their wings?",
+     "options": [
+      "To keep it warm",
+      "To move it to another hive",
+      "To remove water from it",
+      "To make it sweeter"
+     ],
+     "answer": 2,
+     "why": "„to dry it“."
+    },
+    {
+     "q": "What do the bees do last?",
+     "options": [
+      "Fly to more flowers",
+      "Fan the honey",
+      "Chew the nectar",
+      "Cover the cells with wax"
+     ],
+     "answer": 3,
+     "why": "„Finally, the bees cover each cell with wax“."
+    },
+    {
+     "q": "What does the speaker say about a single bee?",
+     "options": [
+      "It produces only a small amount of honey in its life.",
+      "It can visit every flower in one day.",
+      "It lives for many years.",
+      "It makes about a teaspoon of honey every single day."
+     ],
+     "answer": 0,
+     "why": "Nur etwa 1/12 Teelöffel im ganzen Leben."
+    }
+   ]
+  },
+  {
+   "id": "tk10",
+   "level": 2,
+   "voice": "M",
+   "title": "The Bystander Effect",
+   "text": "In psychology, the bystander effect refers to a surprising finding: people are less likely to help someone in an emergency when other people are present. You might expect the opposite, that more witnesses would mean more help. But in a series of experiments in the 1960s, researchers found that participants who believed they were the only person hearing someone in distress helped quickly, while those who thought several others could hear often did nothing. Researchers point to two main causes. The first is diffusion of responsibility: when many people are present, each person feels less personally responsible. The second is social influence. In an unclear situation, people look at how others react, and if no one else seems worried, they assume there's no emergency. The good news is that simply knowing about the effect can reduce it. And if you ever need help in a crowd, experts suggest pointing to one specific person and asking them directly.",
+   "questions": [
+    {
+     "q": "What is the bystander effect?",
+     "options": [
+      "People help more quickly when others are watching them.",
+      "People are less likely to help when others are present.",
+      "People avoid crowded places.",
+      "People panic in emergencies."
+     ],
+     "answer": 1,
+     "why": "Definition am Anfang."
+    },
+    {
+     "q": "What did the experiments in the 1960s show?",
+     "options": [
+      "Most participants refused to help anyone.",
+      "Participants could not hear the person in distress.",
+      "People who thought they were alone helped more quickly.",
+      "Groups helped faster than individuals."
+     ],
+     "answer": 2,
+     "why": "Allein → schnell geholfen; mit anderen → oft nichts."
+    },
+    {
+     "q": "According to the speaker, what does diffusion of responsibility mean?",
+     "options": [
+      "People share tasks equally.",
+      "One person in the group naturally takes control of the situation.",
+      "Responsibility increases in larger groups.",
+      "Each person feels less responsible when many people are present."
+     ],
+     "answer": 3,
+     "why": "Verantwortung verteilt sich."
+    },
+    {
+     "q": "What does the speaker recommend if you need help in a crowd?",
+     "options": [
+      "Ask one specific person directly",
+      "Shout as loudly as possible",
+      "Wait for someone to notice",
+      "Call several people at once"
+     ],
+     "answer": 0,
+     "why": "„pointing to one specific person and asking them directly“."
+    }
+   ]
+  },
+  {
+   "id": "tk11",
+   "level": 3,
+   "voice": "W",
+   "title": "The Columbian Exchange",
+   "text": "Historians use the term Columbian Exchange to describe the massive transfer of plants, animals, and diseases between the Americas and the rest of the world that followed 1492. Its consequences are difficult to overstate. Crops native to the Americas, such as potatoes, maize, and tomatoes, eventually transformed diets across Europe, Africa, and Asia. The potato, in particular, could produce more calories per acre than traditional European grains, and some scholars argue it contributed substantially to population growth in eighteenth-century Europe. The exchange flowed in the other direction as well. Europeans introduced horses, cattle, and wheat to the Americas, reshaping indigenous economies and ways of life. Horses, for instance, enabled some Plains peoples to adopt a highly mobile, bison-hunting culture. Yet the most devastating consequence was biological. Diseases such as smallpox, to which indigenous populations had no prior exposure, spread with catastrophic speed, killing a large proportion of the population in many regions, often before the newcomers themselves had arrived in those areas.",
+   "questions": [
+    {
+     "q": "What is the main topic of the talk?",
+     "options": [
+      "The trade routes Europeans used to reach Asia",
+      "How the exchange after 1492 affected the world",
+      "The life of Christopher Columbus",
+      "How potatoes are grown"
+     ],
+     "answer": 1,
+     "why": "Begriff und Folgen des Columbian Exchange."
+    },
+    {
+     "q": "Why does the speaker mention the potato?",
+     "options": [
+      "To explain the origin of European grains",
+      "To describe what Plains peoples hunted",
+      "To illustrate how an American crop changed life elsewhere",
+      "To show that most Europeans rejected new foods from abroad"
+     ],
+     "answer": 2,
+     "why": "Mehr Kalorien pro Acre → Bevölkerungswachstum."
+    },
+    {
+     "q": "According to the speaker, how did horses affect some Plains peoples?",
+     "options": [
+      "They were used mainly for trading goods with Europeans.",
+      "They replaced farming in Europe.",
+      "They spread disease.",
+      "They made a mobile, bison-hunting way of life possible."
+     ],
+     "answer": 3,
+     "why": "„enabled some Plains peoples to adopt a highly mobile, bison-hunting culture“."
+    },
+    {
+     "q": "What does the speaker imply about the spread of disease?",
+     "options": [
+      "It sometimes moved faster than the Europeans themselves.",
+      "It was planned deliberately.",
+      "It had little effect on population size.",
+      "It affected Europeans more than indigenous peoples."
+     ],
+     "answer": 0,
+     "why": "„often before the newcomers themselves had arrived“."
+    }
+   ]
+  },
+  {
+   "id": "tk12",
+   "level": 3,
+   "voice": "M",
+   "title": "Opportunity Cost",
+   "text": "One of the most useful concepts in economics is also one of the most frequently misunderstood: opportunity cost. The opportunity cost of a choice isn't the money you spend; it's the value of the best alternative you give up. Suppose you spend a Saturday working a shift that pays a hundred dollars instead of going to a friend's concert. The opportunity cost of working is the concert, and the opportunity cost of the concert is the hundred dollars you'd have earned. This framing has some counterintuitive implications. Consider a student deciding whether to attend graduate school. Tuition is obvious, but the larger cost is often invisible: the salary the student would have earned during those years. Economists argue that ignoring these hidden costs leads people to make decisions that look sensible on paper but aren't. The concept also explains why time becomes more valuable as income rises. A highly paid professional who spends an afternoon repainting her own house may, in economic terms, be paying far more than if she'd hired someone, even though no money changes hands.",
+   "questions": [
+    {
+     "q": "What is opportunity cost?",
+     "options": [
+      "The money spent on a purchase",
+      "The value of the best alternative that is given up",
+      "The total cost of all the options that are available",
+      "The profit gained from a decision"
+     ],
+     "answer": 1,
+     "why": "Definition im zweiten Satz."
+    },
+    {
+     "q": "Why does the speaker mention graduate school?",
+     "options": [
+      "To argue that tuition is too expensive",
+      "To recommend working for a few years before studying",
+      "To show that a major cost may be income one does not earn",
+      "To explain how salaries are calculated"
+     ],
+     "answer": 2,
+     "why": "Das entgangene Gehalt ist der größere, unsichtbare Kostenpunkt."
+    },
+    {
+     "q": "According to the speaker, what happens when people ignore hidden costs?",
+     "options": [
+      "They almost always choose the cheaper option.",
+      "They save more money.",
+      "They avoid making decisions.",
+      "They may make poor decisions that seem reasonable."
+     ],
+     "answer": 3,
+     "why": "„decisions that look sensible on paper but aren't“."
+    },
+    {
+     "q": "What does the speaker imply about the professional who paints her own house?",
+     "options": [
+      "Her time may be worth more than the cost of hiring a painter.",
+      "She saves money by doing it herself.",
+      "She probably enjoys painting more than her regular job.",
+      "She should paint more often."
+     ],
+     "answer": 0,
+     "why": "Ökonomisch zahlt sie mehr, obwohl kein Geld fließt."
     }
    ]
   }

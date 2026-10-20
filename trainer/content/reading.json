@@ -100,7 +100,7 @@
      "q": "What does Dana ask the staff to do?",
      "options": [
       "Bring food to the office on Friday",
-      "Choose a restaurant for the lunch",
+      "Suggest a different restaurant for Friday's lunch",
       "Pay for their meals in advance",
       "Confirm whether they are coming by Wednesday"
      ],
@@ -111,8 +111,8 @@
      "q": "What is indicated about drinks?",
      "options": [
       "Employees must pay for some drinks themselves",
-      "The company will pay for all drinks",
-      "Only water will be served",
+      "The company will pay for every drink that is ordered",
+      "Only water will be served at the restaurant",
       "Drinks must be ordered by Wednesday"
      ],
      "answer": 0,
@@ -154,7 +154,7 @@
      "options": [
       "A copy of the textbook",
       "Notes from his lab",
-      "Snacks for the group",
+      "Snacks and drinks for everyone in the group",
       "Practice problems from the previous week"
      ],
      "answer": 3,
@@ -184,7 +184,7 @@
     {
      "q": "What is true about online orders?",
      "options": [
-      "They must be paid for in cash.",
+      "They must be paid for in cash when picked up.",
       "Orders placed early will be ready by midday.",
       "They are delivered to campus.",
       "They are only available for combos."
@@ -249,7 +249,7 @@
       "The rental period will be extended.",
       "The student will be charged the calculator's full price.",
       "Nothing, because the semester is over.",
-      "The student will receive a partial refund."
+      "The student will receive a partial refund for the rental."
      ],
      "answer": 1,
      "why": "Leihartikel bis 20.12. zurück, sonst wird der volle Kaufpreis berechnet."
@@ -260,7 +260,7 @@
       "It was bought new.",
       "It is a rental item.",
       "It can be returned for a refund for two weeks.",
-      "It must be returned by December 20."
+      "It must be returned to the store by December 20."
      ],
      "answer": 2,
      "why": "Gebrauchte Bücher: volle Erstattung innerhalb von 14 Tagen."
@@ -393,7 +393,7 @@
     {
      "q": "What will students do next Tuesday?",
      "options": [
-      "Read Chapter 6 in class",
+      "Read Chapter 6 together during class",
       "Hand in a lab report",
       "Go to a conference",
       "Discuss Chapter 6 and take a quiz"
@@ -486,7 +486,7 @@
     {
      "q": "What is the main purpose of the post?",
      "options": [
-      "To explain why prices in dining halls are rising",
+      "To explain why prices in campus dining halls are rising this year",
       "To report the results of a campaign and announce next steps",
       "To criticize students for using disposable cups",
       "To announce that cafés will stop selling coffee"
@@ -530,7 +530,7 @@
      "options": [
       "It does not clearly explain why the topic is important.",
       "It is ready to be submitted.",
-      "It is too long.",
+      "It is much too long for a short research paper like this.",
       "It contains incorrect data."
      ],
      "answer": 0,
@@ -573,7 +573,7 @@
      "options": [
       "At the start of the semester",
       "On the day of the deadline",
-      "Within seven days after the deadline",
+      "Within seven days after the original deadline has passed",
       "At least two days before the original deadline"
      ],
      "answer": 3,
@@ -585,7 +585,7 @@
       "Instructors may refuse them unless there is a documented emergency.",
       "They reduce the student's chance of receiving honors.",
       "They are always rejected.",
-      "They are usually accepted with documentation."
+      "They are usually accepted if students provide documentation."
      ],
      "answer": 0,
      "why": "„not obligated to grant … except in documented emergencies“."
@@ -731,7 +731,7 @@
       "Buy her pass soon to save money",
       "Ask for a refund",
       "Stop taking the bus",
-      "Wait until December"
+      "Wait until December to decide"
      ],
      "answer": 0,
      "why": "Vor dem 1. Dezember gilt noch der alte Preis."
@@ -761,7 +761,7 @@
      "q": "How can a student get help from the Writing Center on a Saturday?",
      "options": [
       "Not at all",
-      "In person in the morning",
+      "In person during the morning hours",
       "Online in the afternoon or evening",
       "In person until 3 p.m."
      ],
@@ -930,7 +930,7 @@
       "The application was rejected.",
       "A letter of recommendation is still missing.",
       "The online portal has been closed.",
-      "The deadline has been extended."
+      "The deadline for applications has been extended."
      ],
      "answer": 1,
      "why": "„complete with the exception of one letter of recommendation“."
@@ -950,7 +950,7 @@
      "q": "What condition applies to letters sent by email?",
      "options": [
       "They must be sent by the applicant.",
-      "They must be sent before January 1.",
+      "They must be sent at least two weeks before January 15.",
       "They must be signed by hand.",
       "They must come from an institutional email address."
      ],
@@ -972,7 +972,7 @@
       "Few students use it at night then, and staffing is expensive.",
       "Staff members go on vacation.",
       "The building needs repairs.",
-      "Students complained about noise."
+      "Students complained about noise in the building at night."
      ],
      "answer": 0,
      "why": "Nutzung −80 % und hohe Personalkosten."
@@ -983,7 +983,7 @@
       "The library will be open 24 hours all term.",
       "A study lounge will stay open late throughout the semester.",
       "Students will need a new type of ID.",
-      "The library will close earlier than before."
+      "The library will close earlier than before on weeknights."
      ],
      "answer": 1,
      "why": "Lounge bis 2 Uhr mit Studierendenausweis."
@@ -992,7 +992,7 @@
      "q": "What does the dean suggest about future opening hours?",
      "options": [
       "They are final and will not change.",
-      "They will be decided by a student vote.",
+      "They will be decided by a vote among students next term.",
       "They may change depending on how much the space is used.",
       "They will be reduced next year."
      ],
@@ -1025,7 +1025,7 @@
       "She does not have enough academic sources.",
       "Her partner has left the group.",
       "She cannot open her slides.",
-      "She has missed the deadline."
+      "She has already missed the deadline for her slides."
      ],
      "answer": 0,
      "why": "Fünf Fachquellen gefordert, sie hat drei."
@@ -1066,7 +1066,7 @@
      "q": "What happens to a print job that takes six hours?",
      "options": [
       "It is not allowed.",
-      "It must be printed on a Wednesday.",
+      "It must be printed on a Wednesday at noon.",
       "It is free of charge.",
       "It needs approval and is printed overnight."
      ],
@@ -1144,7 +1144,7 @@
       "Clearing mangroves may increase storm damage to coastal towns.",
       "Mangrove forests are expanding in most regions.",
       "Shrimp farms help protect shorelines.",
-      "Scientists generally support coastal development."
+      "Scientists generally support coastal development and shrimp farming."
      ],
      "answer": 0,
      "why": "Ohne Mangroven sind Küstenorte „more vulnerable to storm damage“."
@@ -1196,7 +1196,7 @@
       "They held something cold against their forehead.",
       "They breathed extra oxygen.",
       "They read about yawning.",
-      "They watched family members yawn."
+      "They watched videos of family members yawning."
      ],
      "answer": 0,
      "why": "„held a cold pack against their forehead“."
@@ -1236,7 +1236,7 @@
      "options": [
       "Shoppers preferred jams with fewer ingredients.",
       "Fewer people visited the smaller display.",
-      "Visitors tasted more jam at the smaller display.",
+      "Visitors spent more time tasting jam at the smaller display than at the larger one.",
       "The larger display led to fewer purchases even though it attracted more visitors."
      ],
      "answer": 3,
@@ -1256,7 +1256,7 @@
     {
      "q": "Why does the author mention experts in the final paragraph?",
      "options": [
-      "To suggest that shoppers should consult experts",
+      "To suggest that shoppers should consult experts before buying products",
       "To show that choice overload does not affect everyone equally",
       "To explain why the jam study was repeated",
       "To argue that experts make worse decisions"
@@ -1332,7 +1332,7 @@
      "options": [
       "To explain where vents were first discovered",
       "To argue that life definitely exists there",
-      "To compare their temperatures with Earth's oceans",
+      "To compare the temperatures of their oceans with those of Earth's oceans",
       "To show that the discovery influenced the search for life elsewhere"
      ],
      "answer": 3,
@@ -1361,7 +1361,7 @@
      "q": "The word \"issuing\" in paragraph 2 is closest in meaning to",
      "options": [
       "collecting",
-      "officially giving out",
+      "distributing",
       "destroying",
       "designing"
      ],
@@ -1372,7 +1372,7 @@
      "q": "According to paragraph 2, what was a disadvantage of government-controlled paper money?",
      "options": [
       "It was accepted only in a few cities.",
-      "Criminals could copy it easily.",
+      "Criminals found it far too easy to make copies of the official notes.",
       "The government sometimes printed too much, which caused prices to rise.",
       "Merchants could not exchange it for coins."
      ],
@@ -1384,7 +1384,7 @@
      "options": [
       "To describe a famous Chinese merchant",
       "To argue that paper money was invented in Europe",
-      "To explain how paper money quickly reached Europe",
+      "To explain how paper money quickly reached Europe through trade",
       "To show that Europeans found Chinese paper money remarkable"
      ],
      "answer": 3,
@@ -1412,7 +1412,7 @@
     {
      "q": "According to paragraph 1, what is the role of the reward?",
      "options": [
-      "It replaces the cue.",
+      "It replaces the cue that started the behavior.",
       "It makes the behavior more likely to be repeated.",
       "It reduces the need for repetition.",
       "It signals the start of a routine."
@@ -1423,10 +1423,10 @@
     {
      "q": "The word \"gradually\" in paragraph 2 is closest in meaning to",
      "options": [
-      "suddenly",
-      "easily",
+      "all at once",
+      "without effort",
       "slowly over time",
-      "rarely"
+      "only occasionally"
      ],
      "answer": 2,
      "why": "gradually = allmählich."
@@ -1434,7 +1434,7 @@
     {
      "q": "What did the study described in paragraph 2 find?",
      "options": [
-      "Complex habits form faster than simple ones.",
+      "Complex habits form faster than simple ones in most people.",
       "Eating fruit is the easiest habit to form.",
       "All habits form in exactly two months.",
       "The time needed to form a habit differed greatly between people."
@@ -1447,7 +1447,7 @@
      "options": [
       "To give an example of using the environment as a cue",
       "To recommend a particular type of shoe",
-      "To show that exercise is a difficult habit",
+      "To show that exercise is an especially difficult habit to form",
       "To compare exercise with snacking"
      ],
      "answer": 0,
@@ -1486,7 +1486,7 @@
     {
      "q": "According to the story, what did the goat herder notice?",
      "options": [
-      "The bush grew very quickly.",
+      "The bush grew much faster than other plants nearby.",
       "The berries tasted sweet.",
       "His goats became sick.",
       "His goats had more energy after eating certain berries."
@@ -1549,7 +1549,7 @@
     {
      "q": "The word \"formidable\" in paragraph 1 is closest in meaning to",
      "options": [
-      "serious and difficult",
+      "daunting",
       "temporary",
       "unexpected",
       "minor"
@@ -1563,7 +1563,7 @@
       "It makes bacteria more vulnerable to drugs.",
       "It lets resistance spread faster than through reproduction alone.",
       "It only occurs within a single species.",
-      "It prevents mutations."
+      "It prevents new mutations from appearing in most types of bacteria."
      ],
      "answer": 1,
      "why": "„far more quickly than inheritance alone would allow“."
@@ -1571,7 +1571,7 @@
     {
      "q": "Why does the author mention viral infections?",
      "options": [
-      "To compare the size of viruses and bacteria",
+      "To compare the size of viruses with the size of bacteria",
       "To show that antibiotics work against viruses",
       "To give an example of antibiotics being used inappropriately",
       "To explain how viruses become resistant"
