@@ -64,5 +64,6 @@ for x in SP.get("repeat", []):
 for x in SP.get("interview", []):
     v = voice(x.get("voice", "W"), x["id"])
     for i, q in enumerate(x["questions"]): n += write(f"{x['id']}-{i}", [(q, v, 0.05)])
+n += write("soundcheck", [("This is a sound check. If you can hear this clearly, you are ready to begin.", "af_heart", 0.05)])
 MAN.write_text(json.dumps(man, indent=0, sort_keys=True))
 print("neu erzeugt:", n, "| gesamt:", len(man), "| Größe MB:", round(sum(p.stat().st_size for p in AUD.glob("*.mp3")) / 1e6, 1))

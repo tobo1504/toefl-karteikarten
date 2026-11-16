@@ -12,7 +12,8 @@
     "much quieter",
     "than before"
    ],
-   "why": "Vergleich: Komparativ + than (much quieter than)."
+   "why": "Vergleich: Komparativ + than (much quieter than).",
+   "skill": "compare"
   },
   {
    "id": "bas02",
@@ -27,7 +28,8 @@
     "moved",
     "to the afternoon"
    ],
-   "why": "Vorvergangenheit im Passiv: had been + Partizip."
+   "why": "Vorvergangenheit im Passiv: had been + Partizip.",
+   "skill": "passive"
   },
   {
    "id": "bas03",
@@ -42,7 +44,8 @@
     "submitted",
     "by Friday"
    ],
-   "why": "Passiv mit Modal: has to be + Partizip."
+   "why": "Passiv mit Modal: has to be + Partizip.",
+   "skill": "passive"
   },
   {
    "id": "bas04",
@@ -57,7 +60,8 @@
     "lunch",
     "last week"
    ],
-   "why": "Relativsatz mit where direkt hinter dem Ort."
+   "why": "Relativsatz mit where direkt hinter dem Ort.",
+   "skill": "relative"
   },
   {
    "id": "bas05",
@@ -72,7 +76,8 @@
     "fits",
     "my schedule"
    ],
-   "why": "Indirekte Frage: which one + Verb, keine Inversion."
+   "why": "Indirekte Frage: which one + Verb, keine Inversion.",
+   "skill": "indirect"
   },
   {
    "id": "bas06",
@@ -87,7 +92,8 @@
     "have ever",
     "had"
    ],
-   "why": "Superlativ + Relativsatz ohne that: the most … I have ever had."
+   "why": "Superlativ + Relativsatz ohne that: the most … I have ever had.",
+   "skill": "compare"
   },
   {
    "id": "bas07",
@@ -102,7 +108,8 @@
     "to work",
     "that day"
    ],
-   "why": "Irrealer if-Satz: would …, if + Past."
+   "why": "Irrealer if-Satz: would …, if + Past.",
+   "skill": "cond"
   },
   {
    "id": "bas08",
@@ -117,7 +124,8 @@
     "brings",
     "a mug"
    ],
-   "why": "Relativsatz who + Verb mit -s (anyone = Singular)."
+   "why": "Relativsatz who + Verb mit -s (anyone = Singular).",
+   "skill": "relative"
   },
   {
    "id": "bas09",
@@ -132,7 +140,8 @@
     "done",
     "by tonight"
    ],
-   "why": "Modal + be + Partizip: should be done."
+   "why": "Modal + be + Partizip: should be done.",
+   "skill": "verb"
   },
   {
    "id": "bas10",
@@ -147,7 +156,8 @@
     "about",
     "studying abroad"
    ],
-   "why": "Indirekte Frage: whether + Subjekt + Verb; Präposition + -ing."
+   "why": "Indirekte Frage: whether + Subjekt + Verb; Präposition + -ing.",
+   "skill": "indirect"
   },
   {
    "id": "bas11",
@@ -161,7 +171,8 @@
     "at six",
     "on weekdays"
    ],
-   "why": "Zeitangaben: at + Uhrzeit, on + Tage."
+   "why": "Zeitangaben: at + Uhrzeit, on + Tage.",
+   "skill": "order"
   },
   {
    "id": "bas12",
@@ -176,7 +187,8 @@
     "for NASA",
     "for twenty years"
    ],
-   "why": "Relativsatz direkt hinter dem Nomen (a scientist who …)."
+   "why": "Relativsatz direkt hinter dem Nomen (a scientist who …).",
+   "skill": "relative"
   },
   {
    "id": "bas13",
@@ -191,7 +203,8 @@
     "it is",
     "raining"
    ],
-   "why": "Häufigkeitsadverb vor dem Vollverb (I usually ride)."
+   "why": "Häufigkeitsadverb vor dem Vollverb (I usually ride).",
+   "skill": "order"
   },
   {
    "id": "bas14",
@@ -205,7 +218,8 @@
     "its close ties",
     "to industry"
    ],
-   "why": "Feste Verbindung: be known for; ties to."
+   "why": "Feste Verbindung: be known for; ties to.",
+   "skill": "order"
   },
   {
    "id": "bas15",
@@ -219,7 +233,8 @@
     "of",
     "the administration building"
    ],
-   "why": "be located on the … floor."
+   "why": "be located on the … floor.",
+   "skill": "order"
   },
   {
    "id": "bas16",
@@ -233,7 +248,8 @@
     "of",
     "your resume"
    ],
-   "why": "Modal + Grundform: should bring."
+   "why": "Modal + Grundform: should bring.",
+   "skill": "verb"
   },
   {
    "id": "bas17",
@@ -247,7 +263,8 @@
     "posted",
     "next Monday"
    ],
-   "why": "Indirekte Rede: will → would; Passiv would be posted."
+   "why": "Indirekte Rede: will → would; Passiv would be posted.",
+   "skill": "indirect"
   },
   {
    "id": "bas18",
@@ -262,7 +279,8 @@
     "by",
     "another group"
    ],
-   "why": "Passiv Verlaufsform: was being used."
+   "why": "Passiv Verlaufsform: was being used.",
+   "skill": "passive"
   },
   {
    "id": "bas19",
@@ -276,7 +294,8 @@
     "to pay",
     "for the trip"
    ],
-   "why": "agree + to + Grundform; Present Simple nach if."
+   "why": "agree + to + Grundform; Present Simple nach if.",
+   "skill": "cond"
   },
   {
    "id": "bas20",
@@ -291,7 +310,8 @@
     "everyone",
     "was"
    ],
-   "why": "Cleft Sentence What … was + indirekte Frage how friendly everyone was."
+   "why": "Cleft Sentence What … was + indirekte Frage how friendly everyone was.",
+   "skill": "indirect"
   },
   {
    "id": "bas21",
@@ -305,7 +325,8 @@
     "I finished it",
     "in two days"
    ],
-   "why": "so … that = so sehr, dass."
+   "why": "so … that = so sehr, dass.",
+   "skill": "compare"
   },
   {
    "id": "bas22",
@@ -320,7 +341,8 @@
     "driving",
     "in this traffic"
    ],
-   "why": "-ing-Form als Subjekt (Taking the train …)."
+   "why": "-ing-Form als Subjekt (Taking the train …).",
+   "skill": "verb"
   },
   {
    "id": "bas23",
@@ -334,7 +356,8 @@
     "by",
     "the deadline"
    ],
-   "why": "by + Zeitpunkt → Past Perfect (had signed up)."
+   "why": "by + Zeitpunkt → Past Perfect (had signed up).",
+   "skill": "verb"
   },
   {
    "id": "bas24",
@@ -348,7 +371,8 @@
     "doesn't get",
     "too cold"
    ],
-   "why": "as long as + Present Simple = solange."
+   "why": "as long as + Present Simple = solange.",
+   "skill": "cond"
   },
   {
    "id": "bas25",
@@ -361,7 +385,8 @@
     "near",
     "the station"
    ],
-   "why": "Ortsangabe: at a shop near …"
+   "why": "Ortsangabe: at a shop near …",
+   "skill": "order"
   },
   {
    "id": "bas26",
@@ -375,7 +400,8 @@
     "study",
     "for my exam"
    ],
-   "why": "have to + Grundform."
+   "why": "have to + Grundform.",
+   "skill": "verb"
   },
   {
    "id": "bas27",
@@ -389,7 +415,8 @@
     "and",
     "drink more water"
    ],
-   "why": "tell sb to + Grundform."
+   "why": "tell sb to + Grundform.",
+   "skill": "verb"
   },
   {
    "id": "bas28",
@@ -403,7 +430,8 @@
     "almost",
     "two years"
    ],
-   "why": "Present Perfect Continuous + for + Zeitraum."
+   "why": "Present Perfect Continuous + for + Zeitraum.",
+   "skill": "verb"
   },
   {
    "id": "bas29",
@@ -417,7 +445,8 @@
     "I was",
     "in the library"
    ],
-   "why": "Passiv Past: was turned off; while + Satz."
+   "why": "Passiv Past: was turned off; while + Satz.",
+   "skill": "passive"
   },
   {
    "id": "bas30",
@@ -432,7 +461,8 @@
     "the administration",
     "hopes"
    ],
-   "why": "Vergleich: as + Adjektiv + as."
+   "why": "Vergleich: as + Adjektiv + as.",
+   "skill": "compare"
   },
   {
    "id": "bas31",
@@ -445,7 +475,8 @@
     "already completed",
     "the introductory one"
    ],
-   "why": "already zwischen have und Partizip."
+   "why": "already zwischen have und Partizip.",
+   "skill": "cond"
   },
   {
    "id": "bas32",
@@ -459,7 +490,8 @@
     "all the scholarships",
     "available"
    ],
-   "why": "available kann nach dem Nomen stehen."
+   "why": "available kann nach dem Nomen stehen.",
+   "skill": "order"
   },
   {
    "id": "bas33",
@@ -472,7 +504,8 @@
     "on the first Monday",
     "in September"
    ],
-   "why": "on + Tag, in + Monat."
+   "why": "on + Tag, in + Monat.",
+   "skill": "order"
   },
   {
    "id": "bas34",
@@ -486,7 +519,8 @@
     "to be",
     "trusted"
    ],
-   "why": "too + Adjektiv + to + Infinitiv (Passiv)."
+   "why": "too + Adjektiv + to + Infinitiv (Passiv).",
+   "skill": "compare"
   },
   {
    "id": "bas35",
@@ -501,7 +535,8 @@
     "sat",
     "by the window"
    ],
-   "why": "Relativsatz who direkt hinter dem Nomen."
+   "why": "Relativsatz who direkt hinter dem Nomen.",
+   "skill": "relative"
   },
   {
    "id": "bas36",
@@ -516,7 +551,8 @@
     "announce it",
     "next week"
    ],
-   "why": "be expected to + Grundform."
+   "why": "be expected to + Grundform.",
+   "skill": "passive"
   },
   {
    "id": "bas37",
@@ -529,7 +565,8 @@
     "my grandparents",
     "in the country"
    ],
-   "why": "going to + Grundform für Pläne."
+   "why": "going to + Grundform für Pläne.",
+   "skill": "verb"
   },
   {
    "id": "bas38",
@@ -543,7 +580,8 @@
     "from",
     "where I work"
    ],
-   "why": "too far from + Nebensatz (where I work)."
+   "why": "too far from + Nebensatz (where I work).",
+   "skill": "relative"
   },
   {
    "id": "bas39",
@@ -556,7 +594,8 @@
     "to discuss",
     "the readings"
    ],
-   "why": "would have liked = hätte gern gehabt."
+   "why": "would have liked = hätte gern gehabt.",
+   "skill": "cond"
   },
   {
    "id": "bas40",
@@ -570,7 +609,8 @@
     "quiet enough",
     "to concentrate"
    ],
-   "why": "Adjektiv + enough + to + Grundform."
+   "why": "Adjektiv + enough + to + Grundform.",
+   "skill": "compare"
   }
  ],
  "email": [

@@ -1,9 +1,11 @@
 """Hilfsfunktionen für neue Inhalte. Verwendung siehe gen_*_batch*.py.
 - ctw(text): setzt nach ETS-Regel 10 Lücken (erster Satz intakt, danach jedes zweite Wort, zweite Hälfte fehlt).
 - MC(start): Fragen-Fabrik; richtige Antwort zuerst übergeben, Position wird rotierend auf A–D verteilt.
+- Jede Frage bekommt "skill" (Fragetyp, siehe skills.py): als Argument angeben oder automatisch aus dem Fragetext.
 - append(file, key, items): hängt Items an eine Liste in content/<file>.json an (ids müssen neu sein).
 """
 import json, re, random, pathlib
+from skills import classify
 CONTENT = pathlib.Path(__file__).resolve().parent.parent / "content"
 
 def ctw(text):
@@ -27,10 +29,10 @@ def ctw(text):
 class MC:
     def __init__(self, start=0, seed=1):
         self.pos = start; self.rnd = random.Random(seed)
-    def __call__(self, q, correct, wrong, why):
+    def __call__(self, q, correct, wrong, why, skill=None):
         a = self.pos % 4; self.pos += 1
         rest = wrong[:]; self.rnd.shuffle(rest); rest.insert(a, correct)
-        return {"q": q, "options": rest, "answer": a, "why": why}
+        return {"q": q, "options": rest, "answer": a, "why": why, "skill": skill or classify(q)}
 
 def append(file, key, items):
     p = CONTENT / f"{file}.json"

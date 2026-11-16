@@ -5,6 +5,9 @@ import json, re, sys, hashlib, pathlib
 ROOT = pathlib.Path(__file__).resolve().parent
 SRC, CONTENT, DIST = ROOT / "src", ROOT / "content", ROOT / "dist"
 errors = []
+MCQ_SKILLS = ("main", "detail", "vocab", "infer", "purpose", "neg", "attitude", "next")
+CHOOSE_SKILLS = ("wh", "yn", "request", "statement", "idiom")
+BAS_SKILLS = ("passive", "relative", "indirect", "compare", "cond", "verb", "order")
 
 def err(m): errors.append(m)
 
@@ -17,6 +20,7 @@ def check_mcq(where, qs, n=None):
         if len(q.get("options", [])) != 4: err(f"{w}: braucht 4 Optionen")
         if q.get("answer") not in (0, 1, 2, 3): err(f"{w}: answer muss 0–3 sein")
         if not q.get("why"): err(f"{w}: Begründung (why) fehlt")
+        if q.get("skill") not in MCQ_SKILLS: err(f"{w}: skill fehlt oder unbekannt ({q.get('skill')})")
 
 def load(name):
     p = CONTENT / f"{name}.json"
@@ -50,6 +54,7 @@ for x in W.get("bas", []):
     ans = re.sub(r"[.?!]$", "", x.get("answer", "")).replace(",", "")
     if joined.lower() != ans.lower(): err(f"{x['id']}: chunks ergeben nicht den Antwortsatz:\n   {joined}\n   {ans}")
     if not 4 <= len(x.get("chunks", [])) <= 9: err(f"{x['id']}: 4–9 Blöcke erwartet")
+    if x.get("skill") not in BAS_SKILLS: err(f"{x['id']}: skill fehlt oder unbekannt")
 for x in W.get("email", []):
     uid(x, "email")
     if len(x.get("tasks", [])) != 3: err(f"{x['id']}: braucht 3 tasks")
@@ -62,6 +67,7 @@ for x in L.get("choose", []):
     uid(x, "choose")
     if len(x.get("options", [])) != 4 or x.get("answer") not in (0,1,2,3) or not x.get("prompt") or not x.get("why"): err(f"{x['id']}: prompt, 4 Optionen, answer, why nötig")
     if x.get("voice") not in ("M", "W"): err(f"{x['id']}: voice M oder W")
+    if x.get("skill") not in CHOOSE_SKILLS: err(f"{x['id']}: skill fehlt oder unbekannt")
 for x in L.get("conversation", []):
     uid(x, "conversation"); check_mcq(x["id"], x.get("questions", []), 2)
     if any(l.get("who") not in ("M", "W") for l in x.get("lines", [])): err(f"{x['id']}: who muss M oder W sein")
@@ -98,8 +104,38 @@ for sec in ("reading", "listening"):
 if errors:
     print("FEHLER in den Inhalten:"); [print(" -", e) for e in errors]; sys.exit(1)
 
+# ---------- Feste Probetests (Formen): jede Aufgabe gehört zu höchstens einem Test ----------
+def lv(lst, level): return [x for x in lst if x.get("level", 2) == level]
+def take(lst, f, n):
+    part = lst[f * n:(f + 1) * n]
+    if len(part) < n: raise IndexError
+    return [x["id"] for x in part]
+def daily_set(level, f):
+    d = lv(R["daily"], level)
+    q3 = [x for x in d if len(x["questions"]) == 3]; q2 = [x for x in d if len(x["questions"]) == 2]
+    return take(q3, f, 2) + take(q2, f, 2)   # 3+3+2+2 = 10 Fragen
+LEVEL = {"m1": 2, "easy": 1, "hard": 3}
+forms = []
+while True:
+    f = len(forms)
+    try:
+        Ls = data["listening"]
+        form = {
+          "reading": {m: take(lv(R["ctw"], l), f, 1) + daily_set(l, f) + take(lv(R["academic"], l), f, 1) for m, l in LEVEL.items()},
+          "listening": {m: take(lv(Ls["choose"], l), f, 8 if m == "m1" else 7) + take(lv(Ls["conversation"], l), f, 2)
+                           + take(lv(Ls["announcement"], l), f, 2) + take(lv(Ls["talk"], l), f, 2) for m, l in LEVEL.items()},
+          "writing": {"bas": [x["id"] for x in sorted(W["bas"][f * 10:(f + 1) * 10], key=lambda x: x["level"])] if len(W["bas"]) >= (f + 1) * 10 else take([], 0, 1),
+                      "email": take(W["email"], f, 1)[0], "discussion": take(W["discussion"], f, 1)[0]},
+          "speaking": {"repeat": take(SP["repeat"], f, 1)[0], "interview": take(SP["interview"], f, 1)[0]},
+        }
+    except IndexError:
+        break
+    forms.append(form)
+data["forms"] = forms
+if not forms: print("FEHLER: Inhalte reichen nicht für einen vollständigen Probetest"); sys.exit(1)
+
 style = (SRC / "styles.css").read_text(encoding="utf8")
-appjs = (SRC / "app.js").read_text(encoding="utf8")
+appjs = (SRC / "app.js").read_text(encoding="utf8").replace("/*INCLUDE analysis.js*/", (SRC / "analysis.js").read_text(encoding="utf8"))
 shell = (SRC / "shell.html").read_text(encoding="utf8")
 AUDIO = ROOT / "audio" / "manifest.json"
 data["audio"] = {k: v["dur"] for k, v in json.loads(AUDIO.read_text()).items() if (ROOT / "audio" / f"{k}.mp3").exists()} if AUDIO.exists() else {}
@@ -110,7 +146,14 @@ def build(artifact):
     return shell.replace("/*STYLE*/", style).replace("/*CONTENT*/", content).replace("/*BUILD*/", b).replace("/*APP*/", appjs)
 
 DIST.mkdir(exist_ok=True)
-(DIST / "trainer-artifact.html").write_text(build(True), encoding="utf8")
+ART_HEAD = """<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>TOEFL-Trainer</title>
+<style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0}</style>
+</head><body>
+"""
+(DIST / "trainer-artifact.html").write_text(ART_HEAD + build(True).replace("<title>TOEFL-Trainer</title>\n", "", 1) + "</body></html>\n", encoding="utf8")
 
 pwa_head = """<!doctype html>
 <html lang="de"><head><meta charset="utf-8">
@@ -139,6 +182,7 @@ self.addEventListener("fetch",e=>{{const r=e.request;if(r.method!=="GET")return;
   "icons": [{"src": "../icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "../icon-512.png", "sizes": "512x512", "type": "image/png"},
             {"src": "../icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}]}, ensure_ascii=False, indent=1), encoding="utf8")
 
-counts = {sec: {k: len(v) for k, v in d.items()} for sec, d in data.items() if d and sec != "audio"}
+counts = {sec: {k: len(v) for k, v in d.items()} for sec, d in data.items() if d and sec not in ("audio", "forms")}
+counts["probetests"] = len(forms)
 counts["audio"] = len(data["audio"])
 print("OK", counts, "Antwortverteilung A–D:", dist, f"| richtige Antwort am längsten: {100*longest[0]//max(1,longest[1])} % (Ziel < 40 %)")

@@ -44,6 +44,21 @@
    "id": "ctw09",
    "level": 3,
    "text": "Language extinction has accelerated dramatically over the past century. Linguists esti{mate} that rou{ghly} half o{f} the wor{ld's} languages co{uld} disappear wit{hin} the ne{xt} hundred ye{ars}. When a lang{uage} vanishes, commu{nities} frequently lose irreplaceable knowledge about local ecosystems, medicinal plants, and cultural traditions. Revitalization programs, which typically combine immersive schooling with digital archives, have achieved notable success in several regions, demonstrating that the decline is not necessarily irreversible when communities receive sustained institutional support."
+  },
+  {
+   "id": "ctw10",
+   "level": 2,
+   "text": "Coral reefs are among the most diverse ecosystems on Earth. Although th{ey} cover le{ss} than o{ne} percent o{f} the oc{ean} floor, th{ey} provide a ho{me} for ab{out} a qua{rter} of a{ll} marine species. Corals are actually tiny animals that live together in large colonies and build hard skeletons over many years. They depend on small algae inside their bodies for most of their food. When the water becomes too warm, corals lose these algae and turn white, a process known as bleaching."
+  },
+  {
+   "id": "ctw11",
+   "level": 1,
+   "text": "Dogs have an amazing sense of smell. Their no{ses} are mu{ch} better th{an} ours, s{o} they c{an} find thi{ngs} that peo{ple} cannot s{ee}. For th{is} reason, do{gs} often work with the police and help to find lost people. Some dogs can even tell when a person is sick. Training these dogs takes a long time, but most of them enjoy the work because it feels like a game."
+  },
+  {
+   "id": "ctw12",
+   "level": 3,
+   "text": "Urban planners increasingly recognize that transportation policy shapes public health. Neighborhoods desi{gned} primarily aro{und} automobiles te{nd} to disco{urage} walking, wh{ich} contributes t{o} higher ra{tes} of obe{sity} and cardiov{ascular} disease am{ong} residents. Conversely, districts featuring continuous sidewalks, protected bicycle lanes, and reliable transit encourage routine physical activity without requiring deliberate exercise. Critics caution, however, that such improvements frequently raise property values, potentially displacing the very communities they were intended to benefit."
   }
  ],
  "daily": [
@@ -63,7 +78,8 @@
       "To advertise study rooms that can be rented"
      ],
      "answer": 0,
-     "why": "Der Aushang kündigt an, dass der 2. Stock vom 4. bis 18. März geschlossen ist."
+     "why": "Der Aushang kündigt an, dass der 2. Stock vom 4. bis 18. März geschlossen ist.",
+     "skill": "main"
     },
     {
      "q": "According to the notice, how can users get books from the second floor during the closure?",
@@ -74,7 +90,8 @@
       "By going to Room 105"
      ],
      "answer": 1,
-     "why": "„Books … can still be requested online and picked up within 24 hours.“"
+     "why": "„Books … can still be requested online and picked up within 24 hours.“",
+     "skill": "detail"
     },
     {
      "q": "The word \"relocated\" in the notice is closest in meaning to",
@@ -85,7 +102,8 @@
       "repaired"
      ],
      "answer": 2,
-     "why": "relocate = an einen anderen Ort bringen."
+     "why": "relocate = an einen anderen Ort bringen.",
+     "skill": "vocab"
     }
    ]
   },
@@ -105,7 +123,8 @@
       "Confirm whether they are coming by Wednesday"
      ],
      "answer": 3,
-     "why": "Das Restaurant braucht bis Mittwoch die finale Zahl – wer noch nicht geantwortet hat, soll antworten."
+     "why": "Das Restaurant braucht bis Mittwoch die finale Zahl – wer noch nicht geantwortet hat, soll antworten.",
+     "skill": "detail"
     },
     {
      "q": "What is indicated about drinks?",
@@ -116,7 +135,8 @@
       "Drinks must be ordered by Wednesday"
      ],
      "answer": 0,
-     "why": "Getränke außer Wasser und Softdrinks werden nicht erstattet."
+     "why": "Getränke außer Wasser und Softdrinks werden nicht erstattet.",
+     "skill": "detail"
     }
    ]
   },
@@ -136,7 +156,8 @@
       "He forgot about the session."
      ],
      "answer": 1,
-     "why": "„My lab runs until 7.“"
+     "why": "„My lab runs until 7.“",
+     "skill": "detail"
     },
     {
      "q": "Why did the group change the location of the session?",
@@ -147,7 +168,8 @@
       "Jordan asked them to."
      ],
      "answer": 2,
-     "why": "„The library was packed.“ – packed = überfüllt."
+     "why": "„The library was packed.“ – packed = überfüllt.",
+     "skill": "detail"
     },
     {
      "q": "What does Maya ask Jordan to bring?",
@@ -158,7 +180,8 @@
       "Practice problems from the previous week"
      ],
      "answer": 3,
-     "why": "„If you still have the practice problems from last week, bring those.“"
+     "why": "„If you still have the practice problems from last week, bring those.“",
+     "skill": "detail"
     }
    ],
    "me": "Jordan"
@@ -179,7 +202,8 @@
       "$9.00"
      ],
      "answer": 0,
-     "why": "10 % Rabatt auf $9.00 = $8.10."
+     "why": "10 % Rabatt auf $9.00 = $8.10.",
+     "skill": "detail"
     },
     {
      "q": "What is true about online orders?",
@@ -190,7 +214,8 @@
       "They are only available for combos."
      ],
      "answer": 1,
-     "why": "Vor 10:30 bestellt = garantiert bis 12 Uhr fertig."
+     "why": "Vor 10:30 bestellt = garantiert bis 12 Uhr fertig.",
+     "skill": "detail"
     },
     {
      "q": "When can a customer NOT order the specials?",
@@ -201,7 +226,8 @@
       "On Tuesday at 1:00 p.m."
      ],
      "answer": 2,
-     "why": "Die Specials gibt es nur Montag bis Freitag."
+     "why": "Die Specials gibt es nur Montag bis Freitag.",
+     "skill": "neg"
     }
    ]
   },
@@ -221,7 +247,8 @@
       "To find people to help in a garden"
      ],
      "answer": 3,
-     "why": "„Volunteers needed!“ – es werden Helfer gesucht."
+     "why": "„Volunteers needed!“ – es werden Helfer gesucht.",
+     "skill": "main"
     },
     {
      "q": "What will people who volunteer three times receive?",
@@ -232,7 +259,8 @@
       "A set of garden tools"
      ],
      "answer": 0,
-     "why": "„… will get their own small plot for free next year.“"
+     "why": "„… will get their own small plot for free next year.“",
+     "skill": "detail"
     }
    ]
   },
@@ -252,7 +280,8 @@
       "The student will receive a partial refund for the rental."
      ],
      "answer": 1,
-     "why": "Leihartikel bis 20.12. zurück, sonst wird der volle Kaufpreis berechnet."
+     "why": "Leihartikel bis 20.12. zurück, sonst wird der volle Kaufpreis berechnet.",
+     "skill": "detail"
     },
     {
      "q": "What is indicated about the psychology book?",
@@ -263,7 +292,8 @@
       "It must be returned to the store by December 20."
      ],
      "answer": 2,
-     "why": "Gebrauchte Bücher: volle Erstattung innerhalb von 14 Tagen."
+     "why": "Gebrauchte Bücher: volle Erstattung innerhalb von 14 Tagen.",
+     "skill": "detail"
     }
    ]
   },
@@ -283,7 +313,8 @@
       "It is being cleaned."
      ],
      "answer": 3,
-     "why": "„… closed … for cleaning.“"
+     "why": "„… closed … for cleaning.“",
+     "skill": "detail"
     },
     {
      "q": "What will happen to Monday's swim classes?",
@@ -294,7 +325,8 @@
       "They will start at 6:00 a.m."
      ],
      "answer": 0,
-     "why": "„… will take place on Wednesday at the same time.“"
+     "why": "„… will take place on Wednesday at the same time.“",
+     "skill": "detail"
     }
    ]
   },
@@ -314,7 +346,8 @@
       "Eat dinner"
      ],
      "answer": 1,
-     "why": "„I have to finish my essay first.“"
+     "why": "„I have to finish my essay first.“",
+     "skill": "detail"
     },
     {
      "q": "What does Sam ask Lena to do?",
@@ -325,7 +358,8 @@
       "Wait outside the theater"
      ],
      "answer": 2,
-     "why": "„Save me a seat“ = halte mir einen Platz frei."
+     "why": "„Save me a seat“ = halte mir einen Platz frei.",
+     "skill": "detail"
     }
    ],
    "me": "Sam"
@@ -346,7 +380,8 @@
       "Internet"
      ],
      "answer": 3,
-     "why": "„$550 per month, including electricity and internet.“"
+     "why": "„$550 per month, including electricity and internet.“",
+     "skill": "detail"
     },
     {
      "q": "When should people call Mark?",
@@ -357,7 +392,8 @@
       "Only on January 1"
      ],
      "answer": 0,
-     "why": "„after 5 p.m.“"
+     "why": "„after 5 p.m.“",
+     "skill": "detail"
     },
     {
      "q": "Who would NOT be able to rent the room?",
@@ -368,7 +404,8 @@
       "Someone who wants to move in in January"
      ],
      "answer": 1,
-     "why": "„No pets.“"
+     "why": "„No pets.“",
+     "skill": "neg"
     }
    ]
   },
@@ -388,7 +425,8 @@
       "The classroom is being repaired."
      ],
      "answer": 2,
-     "why": "„I will be at a conference this week.“"
+     "why": "„I will be at a conference this week.“",
+     "skill": "detail"
     },
     {
      "q": "What will students do next Tuesday?",
@@ -399,7 +437,8 @@
       "Discuss Chapter 6 and take a quiz"
      ],
      "answer": 3,
-     "why": "Kapitel 6 wird besprochen, und das Quiz findet ebenfalls Dienstag statt."
+     "why": "Kapitel 6 wird besprochen, und das Quiz findet ebenfalls Dienstag statt.",
+     "skill": "detail"
     }
    ]
   },
@@ -419,7 +458,8 @@
       "Every hour"
      ],
      "answer": 0,
-     "why": "Wochenende: every 30 min."
+     "why": "Wochenende: every 30 min.",
+     "skill": "detail"
     },
     {
      "q": "What do students need in order to ride for free?",
@@ -430,7 +470,8 @@
       "Nothing at all"
      ],
      "answer": 1,
-     "why": "„Students ride free with their ID card.“"
+     "why": "„Students ride free with their ID card.“",
+     "skill": "detail"
     }
    ]
   },
@@ -450,7 +491,8 @@
       "A new shower system is being tested."
      ],
      "answer": 2,
-     "why": "„replacing a corroded main valve“ – ein beschädigtes Ventil wird ersetzt."
+     "why": "„replacing a corroded main valve“ – ein beschädigtes Ventil wird ersetzt.",
+     "skill": "detail"
     },
     {
      "q": "What does Facilities Management suggest about the repair?",
@@ -461,7 +503,8 @@
       "It might take longer than planned."
      ],
      "answer": 3,
-     "why": "„unforeseen complications occasionally prolong such repairs“ – es kann länger dauern."
+     "why": "„unforeseen complications occasionally prolong such repairs“ – es kann länger dauern.",
+     "skill": "infer"
     },
     {
      "q": "The word \"adjacent\" in the email is closest in meaning to",
@@ -472,7 +515,8 @@
       "larger"
      ],
      "answer": 0,
-     "why": "adjacent = angrenzend, benachbart."
+     "why": "adjacent = angrenzend, benachbart.",
+     "skill": "vocab"
     }
    ]
   },
@@ -492,7 +536,8 @@
       "To announce that cafés will stop selling coffee"
      ],
      "answer": 1,
-     "why": "Ergebnis der Kampagne (−38 %) plus Ausweitung und Pilotprojekt."
+     "why": "Ergebnis der Kampagne (−38 %) plus Ausweitung und Pilotprojekt.",
+     "skill": "main"
     },
     {
      "q": "What can be inferred about the deposit system?",
@@ -503,7 +548,8 @@
       "It has replaced the discount for reusable containers."
      ],
      "answer": 2,
-     "why": "„Should the pilot prove successful, it will be introduced campus-wide.“"
+     "why": "„Should the pilot prove successful, it will be introduced campus-wide.“",
+     "skill": "infer"
     },
     {
      "q": "The phrase \"exceeded every expectation\" means that the campaign was",
@@ -514,7 +560,8 @@
       "more successful than expected"
      ],
      "answer": 3,
-     "why": "exceed = übertreffen."
+     "why": "exceed = übertreffen.",
+     "skill": "vocab"
     }
    ]
   },
@@ -534,7 +581,8 @@
       "It contains incorrect data."
      ],
      "answer": 0,
-     "why": "Leser außerhalb des Fachs verstehen nicht, warum das Thema wichtig ist."
+     "why": "Leser außerhalb des Fachs verstehen nicht, warum das Thema wichtig ist.",
+     "skill": "infer"
     },
     {
      "q": "What does Daniel mean when he says \"back to the drawing board\"?",
@@ -545,7 +593,8 @@
       "He wants to add some drawings."
      ],
      "answer": 1,
-     "why": "back to the drawing board = noch einmal von vorn anfangen."
+     "why": "back to the drawing board = noch einmal von vorn anfangen.",
+     "skill": "vocab"
     },
     {
      "q": "What does Priya offer to do?",
@@ -556,7 +605,8 @@
       "Rewrite the data section"
      ],
      "answer": 2,
-     "why": "„I can go over it with you tomorrow.“"
+     "why": "„I can go over it with you tomorrow.“",
+     "skill": "detail"
     }
    ],
    "me": "Priya"
@@ -577,7 +627,8 @@
       "At least two days before the original deadline"
      ],
      "answer": 3,
-     "why": "„no later than 48 hours before the original deadline“."
+     "why": "„no later than 48 hours before the original deadline“.",
+     "skill": "detail"
     },
     {
      "q": "What is true about requests made later than this?",
@@ -588,7 +639,8 @@
       "They are usually accepted if students provide documentation."
      ],
      "answer": 0,
-     "why": "„not obligated to grant … except in documented emergencies“."
+     "why": "„not obligated to grant … except in documented emergencies“.",
+     "skill": "detail"
     },
     {
      "q": "The phrase \"at the instructor's discretion\" means that the penalty",
@@ -599,7 +651,8 @@
       "is explained in the Student Portal"
      ],
      "answer": 1,
-     "why": "discretion = Ermessen."
+     "why": "discretion = Ermessen.",
+     "skill": "vocab"
     }
    ]
   },
@@ -619,7 +672,8 @@
       "It is too expensive for what it offers."
      ],
      "answer": 2,
-     "why": "„the food did not live up to the atmosphere“."
+     "why": "„the food did not live up to the atmosphere“.",
+     "skill": "attitude"
     },
     {
      "q": "Why does the reviewer mention the server?",
@@ -630,7 +684,8 @@
       "To give a fair, balanced picture of the visit"
      ],
      "answer": 3,
-     "why": "„To be fair …“ leitet einen positiven Gegenpunkt ein."
+     "why": "„To be fair …“ leitet einen positiven Gegenpunkt ein.",
+     "skill": "purpose"
     }
    ]
   },
@@ -650,7 +705,8 @@
       "The fields are being repaired."
      ],
      "answer": 2,
-     "why": "„Because heavy rain is forecast …“"
+     "why": "„Because heavy rain is forecast …“",
+     "skill": "detail"
     },
     {
      "q": "What must players do for indoor games?",
@@ -661,7 +717,8 @@
       "Wear shoes without cleats"
      ],
      "answer": 3,
-     "why": "„cleats are not permitted … flat-soled shoes only“."
+     "why": "„cleats are not permitted … flat-soled shoes only“.",
+     "skill": "detail"
     },
     {
      "q": "What can be inferred about the evening games?",
@@ -672,7 +729,8 @@
       "They have been canceled."
      ],
      "answer": 0,
-     "why": "„as planned unless you receive another update“."
+     "why": "„as planned unless you receive another update“.",
+     "skill": "infer"
     }
    ]
   },
@@ -692,7 +750,8 @@
       "It is mailed to the owner."
      ],
      "answer": 1,
-     "why": "Kleidung wird nach 30 Tagen gespendet."
+     "why": "Kleidung wird nach 30 Tagen gespendet.",
+     "skill": "detail"
     },
     {
      "q": "What is required to claim a lost wallet?",
@@ -703,7 +762,8 @@
       "A receipt"
      ],
      "answer": 2,
-     "why": "Telefone, Laptops und Geldbörsen nur gegen Lichtbildausweis."
+     "why": "Telefone, Laptops und Geldbörsen nur gegen Lichtbildausweis.",
+     "skill": "detail"
     }
    ]
   },
@@ -723,7 +783,8 @@
       "It will increase by $30."
      ],
      "answer": 3,
-     "why": "Von $90 auf $120."
+     "why": "Von $90 auf $120.",
+     "skill": "detail"
     },
     {
      "q": "What does Ava decide to do?",
@@ -734,7 +795,8 @@
       "Wait until December to decide"
      ],
      "answer": 0,
-     "why": "Vor dem 1. Dezember gilt noch der alte Preis."
+     "why": "Vor dem 1. Dezember gilt noch der alte Preis.",
+     "skill": "detail"
     },
     {
      "q": "What does Ava mean by \"Thanks for the heads-up\"?",
@@ -745,7 +807,8 @@
       "Thanks for the ride."
      ],
      "answer": 1,
-     "why": "heads-up = Vorwarnung, Hinweis."
+     "why": "heads-up = Vorwarnung, Hinweis.",
+     "skill": "vocab"
     }
    ],
    "me": "Ava"
@@ -766,7 +829,8 @@
       "In person until 3 p.m."
      ],
      "answer": 2,
-     "why": "Wochenende: nur online, 14–20 Uhr."
+     "why": "Wochenende: nur online, 14–20 Uhr.",
+     "skill": "detail"
     },
     {
      "q": "What should students bring to an in-person appointment?",
@@ -777,7 +841,8 @@
       "A printed copy of their draft"
      ],
      "answer": 3,
-     "why": "„bring a printed copy of your draft“."
+     "why": "„bring a printed copy of your draft“.",
+     "skill": "detail"
     },
     {
      "q": "What is the maximum number of appointments a student can have in one week?",
@@ -788,7 +853,8 @@
       "As many as needed"
      ],
      "answer": 0,
-     "why": "„up to two appointments per week“."
+     "why": "„up to two appointments per week“.",
+     "skill": "detail"
     }
    ]
   },
@@ -808,7 +874,8 @@
       "Cheap medicine"
      ],
      "answer": 1,
-     "why": "„free flu shots for all students“."
+     "why": "„free flu shots for all students“.",
+     "skill": "detail"
     },
     {
      "q": "What do students need to bring?",
@@ -819,7 +886,8 @@
       "An appointment card"
      ],
      "answer": 2,
-     "why": "„Just bring your student ID.“"
+     "why": "„Just bring your student ID.“",
+     "skill": "detail"
     }
    ]
   },
@@ -839,7 +907,8 @@
       "At a store"
      ],
      "answer": 3,
-     "why": "„I'm at the store.“"
+     "why": "„I'm at the store.“",
+     "skill": "detail"
     },
     {
      "q": "What does Kim want for tomorrow?",
@@ -850,7 +919,8 @@
       "Dinner"
      ],
      "answer": 0,
-     "why": "„some apples for tomorrow“."
+     "why": "„some apples for tomorrow“.",
+     "skill": "detail"
     }
    ],
    "me": "Kim"
@@ -871,7 +941,8 @@
       "$45"
      ],
      "answer": 1,
-     "why": "„$50 for four lessons“."
+     "why": "„$50 for four lessons“.",
+     "skill": "detail"
     },
     {
      "q": "What is true about the lessons?",
@@ -882,7 +953,8 @@
       "They are for advanced players."
      ],
      "answer": 2,
-     "why": "„Guitars are available to borrow.“"
+     "why": "„Guitars are available to borrow.“",
+     "skill": "detail"
     }
    ]
   },
@@ -902,7 +974,8 @@
       "In a café"
      ],
      "answer": 3,
-     "why": "„in the café on Pine Street, not in the library“."
+     "why": "„in the café on Pine Street, not in the library“.",
+     "skill": "detail"
     },
     {
      "q": "What will the club talk about?",
@@ -913,7 +986,8 @@
       "The café's menu"
      ],
      "answer": 0,
-     "why": "„the first half of the book“."
+     "why": "„the first half of the book“.",
+     "skill": "detail"
     }
    ]
   },
@@ -933,7 +1007,8 @@
       "The deadline for applications has been extended."
      ],
      "answer": 1,
-     "why": "„complete with the exception of one letter of recommendation“."
+     "why": "„complete with the exception of one letter of recommendation“.",
+     "skill": "detail"
     },
     {
      "q": "What will happen if the application is still incomplete on January 15?",
@@ -944,7 +1019,8 @@
       "The committee will contact the recommender."
      ],
      "answer": 2,
-     "why": "„will not be forwarded to the admissions committee“."
+     "why": "„will not be forwarded to the admissions committee“.",
+     "skill": "detail"
     },
     {
      "q": "What condition applies to letters sent by email?",
@@ -955,7 +1031,8 @@
       "They must come from an institutional email address."
      ],
      "answer": 3,
-     "why": "„provided the message originates from an institutional email address“."
+     "why": "„provided the message originates from an institutional email address“.",
+     "skill": "detail"
     }
    ]
   },
@@ -975,7 +1052,8 @@
       "Students complained about noise in the building at night."
      ],
      "answer": 0,
-     "why": "Nutzung −80 % und hohe Personalkosten."
+     "why": "Nutzung −80 % und hohe Personalkosten.",
+     "skill": "detail"
     },
     {
      "q": "What change is announced?",
@@ -986,7 +1064,8 @@
       "The library will close earlier than before on weeknights."
      ],
      "answer": 1,
-     "why": "Lounge bis 2 Uhr mit Studierendenausweis."
+     "why": "Lounge bis 2 Uhr mit Studierendenausweis.",
+     "skill": "detail"
     },
     {
      "q": "What does the dean suggest about future opening hours?",
@@ -997,7 +1076,8 @@
       "They will be reduced next year."
      ],
      "answer": 2,
-     "why": "„monitor demand and adjust hours accordingly“."
+     "why": "„monitor demand and adjust hours accordingly“.",
+     "skill": "infer"
     }
    ]
   },
@@ -1017,7 +1097,8 @@
       "She needs more time to prepare."
      ],
      "answer": 3,
-     "why": "„I need every minute I can get.“"
+     "why": "„I need every minute I can get.“",
+     "skill": "detail"
     },
     {
      "q": "What problem does Grace have?",
@@ -1028,7 +1109,8 @@
       "She has already missed the deadline for her slides."
      ],
      "answer": 0,
-     "why": "Fünf Fachquellen gefordert, sie hat drei."
+     "why": "Fünf Fachquellen gefordert, sie hat drei.",
+     "skill": "detail"
     },
     {
      "q": "What does Owen imply about the interlibrary loan service?",
@@ -1039,7 +1121,8 @@
       "It is only available to professors."
      ],
      "answer": 1,
-     "why": "„usually quicker than people think“."
+     "why": "„usually quicker than people think“.",
+     "skill": "infer"
     }
    ],
    "me": "Grace"
@@ -1060,7 +1143,8 @@
       "Get approval from a professor"
      ],
      "answer": 2,
-     "why": "Pflicht: 30-minütige Sicherheitseinweisung."
+     "why": "Pflicht: 30-minütige Sicherheitseinweisung.",
+     "skill": "detail"
     },
     {
      "q": "What happens to a print job that takes six hours?",
@@ -1071,7 +1155,8 @@
       "It needs approval and is printed overnight."
      ],
      "answer": 3,
-     "why": "Über vier Stunden: Genehmigung, Druck über Nacht."
+     "why": "Über vier Stunden: Genehmigung, Druck über Nacht.",
+     "skill": "detail"
     },
     {
      "q": "How much would a 50-gram print cost?",
@@ -1082,7 +1167,779 @@
       "$50.00"
      ],
      "answer": 0,
-     "why": "50 × $0,10 = $5,00."
+     "why": "50 × $0,10 = $5,00.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "d29",
+   "level": 1,
+   "genre": "flyer",
+   "title": "Yoga in the park",
+   "text": "# Free Yoga in the Park\nEvery Saturday in June · 9:00–10:00 a.m.\nMeet at the big fountain in Riverside Park.\nAll levels are welcome. Please bring your own mat and a bottle of water.\nIf it rains, the class moves to the Community Center on Oak Street.\nQuestions? Call Nina at 555-0142.",
+   "questions": [
+    {
+     "q": "When does the class take place?",
+     "options": [
+      "On Saturday mornings in June",
+      "On the first Saturday of each month",
+      "On Saturday evenings all summer",
+      "Every morning in June"
+     ],
+     "answer": 0,
+     "why": "„Every Saturday in June · 9:00–10:00 a.m.“",
+     "skill": "detail"
+    },
+    {
+     "q": "What should people bring?",
+     "options": [
+      "A towel and sports shoes",
+      "A mat and some water",
+      "Money for the teacher",
+      "An umbrella and a mat"
+     ],
+     "answer": 1,
+     "why": "„bring your own mat and a bottle of water“.",
+     "skill": "detail"
+    },
+    {
+     "q": "What happens if it rains?",
+     "options": [
+      "The class starts an hour later.",
+      "The class is canceled.",
+      "The class is held indoors.",
+      "The class moves to Sunday."
+     ],
+     "answer": 2,
+     "why": "Bei Regen im Community Center.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "d30",
+   "level": 1,
+   "genre": "chat",
+   "title": "Birthday gift",
+   "text": "Emma: Hi Ben! Tom's birthday is on Friday. Do you have a gift yet?\nBen: Not yet. Any ideas?\nEmma: He loves cooking. Maybe a cookbook?\nBen: Good idea. We could buy it together.\nEmma: Sure! The bookstore on King Street has a sale this week.\nBen: Great. Let's go tomorrow after class. I finish at 3.\nEmma: Perfect. See you at the front gate.",
+   "questions": [
+    {
+     "q": "What are Emma and Ben planning to do?",
+     "options": [
+      "Sell their old books at a store",
+      "Cook dinner for Tom's birthday",
+      "Study together after class",
+      "Buy a present for a friend"
+     ],
+     "answer": 3,
+     "why": "Sie wollen gemeinsam ein Geschenk für Tom kaufen.",
+     "skill": "main"
+    },
+    {
+     "q": "Why does Emma suggest a cookbook?",
+     "options": [
+      "Tom enjoys cooking.",
+      "Ben has one already.",
+      "Cookbooks are on sale.",
+      "Tom asked for one."
+     ],
+     "answer": 0,
+     "why": "„He loves cooking.“",
+     "skill": "detail"
+    },
+    {
+     "q": "Where will Emma and Ben meet tomorrow?",
+     "options": [
+      "At the bookstore",
+      "At the front gate",
+      "In their classroom",
+      "On King Street"
+     ],
+     "answer": 1,
+     "why": "„See you at the front gate.“",
+     "skill": "detail"
+    }
+   ],
+   "me": "Ben"
+  },
+  {
+   "id": "d31",
+   "level": 1,
+   "genre": "menu",
+   "title": "Pizza lunch",
+   "text": "# Tony's Pizza – Lunch Menu\nItem | Small | Large\nCheese pizza | $7 | $11\nVegetable pizza | $8 | $12\nChicken pizza | $9 | $13\nLunch deal (11 a.m.–2 p.m.): any small pizza + a drink for $9.\nFree delivery for orders over $20.",
+   "questions": [
+    {
+     "q": "How much is a large vegetable pizza?",
+     "options": [
+      "$11",
+      "$8",
+      "$12",
+      "$13"
+     ],
+     "answer": 2,
+     "why": "Zeile Vegetable pizza, Spalte Large.",
+     "skill": "detail"
+    },
+    {
+     "q": "What is included in the lunch deal?",
+     "options": [
+      "Two small pizzas",
+      "A large pizza and a drink",
+      "A small pizza and free delivery",
+      "A small pizza and a drink"
+     ],
+     "answer": 3,
+     "why": "„any small pizza + a drink for $9“.",
+     "skill": "detail"
+    },
+    {
+     "q": "Which order would be delivered for free?",
+     "options": [
+      "Two large chicken pizzas",
+      "One lunch deal",
+      "Two small cheese pizzas",
+      "One large cheese pizza"
+     ],
+     "answer": 0,
+     "why": "Nur 2 × $13 = $26 liegt über $20.",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "d32",
+   "level": 1,
+   "genre": "notice",
+   "title": "Elevator repair",
+   "text": "# Notice: Elevator Repair\nThe elevator in Baker Hall will be out of service on Tuesday, May 6, from 8 a.m. to 4 p.m.\nPlease use the stairs on that day.\nIf you need help carrying heavy things, ask at the front desk. Staff will be happy to help you.\nThank you for your patience.",
+   "questions": [
+    {
+     "q": "What is the notice about?",
+     "options": [
+      "A new elevator that will open at the beginning of May",
+      "An elevator that cannot be used for a day",
+      "Stairs that are closed for repair work",
+      "A front desk that is moving upstairs"
+     ],
+     "answer": 1,
+     "why": "Der Aufzug ist am 6. Mai außer Betrieb.",
+     "skill": "main"
+    },
+    {
+     "q": "How long will the elevator be out of service?",
+     "options": [
+      "One week",
+      "Two days",
+      "Eight hours",
+      "Four hours"
+     ],
+     "answer": 2,
+     "why": "Von 8 bis 16 Uhr.",
+     "skill": "detail"
+    },
+    {
+     "q": "What can people do at the front desk?",
+     "options": [
+      "Report a broken stair or a broken light",
+      "Get a key for the elevator",
+      "Leave their bags for the day",
+      "Ask for help with heavy things"
+     ],
+     "answer": 3,
+     "why": "„If you need help carrying heavy things, ask at the front desk.“",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "d33",
+   "level": 1,
+   "genre": "email",
+   "title": "Dentist appointment",
+   "text": "From: Bright Smile Dental\nTo: Alex Moreno\nSubject: Your appointment\nDear Alex,\nThis is a reminder of your appointment with Dr. Lee on Monday, April 14, at 10:30 a.m.\nPlease arrive ten minutes early to fill out a form. If you cannot come, call us at least one day before. Our office is on the second floor, above the pharmacy.\nSee you soon!",
+   "questions": [
+    {
+     "q": "Why was this email sent?",
+     "options": [
+      "To remind Alex of an appointment",
+      "To tell Alex about a new office",
+      "To cancel a visit to the dentist",
+      "To ask Alex to pay a bill"
+     ],
+     "answer": 0,
+     "why": "„This is a reminder of your appointment“.",
+     "skill": "main"
+    },
+    {
+     "q": "When should Alex arrive?",
+     "options": [
+      "At 10:30 a.m.",
+      "At 10:20 a.m.",
+      "At 10:40 a.m.",
+      "At 10:00 a.m."
+     ],
+     "answer": 1,
+     "why": "Zehn Minuten vor 10:30 Uhr.",
+     "skill": "detail"
+    },
+    {
+     "q": "Where is the dentist's office?",
+     "options": [
+      "Inside a hospital",
+      "Next to a pharmacy",
+      "Over a pharmacy",
+      "On the first floor"
+     ],
+     "answer": 2,
+     "why": "„on the second floor, above the pharmacy“.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "d34",
+   "level": 1,
+   "genre": "ad",
+   "title": "Bike for sale",
+   "text": "# For Sale: Mountain Bike – $120\nBlue mountain bike, three years old, in good condition. New tires and brakes last month.\nI am selling it because I am moving to another city.\nA helmet and a lock are included in the price.\nYou can see the bike any evening after 6 p.m. Text Carla: 555-0199",
+   "questions": [
+    {
+     "q": "Why is Carla selling the bike?",
+     "options": [
+      "She bought a new one.",
+      "She needs the money.",
+      "It needs new brakes.",
+      "She is moving away."
+     ],
+     "answer": 3,
+     "why": "„because I am moving to another city“.",
+     "skill": "detail"
+    },
+    {
+     "q": "What does the buyer get together with the bike?",
+     "options": [
+      "A helmet and a lock",
+      "Two extra tires",
+      "A lock and new lights",
+      "A helmet and a pump"
+     ],
+     "answer": 0,
+     "why": "„A helmet and a lock are included“.",
+     "skill": "detail"
+    },
+    {
+     "q": "What is NOT true about the bike?",
+     "options": [
+      "It is blue.",
+      "It is one year old.",
+      "It costs $120.",
+      "It has new tires."
+     ],
+     "answer": 1,
+     "why": "Das Rad ist drei Jahre alt.",
+     "skill": "neg"
+    }
+   ]
+  },
+  {
+   "id": "d35",
+   "level": 1,
+   "genre": "schedule",
+   "title": "City pool",
+   "text": "# City Pool – Opening Hours\nDay | Hours | Notes\nMonday–Friday | 6 a.m.–9 p.m. | Lanes for fast swimmers until 8 a.m.\nSaturday | 8 a.m.–8 p.m. | Children's lessons 9–11 a.m.\nSunday | 10 a.m.–6 p.m. | Family day\nTickets: adults $5, students $3. Children under 6 swim free.",
+   "questions": [
+    {
+     "q": "When does the pool open on Saturdays?",
+     "options": [
+      "At 9 a.m.",
+      "At 10 a.m.",
+      "At 8 a.m.",
+      "At 6 a.m."
+     ],
+     "answer": 2,
+     "why": "Zeile Saturday.",
+     "skill": "detail"
+    },
+    {
+     "q": "How much does a student pay?",
+     "options": [
+      "$6",
+      "$5",
+      "Nothing",
+      "$3"
+     ],
+     "answer": 3,
+     "why": "„students $3“.",
+     "skill": "detail"
+    },
+    {
+     "q": "When are the children's lessons?",
+     "options": [
+      "On Saturday mornings",
+      "On Saturday afternoons",
+      "On weekday mornings",
+      "On Sunday mornings"
+     ],
+     "answer": 0,
+     "why": "Saturday, 9–11 a.m.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "d36",
+   "level": 2,
+   "genre": "email",
+   "title": "Internship interview",
+   "text": "From: Rachel Kim, Human Resources\nTo: Daniel Ortega\nSubject: Interview for summer internship\nDear Mr. Ortega,\nThank you for applying for the marketing internship at Northline Media. We would like to invite you to an interview on Thursday, March 12, at 2:00 p.m. The interview will be held online and will last about 30 minutes; a link will be sent the day before.\nPlease prepare a short presentation (no more than five minutes) about a social media campaign you admire. If the time does not suit you, reply by Monday so that we can arrange an alternative.\nBest regards,\nRachel Kim",
+   "questions": [
+    {
+     "q": "What is the purpose of the email?",
+     "options": [
+      "To offer an applicant a summer job",
+      "To invite an applicant to an interview",
+      "To confirm that an application has arrived",
+      "To ask an applicant for more documents"
+     ],
+     "answer": 1,
+     "why": "„We would like to invite you to an interview“.",
+     "skill": "main"
+    },
+    {
+     "q": "What is Daniel asked to prepare?",
+     "options": [
+      "A link for the online interview",
+      "A five-page report about Northline Media's history",
+      "A brief talk about a campaign he likes",
+      "A list of his social media accounts"
+     ],
+     "answer": 2,
+     "why": "Kurze Präsentation über eine Kampagne, die er bewundert.",
+     "skill": "detail"
+    },
+    {
+     "q": "What should Daniel do if he is not available on Thursday?",
+     "options": [
+      "Wait for a link on Wednesday",
+      "Call the office on Thursday morning",
+      "Send his presentation in writing",
+      "Answer the email by Monday"
+     ],
+     "answer": 3,
+     "why": "„reply by Monday so that we can arrange an alternative“.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "d37",
+   "level": 2,
+   "genre": "webpage",
+   "title": "Bike sharing",
+   "text": "# CityCycle – How It Works\n1. Download the app and create an account.\n2. Scan the code on any bike to unlock it.\n3. Ride! The first 30 minutes of every trip are free for members.\n4. Return the bike to any CityCycle station and wait for the green light.\nAfter 30 minutes, trips cost $1 for each additional 15 minutes. Bikes left outside a station are subject to a $25 fee. Monthly membership: $12; students: $8.",
+   "questions": [
+    {
+     "q": "How much would a member pay for a 45-minute trip?",
+     "options": [
+      "$1",
+      "$3",
+      "Nothing",
+      "$2"
+     ],
+     "answer": 0,
+     "why": "30 Minuten frei, weitere 15 Minuten kosten $1.",
+     "skill": "detail"
+    },
+    {
+     "q": "What happens if a rider leaves a bike outside a station?",
+     "options": [
+      "The bike locks after 30 minutes.",
+      "The rider has to pay $25.",
+      "The rider pays $1 every 15 minutes.",
+      "The membership is canceled."
+     ],
+     "answer": 1,
+     "why": "„subject to a $25 fee“.",
+     "skill": "detail"
+    },
+    {
+     "q": "What can be inferred about the green light?",
+     "options": [
+      "It shows that the bike needs to be repaired.",
+      "It shows that the free 30 minutes of the trip are now over.",
+      "It shows that the bike has been returned correctly.",
+      "It shows that the station has no space left."
+     ],
+     "answer": 2,
+     "why": "Man soll nach dem Abstellen auf das grüne Licht warten.",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "d38",
+   "level": 2,
+   "genre": "chat",
+   "title": "Apartment viewing",
+   "text": "Mia: I just saw the apartment on Cedar Street. It's bright, and it's only ten minutes from campus.\nJonas: Sounds great. What's the catch?\nMia: The rent is $150 more than we planned, and there's no washing machine.\nJonas: Hmm. Is there a laundromat nearby?\nMia: Right across the street. The landlord needs an answer by Friday.\nJonas: Let's look at the one on Hill Road tomorrow first, then decide.",
+   "questions": [
+    {
+     "q": "What does Jonas mean when he asks, \"What's the catch?\"",
+     "options": [
+      "He wants to know when they can move in.",
+      "He wants to know who the landlord is.",
+      "He wants to know how Mia found the place.",
+      "He wants to know the disadvantages."
+     ],
+     "answer": 3,
+     "why": "the catch = der Haken.",
+     "skill": "vocab"
+    },
+    {
+     "q": "What will Mia and Jonas probably do before Friday?",
+     "options": [
+      "Visit another apartment",
+      "Sign the contract for Cedar Street",
+      "Ask the landlord for a lower rent",
+      "Buy a washing machine"
+     ],
+     "answer": 0,
+     "why": "Erst die Wohnung in der Hill Road ansehen, dann entscheiden.",
+     "skill": "next"
+    }
+   ],
+   "me": "Jonas"
+  },
+  {
+   "id": "d39",
+   "level": 2,
+   "genre": "instructions",
+   "title": "Printing",
+   "text": "# How to Print from Your Laptop\n1. Connect to the campus Wi-Fi network.\n2. Go to print.westfield.edu and log in with your student account.\n3. Upload your file and choose black-and-white or color.\n4. Walk to any library printer and tap your student card to release the job.\nJobs that are not released within 12 hours are deleted automatically. Printing costs 5 cents per page (color: 20 cents) and is charged to your card only when the job is released.",
+   "questions": [
+    {
+     "q": "What must students do at the printer?",
+     "options": [
+      "Connect their laptop with a cable",
+      "Tap their student card",
+      "Log in to the website again",
+      "Choose between color and black-and-white"
+     ],
+     "answer": 1,
+     "why": "„tap your student card to release the job“.",
+     "skill": "detail"
+    },
+    {
+     "q": "What can be inferred about a job that is uploaded but never released?",
+     "options": [
+      "It is printed in black-and-white.",
+      "The student is charged after 12 hours.",
+      "The student does not pay for it.",
+      "It stays in the system until the end of term."
+     ],
+     "answer": 2,
+     "why": "Abgerechnet wird erst bei der Freigabe; nach 12 Stunden wird gelöscht.",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "d40",
+   "level": 2,
+   "genre": "post",
+   "title": "Campus radio",
+   "text": "# Campus Radio 91.3 is looking for hosts!\nDo you love music, sports, or talking about campus life? We have three open slots for weekly one-hour shows next semester. No experience is necessary – we offer training in the first two weeks of the term.\nTo apply, send us a two-minute audio sample and a short description of your show idea by December 5. Shows that feature local artists will be given priority.",
+   "questions": [
+    {
+     "q": "What do applicants have to send?",
+     "options": [
+      "Proof of earlier experience in radio",
+      "A list of their favorite local artists",
+      "A one-hour sample of a complete show with music and talk",
+      "A short recording and a description of their idea"
+     ],
+     "answer": 3,
+     "why": "„a two-minute audio sample and a short description of your show idea“.",
+     "skill": "detail"
+    },
+    {
+     "q": "Which applicant would most likely be chosen?",
+     "options": [
+      "Someone who plans to play music by bands from the area",
+      "Someone who can start before the semester begins",
+      "Someone who wants to report on national sports",
+      "Someone who has already hosted a show at another radio station"
+     ],
+     "answer": 0,
+     "why": "„Shows that feature local artists will be given priority.“",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "d41",
+   "level": 2,
+   "genre": "notice",
+   "title": "Parking changes",
+   "text": "# Parking Changes – Lot C\nBeginning October 1, Lot C will be reserved for vehicles with a commuter permit on weekdays between 7 a.m. and 5 p.m. Outside these hours, the lot remains open to all permit holders.\nVisitors should use the parking garage on College Avenue, where the first hour is free. Vehicles parked without the correct permit will be ticketed.",
+   "questions": [
+    {
+     "q": "Who may park in Lot C on a Tuesday at 10 a.m.?",
+     "options": [
+      "Nobody, because the lot is closed",
+      "Drivers with a commuter permit",
+      "Anyone with a campus permit",
+      "Visitors staying under an hour"
+     ],
+     "answer": 1,
+     "why": "Werktags 7–17 Uhr nur mit commuter permit.",
+     "skill": "detail"
+    },
+    {
+     "q": "What is true about the parking garage?",
+     "options": [
+      "It requires a visitor permit.",
+      "It is reserved for commuters.",
+      "The first hour costs nothing.",
+      "It closes at 5 p.m. on weekdays."
+     ],
+     "answer": 2,
+     "why": "„where the first hour is free“.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "d42",
+   "level": 3,
+   "genre": "email",
+   "title": "Conference abstract",
+   "text": "From: Program Committee, Regional Linguistics Conference\nTo: Hannah Fischer\nSubject: Decision on your abstract\nDear Ms. Fischer,\nWe are pleased to inform you that your abstract has been accepted for a poster presentation rather than the oral presentation you requested. The number of submissions far exceeded the available speaking slots, and the committee felt your data would lend itself particularly well to a visual format.\nPlease confirm your participation by May 2. Presenters who have not registered by that date will be removed from the program.",
+   "questions": [
+    {
+     "q": "Why was the abstract not accepted as an oral presentation?",
+     "options": [
+      "The committee found the data in the abstract unconvincing.",
+      "Ms. Fischer had not registered in time.",
+      "The abstract arrived after the deadline.",
+      "There were more submissions than speaking slots."
+     ],
+     "answer": 3,
+     "why": "„The number of submissions far exceeded the available speaking slots“.",
+     "skill": "detail"
+    },
+    {
+     "q": "The phrase \"lend itself particularly well to\" is closest in meaning to",
+     "options": [
+      "be especially suitable for",
+      "be easily confused with",
+      "be less important than",
+      "be borrowed from"
+     ],
+     "answer": 0,
+     "why": "lend itself to = sich eignen für.",
+     "skill": "vocab"
+    }
+   ]
+  },
+  {
+   "id": "d43",
+   "level": 3,
+   "genre": "review",
+   "title": "Laptop review",
+   "text": "# Review: AeroBook 14 ★★★☆☆\nI wanted to love this laptop. It weighs next to nothing, and the screen is gorgeous. The battery, however, is another story: the advertised twelve hours turned out to be closer to six with ordinary use. The keyboard also takes some getting used to, since the keys barely move. For the price, I expected fewer compromises. If you mostly work near a power outlet, it may still be worth considering.",
+   "questions": [
+    {
+     "q": "What is the reviewer's overall opinion of the laptop?",
+     "options": [
+      "It is too heavy to carry around every day.",
+      "It is disappointing despite some strengths.",
+      "It is poorly designed in every respect.",
+      "It is the best laptop available at this price."
+     ],
+     "answer": 1,
+     "why": "Lob für Gewicht und Bildschirm, aber Akku und Tastatur enttäuschen.",
+     "skill": "attitude"
+    },
+    {
+     "q": "For whom might the laptop still be suitable, according to the reviewer?",
+     "options": [
+      "People who often travel on very long flights",
+      "People who type for many hours a day",
+      "People who rarely depend on the battery",
+      "People who want the lowest price"
+     ],
+     "answer": 2,
+     "why": "„If you mostly work near a power outlet“.",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "d44",
+   "level": 3,
+   "genre": "webpage",
+   "title": "AI tools policy",
+   "text": "# Use of AI Tools in Coursework\nUnless an instructor states otherwise, students may use AI tools to brainstorm ideas and to check grammar. Submitting text generated by such tools as one's own work, however, constitutes academic misconduct.\nWhenever an AI tool has been used, students must disclose this in a brief note at the end of the assignment. Failure to do so will be treated in the same way as plagiarism, regardless of how the tool was used.",
+   "questions": [
+    {
+     "q": "According to the policy, what are students generally allowed to do?",
+     "options": [
+      "Submit AI-generated text if they add a note",
+      "Use AI tools only when an instructor asks them to",
+      "Leave out the note for small assignments",
+      "Use AI tools to come up with ideas"
+     ],
+     "answer": 3,
+     "why": "„may use AI tools to brainstorm ideas and to check grammar“.",
+     "skill": "detail"
+    },
+    {
+     "q": "What can be inferred about a student who uses an AI tool only to check grammar but does not mention it?",
+     "options": [
+      "The student could be penalized as if for plagiarism.",
+      "The student will only receive a warning.",
+      "The student has followed the policy correctly.",
+      "The student must rewrite the whole assignment without any tools."
+     ],
+     "answer": 0,
+     "why": "Fehlende Angabe gilt wie Plagiat, „regardless of how the tool was used“.",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "d45",
+   "level": 3,
+   "genre": "chat",
+   "title": "Proposal feedback",
+   "text": "Lucas: Did you read the professor's comments on our proposal?\nSofia: Just now. She thinks the research question is too broad to be answered in ten pages.\nLucas: She has a point. We're basically trying to cover the entire history of the minimum wage.\nSofia: What if we limited it to one state over the last decade?\nLucas: That would make the data far more manageable. Though we'd have to scrap most of section two.\nSofia: Better now than the night before the deadline.",
+   "questions": [
+    {
+     "q": "How does Lucas react to the professor's criticism?",
+     "options": [
+      "He does not understand it.",
+      "He agrees with it.",
+      "He is offended by it.",
+      "He decides to ignore it."
+     ],
+     "answer": 1,
+     "why": "She has a point = Sie hat recht.",
+     "skill": "attitude"
+    },
+    {
+     "q": "What does Sofia imply in her last message?",
+     "options": [
+      "They should have limited the topic before writing the first section.",
+      "The deadline should be moved to a later date.",
+      "Major changes are easier to make early than at the last minute.",
+      "Section two is the strongest part of the proposal."
+     ],
+     "answer": 2,
+     "why": "„Better now than the night before the deadline.“",
+     "skill": "infer"
+    }
+   ],
+   "me": "Sofia"
+  },
+  {
+   "id": "d46",
+   "level": 3,
+   "genre": "notice",
+   "title": "Sleep study",
+   "text": "# Participants Needed: Sleep and Memory Study\nThe Department of Psychology is recruiting volunteers aged 18–30 for a two-session study. Participants will complete memory tasks in the evening and again the following morning after wearing a sleep-tracking wristband overnight.\nCompensation is $40, paid upon completion of both sessions. Individuals who regularly work night shifts or have traveled across more than two time zones in the past month are ineligible.",
+   "questions": [
+    {
+     "q": "Who would NOT be able to take part in the study?",
+     "options": [
+      "A 22-year-old who usually goes to bed after midnight",
+      "A 30-year-old who works in an office during the day",
+      "A 19-year-old who has never taken part in a research study before",
+      "A 25-year-old who flew from New York to London last week"
+     ],
+     "answer": 3,
+     "why": "New York–London sind fünf Zeitzonen; mehr als zwei schließen aus.",
+     "skill": "neg"
+    },
+    {
+     "q": "When do participants receive the payment?",
+     "options": [
+      "After they have finished the second session",
+      "As soon as they return the wristband",
+      "Before the first evening session begins at the lab",
+      "Half after each of the two sessions"
+     ],
+     "answer": 0,
+     "why": "„paid upon completion of both sessions“.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "d47",
+   "level": 3,
+   "genre": "email",
+   "title": "Lease renewal",
+   "text": "From: Greenway Property Management\nTo: Residents of 48 Alder Street\nSubject: Lease renewal for next year\nDear residents,\nYour current lease expires on July 31. Should you wish to remain in your apartment, please return the attached renewal form no later than May 15. Owing to rising maintenance costs, the monthly rent will increase by 4 percent for leases beginning August 1.\nResidents who do not respond by the deadline will be assumed to be moving out, and their apartments will be advertised to new tenants.",
+   "questions": [
+    {
+     "q": "Why is the rent going up?",
+     "options": [
+      "Demand from new tenants has risen.",
+      "Maintenance has become more expensive.",
+      "The lease period has been extended.",
+      "The apartments have been renovated."
+     ],
+     "answer": 1,
+     "why": "„Owing to rising maintenance costs“.",
+     "skill": "detail"
+    },
+    {
+     "q": "What will happen if a resident does not reply to the email?",
+     "options": [
+      "The lease will be renewed automatically.",
+      "The rent will rise by more than 4 percent.",
+      "The apartment will be offered to other people.",
+      "The resident will have to move out of the apartment on May 15."
+     ],
+     "answer": 2,
+     "why": "Wer nicht antwortet, gilt als ausziehend; die Wohnung wird inseriert.",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "d48",
+   "level": 3,
+   "genre": "ad",
+   "title": "Travel grant",
+   "text": "# Dalton Travel Grant – Call for Applications\nThe Dalton Foundation awards up to ten grants of $2,000 each to undergraduates conducting independent research abroad during the summer. Preference is given to projects that could not be carried out at the applicant's home institution.\nApplications must include a two-page proposal, a budget, and a letter of support from a faculty member. Incomplete applications will not be reviewed. Recipients are required to present their findings at the autumn research fair.",
+   "questions": [
+    {
+     "q": "Which project would most likely receive a grant?",
+     "options": [
+      "One that requires more than $2,000 in equipment",
+      "One that continues a professor's long-term study on the home campus",
+      "One that is planned for the autumn semester",
+      "One that needs an archive found only in another country"
+     ],
+     "answer": 3,
+     "why": "Bevorzugt: Projekte, die an der Heimathochschule nicht möglich wären.",
+     "skill": "infer"
+    },
+    {
+     "q": "What must grant recipients do afterward?",
+     "options": [
+      "Share their results at a university event",
+      "Submit a second two-page proposal",
+      "Return any money they did not spend",
+      "Write a letter of support for a new applicant"
+     ],
+     "answer": 0,
+     "why": "„present their findings at the autumn research fair“.",
+     "skill": "detail"
     }
    ]
   }
@@ -1103,7 +1960,8 @@
       "To hold the trees in place during storms"
      ],
      "answer": 0,
-     "why": "Der Schlamm enthält kaum Sauerstoff; die Wurzeln „absorb air directly“."
+     "why": "Der Schlamm enthält kaum Sauerstoff; die Wurzeln „absorb air directly“.",
+     "skill": "detail"
     },
     {
      "q": "The word \"dense\" in paragraph 2 is closest in meaning to",
@@ -1114,7 +1972,8 @@
       "fragile"
      ],
      "answer": 1,
-     "why": "dense = dicht."
+     "why": "dense = dicht.",
+     "skill": "vocab"
     },
     {
      "q": "Why does the author mention young fish in paragraph 2?",
@@ -1125,7 +1984,8 @@
       "To explain how mangroves obtain nutrients"
      ],
      "answer": 2,
-     "why": "Junge Fische nutzen die Wurzeln als „nurseries“ – Beispiel für Nutzen für Tiere."
+     "why": "Junge Fische nutzen die Wurzeln als „nurseries“ – Beispiel für Nutzen für Tiere.",
+     "skill": "purpose"
     },
     {
      "q": "Which of the following is NOT mentioned as a way mangroves deal with salt?",
@@ -1136,7 +1996,8 @@
       "Releasing it through their flowers"
      ],
      "answer": 3,
-     "why": "Blüten werden im Text nicht erwähnt."
+     "why": "Blüten werden im Text nicht erwähnt.",
+     "skill": "neg"
     },
     {
      "q": "What can be inferred from paragraph 3?",
@@ -1147,7 +2008,8 @@
       "Scientists generally support coastal development and shrimp farming."
      ],
      "answer": 0,
-     "why": "Ohne Mangroven sind Küstenorte „more vulnerable to storm damage“."
+     "why": "Ohne Mangroven sind Küstenorte „more vulnerable to storm damage“.",
+     "skill": "infer"
     }
    ]
   },
@@ -1166,7 +2028,8 @@
       "Ways to stop yawning"
      ],
      "answer": 1,
-     "why": "Der Text stellt mehrere Erklärungen für das Gähnen vor."
+     "why": "Der Text stellt mehrere Erklärungen für das Gähnen vor.",
+     "skill": "main"
     },
     {
      "q": "According to paragraph 1, why is the oxygen explanation probably wrong?",
@@ -1177,7 +2040,8 @@
       "Scientists have never tested it."
      ],
      "answer": 2,
-     "why": "„breathing extra oxygen does not make people yawn less“."
+     "why": "„breathing extra oxygen does not make people yawn less“.",
+     "skill": "detail"
     },
     {
      "q": "The word \"contagious\" in paragraph 3 is closest in meaning to",
@@ -1188,7 +2052,8 @@
       "easily passed to others"
      ],
      "answer": 3,
-     "why": "contagious = ansteckend."
+     "why": "contagious = ansteckend.",
+     "skill": "vocab"
     },
     {
      "q": "What did people do in the study mentioned in paragraph 2?",
@@ -1199,7 +2064,8 @@
       "They watched videos of family members yawning."
      ],
      "answer": 0,
-     "why": "„held a cold pack against their forehead“."
+     "why": "„held a cold pack against their forehead“.",
+     "skill": "detail"
     },
     {
      "q": "What can be inferred about contagious yawning?",
@@ -1210,7 +2076,8 @@
       "It only happens when people see someone yawn."
      ],
      "answer": 1,
-     "why": "Man „fängt“ das Gähnen eher bei Familie und Freunden."
+     "why": "Man „fängt“ das Gähnen eher bei Familie und Freunden.",
+     "skill": "infer"
     }
    ]
   },
@@ -1229,7 +2096,8 @@
       "Unwanted options should be removed from stores."
      ],
      "answer": 2,
-     "why": "„having more options is always beneficial“ – man kann Unerwünschtes ignorieren."
+     "why": "„having more options is always beneficial“ – man kann Unerwünschtes ignorieren.",
+     "skill": "detail"
     },
     {
      "q": "What was surprising about the result of the jam experiment?",
@@ -1240,7 +2108,8 @@
       "The larger display led to fewer purchases even though it attracted more visitors."
      ],
      "answer": 3,
-     "why": "Mehr Besucher, aber zehnmal weniger Käufe bei 24 Sorten."
+     "why": "Mehr Besucher, aber zehnmal weniger Käufe bei 24 Sorten.",
+     "skill": "detail"
     },
     {
      "q": "The word \"diminish\" in paragraph 3 is closest in meaning to",
@@ -1251,7 +2120,8 @@
       "delay"
      ],
      "answer": 0,
-     "why": "diminish = verringern."
+     "why": "diminish = verringern.",
+     "skill": "vocab"
     },
     {
      "q": "Why does the author mention experts in the final paragraph?",
@@ -1262,7 +2132,8 @@
       "To argue that experts make worse decisions"
      ],
      "answer": 1,
-     "why": "Experten sind „largely immune“ – der Effekt hängt von Bedingungen ab."
+     "why": "Experten sind „largely immune“ – der Effekt hängt von Bedingungen ab.",
+     "skill": "purpose"
     },
     {
      "q": "Which statement best describes the author's view of the original findings?",
@@ -1273,7 +2144,8 @@
       "They have been completely disproven."
      ],
      "answer": 2,
-     "why": "Wiederholungen zeigten schwache Effekte; der Effekt tritt „mainly when …“ auf."
+     "why": "Wiederholungen zeigten schwache Effekte; der Effekt tritt „mainly when …“ auf.",
+     "skill": "attitude"
     }
    ]
   },
@@ -1292,7 +2164,8 @@
       "The animals survived without depending on sunlight."
      ],
      "answer": 3,
-     "why": "Fast alle Ökosysteme hängen an Photosynthese – hier gibt es kein Licht."
+     "why": "Fast alle Ökosysteme hängen an Photosynthese – hier gibt es kein Licht.",
+     "skill": "detail"
     },
     {
      "q": "The word \"abundant\" in paragraph 2 is closest in meaning to",
@@ -1303,7 +2176,8 @@
       "rare"
      ],
      "answer": 0,
-     "why": "abundant = reichlich vorhanden."
+     "why": "abundant = reichlich vorhanden.",
+     "skill": "vocab"
     },
     {
      "q": "According to paragraph 2, how do giant tube worms obtain food?",
@@ -1314,7 +2188,8 @@
       "By filtering plankton from the water"
      ],
      "answer": 1,
-     "why": "Sie beherbergen Bakterien und nehmen deren Nährstoffe auf."
+     "why": "Sie beherbergen Bakterien und nehmen deren Nährstoffe auf.",
+     "skill": "detail"
     },
     {
      "q": "What does the author indicate about hydrogen sulfide?",
@@ -1325,7 +2200,8 @@
       "It cools the vent fluid."
      ],
      "answer": 2,
-     "why": "„toxic to most organisms“."
+     "why": "„toxic to most organisms“.",
+     "skill": "detail"
     },
     {
      "q": "Why does the author mention Europa and Enceladus?",
@@ -1336,7 +2212,8 @@
       "To show that the discovery influenced the search for life elsewhere"
      ],
      "answer": 3,
-     "why": "Die Entdeckung „encouraged the search for life on moons such as …“."
+     "why": "Die Entdeckung „encouraged the search for life on moons such as …“.",
+     "skill": "purpose"
     }
    ]
   },
@@ -1355,7 +2232,8 @@
       "Foreign traders refused to accept coins."
      ],
      "answer": 0,
-     "why": "„found heavy metal coins inconvenient for large transactions“."
+     "why": "„found heavy metal coins inconvenient for large transactions“.",
+     "skill": "detail"
     },
     {
      "q": "The word \"issuing\" in paragraph 2 is closest in meaning to",
@@ -1366,7 +2244,8 @@
       "designing"
      ],
      "answer": 1,
-     "why": "issue = (offiziell) ausgeben."
+     "why": "issue = (offiziell) ausgeben.",
+     "skill": "vocab"
     },
     {
      "q": "According to paragraph 2, what was a disadvantage of government-controlled paper money?",
@@ -1377,7 +2256,8 @@
       "Merchants could not exchange it for coins."
      ],
      "answer": 2,
-     "why": "Zu viel gedrucktes Geld → Inflation."
+     "why": "Zu viel gedrucktes Geld → Inflation.",
+     "skill": "detail"
     },
     {
      "q": "Why does the author mention Marco Polo?",
@@ -1388,7 +2268,8 @@
       "To show that Europeans found Chinese paper money remarkable"
      ],
      "answer": 3,
-     "why": "Er beschrieb das Papiergeld „with amazement“."
+     "why": "Er beschrieb das Papiergeld „with amazement“.",
+     "skill": "purpose"
     },
     {
      "q": "What can be inferred from the last sentence of the passage?",
@@ -1399,7 +2280,8 @@
       "Electronic payments are less secure than cash."
      ],
      "answer": 0,
-     "why": "Elektronische Zahlungen ersetzen Papiergeld „steadily“."
+     "why": "Elektronische Zahlungen ersetzen Papiergeld „steadily“.",
+     "skill": "infer"
     }
    ]
   },
@@ -1418,7 +2300,8 @@
       "It signals the start of a routine."
      ],
      "answer": 1,
-     "why": "Die Belohnung macht Wiederholung wahrscheinlicher."
+     "why": "Die Belohnung macht Wiederholung wahrscheinlicher.",
+     "skill": "detail"
     },
     {
      "q": "The word \"gradually\" in paragraph 2 is closest in meaning to",
@@ -1429,7 +2312,8 @@
       "only occasionally"
      ],
      "answer": 2,
-     "why": "gradually = allmählich."
+     "why": "gradually = allmählich.",
+     "skill": "vocab"
     },
     {
      "q": "What did the study described in paragraph 2 find?",
@@ -1440,7 +2324,8 @@
       "The time needed to form a habit differed greatly between people."
      ],
      "answer": 3,
-     "why": "Von unter drei Wochen bis fast ein Jahr."
+     "why": "Von unter drei Wochen bis fast ein Jahr.",
+     "skill": "detail"
     },
     {
      "q": "Why does the author mention running shoes?",
@@ -1451,7 +2336,8 @@
       "To compare exercise with snacking"
      ],
      "answer": 0,
-     "why": "Schuhe an der Tür als Auslöser."
+     "why": "Schuhe an der Tür als Auslöser.",
+     "skill": "purpose"
     },
     {
      "q": "What can be inferred about willpower?",
@@ -1462,7 +2348,8 @@
       "It is the most important factor in forming habits."
      ],
      "answer": 1,
-     "why": "„changing the environment rather than relying on willpower alone“."
+     "why": "„changing the environment rather than relying on willpower alone“.",
+     "skill": "infer"
     }
    ]
   },
@@ -1481,7 +2368,8 @@
       "Why goats like berries"
      ],
      "answer": 2,
-     "why": "Der Text erzählt die Geschichte des Kaffees."
+     "why": "Der Text erzählt die Geschichte des Kaffees.",
+     "skill": "main"
     },
     {
      "q": "According to the story, what did the goat herder notice?",
@@ -1492,7 +2380,8 @@
       "His goats had more energy after eating certain berries."
      ],
      "answer": 3,
-     "why": "„became very energetic after eating red berries“."
+     "why": "„became very energetic after eating red berries“.",
+     "skill": "detail"
     },
     {
      "q": "What does the author say about the goat herder story?",
@@ -1503,7 +2392,8 @@
       "It is definitely true."
      ],
      "answer": 0,
-     "why": "„Whether or not the story is true …“"
+     "why": "„Whether or not the story is true …“",
+     "skill": "detail"
     },
     {
      "q": "According to paragraph 2, what did people do in coffee houses?",
@@ -1514,7 +2404,8 @@
       "They grew coffee plants."
      ],
      "answer": 1,
-     "why": "„met to talk, listen to music, and share news“."
+     "why": "„met to talk, listen to music, and share news“.",
+     "skill": "detail"
     },
     {
      "q": "Which country produces the most coffee today?",
@@ -1525,7 +2416,8 @@
       "Yemen"
      ],
      "answer": 2,
-     "why": "„Brazil produces more coffee than any other nation“."
+     "why": "„Brazil produces more coffee than any other nation“.",
+     "skill": "detail"
     }
    ]
   },
@@ -1544,7 +2436,8 @@
       "They survive treatment while other bacteria die."
      ],
      "answer": 3,
-     "why": "Empfindliche sterben, resistente vermehren sich."
+     "why": "Empfindliche sterben, resistente vermehren sich.",
+     "skill": "detail"
     },
     {
      "q": "The word \"formidable\" in paragraph 1 is closest in meaning to",
@@ -1555,7 +2448,8 @@
       "minor"
      ],
      "answer": 0,
-     "why": "formidable = gewaltig, schwerwiegend."
+     "why": "formidable = gewaltig, schwerwiegend.",
+     "skill": "vocab"
     },
     {
      "q": "What does paragraph 2 suggest about horizontal gene transfer?",
@@ -1566,7 +2460,8 @@
       "It prevents new mutations from appearing in most types of bacteria."
      ],
      "answer": 1,
-     "why": "„far more quickly than inheritance alone would allow“."
+     "why": "„far more quickly than inheritance alone would allow“.",
+     "skill": "infer"
     },
     {
      "q": "Why does the author mention viral infections?",
@@ -1577,7 +2472,8 @@
       "To explain how viruses become resistant"
      ],
      "answer": 2,
-     "why": "Antibiotika wirken nicht gegen Viren, werden aber verschrieben."
+     "why": "Antibiotika wirken nicht gegen Viren, werden aber verschrieben.",
+     "skill": "purpose"
     },
     {
      "q": "What can be inferred about why few new antibiotics are developed?",
@@ -1588,7 +2484,280 @@
       "They are not very profitable for drug companies."
      ],
      "answer": 3,
-     "why": "„little financial incentive … far less profitable“."
+     "why": "„little financial incentive … far less profitable“.",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "ac09",
+   "level": 2,
+   "title": "How Wolves Became Dogs",
+   "text": "Dogs were the first animals to be domesticated, long before sheep, goats, or cattle. Genetic studies indicate that they descend from an extinct population of wolves and that the split occurred at least 15,000 years ago, when humans still lived as hunter-gatherers.\nHow did a dangerous predator become a companion? One popular hypothesis suggests that wolves largely domesticated themselves. According to this view, the boldest wolves began to scavenge leftover food near human camps. Animals that were less fearful and less aggressive obtained more food and therefore raised more offspring. Over many generations, this process produced tamer animals without any deliberate plan on the part of humans.\nA famous experiment supports the idea that selecting for tameness alone can transform a species. Beginning in 1959, Soviet scientists bred only the friendliest foxes from each generation. Within a few decades, the foxes not only sought human contact but had also developed floppy ears, curled tails, and spotted coats, features typical of dogs but rare in wild animals.\nOnce dogs lived alongside people, both sides benefited. Dogs warned of danger and helped in hunting, while humans provided a reliable source of food.",
+   "questions": [
+    {
+     "q": "According to paragraph 1, what is true about the domestication of dogs?",
+     "options": [
+      "It involved wolves that still exist today.",
+      "It took place before people kept farm animals.",
+      "It happened later than that of goats.",
+      "It began when humans started to grow crops."
+     ],
+     "answer": 1,
+     "why": "„long before sheep, goats, or cattle“; Menschen waren noch Jäger und Sammler.",
+     "skill": "detail"
+    },
+    {
+     "q": "The word \"deliberate\" in paragraph 2 is closest in meaning to",
+     "options": [
+      "successful",
+      "complicated",
+      "intentional",
+      "dangerous"
+     ],
+     "answer": 2,
+     "why": "deliberate = absichtlich.",
+     "skill": "vocab"
+    },
+    {
+     "q": "Why does the author describe the fox experiment?",
+     "options": [
+      "To suggest that dogs are descended from wild foxes",
+      "To argue that foxes make better and safer companions than wolves ever could",
+      "To explain why Soviet scientists were interested in dogs",
+      "To show that breeding for friendliness alone can change a species"
+     ],
+     "answer": 3,
+     "why": "Das Experiment stützt die Selbstdomestikations-Hypothese.",
+     "skill": "purpose"
+    },
+    {
+     "q": "What can be inferred about wolves that stayed away from human camps?",
+     "options": [
+      "They were unlikely to become the ancestors of dogs.",
+      "They were hunted by the people in the camps.",
+      "They soon developed spotted coats as well.",
+      "They had far more offspring than the bolder wolves did."
+     ],
+     "answer": 0,
+     "why": "Nur die zutraulichen Wölfe profitierten vom Futter und vermehrten sich in Menschennähe.",
+     "skill": "infer"
+    },
+    {
+     "q": "According to paragraph 4, how did humans benefit from dogs?",
+     "options": [
+      "Dogs kept their camps free of leftover food.",
+      "Dogs alerted them to threats and assisted with hunting.",
+      "Dogs protected their sheep and goats from wolves at night.",
+      "Dogs carried supplies between distant camps."
+     ],
+     "answer": 1,
+     "why": "„Dogs warned of danger and helped in hunting“.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "ac10",
+   "level": 1,
+   "title": "How Emperor Penguins Stay Warm",
+   "text": "Emperor penguins live in Antarctica, the coldest place on Earth. In winter, the temperature can fall to minus forty degrees, and strong winds make it feel even colder. How do these birds survive?\nFirst, their bodies are built for the cold. Under the skin, penguins have a thick layer of fat that keeps heat inside. Their feathers are short and very close together, so wind and water cannot reach the skin.\nSecond, penguins work as a team. Thousands of birds stand close together in a large group called a huddle. The penguins in the middle are warm, while those on the outside are cold. But the birds do not stay in one place. They slowly move, so every penguin spends some time in the warm center.\nFinally, emperor penguins can go without food for a long time. A male penguin eats nothing for about two months while he keeps the egg warm on his feet. During this time, he lives on the fat in his body.",
+   "questions": [
+    {
+     "q": "What is the passage mainly about?",
+     "options": [
+      "What emperor penguins eat in winter",
+      "How emperor penguins raise their young",
+      "How emperor penguins survive extreme cold",
+      "Why emperor penguins live in large groups"
+     ],
+     "answer": 2,
+     "why": "Drei Gründe, warum die Pinguine die Kälte überstehen.",
+     "skill": "main"
+    },
+    {
+     "q": "According to paragraph 2, why can't wind and water reach a penguin's skin?",
+     "options": [
+      "Its body is always turned away from the wind.",
+      "Its skin is covered with a layer of ice.",
+      "Its fat forms a layer on top of the feathers.",
+      "Its feathers are short and tightly packed."
+     ],
+     "answer": 3,
+     "why": "„short and very close together“.",
+     "skill": "detail"
+    },
+    {
+     "q": "The word \"survive\" in paragraph 1 is closest in meaning to",
+     "options": [
+      "stay alive",
+      "keep quiet",
+      "find food",
+      "move fast"
+     ],
+     "answer": 0,
+     "why": "survive = überleben.",
+     "skill": "vocab"
+    },
+    {
+     "q": "Why do the penguins in a huddle keep moving?",
+     "options": [
+      "So that the wind cannot blow them over",
+      "So that each bird gets a turn in the warm middle",
+      "So that they can look for food together",
+      "So that the eggs do not touch the ice"
+     ],
+     "answer": 1,
+     "why": "„every penguin spends some time in the warm center“.",
+     "skill": "detail"
+    },
+    {
+     "q": "What does a male penguin do for about two months?",
+     "options": [
+      "He builds a nest out of small stones.",
+      "He searches for food far out at sea.",
+      "He keeps the egg warm without eating.",
+      "He stands on the outside of the huddle."
+     ],
+     "answer": 2,
+     "why": "Er frisst zwei Monate nichts und wärmt das Ei auf den Füßen.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "ac11",
+   "level": 1,
+   "title": "Why Onions Make Us Cry",
+   "text": "Almost everyone has cried while cutting an onion. But why does this happen? The answer is chemistry.\nOnions grow under the ground, where small animals might eat them. To protect itself, the onion takes in a substance called sulfur from the soil and stores it in its cells. When a knife cuts through the onion, the cells break open. The chemicals inside mix together and form a gas. This gas rises into the air and reaches our eyes. There, it mixes with the water in our eyes and makes a weak acid. The acid burns a little, so our eyes produce tears to wash it away.\nLuckily, there are simple ways to reduce the tears. A cold onion releases less gas, so you can put the onion in the refrigerator before cutting it. A sharp knife also helps because it breaks fewer cells. Some cooks even cut onions under running water.",
+   "questions": [
+    {
+     "q": "According to the passage, why do onions store sulfur?",
+     "options": [
+      "To grow faster under the ground",
+      "To keep water inside their cells",
+      "To make their taste sweeter",
+      "To protect themselves from animals"
+     ],
+     "answer": 3,
+     "why": "„To protect itself, the onion takes in … sulfur“.",
+     "skill": "detail"
+    },
+    {
+     "q": "What happens when an onion is cut?",
+     "options": [
+      "Its cells break, and a gas forms.",
+      "Its smell disappears after a while.",
+      "Its sulfur turns into a weak acid.",
+      "Its cells take in water from the air."
+     ],
+     "answer": 0,
+     "why": "Zellen platzen, die Stoffe mischen sich zu einem Gas.",
+     "skill": "detail"
+    },
+    {
+     "q": "The word \"reduce\" in paragraph 3 is closest in meaning to",
+     "options": [
+      "explain",
+      "lessen",
+      "notice",
+      "collect"
+     ],
+     "answer": 1,
+     "why": "reduce = verringern.",
+     "skill": "vocab"
+    },
+    {
+     "q": "Why does the author mention the refrigerator?",
+     "options": [
+      "To describe how the gas is produced",
+      "To explain where onions should be stored",
+      "To give an example of how to cry less",
+      "To show that onions go bad quickly"
+     ],
+     "answer": 2,
+     "why": "Kalte Zwiebeln geben weniger Gas ab.",
+     "skill": "purpose"
+    },
+    {
+     "q": "What can be inferred about cutting a warm onion with a dull knife?",
+     "options": [
+      "It would stop the gas from forming.",
+      "It would make the onion taste bitter.",
+      "It would take less time than usual.",
+      "It would cause more tears than usual."
+     ],
+     "answer": 3,
+     "why": "Warm = mehr Gas, stumpfes Messer = mehr zerstörte Zellen.",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "ac12",
+   "level": 3,
+   "title": "The Rebound Effect",
+   "text": "When a technology uses a resource more efficiently, it seems self-evident that total consumption of that resource should fall. In 1865, however, the English economist William Stanley Jevons observed precisely the opposite. Improvements to the steam engine had made the use of coal far more economical, yet Britain's coal consumption soared.\nJevons's explanation was simple. Greater efficiency lowered the effective cost of steam power, which made it profitable in industries where it had previously been too expensive. The resulting expansion in demand more than offset the savings achieved by each individual engine.\nEconomists now refer to this phenomenon as the rebound effect, and contemporary examples are not hard to find. As car engines have become more fuel-efficient, many drivers have responded by purchasing larger vehicles or traveling greater distances. Similarly, the advent of inexpensive LED lighting has encouraged people to illuminate spaces that were formerly left dark.\nThe rebound is seldom large enough to cancel out the gains entirely; most studies suggest that it erodes somewhere between ten and thirty percent of the expected savings. Nevertheless, it implies that efficiency standards alone are unlikely to deliver the reductions that policymakers anticipate. For this reason, some economists argue that such standards should be accompanied by measures, such as taxes, that keep the cost of consumption from falling.",
+   "questions": [
+    {
+     "q": "According to paragraph 1, what did Jevons observe?",
+     "options": [
+      "Coal use rose although engines had become more efficient.",
+      "Britain began to run out of coal in the 1860s.",
+      "Efficient engines remained too costly for most British industries.",
+      "Steam engines wasted more coal than earlier machines."
+     ],
+     "answer": 0,
+     "why": "Effizientere Dampfmaschinen, aber stark steigender Kohleverbrauch.",
+     "skill": "detail"
+    },
+    {
+     "q": "The word \"erodes\" in paragraph 4 is closest in meaning to",
+     "options": [
+      "temporarily hides",
+      "gradually reduces",
+      "greatly exceeds",
+      "accurately measures"
+     ],
+     "answer": 1,
+     "why": "erode = nach und nach abtragen/verringern.",
+     "skill": "vocab"
+    },
+    {
+     "q": "Why does the author mention LED lighting?",
+     "options": [
+      "To argue that older lamps were actually better for the environment",
+      "To show that some technologies have no rebound effect",
+      "To give a modern example of efficiency leading to greater use",
+      "To explain why electricity has become more expensive"
+     ],
+     "answer": 2,
+     "why": "Billiges Licht → mehr Flächen werden beleuchtet.",
+     "skill": "purpose"
+    },
+    {
+     "q": "What can be inferred from paragraph 4 about efficiency standards?",
+     "options": [
+      "They work only when no taxes are charged.",
+      "They usually increase total consumption.",
+      "They have been abandoned by most governments.",
+      "They save resources, but less than predicted."
+     ],
+     "answer": 3,
+     "why": "Der Rebound frisst 10–30 % der Einsparung, nicht alles.",
+     "skill": "infer"
+    },
+    {
+     "q": "According to the passage, why do some economists propose taxes?",
+     "options": [
+      "To prevent cheaper use from driving up consumption",
+      "To make efficient technology affordable for everyone",
+      "To pay for research into more efficient engines",
+      "To punish companies that ignore the standards"
+     ],
+     "answer": 0,
+     "why": "Steuern sollen verhindern, dass die Nutzungskosten sinken.",
+     "skill": "detail"
     }
    ]
   }

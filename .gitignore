@@ -1,1 +1,2 @@
 trainer/tests/*.png
+__pycache__/

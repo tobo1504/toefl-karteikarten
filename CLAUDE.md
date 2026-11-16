@@ -17,9 +17,10 @@ Live: https://tobo1504.github.io/toefl-karteikarten/ und …/trainer/
    und `trainer/dist/trainer-artifact.html` (Claude-Version mit KI-Bewertung).
 4. Headless testen (Playwright, Chromium ist vorinstalliert, `NODE_PATH=$(npm root -g)`):
    `node trainer/tests/smoke.js` – muss ohne Fehler durchlaufen.
-5. Committen und auf `main` pushen. Die Claude-Version mit dem Artifact-Tool veröffentlichen
-   (Datei `trainer/dist/trainer-artifact.html`, `capabilities: {sample:{}}`). Bestehende
-   Artifact-URL steht in ROADMAP.md – immer dorthin aktualisieren, kein neues Artifact.
+5. Committen und auf `main` pushen. Die Claude-Version veröffentlichen: `trainer/dist/trainer-artifact.html` als `index.html`
+   plus neue/geänderte `audio/<key>.mp3` (Dateien-Veröffentlichung mit `slug` und `base_version`, Modus patch; die Fähigkeit
+   `sample` ist am Artifact hinterlegt und bleibt erhalten). Bestehende Artifact-URL steht in ROADMAP.md – immer dorthin
+   aktualisieren, kein neues Artifact.
 6. Kommunikation mit Tom: Deutsch, knappe Stichpunkte, keine Ausschmückungen.
 
 ## Architektur
@@ -27,9 +28,22 @@ Live: https://tobo1504.github.io/toefl-karteikarten/ und …/trainer/
 - `trainer/src/`:
   - `shell.html` – Grundgerüst (Platzhalter `/*STYLE*/`, `/*CONTENT*/`, `/*APP*/`)
   - `styles.css` – Design-Tokens identisch zu den Karteikarten (ruhig, Petrol-Akzent, Newsreader + Hanken Grotesk)
-  - `app.js` – Router, Speicher, Timer, Test-Engine, Renderer pro Aufgabentyp, Bewertung
+  - `app.js` – Router, Speicher, Timer, Test-Engine, Renderer pro Aufgabentyp, Bewertung, Start- und Ergebnisseite
+  - `analysis.js` – Fehleranalyse (wird von build.py an der Stelle `INCLUDE analysis.js` in app.js eingesetzt):
+    Wissensbasis `KB` je Fragetyp (Erkennen / Falle / Vorgehen), `analyze()`, `insights()` (wichtigste Erkenntnisse),
+    `analysisHtml()`, Tiefenanalyse-Prompt für Claude (`analysisPrompt`), Fehlerprofil (`weakSkills`)
 - `trainer/content/*.json` – **alle Aufgaben**. Schema siehe unten. Neue Aufgaben nur hier ergänzen.
-- `trainer/build.py` – validiert JSON gegen Schema, setzt alles zusammen, schreibt beide Ausgaben.
+- `trainer/build.py` – validiert JSON gegen Schema, bildet die festen Probetests (`DATA.forms`), setzt alles zusammen, schreibt beide Ausgaben.
+- **Probetests (Formen):** build.py teilt die Aufgaben nach Level und Reihenfolge in der JSON-Datei auf Tests auf; jede Aufgabe gehört zu
+  höchstens einem Test. Je Test: Reading/Listening je `m1` (Level 2), `easy` (Level 1), `hard` (Level 3); Writing 10 BaS + Email + Discussion;
+  Speaking Repeat + Interview. Die Zahl der Tests ergibt sich aus dem knappsten Aufgabentyp (build.py meldet `probetests`).
+  Neue Aufgaben immer **hinten anhängen**, sonst verschieben sich bestehende Tests. Training nimmt zuerst Aufgaben aus schon gemachten Tests.
+- **Testoberfläche:** Im Test englisch wie am Testtag (Helfer `tx(en,de)`), mit Anweisungs-Seite je Section (`INTRO`), Sound-Check vor Listening,
+  Signalton vor Speaking-Antworten, Warnung bei offenen Fragen. Im Training deutsch mit „Nochmal anhören“ und Transkript.
+- **Fehleranalyse nach jedem Durchlauf:** Zeit je Frage (`times`), Antwortänderungen (`changes`), Punkte je Fragetyp (`S.skills`),
+  Fehlerheft (`S.wrong`, Knopf „Fehler wiederholen“), Schwächen-Training je Fragetyp (`startSkillPractice`).
+  In der Claude-Version zusätzlich „Alles von Claude auswerten lassen“ (Email, Discussion, Interview, Tiefenanalyse in einem Durchgang);
+  in der PWA Prompt kopieren und Punktzahl von Hand eintragen.
 - Speicherung: `localStorage` Schlüssel `toefl-trainer-v1` (Verlauf, gesehene Aufgaben, Bewertungen).
   Lernstand-Export/Import per Code (`TT1:` + base64), wie bei den Karteikarten.
 - KI-Bewertung (Writing, Interview): nur in der Claude-Version über `claude.use("sample")`.
@@ -46,9 +60,10 @@ Live: https://tobo1504.github.io/toefl-karteikarten/ und …/trainer/
   dort ist das Mikrofon gesperrt) Textfeld für die Diktierfunktion der Tastatur. Antwortfenster: Repeat 8–12 s, Interview 45 s,
   plus kurze Nachfrist zum Abschließen der Eingabe. Repeat wird automatisch per Wort-Abgleich (0–5) bewertet,
   Interview per KI (`sample`) mit allen vier Antworten in einem Aufruf.
-- Kompletter Test: Teile aller vier Sections hintereinander (`startFullTest`); Gesamt-Band = Mittel der Section-Bands, auf 0,5 gerundet,
+- Kompletter Test: Teile aller vier Sections hintereinander (`startFullTest(formIndex)`); Gesamt-Band = Mittel der Section-Bands, auf 0,5 gerundet,
   sobald Writing und Speaking bewertet sind.
-- Testhilfe: `window.__TT_SPEED` beschleunigt die Speaking-Zeitfenster (nur für `tests/smoke.js`).
+- Testhilfe: `window.__TT_SPEED` beschleunigt die Speaking-Zeitfenster (nur für `tests/smoke.js`). Der Smoke-Test prüft auch die
+  Claude-Version (`dist/trainer-artifact.html`) mit einer KI-Attrappe (`window.claude`).
 
 ## Offizielles Format (Quelle: ETS „Updated TOEFL iBT Test Overview“, Practice Tests 2026)
 | Section | Aufgaben | Items | Zeit |
@@ -90,7 +105,10 @@ Annahmen (nicht offiziell belegt, bei besseren Quellen anpassen):
 
 ## Inhaltsschema (`trainer/content/`)
 Jede Aufgabe hat `id` (eindeutig, Präfix je Typ) und `level` (1 = leicht/Modul-2-leicht, 2 = mittel/Modul 1, 3 = schwer/Modul-2-schwer).
-Jede MC-Frage: `{"q": "...", "options": ["A","B","C","D"], "answer": 0-3, "why": "Kurze deutsche Begründung"}`.
+Jede MC-Frage: `{"q": "...", "options": ["A","B","C","D"], "answer": 0-3, "why": "Kurze deutsche Begründung", "skill": "…"}`.
+`skill` = Fragetyp für die Fehleranalyse (Pflicht, build.py prüft): MC `main, detail, vocab, infer, purpose, neg, attitude, next`;
+Choose `wh, yn, request, statement, idiom`; Build a Sentence `passive, relative, indirect, compare, cond, verb, order`.
+`contentlib.MC` setzt `skill` aus dem 5. Argument oder rät ihn aus dem Fragetext (`tools/skills.py`). Neue Fragetypen brauchen einen Eintrag in `KB` (analysis.js).
 - `reading.json`: `ctw[]` `{id, level, text}` – Lücken als `pop{ular}` (sichtbar „pop“, gesucht „ular“).
   `daily[]` `{id, level, genre, title, text, questions[2-3]}`. `academic[]` `{id, level, title, text, questions[5]}`.
 - `writing.json`: `bas[]` `{id, level, prompt, answer, chunks[]}` – `answer` = korrekter Satz, `chunks` = Blöcke in richtiger Reihenfolge
@@ -102,7 +120,9 @@ Jede MC-Frage: `{"q": "...", "options": ["A","B","C","D"], "answer": 0-3, "why":
 ## Qualitätsregeln für neue Aufgaben
 - Nie echte ETS-Aufgaben oder Texte anderer Anbieter kopieren. Alles neu schreiben, nach dem Muster der ETS-Beispiele.
 - Fehlantworten plausibel (gleiche Länge, gleicher Stil). Antwortposition gleichmäßig über A–D verteilen.
-  Die richtige Antwort darf nicht systematisch die längste sein (build.py meldet den Anteil, Ziel < 40 %; Korrektur-Beispiel: `tools/fix_lengths_batch1_2.py`).
+  Die richtige Antwort darf nicht systematisch die längste sein (build.py meldet den Anteil, Ziel < 40 %; Korrektur-Beispiele: `tools/fix_lengths_batch*.py`).
+  Besonders bei Choose a Response: Fehlantworten genauso lang und zweiteilig schreiben wie die richtige Antwort.
+- Mischung der Fragetypen: nicht nur Detailfragen. Je Talk/Passage mindestens eine Frage aus infer / purpose / attitude / vocab.
 - Neue Inhalte: Skript `trainer/tools/gen_<section>_batchN.py` mit `contentlib` (ctw-Lücken, Antwort-Rotation, append) anlegen und ausführen.
 - Englisch: amerikanische Schreibweise, natürlich, fehlerfrei. Begründungen (`why`) auf Deutsch, 1 Satz.
 - Level 3 (schwer) = seltenerer Wortschatz, längere Sätze, mehr Inferenz.

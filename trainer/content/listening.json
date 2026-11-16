@@ -12,7 +12,8 @@
     "It's on the second floor."
    ],
    "answer": 1,
-   "why": "Gefragt ist nach der Uhrzeit – nur diese Antwort nennt eine Zeit."
+   "why": "Gefragt ist nach der Uhrzeit – nur diese Antwort nennt eine Zeit.",
+   "skill": "wh"
   },
   {
    "id": "c02",
@@ -26,7 +27,8 @@
     "It was a really good lunch."
    ],
    "answer": 2,
-   "why": "Einladung → Zusage. starving = sehr hungrig."
+   "why": "Einladung → Zusage. starving = sehr hungrig.",
+   "skill": "request"
   },
   {
    "id": "c03",
@@ -40,7 +42,8 @@
     "Right behind the science building."
    ],
    "answer": 3,
-   "why": "Where → Ortsangabe."
+   "why": "Where → Ortsangabe.",
+   "skill": "wh"
   },
   {
    "id": "c04",
@@ -54,7 +57,8 @@
     "Two days, I think."
    ],
    "answer": 0,
-   "why": "How was …? → Bewertung des vergangenen Wochenendes."
+   "why": "How was …? → Bewertung des vergangenen Wochenendes.",
+   "skill": "wh"
   },
   {
    "id": "c05",
@@ -68,7 +72,8 @@
     "I wrote it yesterday."
    ],
    "answer": 1,
-   "why": "Bitte um einen Stift → Stift wird gegeben."
+   "why": "Bitte um einen Stift → Stift wird gegeben.",
+   "skill": "request"
   },
   {
    "id": "c06",
@@ -82,7 +87,8 @@
     "It's very comfortable."
    ],
    "answer": 2,
-   "why": "Is this seat taken? = Ist hier frei? → No, go ahead."
+   "why": "Is this seat taken? = Ist hier frei? → No, go ahead.",
+   "skill": "yn"
   },
   {
    "id": "c07",
@@ -96,7 +102,8 @@
     "Almost. I just have a few pages left."
    ],
    "answer": 3,
-   "why": "Frage nach dem Stand → fast fertig."
+   "why": "Frage nach dem Stand → fast fertig.",
+   "skill": "yn"
   },
   {
    "id": "c08",
@@ -110,7 +117,8 @@
     "Yes, it's very late."
    ],
    "answer": 0,
-   "why": "Why → Grund (Baustelle)."
+   "why": "Why → Grund (Baustelle).",
+   "skill": "wh"
   },
   {
    "id": "c09",
@@ -124,7 +132,8 @@
     "I'm planning to apply for that job."
    ],
    "answer": 1,
-   "why": "Indirekt: Plan geändert, weil die Schicht verlegt wurde."
+   "why": "Indirekt: Plan geändert, weil die Schicht verlegt wurde.",
+   "skill": "yn"
   },
   {
    "id": "c10",
@@ -138,7 +147,8 @@
     "I believe it's correct."
    ],
    "answer": 2,
-   "why": "Tell me about it = Das kannst du laut sagen (Zustimmung)."
+   "why": "Tell me about it = Das kannst du laut sagen (Zustimmung).",
+   "skill": "idiom"
   },
   {
    "id": "c11",
@@ -152,7 +162,8 @@
     "That would be great. I'm running a bit late."
    ],
    "answer": 3,
-   "why": "save a seat = Platz freihalten; die anderen spielen mit „save“ (speichern, sparen)."
+   "why": "save a seat = Platz freihalten; die anderen spielen mit „save“ (speichern, sparen).",
+   "skill": "request"
   },
   {
    "id": "c12",
@@ -166,7 +177,8 @@
     "The projector is brand new."
    ],
    "answer": 0,
-   "why": "Indirekte Hilfe: Hinweis, wo sie sein könnte."
+   "why": "Indirekte Hilfe: Hinweis, wo sie sein könnte.",
+   "skill": "yn"
   },
   {
    "id": "c13",
@@ -180,7 +192,8 @@
     "The paper is ten pages long."
    ],
    "answer": 1,
-   "why": "Reaktion auf eine gute Nachricht: relief = Erleichterung."
+   "why": "Reaktion auf eine gute Nachricht: relief = Erleichterung.",
+   "skill": "statement"
   },
   {
    "id": "c14",
@@ -194,7 +207,8 @@
     "The report has ten pages."
    ],
    "answer": 2,
-   "why": "I'm afraid so = leider ja; Grund folgt."
+   "why": "I'm afraid so = leider ja; Grund folgt.",
+   "skill": "yn"
   },
   {
    "id": "c15",
@@ -208,7 +222,8 @@
     "Good idea. We can take turns using it."
    ],
    "answer": 3,
-   "why": "Why don't we …? ist ein Vorschlag, keine Frage nach dem Grund."
+   "why": "Why don't we …? ist ein Vorschlag, keine Frage nach dem Grund.",
+   "skill": "request"
   },
   {
    "id": "c16",
@@ -222,7 +237,8 @@
     "I covered that topic in class."
    ],
    "answer": 0,
-   "why": "Would you mind …? → Not at all = gern (ich habe nichts dagegen)."
+   "why": "Would you mind …? → Not at all = gern (ich habe nichts dagegen).",
+   "skill": "request"
   },
   {
    "id": "c17",
@@ -236,7 +252,8 @@
     "My advisor teaches chemistry."
    ],
    "answer": 1,
-   "why": "Indirekt: Das Treffen wurde verschoben."
+   "why": "Indirekt: Das Treffen wurde verschoben.",
+   "skill": "yn"
   },
   {
    "id": "c18",
@@ -250,7 +267,8 @@
     "Paper is cheaper online."
    ],
    "answer": 2,
-   "why": "Problem gemeldet → Lösung anbieten."
+   "why": "Problem gemeldet → Lösung anbieten.",
+   "skill": "statement"
   },
   {
    "id": "c19",
@@ -264,7 +282,8 @@
     "So could I, but the email says two."
    ],
    "answer": 3,
-   "why": "I could have sworn = ich war mir ganz sicher; So could I = ich auch."
+   "why": "I could have sworn = ich war mir ganz sicher; So could I = ich auch.",
+   "skill": "statement"
   },
   {
    "id": "c20",
@@ -278,7 +297,8 @@
     "I submitted my application for the program last week."
    ],
    "answer": 0,
-   "why": "Höflicher Rat (You might want to …) → Zustimmung mit Begründung."
+   "why": "Höflicher Rat (You might want to …) → Zustimmung mit Begründung.",
+   "skill": "request"
   },
   {
    "id": "c21",
@@ -292,7 +312,8 @@
     "Statistics show that most students pass the course easily."
    ],
    "answer": 1,
-   "why": "drop a course = einen Kurs abwählen; die Antwort hinterfragt die Entscheidung."
+   "why": "drop a course = einen Kurs abwählen; die Antwort hinterfragt die Entscheidung.",
+   "skill": "statement"
   },
   {
    "id": "c22",
@@ -306,7 +327,8 @@
     "Happy holidays to you and your whole family as well."
    ],
    "answer": 2,
-   "why": "Nicht wissen, aber Hinweis auf eine Informationsquelle geben."
+   "why": "Nicht wissen, aber Hinweis auf eine Informationsquelle geben.",
+   "skill": "yn"
   },
   {
    "id": "c23",
@@ -320,7 +342,8 @@
     "You certainly didn't look nervous."
    ],
    "answer": 3,
-   "why": "Reaktion auf eine Aussage über die Vergangenheit mit passendem Kommentar."
+   "why": "Reaktion auf eine Aussage über die Vergangenheit mit passendem Kommentar.",
+   "skill": "statement"
   },
   {
    "id": "c24",
@@ -334,7 +357,8 @@
     "I grabbed the wrong bag."
    ],
    "answer": 0,
-   "why": "grab sb a coffee = jemandem einen Kaffee mitbringen; The usual? = wie immer?"
+   "why": "grab sb a coffee = jemandem einen Kaffee mitbringen; The usual? = wie immer?",
+   "skill": "request"
   },
   {
    "id": "c25",
@@ -348,7 +372,8 @@
     "There's a chance of rain later."
    ],
    "answer": 1,
-   "why": "I don't suppose … = höfliche, zurückhaltende Frage; Actually = doch."
+   "why": "I don't suppose … = höfliche, zurückhaltende Frage; Actually = doch.",
+   "skill": "yn"
   },
   {
    "id": "c26",
@@ -362,7 +387,8 @@
     "It's about three o'clock."
    ],
    "answer": 2,
-   "why": "Isn't it about time …? = Wir sollten langsam anfangen → Terminvorschlag."
+   "why": "Isn't it about time …? = Wir sollten langsam anfangen → Terminvorschlag.",
+   "skill": "request"
   },
   {
    "id": "c27",
@@ -376,7 +402,8 @@
     "In about ten minutes."
    ],
    "answer": 3,
-   "why": "What time → Zeitangabe."
+   "why": "What time → Zeitangabe.",
+   "skill": "wh"
   },
   {
    "id": "c28",
@@ -390,7 +417,8 @@
     "The inside is new."
    ],
    "answer": 0,
-   "why": "Entweder-oder-Frage → eine der Optionen wählen, nicht Yes/No."
+   "why": "Entweder-oder-Frage → eine der Optionen wählen, nicht Yes/No.",
+   "skill": "yn"
   },
   {
    "id": "c29",
@@ -404,7 +432,8 @@
     "I'm not taking any math classes."
    ],
    "answer": 1,
-   "why": "Who → Person."
+   "why": "Who → Person.",
+   "skill": "wh"
   },
   {
    "id": "c30",
@@ -418,7 +447,8 @@
     "The music starts at eight."
    ],
    "answer": 2,
-   "why": "Bitte → der Bitte nachkommen."
+   "why": "Bitte → der Bitte nachkommen.",
+   "skill": "request"
   },
   {
    "id": "c31",
@@ -432,7 +462,8 @@
     "About three years now."
    ],
    "answer": 3,
-   "why": "How long → Zeitdauer."
+   "why": "How long → Zeitdauer.",
+   "skill": "wh"
   },
   {
    "id": "c32",
@@ -446,7 +477,8 @@
     "Yes, I went there last week."
    ],
    "answer": 0,
-   "why": "Indirekte Absage mit Grund."
+   "why": "Indirekte Absage mit Grund.",
+   "skill": "yn"
   },
   {
    "id": "c33",
@@ -460,7 +492,8 @@
     "The assignment was easier last year, I think."
    ],
    "answer": 1,
-   "why": "Negativ formulierte Frage: „Not yet“ = noch nicht; „Yes … tomorrow“ widerspricht sich."
+   "why": "Negativ formulierte Frage: „Not yet“ = noch nicht; „Yes … tomorrow“ widerspricht sich.",
+   "skill": "yn"
   },
   {
    "id": "c34",
@@ -474,7 +507,8 @@
     "I don't know why they left."
    ],
    "answer": 2,
-   "why": "Why don't you …? = Einladung, keine Frage nach dem Grund."
+   "why": "Why don't you …? = Einladung, keine Frage nach dem Grund.",
+   "skill": "request"
   },
   {
    "id": "c35",
@@ -488,7 +522,8 @@
     "You can borrow mine if you want."
    ],
    "answer": 3,
-   "why": "Problem → Hilfe anbieten."
+   "why": "Problem → Hilfe anbieten.",
+   "skill": "statement"
   },
   {
    "id": "c36",
@@ -502,7 +537,8 @@
     "The group meets in the library."
    ],
    "answer": 0,
-   "why": "the more the merrier = je mehr, desto besser (Zustimmung)."
+   "why": "the more the merrier = je mehr, desto besser (Zustimmung).",
+   "skill": "idiom"
   },
   {
    "id": "c37",
@@ -516,7 +552,8 @@
     "I opened the book this morning."
    ],
    "answer": 1,
-   "why": "Präzisierende Antwort auf eine Rückfrage."
+   "why": "Präzisierende Antwort auf eine Rückfrage.",
+   "skill": "yn"
   },
   {
    "id": "c38",
@@ -530,7 +567,8 @@
     "It gets dark early these days."
    ],
    "answer": 2,
-   "why": "Late night? = Lange aufgeblieben? → Bestätigung mit Grund."
+   "why": "Late night? = Lange aufgeblieben? → Bestätigung mit Grund.",
+   "skill": "statement"
   },
   {
    "id": "c39",
@@ -544,7 +582,8 @@
     "It was, but only for the graduate students."
    ],
    "answer": 3,
-   "why": "under the impression = dachte; pushed back = verschoben."
+   "why": "under the impression = dachte; pushed back = verschoben.",
+   "skill": "statement"
   },
   {
    "id": "c40",
@@ -558,7 +597,8 @@
     "I happened to see him yesterday."
    ],
    "answer": 0,
-   "why": "Sehr höfliche, indirekte Bitte → Gegenfrage, um helfen zu können."
+   "why": "Sehr höfliche, indirekte Bitte → Gegenfrage, um helfen zu können.",
+   "skill": "request"
   },
   {
    "id": "c41",
@@ -572,7 +612,8 @@
     "I asked him yesterday where you were."
    ],
    "answer": 1,
-   "why": "Ratschlag → abwägende Reaktion; die anderen spielen mit „extension“."
+   "why": "Ratschlag → abwägende Reaktion; die anderen spielen mit „extension“.",
+   "skill": "request"
   },
   {
    "id": "c42",
@@ -586,7 +627,8 @@
     "Yes, it was a great concert."
    ],
    "answer": 2,
-   "why": "Tell me about it = volle Zustimmung."
+   "why": "Tell me about it = volle Zustimmung.",
+   "skill": "idiom"
   },
   {
    "id": "c43",
@@ -600,7 +642,8 @@
     "Because you said the highway would be packed."
    ],
    "answer": 3,
-   "why": "Remind me why … = Warum noch mal …? → Grund."
+   "why": "Remind me why … = Warum noch mal …? → Grund.",
+   "skill": "wh"
   },
   {
    "id": "c44",
@@ -614,7 +657,668 @@
     "I won't tell anyone."
    ],
    "answer": 0,
-   "why": "Don't tell me … drückt Erstaunen aus; couldn't put it down = konnte nicht aufhören."
+   "why": "Don't tell me … drückt Erstaunen aus; couldn't put it down = konnte nicht aufhören.",
+   "skill": "idiom"
+  },
+  {
+   "id": "c45",
+   "level": 1,
+   "voice": "W",
+   "skill": "wh",
+   "prompt": "When is your next class?",
+   "options": [
+    "It's my favorite class this semester.",
+    "At two, in the science building.",
+    "Yes, I have a class with Dr. Hill.",
+    "Last semester, I think, in room four."
+   ],
+   "answer": 1,
+   "why": "When → Zeitangabe."
+  },
+  {
+   "id": "c46",
+   "level": 1,
+   "voice": "M",
+   "skill": "request",
+   "prompt": "Could you hold the door for me?",
+   "options": [
+    "I'm holding a meeting.",
+    "The door is made of wood.",
+    "Of course. Go ahead.",
+    "No, it's on the left."
+   ],
+   "answer": 2,
+   "why": "Bitte → zusagen und ausführen."
+  },
+  {
+   "id": "c47",
+   "level": 1,
+   "voice": "W",
+   "skill": "wh",
+   "prompt": "How do you like your new roommate?",
+   "options": [
+    "On the third floor, next to the stairs.",
+    "I like the room. It's very bright.",
+    "Since September, when classes began.",
+    "She's great. We get along well."
+   ],
+   "answer": 3,
+   "why": "How do you like …? fragt nach der Meinung über die Person, nicht über das Zimmer."
+  },
+  {
+   "id": "c48",
+   "level": 1,
+   "voice": "M",
+   "skill": "yn",
+   "prompt": "Is the cafeteria open on Sundays?",
+   "options": [
+    "Only until two, I think.",
+    "I had pasta there last Sunday.",
+    "It's right next to the new gym.",
+    "Yes, I opened it this morning."
+   ],
+   "answer": 0,
+   "why": "Ja/Nein-Frage → eingeschränktes Ja mit Zeitangabe."
+  },
+  {
+   "id": "c49",
+   "level": 1,
+   "voice": "W",
+   "skill": "statement",
+   "prompt": "Thanks for helping me with my homework.",
+   "options": [
+    "Yes, please. That would be great.",
+    "No problem. Anytime.",
+    "I'm fine, thanks. How are you?",
+    "It's due on Friday, I think."
+   ],
+   "answer": 1,
+   "why": "Dank → No problem / Anytime."
+  },
+  {
+   "id": "c50",
+   "level": 1,
+   "voice": "M",
+   "skill": "wh",
+   "prompt": "Whose backpack is this?",
+   "options": [
+    "I bought it online.",
+    "It's blue and black.",
+    "I think it's Maria's.",
+    "It's under the table."
+   ],
+   "answer": 2,
+   "why": "Whose → Besitzer nennen."
+  },
+  {
+   "id": "c51",
+   "level": 1,
+   "voice": "W",
+   "skill": "request",
+   "prompt": "Would you like some more coffee?",
+   "options": [
+    "Yes, I like it very much there.",
+    "The coffee shop closes at five.",
+    "I made it early this morning.",
+    "No, thanks. I've had enough."
+   ],
+   "answer": 3,
+   "why": "Angebot → höflich annehmen oder ablehnen."
+  },
+  {
+   "id": "c52",
+   "level": 1,
+   "voice": "M",
+   "skill": "wh",
+   "prompt": "How far is the train station from here?",
+   "options": [
+    "About a ten-minute walk.",
+    "At nine thirty.",
+    "The train was very fast.",
+    "By bus, usually."
+   ],
+   "answer": 0,
+   "why": "How far → Entfernung, nicht Uhrzeit oder Verkehrsmittel."
+  },
+  {
+   "id": "c53",
+   "level": 1,
+   "voice": "W",
+   "skill": "statement",
+   "prompt": "I'm sorry I'm late.",
+   "options": [
+    "The late bus leaves at eleven.",
+    "That's okay. We just started.",
+    "You're welcome. Come back soon.",
+    "Yes, see you later tonight."
+   ],
+   "answer": 1,
+   "why": "Entschuldigung → That's okay."
+  },
+  {
+   "id": "c54",
+   "level": 1,
+   "voice": "M",
+   "skill": "request",
+   "prompt": "Do you have a minute to talk?",
+   "options": [
+    "No, I have two.",
+    "I talked to him yesterday.",
+    "Sure. What's up?",
+    "It takes sixty seconds."
+   ],
+   "answer": 2,
+   "why": "Do you have a minute? = Hast du kurz Zeit? → zusagen und nachfragen."
+  },
+  {
+   "id": "c55",
+   "level": 1,
+   "voice": "W",
+   "skill": "wh",
+   "prompt": "Which bus goes downtown?",
+   "options": [
+    "Downtown is busy.",
+    "Every fifteen minutes.",
+    "It's two dollars.",
+    "The number five."
+   ],
+   "answer": 3,
+   "why": "Which bus → Linie nennen."
+  },
+  {
+   "id": "c56",
+   "level": 1,
+   "voice": "M",
+   "skill": "yn",
+   "prompt": "Did you remember to bring the tickets?",
+   "options": [
+    "Yes, they're in my bag.",
+    "I remember that movie.",
+    "They cost twenty dollars.",
+    "No, I'll bring you there."
+   ],
+   "answer": 0,
+   "why": "Ja/Nein-Frage → Bestätigung mit passendem Zusatz."
+  },
+  {
+   "id": "c57",
+   "level": 1,
+   "voice": "W",
+   "skill": "request",
+   "prompt": "Let's take a short break.",
+   "options": [
+    "It broke yesterday, I'm afraid.",
+    "Good idea. I need some water.",
+    "It's too short for me, really.",
+    "I took it already this morning."
+   ],
+   "answer": 1,
+   "why": "Let's … = Vorschlag → zustimmen."
+  },
+  {
+   "id": "c58",
+   "level": 1,
+   "voice": "M",
+   "skill": "wh",
+   "prompt": "What's the weather supposed to be like tomorrow?",
+   "options": [
+    "Tomorrow is Tuesday.",
+    "Yes, I'm supposed to go.",
+    "Sunny and warm, I heard.",
+    "I like warm weather."
+   ],
+   "answer": 2,
+   "why": "What … like? → Beschreibung; W-Frage nie mit Yes beantworten."
+  },
+  {
+   "id": "c59",
+   "level": 2,
+   "voice": "W",
+   "skill": "yn",
+   "prompt": "You haven't seen my keys anywhere, have you?",
+   "options": [
+    "Yes, I've seen that movie three times.",
+    "No, I have my own key to the house.",
+    "The kitchen is very clean today, isn't it?",
+    "I think they're on the kitchen counter."
+   ],
+   "answer": 3,
+   "why": "Frageanhängsel (have you?) → hilfreiche Auskunft statt bloßem Ja/Nein."
+  },
+  {
+   "id": "c60",
+   "level": 2,
+   "voice": "M",
+   "skill": "request",
+   "prompt": "How about getting some fresh air?",
+   "options": [
+    "Sounds good. Let me grab my jacket.",
+    "The air conditioner is brand new.",
+    "About ten minutes ago, I think.",
+    "It's fresh from the bakery downtown."
+   ],
+   "answer": 0,
+   "why": "How about + -ing = Vorschlag → zustimmen."
+  },
+  {
+   "id": "c61",
+   "level": 2,
+   "voice": "W",
+   "skill": "statement",
+   "prompt": "I thought the exam was pretty tough.",
+   "options": [
+    "Yes, I think so. It's tomorrow at nine.",
+    "Really? I found it easier than the last one.",
+    "It's on the fifth of May, in the main hall.",
+    "I thought about it, too, but I can't go."
+   ],
+   "answer": 1,
+   "why": "Meinung → eigene Einschätzung dagegenstellen."
+  },
+  {
+   "id": "c62",
+   "level": 2,
+   "voice": "M",
+   "skill": "yn",
+   "prompt": "Shouldn't we let the professor know we'll be absent?",
+   "options": [
+    "She knows the subject very well.",
+    "No, we should be absent more.",
+    "I already sent her an email.",
+    "Yes, she is absent again today."
+   ],
+   "answer": 2,
+   "why": "Verneinte Frage = Vorschlag/Erinnerung → schon erledigt."
+  },
+  {
+   "id": "c63",
+   "level": 2,
+   "voice": "W",
+   "skill": "request",
+   "prompt": "Would it be all right if I left a few minutes early?",
+   "options": [
+    "Turn left at the corner, then right.",
+    "Yes, I left it there this morning.",
+    "It's right, but it's not early.",
+    "That's fine. Just sign out first."
+   ],
+   "answer": 3,
+   "why": "Bitte um Erlaubnis → Erlaubnis mit Bedingung; left = Vergangenheit von leave."
+  },
+  {
+   "id": "c64",
+   "level": 2,
+   "voice": "M",
+   "skill": "statement",
+   "prompt": "My laptop keeps freezing during video calls.",
+   "options": [
+    "Have you tried restarting it?",
+    "I'll call you by video later.",
+    "It's cold in here, too.",
+    "Keep it in the freezer."
+   ],
+   "answer": 0,
+   "why": "Problem → Lösungsvorschlag; freeze = hängen bleiben."
+  },
+  {
+   "id": "c65",
+   "level": 2,
+   "voice": "W",
+   "skill": "yn",
+   "prompt": "Do you want to drive, or should I?",
+   "options": [
+    "Yes, I do. Thanks for asking me.",
+    "I'd rather you did. I'm exhausted.",
+    "It's a long drive to the coast.",
+    "I should have, I guess. Sorry."
+   ],
+   "answer": 1,
+   "why": "Entweder-oder-Frage → eine Möglichkeit wählen, kein Yes/No."
+  },
+  {
+   "id": "c66",
+   "level": 2,
+   "voice": "M",
+   "skill": "wh",
+   "prompt": "How come you didn't sign up for the workshop?",
+   "options": [
+    "I came by bus, as I always do.",
+    "I signed the birthday card already.",
+    "It was already full when I checked.",
+    "The workshop is on Friday at ten."
+   ],
+   "answer": 2,
+   "why": "How come = Warum → Grund nennen."
+  },
+  {
+   "id": "c67",
+   "level": 2,
+   "voice": "W",
+   "skill": "statement",
+   "prompt": "I'll pick up the pizza on my way over.",
+   "options": [
+    "I picked it up last week.",
+    "The way is very long from here.",
+    "Yes, pick me up at the station.",
+    "Perfect. I'll set the table."
+   ],
+   "answer": 3,
+   "why": "Ankündigung → passende eigene Handlung."
+  },
+  {
+   "id": "c68",
+   "level": 2,
+   "voice": "M",
+   "skill": "yn",
+   "prompt": "That was quite a lecture, wasn't it?",
+   "options": [
+    "It was. I didn't expect it to be so interesting.",
+    "No, it's at ten. We still have plenty of time.",
+    "It was quite quiet there, so I could study.",
+    "Yes, I'll be there. Save me a seat, please."
+   ],
+   "answer": 0,
+   "why": "Frageanhängsel → zustimmen und ergänzen; quite ≠ quiet."
+  },
+  {
+   "id": "c69",
+   "level": 2,
+   "voice": "W",
+   "skill": "idiom",
+   "prompt": "Could you give me a hand with these boxes?",
+   "options": [
+    "My hand is much better, thanks.",
+    "Sure. Where do you want them?",
+    "I gave it to her yesterday.",
+    "They're made of thick cardboard."
+   ],
+   "answer": 1,
+   "why": "give someone a hand = helfen."
+  },
+  {
+   "id": "c70",
+   "level": 2,
+   "voice": "M",
+   "skill": "statement",
+   "prompt": "I'm afraid I won't be able to make it to dinner.",
+   "options": [
+    "Don't be afraid. It's perfectly safe.",
+    "I'll make it for you, if you like.",
+    "That's too bad. Maybe next time.",
+    "Dinner was delicious. Thank you."
+   ],
+   "answer": 2,
+   "why": "I'm afraid = leider; make it = es schaffen zu kommen → Bedauern."
+  },
+  {
+   "id": "c71",
+   "level": 2,
+   "voice": "W",
+   "skill": "yn",
+   "prompt": "Do you know whether the bookstore buys back used textbooks?",
+   "options": [
+    "Yes, I know the store. It's on Main Street.",
+    "I bought mine new, so they cost a lot.",
+    "The weather is fine, so let's walk there.",
+    "They do, but only at the end of the term."
+   ],
+   "answer": 3,
+   "why": "Eingebettete Frage: gefragt ist die Auskunft, nicht „ob du es weißt“."
+  },
+  {
+   "id": "c72",
+   "level": 2,
+   "voice": "M",
+   "skill": "idiom",
+   "prompt": "What do you say we order in tonight?",
+   "options": [
+    "Fine by me. I don't feel like cooking.",
+    "I said it last night, but nobody heard.",
+    "I'd say he's about seven years old.",
+    "The order is wrong. I asked for soup."
+   ],
+   "answer": 0,
+   "why": "What do you say we …? = Vorschlag; order in = Essen liefern lassen."
+  },
+  {
+   "id": "c73",
+   "level": 2,
+   "voice": "W",
+   "skill": "yn",
+   "prompt": "Is this where the line for registration starts?",
+   "options": [
+    "It starts at nine, I believe.",
+    "No, it's around the corner.",
+    "Yes, I registered last week.",
+    "The line is long but straight."
+   ],
+   "answer": 1,
+   "why": "Gefragt ist der Ort (where … starts), nicht die Uhrzeit."
+  },
+  {
+   "id": "c74",
+   "level": 2,
+   "voice": "M",
+   "skill": "statement",
+   "prompt": "I can't decide between the two apartments.",
+   "options": [
+    "I decided yesterday afternoon.",
+    "Yes, you can, if you hurry up.",
+    "Which one is closer to campus?",
+    "There are two of them upstairs."
+   ],
+   "answer": 2,
+   "why": "Unentschlossenheit → Rückfrage, die bei der Entscheidung hilft."
+  },
+  {
+   "id": "c75",
+   "level": 3,
+   "voice": "W",
+   "skill": "idiom",
+   "prompt": "I take it the interview didn't go as planned.",
+   "options": [
+    "Yes, you can take it. I don't need it anymore.",
+    "I planned it for Monday, but then it rained.",
+    "It goes on until five, so there's no hurry.",
+    "Not exactly. They asked things I hadn't prepared for."
+   ],
+   "answer": 3,
+   "why": "I take it … = Ich nehme an, dass … → bestätigen und erklären."
+  },
+  {
+   "id": "c76",
+   "level": 3,
+   "voice": "M",
+   "skill": "idiom",
+   "prompt": "Would you be up for presenting first?",
+   "options": [
+    "I'd rather not, if that's all right.",
+    "I'm up at six every single day.",
+    "The present is for her birthday.",
+    "Yes, it's on the first floor."
+   ],
+   "answer": 0,
+   "why": "be up for = Lust haben/bereit sein → höflich ablehnen."
+  },
+  {
+   "id": "c77",
+   "level": 3,
+   "voice": "W",
+   "skill": "request",
+   "prompt": "It wouldn't hurt to back up your files before the update.",
+   "options": [
+    "No, it doesn't hurt at all anymore.",
+    "You're right. I'll do it tonight.",
+    "My back is fine now, thank you.",
+    "I filed them yesterday afternoon."
+   ],
+   "answer": 1,
+   "why": "It wouldn't hurt to … = vorsichtiger Rat → annehmen."
+  },
+  {
+   "id": "c78",
+   "level": 3,
+   "voice": "M",
+   "skill": "idiom",
+   "prompt": "I can't get over how much tuition has gone up.",
+   "options": [
+    "You should get over there before it closes.",
+    "It goes up the hill and then turns left.",
+    "I know. It's almost double what my sister paid.",
+    "I'll get it tomorrow, when the bank opens."
+   ],
+   "answer": 2,
+   "why": "can't get over = nicht fassen können → zustimmen."
+  },
+  {
+   "id": "c79",
+   "level": 3,
+   "voice": "W",
+   "skill": "request",
+   "prompt": "Any chance you could cover my shift on Friday?",
+   "options": [
+    "The chances are about fifty-fifty, I'd say.",
+    "Cover it with a lid, or it will get cold.",
+    "It shifted a little, but it still works.",
+    "I wish I could, but I have an exam that day."
+   ],
+   "answer": 3,
+   "why": "Any chance you could …? = höfliche Bitte; I wish I could = Absage."
+  },
+  {
+   "id": "c80",
+   "level": 3,
+   "voice": "M",
+   "skill": "idiom",
+   "prompt": "So much for finishing the project early.",
+   "options": [
+    "I know. We really underestimated the last part.",
+    "How much was it? I'd like to pay my share.",
+    "Yes, we finished it early, as we planned.",
+    "So much the better. Let's celebrate."
+   ],
+   "answer": 0,
+   "why": "So much for … = Das war wohl nichts mit …"
+  },
+  {
+   "id": "c81",
+   "level": 3,
+   "voice": "W",
+   "skill": "yn",
+   "prompt": "Hadn't we better confirm the reservation?",
+   "options": [
+    "Yes, it's much better now, thanks.",
+    "I called this morning. We're all set.",
+    "We had it last year at the same hotel.",
+    "The reservation was very good."
+   ],
+   "answer": 1,
+   "why": "Hadn't we better …? = Sollten wir nicht lieber …? → schon erledigt."
+  },
+  {
+   "id": "c82",
+   "level": 3,
+   "voice": "M",
+   "skill": "statement",
+   "prompt": "I gather you weren't too impressed with the guest speaker.",
+   "options": [
+    "We gathered in the hall before the talk.",
+    "The speakers are too loud in that room.",
+    "He was fine, but he barely addressed the topic.",
+    "I guess he arrived at two, as scheduled."
+   ],
+   "answer": 2,
+   "why": "I gather = Ich schließe daraus → differenzierte Einschätzung."
+  },
+  {
+   "id": "c83",
+   "level": 3,
+   "voice": "W",
+   "skill": "statement",
+   "prompt": "What with the construction and the detour, I barely made it on time.",
+   "options": [
+    "The construction ends in May, they say.",
+    "What did you make? It smells wonderful.",
+    "I'll take the detour, then. Thanks.",
+    "At least you got here before they started."
+   ],
+   "answer": 3,
+   "why": "What with … = wegen …; barely made it = gerade noch geschafft."
+  },
+  {
+   "id": "c84",
+   "level": 3,
+   "voice": "M",
+   "skill": "yn",
+   "prompt": "You don't suppose they'd let us hand it in a day late?",
+   "options": [
+    "I doubt it. She's strict about deadlines.",
+    "I suppose it was yesterday, around noon.",
+    "Yes, late in the day, after the lecture.",
+    "They handed it to me at the front desk."
+   ],
+   "answer": 0,
+   "why": "You don't suppose …? = vorsichtige Frage → Einschätzung (I doubt it)."
+  },
+  {
+   "id": "c85",
+   "level": 3,
+   "voice": "W",
+   "skill": "statement",
+   "prompt": "Rumor has it the department is cutting the evening sections.",
+   "options": [
+    "I've already cut it out of the newspaper for you.",
+    "I hope not. Those are the only ones that fit my schedule.",
+    "The rumor was about him, not about the department.",
+    "It has three sections, and each one is quite long."
+   ],
+   "answer": 1,
+   "why": "Rumor has it = Man munkelt → Reaktion auf die Neuigkeit."
+  },
+  {
+   "id": "c86",
+   "level": 3,
+   "voice": "M",
+   "skill": "idiom",
+   "prompt": "Mind if I run something by you?",
+   "options": [
+    "Yes, I mind my business.",
+    "It ran out yesterday.",
+    "Go ahead. I'm all ears.",
+    "I run every morning."
+   ],
+   "answer": 2,
+   "why": "run something by someone = jemandem etwas zur Meinung vorlegen; all ears = ganz Ohr."
+  },
+  {
+   "id": "c87",
+   "level": 3,
+   "voice": "W",
+   "skill": "request",
+   "prompt": "Why bother printing the handouts if everyone has a tablet?",
+   "options": [
+    "Because the printer bothers me a lot.",
+    "The tablets are on the table by the door.",
+    "Don't bother me, please. I'm working.",
+    "Fair point. Let's just share the file."
+   ],
+   "answer": 3,
+   "why": "Why bother …? = rhetorische Frage als Vorschlag, es zu lassen."
+  },
+  {
+   "id": "c88",
+   "level": 3,
+   "voice": "M",
+   "skill": "idiom",
+   "prompt": "I was this close to missing my flight.",
+   "options": [
+    "What happened? Was there traffic?",
+    "The airport is very close to my house.",
+    "I missed you, too. It's been a while.",
+    "Which flight did you miss this time?"
+   ],
+   "answer": 0,
+   "why": "this close to = um ein Haar; der Flug wurde nicht verpasst."
   }
  ],
  "conversation": [
@@ -653,7 +1357,8 @@
       "Renew two library books"
      ],
      "answer": 3,
-     "why": "„I'd like to renew these two books.“"
+     "why": "„I'd like to renew these two books.“",
+     "skill": "detail"
     },
     {
      "q": "What does the man tell the woman?",
@@ -664,7 +1369,8 @@
       "She can renew a book only once."
      ],
      "answer": 0,
-     "why": "Über „My Account“ online verlängern, bis zu dreimal."
+     "why": "Über „My Account“ online verlängern, bis zu dreimal.",
+     "skill": "detail"
     }
    ]
   },
@@ -703,7 +1409,8 @@
       "She already went this morning."
      ],
      "answer": 1,
-     "why": "„I have to work until six.“"
+     "why": "„I have to work until six.“",
+     "skill": "detail"
     },
     {
      "q": "What will the man probably do?",
@@ -714,7 +1421,8 @@
       "Wait until six to go shopping"
      ],
      "answer": 2,
-     "why": "Er bietet an, etwas mitzubringen; sie bittet um Milch und Brot."
+     "why": "Er bietet an, etwas mitzubringen; sie bittet um Milch und Brot.",
+     "skill": "next"
     }
    ]
   },
@@ -757,7 +1465,8 @@
       "His topic is too general."
      ],
      "answer": 3,
-     "why": "„my topic feels too broad“."
+     "why": "„my topic feels too broad“.",
+     "skill": "detail"
     },
     {
      "q": "What does the professor remind him to do?",
@@ -768,7 +1477,8 @@
       "Write about at least two countries"
      ],
      "answer": 0,
-     "why": "„use at least two academic journals, not only news articles“."
+     "why": "„use at least two academic journals, not only news articles“.",
+     "skill": "detail"
     }
    ]
   },
@@ -807,7 +1517,8 @@
       "The repair team was too busy."
      ],
      "answer": 1,
-     "why": "„your request was sent to the wrong building“."
+     "why": "„your request was sent to the wrong building“.",
+     "skill": "detail"
     },
     {
      "q": "What does the man suggest the woman do?",
@@ -818,7 +1529,8 @@
       "Submit a new request online"
      ],
      "answer": 2,
-     "why": "„you can pick up a portable heater at the front desk“."
+     "why": "„you can pick up a portable heater at the front desk“.",
+     "skill": "detail"
     }
    ]
   },
@@ -857,7 +1569,8 @@
       "He promised to help his brother."
      ],
      "answer": 3,
-     "why": "„I promised to help my brother move.“"
+     "why": "„I promised to help my brother move.“",
+     "skill": "detail"
     },
     {
      "q": "What does the woman imply?",
@@ -868,7 +1581,8 @@
       "She can't meet before class because of her schedule."
      ],
      "answer": 0,
-     "why": "not a morning person = kein Frühaufsteher; trotzdem „okay“."
+     "why": "not a morning person = kein Frühaufsteher; trotzdem „okay“.",
+     "skill": "infer"
     }
    ]
   },
@@ -911,7 +1625,8 @@
       "Whether to cancel an interview"
      ],
      "answer": 1,
-     "why": "Die Beratung will bis Freitag eine Antwort, die Bank hat noch nicht entschieden."
+     "why": "Die Beratung will bis Freitag eine Antwort, die Bank hat noch nicht entschieden.",
+     "skill": "detail"
     },
     {
      "q": "What does the man mean when he says \"a bird in the hand\"?",
@@ -922,7 +1637,8 @@
       "Consulting work is more interesting."
      ],
      "answer": 2,
-     "why": "Sprichwort: Lieber den Spatz in der Hand …"
+     "why": "Sprichwort: Lieber den Spatz in der Hand …",
+     "skill": "vocab"
     }
    ]
   },
@@ -961,7 +1677,8 @@
       "She wants time to check the report before it is due."
      ],
      "answer": 3,
-     "why": "Sie will es vor der Abgabe gegenlesen; letztes Mal gab es Punktabzug."
+     "why": "Sie will es vor der Abgabe gegenlesen; letztes Mal gab es Punktabzug.",
+     "skill": "detail"
     },
     {
      "q": "What does the woman offer to do?",
@@ -972,7 +1689,8 @@
       "Write the discussion section herself"
      ],
      "answer": 0,
-     "why": "„I've got my notes from the review session.“"
+     "why": "„I've got my notes from the review session.“",
+     "skill": "detail"
     }
    ]
   },
@@ -1007,7 +1725,8 @@
       "With coins"
      ],
      "answer": 1,
-     "why": "„You pay with your student card.“"
+     "why": "„You pay with your student card.“",
+     "skill": "detail"
     },
     {
      "q": "What does the man suggest?",
@@ -1018,7 +1737,8 @@
       "Drying clothes outside"
      ],
      "answer": 2,
-     "why": "„don't wait too late at night“."
+     "why": "„don't wait too late at night“.",
+     "skill": "detail"
     }
    ]
   },
@@ -1057,7 +1777,8 @@
       "A large coffee with milk"
      ],
      "answer": 3,
-     "why": "„a large coffee … Just milk“."
+     "why": "„a large coffee … Just milk“.",
+     "skill": "detail"
     },
     {
      "q": "Why does the man ask about gluten?",
@@ -1068,7 +1789,8 @@
       "He wants the most popular cake."
      ],
      "answer": 0,
-     "why": "Er fragt nach etwas Glutenfreiem und nimmt das Bananenbrot."
+     "why": "Er fragt nach etwas Glutenfreiem und nimmt das Bananenbrot.",
+     "skill": "detail"
     }
    ]
   },
@@ -1107,7 +1829,8 @@
       "Whether her language skills are good enough"
      ],
      "answer": 1,
-     "why": "„I'm worried about the cost.“"
+     "why": "„I'm worried about the cost.“",
+     "skill": "detail"
     },
     {
      "q": "What will the woman probably do next?",
@@ -1118,7 +1841,8 @@
       "Contact the exchange university"
      ],
      "answer": 2,
-     "why": "„I'd better start asking a professor now.“"
+     "why": "„I'd better start asking a professor now.“",
+     "skill": "next"
     }
    ]
   },
@@ -1157,7 +1881,8 @@
       "She is worried she won't have enough time."
      ],
      "answer": 3,
-     "why": "Zwölf Stunden pro Woche plus volles Kursprogramm."
+     "why": "Zwölf Stunden pro Woche plus volles Kursprogramm.",
+     "skill": "detail"
     },
     {
      "q": "What does the woman consider doing?",
@@ -1168,7 +1893,8 @@
       "Postponing graduate school"
      ],
      "answer": 0,
-     "why": "Das Wahlfach zählt nicht für ihr Hauptfach."
+     "why": "Das Wahlfach zählt nicht für ihr Hauptfach.",
+     "skill": "detail"
     }
    ]
   },
@@ -1211,7 +1937,8 @@
       "The camera might get damaged."
      ],
      "answer": 1,
-     "why": "„not exactly the easiest camera to figure out“."
+     "why": "„not exactly the easiest camera to figure out“.",
+     "skill": "detail"
     },
     {
      "q": "What does the man recommend?",
@@ -1222,7 +1949,704 @@
       "Using her phone instead"
      ],
      "answer": 2,
-     "why": "Ersatzakku mitnehmen und vorher üben."
+     "why": "Ersatzakku mitnehmen und vorher üben.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "cv13",
+   "level": 1,
+   "lines": [
+    {
+     "who": "W",
+     "text": "Hi, I'd like to sign up for a gym membership."
+    },
+    {
+     "who": "M",
+     "text": "Sure. Are you a student here?"
+    },
+    {
+     "who": "W",
+     "text": "Yes, I'm a first-year student."
+    },
+    {
+     "who": "M",
+     "text": "Then it's free. I just need to see your student ID."
+    },
+    {
+     "who": "W",
+     "text": "Here you go. Do I need to bring my own towel?"
+    },
+    {
+     "who": "M",
+     "text": "Yes, and a lock for the locker. We don't provide those."
+    },
+    {
+     "who": "W",
+     "text": "Okay. What time do you close?"
+    },
+    {
+     "who": "M",
+     "text": "At ten on weekdays and at six on weekends."
+    }
+   ],
+   "questions": [
+    {
+     "q": "How much does the woman have to pay for the membership?",
+     "options": [
+      "Six dollars a week",
+      "Nothing",
+      "Ten dollars",
+      "The price of a lock"
+     ],
+     "answer": 1,
+     "why": "Für Studierende ist die Mitgliedschaft kostenlos.",
+     "skill": "detail"
+    },
+    {
+     "q": "What should the woman bring to the gym?",
+     "options": [
+      "Her ID and a water bottle",
+      "A towel and her own locker key",
+      "A towel and a lock",
+      "A lock and sports shoes"
+     ],
+     "answer": 2,
+     "why": "„Yes, and a lock for the locker.“",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "cv14",
+   "level": 1,
+   "lines": [
+    {
+     "who": "M",
+     "text": "Excuse me, is this the bus to the airport?"
+    },
+    {
+     "who": "W",
+     "text": "No, this one goes to the city center. You need the number twelve."
+    },
+    {
+     "who": "M",
+     "text": "Oh. Where does it stop?"
+    },
+    {
+     "who": "W",
+     "text": "Right across the street, in front of the bank."
+    },
+    {
+     "who": "M",
+     "text": "Thanks. Do you know how often it comes?"
+    },
+    {
+     "who": "W",
+     "text": "Every twenty minutes. You just missed one, I'm afraid."
+    },
+    {
+     "who": "M",
+     "text": "That's okay. My flight isn't until this evening."
+    }
+   ],
+   "questions": [
+    {
+     "q": "Where does the man want to go?",
+     "options": [
+      "To the bank across the street",
+      "To the city center",
+      "To the bus station",
+      "To the airport"
+     ],
+     "answer": 3,
+     "why": "Er fragt nach dem Bus zum Flughafen.",
+     "skill": "detail"
+    },
+    {
+     "q": "What can be inferred about the man?",
+     "options": [
+      "He is not in a hurry.",
+      "He has taken this bus before.",
+      "He will take a taxi instead.",
+      "He has missed his flight."
+     ],
+     "answer": 0,
+     "why": "Sein Flug geht erst am Abend, also stört ihn das Warten nicht.",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "cv15",
+   "level": 1,
+   "lines": [
+    {
+     "who": "W",
+     "text": "Are you free on Wednesday afternoon? We need to practice our presentation."
+    },
+    {
+     "who": "M",
+     "text": "I have a class until three. How about three thirty?"
+    },
+    {
+     "who": "W",
+     "text": "That works. Should we meet in the library?"
+    },
+    {
+     "who": "M",
+     "text": "The library is too quiet for practicing. Let's use the empty classroom next to the lab."
+    },
+    {
+     "who": "W",
+     "text": "Good idea. I'll bring my laptop."
+    },
+    {
+     "who": "M",
+     "text": "Great. I'll print the notes."
+    }
+   ],
+   "questions": [
+    {
+     "q": "Why doesn't the man want to meet in the library?",
+     "options": [
+      "There are no free tables in the afternoon.",
+      "They could not practice speaking there.",
+      "It closes at three thirty on Wednesdays.",
+      "It is too far away from the lab."
+     ],
+     "answer": 1,
+     "why": "„too quiet for practicing“ – dort darf man nicht laut sprechen.",
+     "skill": "infer"
+    },
+    {
+     "q": "What will the man bring to the meeting?",
+     "options": [
+      "A projector",
+      "The key to the lab",
+      "Printed notes",
+      "His laptop"
+     ],
+     "answer": 2,
+     "why": "„I'll print the notes.“",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "cv16",
+   "level": 1,
+   "lines": [
+    {
+     "who": "M",
+     "text": "Hi, I'd like to return this sweater. It's too small."
+    },
+    {
+     "who": "W",
+     "text": "No problem. Do you have the receipt?"
+    },
+    {
+     "who": "M",
+     "text": "Yes, here it is."
+    },
+    {
+     "who": "W",
+     "text": "Thanks. Would you like a larger size or your money back?"
+    },
+    {
+     "who": "M",
+     "text": "A larger size, please. Do you have it in blue?"
+    },
+    {
+     "who": "W",
+     "text": "Let me check. I'm sorry, we only have large in gray."
+    },
+    {
+     "who": "M",
+     "text": "Hmm. Then I'll just take the refund."
+    }
+   ],
+   "questions": [
+    {
+     "q": "Why is the man returning the sweater?",
+     "options": [
+      "It has a hole in it.",
+      "He does not like the color.",
+      "He found a cheaper one.",
+      "It does not fit him."
+     ],
+     "answer": 3,
+     "why": "„It's too small.“",
+     "skill": "detail"
+    },
+    {
+     "q": "What does the man decide to do?",
+     "options": [
+      "Get his money back",
+      "Take the gray sweater",
+      "Come back another day",
+      "Order a blue one online"
+     ],
+     "answer": 0,
+     "why": "Blau gibt es nicht in L, also nimmt er die Erstattung (refund).",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "cv17",
+   "level": 2,
+   "lines": [
+    {
+     "who": "W",
+     "text": "Professor Adams, could I change the topic of my research paper?"
+    },
+    {
+     "who": "M",
+     "text": "It's a bit late for that. The outline was due last week. What's the problem?"
+    },
+    {
+     "who": "W",
+     "text": "I can't find enough sources on urban beekeeping. Most of the articles are just blog posts."
+    },
+    {
+     "who": "M",
+     "text": "I see. Rather than starting over, why not widen the topic to urban agriculture in general? You could keep beekeeping as one example."
+    },
+    {
+     "who": "W",
+     "text": "That would work. Then I can still use what I've already written."
+    },
+    {
+     "who": "M",
+     "text": "Exactly. Send me a revised outline by Friday."
+    }
+   ],
+   "questions": [
+    {
+     "q": "Why does the woman want to change her topic?",
+     "options": [
+      "Her outline was returned with a low grade.",
+      "She cannot find enough reliable sources.",
+      "She has lost interest in beekeeping.",
+      "Another student is writing about the same topic."
+     ],
+     "answer": 1,
+     "why": "Zu wenige Quellen, meist nur Blogbeiträge.",
+     "skill": "detail"
+    },
+    {
+     "q": "What does the professor suggest?",
+     "options": [
+      "Starting again with a new topic",
+      "Asking for an extension until next month",
+      "Making the topic broader",
+      "Using blog posts as her main sources"
+     ],
+     "answer": 2,
+     "why": "„widen the topic to urban agriculture in general“.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "cv18",
+   "level": 2,
+   "lines": [
+    {
+     "who": "M",
+     "text": "Hi, I'd like to ask about switching rooms. My roommate stays up really late, and I have early classes."
+    },
+    {
+     "who": "W",
+     "text": "Have you talked to him about it?"
+    },
+    {
+     "who": "M",
+     "text": "A few times. He's quieter for a day or two, and then it starts again."
+    },
+    {
+     "who": "W",
+     "text": "Room changes are only possible after the fourth week of the semester, so you'd have to wait until next Monday. In the meantime, your resident advisor can set up a roommate agreement."
+    },
+    {
+     "who": "M",
+     "text": "Does that actually help?"
+    },
+    {
+     "who": "W",
+     "text": "More often than you'd think. Once the rules are in writing, most people stick to them."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What is the man's problem?",
+     "options": [
+      "He missed the deadline for changing rooms.",
+      "His room is too far from his classes.",
+      "His roommate wants to move out of the room.",
+      "His roommate keeps him awake at night."
+     ],
+     "answer": 3,
+     "why": "Der Mitbewohner bleibt lange auf, er hat früh Unterricht.",
+     "skill": "detail"
+    },
+    {
+     "q": "What does the woman imply about roommate agreements?",
+     "options": [
+      "They solve this kind of problem fairly often.",
+      "They are required before any room change.",
+      "They rarely work for more than a day or two.",
+      "They can only be written after the fourth week."
+     ],
+     "answer": 0,
+     "why": "„More often than you'd think … most people stick to them.“",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "cv19",
+   "level": 2,
+   "lines": [
+    {
+     "who": "W",
+     "text": "Have you decided what you're doing this summer?"
+    },
+    {
+     "who": "M",
+     "text": "I got the internship at the engineering firm, but it's unpaid."
+    },
+    {
+     "who": "W",
+     "text": "Unpaid? Can you afford that?"
+    },
+    {
+     "who": "M",
+     "text": "Not really. I'd have to keep my weekend job at the restaurant."
+    },
+    {
+     "who": "W",
+     "text": "That sounds exhausting. Did you ask whether the university offers funding for unpaid internships?"
+    },
+    {
+     "who": "M",
+     "text": "I didn't know that was a thing."
+    },
+    {
+     "who": "W",
+     "text": "The career center has grants. The deadline's at the end of the month, though."
+    },
+    {
+     "who": "M",
+     "text": "Then I'd better go there today."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What is the man's concern about the internship?",
+     "options": [
+      "It is too far away from campus.",
+      "He would not earn any money.",
+      "He does not feel qualified for it.",
+      "It conflicts with his summer classes."
+     ],
+     "answer": 1,
+     "why": "Das Praktikum ist unbezahlt.",
+     "skill": "detail"
+    },
+    {
+     "q": "What will the man probably do next?",
+     "options": [
+      "Turn down the internship at the firm",
+      "Look for a different internship that pays",
+      "Ask about a grant at the career center",
+      "Quit his weekend job at the restaurant"
+     ],
+     "answer": 2,
+     "why": "„Then I'd better go there today.“ – zum Career Center wegen der Förderung.",
+     "skill": "next"
+    }
+   ]
+  },
+  {
+   "id": "cv20",
+   "level": 2,
+   "lines": [
+    {
+     "who": "M",
+     "text": "IT help desk. How can I help?"
+    },
+    {
+     "who": "W",
+     "text": "Hi, my laptop suddenly won't connect to the campus Wi-Fi. It keeps asking for a password."
+    },
+    {
+     "who": "M",
+     "text": "Did you change your university password recently?"
+    },
+    {
+     "who": "W",
+     "text": "Yes, on Monday."
+    },
+    {
+     "who": "M",
+     "text": "That's it, then. Your laptop is still trying to use the old one. Remove the network from your saved list and sign in again."
+    },
+    {
+     "who": "W",
+     "text": "Okay. It's connecting now. Thank you!"
+    },
+    {
+     "who": "M",
+     "text": "You're welcome. By the way, you'll need to do the same on your phone."
+    }
+   ],
+   "questions": [
+    {
+     "q": "Why couldn't the woman connect to the Wi-Fi?",
+     "options": [
+      "She was too far from the nearest router.",
+      "The campus network was down on Monday.",
+      "Her university account had been closed.",
+      "Her laptop was using an old password."
+     ],
+     "answer": 3,
+     "why": "Der Laptop versuchte es noch mit dem alten Passwort.",
+     "skill": "detail"
+    },
+    {
+     "q": "What does the man say the woman will have to do?",
+     "options": [
+      "Sign in again on her phone as well",
+      "Change her password once more",
+      "Remove the network every Monday",
+      "Bring her laptop to the help desk"
+     ],
+     "answer": 0,
+     "why": "„you'll need to do the same on your phone“.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "cv21",
+   "level": 3,
+   "lines": [
+    {
+     "who": "W",
+     "text": "Thanks for seeing me. I'm worried about my survey. Only forty people responded, and I was counting on at least a hundred."
+    },
+    {
+     "who": "M",
+     "text": "Forty isn't ideal, but it isn't fatal either. What matters is how you frame the results."
+    },
+    {
+     "who": "W",
+     "text": "So I shouldn't generalize?"
+    },
+    {
+     "who": "M",
+     "text": "Right. Present it as a pilot study. Be upfront about the sample size, and suggest how a larger study could build on it."
+    },
+    {
+     "who": "W",
+     "text": "I was afraid you'd tell me to start over."
+    },
+    {
+     "who": "M",
+     "text": "With three weeks left? That would be far riskier than a small sample honestly described."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What is the woman worried about?",
+     "options": [
+      "She has only three weeks to design a survey.",
+      "Fewer people answered her survey than she expected.",
+      "Her survey questions turned out to be unclear.",
+      "Her results contradict those of a larger, earlier study."
+     ],
+     "answer": 1,
+     "why": "Nur 40 statt der erhofften 100 Antworten.",
+     "skill": "detail"
+    },
+    {
+     "q": "What is the professor's attitude toward the small sample?",
+     "options": [
+      "It is a good reason to repeat the whole survey.",
+      "It makes the results of the study worthless.",
+      "It is acceptable as long as she is open about it.",
+      "It will not be noticed if she generalizes carefully."
+     ],
+     "answer": 2,
+     "why": "„isn't fatal“ – als Pilotstudie darstellen und die Stichprobengröße offen nennen.",
+     "skill": "attitude"
+    }
+   ]
+  },
+  {
+   "id": "cv22",
+   "level": 3,
+   "lines": [
+    {
+     "who": "M",
+     "text": "Has Derek sent you his section of the report yet?"
+    },
+    {
+     "who": "W",
+     "text": "Not a word. And the draft is due the day after tomorrow."
+    },
+    {
+     "who": "M",
+     "text": "This is the second time. Should we just write his part ourselves?"
+    },
+    {
+     "who": "W",
+     "text": "I'd rather not. If we cover for him again, nothing changes. Let's give him until tonight, and if we still hear nothing, we tell Professor Lin exactly who did what."
+    },
+    {
+     "who": "M",
+     "text": "That feels a little harsh."
+    },
+    {
+     "who": "W",
+     "text": "Maybe, but our grade shouldn't suffer because he can't be bothered."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What are the speakers mainly discussing?",
+     "options": [
+      "Why their last report received a low grade",
+      "How to divide the remaining sections of a report fairly",
+      "Whether to ask their professor for more time",
+      "How to deal with a teammate who is not contributing"
+     ],
+     "answer": 3,
+     "why": "Es geht um Derek, der seinen Teil wieder nicht liefert.",
+     "skill": "main"
+    },
+    {
+     "q": "What does the woman imply about writing Derek's part?",
+     "options": [
+      "It would only encourage him to do the same again.",
+      "It would take longer than waiting for him.",
+      "It would probably lower the quality of the report.",
+      "It would be against the professor's rules."
+     ],
+     "answer": 0,
+     "why": "„If we cover for him again, nothing changes.“",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "cv23",
+   "level": 3,
+   "lines": [
+    {
+     "who": "W",
+     "text": "Excuse me, I'm looking for the biology textbook for Professor Grant's course, but the shelf is empty."
+    },
+    {
+     "who": "M",
+     "text": "The tenth edition? We sold out on Monday. The next shipment won't arrive for ten days."
+    },
+    {
+     "who": "W",
+     "text": "Ten days? We have a quiz on chapter two next week."
+    },
+    {
+     "who": "M",
+     "text": "You could get the e-book today. It's cheaper, too. Or, between you and me, the ninth edition is almost identical for the first few chapters, and the library has copies."
+    },
+    {
+     "who": "W",
+     "text": "I'd rather not pay twice. I'll try the library and order the print copy here."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What is the woman's problem?",
+     "options": [
+      "The e-book costs more than she expected.",
+      "The book she needs is out of stock.",
+      "She bought the wrong edition of a book.",
+      "She missed a quiz on the second chapter."
+     ],
+     "answer": 1,
+     "why": "Das Regal ist leer, die 10. Auflage ist ausverkauft.",
+     "skill": "detail"
+    },
+    {
+     "q": "What will the woman probably do to prepare for the quiz?",
+     "options": [
+      "Buy the e-book and the print copy together",
+      "Ask Professor Grant to postpone the quiz",
+      "Borrow an older edition from the library",
+      "Wait ten days for the new shipment to arrive"
+     ],
+     "answer": 2,
+     "why": "Sie will es in der Bibliothek versuchen (9. Auflage) und das gedruckte Buch bestellen.",
+     "skill": "next"
+    }
+   ]
+  },
+  {
+   "id": "cv24",
+   "level": 3,
+   "lines": [
+    {
+     "who": "M",
+     "text": "I heard you turned down the teaching assistant position. I'm surprised. You'd be perfect for it."
+    },
+    {
+     "who": "W",
+     "text": "I was tempted. But it's fifteen hours a week, and I'm already behind on my thesis."
+    },
+    {
+     "who": "M",
+     "text": "Fair enough. Though a position like that looks good when you apply for doctoral programs."
+    },
+    {
+     "who": "W",
+     "text": "So does finishing on time. Besides, Professor Ortiz said there may be an opening in the spring, when my schedule is lighter."
+    },
+    {
+     "who": "M",
+     "text": "Then you haven't really given up on it."
+    },
+    {
+     "who": "W",
+     "text": "Let's say I've postponed it."
+    }
+   ],
+   "questions": [
+    {
+     "q": "Why did the woman turn down the position?",
+     "options": [
+      "She plans to leave the university in the spring.",
+      "She was not interested in teaching.",
+      "The position was offered to someone else.",
+      "She needs the time for her thesis."
+     ],
+     "answer": 3,
+     "why": "15 Stunden pro Woche, und sie ist mit der Abschlussarbeit im Rückstand.",
+     "skill": "detail"
+    },
+    {
+     "q": "What does the woman mean when she says, \"Let's say I've postponed it\"?",
+     "options": [
+      "She may accept a similar position later.",
+      "She regrets having turned the position down.",
+      "She has asked for a later starting date.",
+      "She no longer wants to apply for doctoral programs."
+     ],
+     "answer": 0,
+     "why": "postponed = verschoben: im Frühjahr gibt es vielleicht wieder eine Stelle.",
+     "skill": "infer"
     }
    ]
   }
@@ -1243,7 +2667,8 @@
       "A new dining hall opening"
      ],
      "answer": 1,
-     "why": "Die Cafeteria schließt heute früher."
+     "why": "Die Cafeteria schließt heute früher.",
+     "skill": "main"
     },
     {
      "q": "Where can students eat dinner today?",
@@ -1254,7 +2679,8 @@
       "In the Student Center"
      ],
      "answer": 2,
-     "why": "„Dinner will be served as usual in the North Dining Hall.“"
+     "why": "„Dinner will be served as usual in the North Dining Hall.“",
+     "skill": "detail"
     }
    ]
   },
@@ -1273,7 +2699,8 @@
       "The departure time"
      ],
      "answer": 3,
-     "why": "9:30 statt 9:00."
+     "why": "9:30 statt 9:00.",
+     "skill": "detail"
     },
     {
      "q": "What should students bring?",
@@ -1284,7 +2711,8 @@
       "A museum ticket"
      ],
      "answer": 0,
-     "why": "„Please bring your student ID for free entry.“"
+     "why": "„Please bring your student ID for free entry.“",
+     "skill": "detail"
     }
    ]
   },
@@ -1303,7 +2731,8 @@
       "The building will be evacuated."
      ],
      "answer": 1,
-     "why": "Test der Brandmeldeanlage zwischen 10 und 12 Uhr."
+     "why": "Test der Brandmeldeanlage zwischen 10 und 12 Uhr.",
+     "skill": "detail"
     },
     {
      "q": "What should residents do if they hear the alarm in the afternoon?",
@@ -1314,7 +2743,8 @@
       "Ignore it because it is a test"
      ],
      "answer": 2,
-     "why": "Außerhalb des Testfensters ist es ein echter Notfall."
+     "why": "Außerhalb des Testfensters ist es ein echter Notfall.",
+     "skill": "detail"
     }
    ]
   },
@@ -1333,7 +2763,8 @@
       "A new exhibition is being set up."
      ],
      "answer": 3,
-     "why": "„while we install our new photography exhibition“."
+     "why": "„while we install our new photography exhibition“.",
+     "skill": "detail"
     },
     {
      "q": "What is true about taking photos?",
@@ -1344,7 +2775,8 @@
       "It is allowed only on guided tours."
      ],
      "answer": 0,
-     "why": "„Photography without flash is permitted“."
+     "why": "„Photography without flash is permitted“.",
+     "skill": "detail"
     }
    ]
   },
@@ -1363,7 +2795,8 @@
       "Room 210 is being renovated."
      ],
      "answer": 1,
-     "why": "„because of high interest“."
+     "why": "„because of high interest“.",
+     "skill": "detail"
     },
     {
      "q": "How can students earn extra credit?",
@@ -1374,7 +2807,8 @@
       "By arriving early"
      ],
      "answer": 2,
-     "why": "„submitting a one-page summary by Friday“."
+     "why": "„submitting a one-page summary by Friday“.",
+     "skill": "detail"
     }
    ]
   },
@@ -1393,7 +2827,8 @@
       "A technical problem affected the online system."
      ],
      "answer": 3,
-     "why": "„Due to an unexpected technical issue“."
+     "why": "„Due to an unexpected technical issue“.",
+     "skill": "detail"
     },
     {
      "q": "What are some students advised to do?",
@@ -1404,7 +2839,8 @@
       "Join a course waitlist"
      ],
      "answer": 0,
-     "why": "„advised to verify their schedules, as some selections may not have been saved“."
+     "why": "„advised to verify their schedules, as some selections may not have been saved“.",
+     "skill": "detail"
     }
    ]
   },
@@ -1423,7 +2859,8 @@
       "To announce new train routes"
      ],
      "answer": 1,
-     "why": "Züge fahren nur alle 20 statt alle 8 Minuten."
+     "why": "Züge fahren nur alle 20 statt alle 8 Minuten.",
+     "skill": "main"
     },
     {
      "q": "What is indicated about the shuttle bus?",
@@ -1434,7 +2871,8 @@
       "It runs every eight minutes."
      ],
      "answer": 2,
-     "why": "„Weekly passes will be honored … at no additional charge.“"
+     "why": "„Weekly passes will be honored … at no additional charge.“",
+     "skill": "detail"
     }
    ]
   },
@@ -1453,7 +2891,8 @@
       "Clothing"
      ],
      "answer": 3,
-     "why": "T-Shirts und Sweatshirts; Lehrbücher nicht."
+     "why": "T-Shirts und Sweatshirts; Lehrbücher nicht.",
+     "skill": "detail"
     },
     {
      "q": "When is the sale?",
@@ -1464,7 +2903,8 @@
       "Only on Friday"
      ],
      "answer": 0,
-     "why": "„this Friday and Saturday“."
+     "why": "„this Friday and Saturday“.",
+     "skill": "detail"
     }
    ]
   },
@@ -1483,7 +2923,8 @@
       "For a class"
      ],
      "answer": 1,
-     "why": "„closed tomorrow morning for software updates“."
+     "why": "„closed tomorrow morning for software updates“.",
+     "skill": "detail"
     },
     {
      "q": "Where can students use computers in the morning?",
@@ -1494,7 +2935,8 @@
       "In the lab"
      ],
      "answer": 2,
-     "why": "„the computers on the first floor of the library“."
+     "why": "„the computers on the first floor of the library“.",
+     "skill": "detail"
     }
    ]
   },
@@ -1513,7 +2955,8 @@
       "A list of courses they are interested in"
      ],
      "answer": 3,
-     "why": "„bring a list of the courses you are interested in“."
+     "why": "„bring a list of the courses you are interested in“.",
+     "skill": "detail"
     },
     {
      "q": "What will happen if a student misses the session?",
@@ -1524,7 +2967,8 @@
       "The student can register online immediately."
      ],
      "answer": 0,
-     "why": "Erst in der zweiten Anmeldephase."
+     "why": "Erst in der zweiten Anmeldephase.",
+     "skill": "detail"
     }
    ]
   },
@@ -1543,7 +2987,8 @@
       "The hall has a strict copyright policy."
      ],
      "answer": 1,
-     "why": "„at the request of the performers“."
+     "why": "„at the request of the performers“.",
+     "skill": "detail"
     },
     {
      "q": "What can be inferred about someone who arrives thirty minutes late?",
@@ -1554,7 +2999,8 @@
       "They can take their seat immediately."
      ],
      "answer": 2,
-     "why": "Zuspätkommende werden nur in der Pause eingelassen."
+     "why": "Zuspätkommende werden nur in der Pause eingelassen.",
+     "skill": "infer"
     }
    ]
   },
@@ -1573,7 +3019,8 @@
       "To introduce a trial of longer opening hours"
      ],
      "answer": 3,
-     "why": "„piloting extended hours“ = Testphase."
+     "why": "„piloting extended hours“ = Testphase.",
+     "skill": "main"
     },
     {
      "q": "What is true about purchases after 10 p.m.?",
@@ -1584,7 +3031,392 @@
       "Food is free."
      ],
      "answer": 0,
-     "why": "Meal swipes nur bis 22 Uhr."
+     "why": "Meal swipes nur bis 22 Uhr.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "an13",
+   "level": 1,
+   "voice": "W",
+   "text": "Attention, library users. The library will close in fifteen minutes. If you would like to borrow books, please bring them to the front desk now. The self-checkout machines will turn off in ten minutes. Please remember to take all your personal things with you. The library opens again tomorrow at eight a.m. Thank you.",
+   "questions": [
+    {
+     "q": "What should people who want to borrow books do?",
+     "options": [
+      "Leave the books on the tables",
+      "Go to the front desk now",
+      "Come back in fifteen minutes",
+      "Use the machines after closing time"
+     ],
+     "answer": 1,
+     "why": "„please bring them to the front desk now“.",
+     "skill": "detail"
+    },
+    {
+     "q": "When will the library open again?",
+     "options": [
+      "In fifteen minutes",
+      "Tomorrow at ten in the morning",
+      "Tomorrow at eight in the morning",
+      "Later this evening"
+     ],
+     "answer": 2,
+     "why": "„opens again tomorrow at eight a.m.“",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "an14",
+   "level": 1,
+   "voice": "M",
+   "text": "Good morning, everyone. This is your bus driver. Because of road work on Park Avenue, we will not stop at the City Museum today. If you want to visit the museum, please get off at the next stop, Green Street. From there, it is a five-minute walk. Sorry for the trouble, and have a nice day.",
+   "questions": [
+    {
+     "q": "Why will the bus not stop at the City Museum?",
+     "options": [
+      "The bus is running late.",
+      "The museum is closed today.",
+      "The stop has been moved for good.",
+      "There is road work."
+     ],
+     "answer": 3,
+     "why": "„Because of road work on Park Avenue“.",
+     "skill": "detail"
+    },
+    {
+     "q": "What should people who want to visit the museum do?",
+     "options": [
+      "Get off at Green Street and walk",
+      "Stay on the bus until Park Avenue",
+      "Wait for the next bus to the museum",
+      "Ask the driver for a new ticket"
+     ],
+     "answer": 0,
+     "why": "Nächste Haltestelle Green Street, von dort fünf Minuten zu Fuß.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "an15",
+   "level": 1,
+   "voice": "W",
+   "text": "Hello, students. The student club fair is this Friday from eleven to three in the main hall. More than forty clubs will be there, including the hiking club, the chess club, and the film club. You can talk to members and sign up at each table. There will also be free snacks and drinks. We hope to see you there!",
+   "questions": [
+    {
+     "q": "What is the announcement mainly about?",
+     "options": [
+      "A hiking trip planned for this Friday",
+      "An event where students can join clubs",
+      "A meeting for the leaders of student clubs",
+      "A new film that will be shown in the main hall"
+     ],
+     "answer": 1,
+     "why": "Club Fair: Clubs stellen sich vor, man kann sich eintragen.",
+     "skill": "main"
+    },
+    {
+     "q": "What can students get at the fair?",
+     "options": [
+      "A chess set",
+      "Free tickets for a film",
+      "Free food and drinks",
+      "A map of hiking trails"
+     ],
+     "answer": 2,
+     "why": "„free snacks and drinks“.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "an16",
+   "level": 1,
+   "voice": "M",
+   "text": "Attention, shoppers. The store will be closing in thirty minutes. Today only, all fresh bread and cakes are half price. You can find them at the bakery counter near the entrance. Please bring your items to the checkout before nine o'clock. Thank you for shopping with us.",
+   "questions": [
+    {
+     "q": "What is on sale today?",
+     "options": [
+      "Everything in the store",
+      "Coffee at the bakery counter",
+      "Fresh fruit and vegetables",
+      "Bread and cakes"
+     ],
+     "answer": 3,
+     "why": "„all fresh bread and cakes are half price“.",
+     "skill": "detail"
+    },
+    {
+     "q": "When does the store close?",
+     "options": [
+      "At nine o'clock",
+      "At eight o'clock",
+      "At half past nine",
+      "In one hour"
+     ],
+     "answer": 0,
+     "why": "In 30 Minuten; bis neun Uhr zur Kasse.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "an17",
+   "level": 2,
+   "voice": "W",
+   "text": "Good afternoon. This is a reminder from the Health Center. Free stress-management workshops will be held every Wednesday in November at four p.m. in Room 210. Each session covers a different topic, such as sleep, time management, and exam anxiety, so you can attend one or all of them. Space is limited to twenty people per session. To reserve a spot, sign up on the Health Center website by noon on the day of the workshop.",
+   "questions": [
+    {
+     "q": "What is true about the workshops?",
+     "options": [
+      "Students must attend all of them.",
+      "Each one deals with a different topic.",
+      "They are held on the Health Center website.",
+      "They take place every day in November."
+     ],
+     "answer": 1,
+     "why": "„Each session covers a different topic“.",
+     "skill": "detail"
+    },
+    {
+     "q": "What must students do in order to attend a session?",
+     "options": [
+      "Arrive twenty minutes early",
+      "Pay a small fee in Room 210",
+      "Register online before noon that day",
+      "Call the Health Center a week before"
+     ],
+     "answer": 2,
+     "why": "Anmeldung auf der Website bis mittags am Workshop-Tag.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "an18",
+   "level": 2,
+   "voice": "M",
+   "text": "Attention, residents of West Hall. Starting Monday, the main entrance will be closed for three weeks while the front steps are rebuilt. During this time, please use the side door facing the parking lot. Your room key will open it. Package deliveries will be moved to the East Hall front desk, so bring your student ID when you pick up mail. We apologize for the inconvenience.",
+   "questions": [
+    {
+     "q": "Why will the main entrance be closed?",
+     "options": [
+      "The door lock is being replaced.",
+      "The front desk is moving to East Hall.",
+      "The parking lot is being repaved.",
+      "The front steps are being rebuilt."
+     ],
+     "answer": 3,
+     "why": "„while the front steps are rebuilt“.",
+     "skill": "detail"
+    },
+    {
+     "q": "Where should residents pick up their packages?",
+     "options": [
+      "At the front desk of East Hall",
+      "At the main entrance after three weeks",
+      "At the office next to the parking lot",
+      "At the side door of West Hall"
+     ],
+     "answer": 0,
+     "why": "Pakete gehen an die Rezeption von East Hall.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "an19",
+   "level": 2,
+   "voice": "W",
+   "text": "Hello, everyone, and welcome aboard the two fifteen ferry to Harbor Island. Our crossing will take about forty minutes. The café on the lower deck is open and accepts cards only. Because of strong winds, the outside upper deck is closed today. For your safety, please stay inside while the boat is moving. We'll let you know when we're about to arrive.",
+   "questions": [
+    {
+     "q": "Why is the upper deck closed?",
+     "options": [
+      "The crossing is too short.",
+      "It is very windy.",
+      "It is being cleaned.",
+      "The café has moved there."
+     ],
+     "answer": 1,
+     "why": "„Because of strong winds“.",
+     "skill": "detail"
+    },
+    {
+     "q": "What is indicated about the café?",
+     "options": [
+      "It is closed because of the weather.",
+      "It will open after forty minutes.",
+      "Customers cannot pay with cash.",
+      "It is located on the upper deck."
+     ],
+     "answer": 2,
+     "why": "„accepts cards only“.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "an20",
+   "level": 2,
+   "voice": "M",
+   "text": "This is an announcement for students in Biology 101. Tomorrow's lab will not take place in the usual room because of a broken ventilation system. Instead, sections A and B will meet in Room 305 of the Chemistry Building. Section C is canceled and will be made up next Tuesday. Don't forget your lab coat and safety glasses. No one will be allowed in without them.",
+   "questions": [
+    {
+     "q": "Why is the lab being moved?",
+     "options": [
+      "The Chemistry Building has larger and newer rooms.",
+      "The usual room is needed for an exam.",
+      "Too many students signed up for section C.",
+      "Equipment in the usual room is not working."
+     ],
+     "answer": 3,
+     "why": "Die Lüftung im üblichen Raum ist defekt.",
+     "skill": "detail"
+    },
+    {
+     "q": "What can be inferred about a student who forgets safety glasses?",
+     "options": [
+      "The student will not be able to take part.",
+      "The student must join section C on Tuesday.",
+      "The student will lose points on the lab report.",
+      "The student can borrow a pair in Room 305."
+     ],
+     "answer": 0,
+     "why": "„No one will be allowed in without them.“",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "an21",
+   "level": 3,
+   "voice": "W",
+   "text": "Good evening. This is a message from the Office of the Registrar. Owing to an unexpectedly high number of requests, the processing time for official transcripts has increased from three to approximately ten business days. Students with imminent application deadlines are urged to submit their requests immediately and to select the electronic delivery option, which is not affected by the delay. Requests marked urgent will not be prioritized unless accompanied by proof of the deadline.",
+   "questions": [
+    {
+     "q": "What is the main purpose of the announcement?",
+     "options": [
+      "To introduce a new way of ordering transcripts",
+      "To warn students that transcripts are taking longer",
+      "To remind students of an application deadline",
+      "To explain why paper transcripts are being discontinued"
+     ],
+     "answer": 1,
+     "why": "Die Bearbeitungszeit ist von drei auf etwa zehn Werktage gestiegen.",
+     "skill": "main"
+    },
+    {
+     "q": "What can be inferred about a request marked urgent that includes no proof of a deadline?",
+     "options": [
+      "It will be rejected and sent back to the student.",
+      "It will be delivered electronically instead.",
+      "It will be handled like any other request.",
+      "It will be processed within three business days."
+     ],
+     "answer": 2,
+     "why": "Ohne Nachweis keine Bevorzugung.",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "an22",
+   "level": 3,
+   "voice": "M",
+   "text": "Attention, conference participants. Due to a scheduling conflict, this afternoon's keynote address has been brought forward by one hour and will now begin at two o'clock in the Grand Ballroom. As a result, the two o'clock panel on renewable energy has been postponed until tomorrow morning at nine. Those who registered for the panel need not sign up again; your registration remains valid. Updated programs are available at the information desk.",
+   "questions": [
+    {
+     "q": "What has changed about the keynote address?",
+     "options": [
+      "It has been moved to another room.",
+      "It has been postponed until tomorrow.",
+      "It will be an hour shorter than planned.",
+      "It will start earlier than planned."
+     ],
+     "answer": 3,
+     "why": "brought forward by one hour = eine Stunde vorverlegt.",
+     "skill": "detail"
+    },
+    {
+     "q": "What should people who registered for the panel do?",
+     "options": [
+      "Nothing, because their registration still counts",
+      "Go to the Grand Ballroom at two o'clock",
+      "Sign up again at the information desk",
+      "Request a refund for the canceled session"
+     ],
+     "answer": 0,
+     "why": "„need not sign up again; your registration remains valid“.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "an23",
+   "level": 3,
+   "voice": "W",
+   "text": "May I have your attention, please. The university's emergency notification system will be tested this Thursday at noon. You will receive a text message and an email, and the outdoor sirens will sound for roughly one minute. No action is required on your part. However, if you fail to receive either message, your contact details are probably out of date, in which case you should update them through the student portal by the end of the week.",
+   "questions": [
+    {
+     "q": "What is the main purpose of the announcement?",
+     "options": [
+      "To warn students about an emergency on campus",
+      "To inform students about a planned test",
+      "To explain how to switch off text notifications",
+      "To ask students to leave the buildings at noon"
+     ],
+     "answer": 1,
+     "why": "Das Warnsystem wird am Donnerstag getestet; niemand muss etwas tun.",
+     "skill": "main"
+    },
+    {
+     "q": "What should students do if they do not receive the messages?",
+     "options": [
+      "Send an email to the university",
+      "Report the problem to campus security",
+      "Correct their contact information online",
+      "Wait for the sirens to sound again"
+     ],
+     "answer": 2,
+     "why": "Kontaktdaten sind dann wohl veraltet → im Portal aktualisieren.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "an24",
+   "level": 3,
+   "voice": "M",
+   "text": "Good morning. Before we begin today's tour of the observatory, a few words of caution. The telescope dome is kept unheated so that the instruments remain at the outside temperature, which means it may feel considerably colder than you expect. Flash photography is prohibited throughout the building, since sudden light can interfere with ongoing measurements. Finally, the staircase to the viewing platform is steep, so anyone who would prefer the elevator should let me know now.",
+   "questions": [
+    {
+     "q": "Why is the telescope dome not heated?",
+     "options": [
+      "To prevent visitors from staying too long",
+      "To reduce the observatory's energy costs",
+      "To protect the building from sudden changes in light",
+      "To keep the instruments at the outdoor temperature"
+     ],
+     "answer": 3,
+     "why": "„so that the instruments remain at the outside temperature“.",
+     "skill": "detail"
+    },
+    {
+     "q": "Why does the speaker mention the staircase?",
+     "options": [
+      "To offer visitors another way up",
+      "To warn that the platform is closed today",
+      "To ask visitors to walk in a single line",
+      "To explain why the tour will take longer"
+     ],
+     "answer": 0,
+     "why": "Die Treppe ist steil; wer möchte, kann den Aufzug nehmen.",
+     "skill": "purpose"
     }
    ]
   }
@@ -1606,7 +3438,8 @@
       "Why leaves change color in the fall"
      ],
      "answer": 3,
-     "why": "Das Thema wird im ersten Satz genannt."
+     "why": "Das Thema wird im ersten Satz genannt.",
+     "skill": "main"
     },
     {
      "q": "Why are yellow and orange colors hard to see in summer?",
@@ -1617,7 +3450,8 @@
       "They only form in winter."
      ],
      "answer": 0,
-     "why": "„we can't see them in summer because there is so much green“."
+     "why": "„we can't see them in summer because there is so much green“.",
+     "skill": "detail"
     },
     {
      "q": "What happens to chlorophyll in the fall?",
@@ -1628,7 +3462,8 @@
       "It turns red."
      ],
      "answer": 1,
-     "why": "„Trees stop making chlorophyll“."
+     "why": "„Trees stop making chlorophyll“.",
+     "skill": "detail"
     },
     {
      "q": "According to the speaker, why might maple leaves turn red?",
@@ -1639,7 +3474,8 @@
       "To keep the tree warm"
      ],
      "answer": 2,
-     "why": "Rot schützt vermutlich vor zu viel Sonne, während Nährstoffe zurückgeholt werden."
+     "why": "Rot schützt vermutlich vor zu viel Sonne, während Nährstoffe zurückgeholt werden.",
+     "skill": "detail"
     }
    ]
   },
@@ -1659,7 +3495,8 @@
       "It had no pedals."
      ],
      "answer": 3,
-     "why": "„It was made of wood and had no pedals.“"
+     "why": "„It was made of wood and had no pedals.“",
+     "skill": "detail"
     },
     {
      "q": "Why were some early bicycles called boneshakers?",
@@ -1670,7 +3507,8 @@
       "They were often stolen from their riders."
      ],
      "answer": 0,
-     "why": "Holprige Straßen und Eisenräder."
+     "why": "Holprige Straßen und Eisenräder.",
+     "skill": "detail"
     },
     {
      "q": "What was the problem with bicycles that had a huge front wheel?",
@@ -1681,7 +3519,8 @@
       "They were too slow."
      ],
      "answer": 1,
-     "why": "„riders often fell“."
+     "why": "„riders often fell“.",
+     "skill": "detail"
     },
     {
      "q": "What does the speaker say about the safety bicycle?",
@@ -1692,7 +3531,8 @@
       "It was invented in 1817."
      ],
      "answer": 2,
-     "why": "„very similar to the bikes we ride today“."
+     "why": "„very similar to the bikes we ride today“.",
+     "skill": "detail"
     }
    ]
   },
@@ -1712,7 +3552,8 @@
       "Paths created by shortcuts and how planners respond to them"
      ],
      "answer": 3,
-     "why": "Trampelpfade und der Umgang der Planer damit."
+     "why": "Trampelpfade und der Umgang der Planer damit.",
+     "skill": "main"
     },
     {
      "q": "How did many planners traditionally respond to desire paths?",
@@ -1723,7 +3564,8 @@
       "They paved them immediately."
      ],
      "answer": 0,
-     "why": "Zäune und Schilder – „a nuisance“."
+     "why": "Zäune und Schilder – „a nuisance“.",
+     "skill": "detail"
     },
     {
      "q": "Why does the speaker mention universities?",
@@ -1734,7 +3576,8 @@
       "To criticize students for damaging lawns"
      ],
      "answer": 1,
-     "why": "Beispiel: erst Gras säen, dann die Trampelpfade pflastern."
+     "why": "Beispiel: erst Gras säen, dann die Trampelpfade pflastern.",
+     "skill": "purpose"
     },
     {
      "q": "What can be inferred about the walkways at those universities?",
@@ -1745,7 +3588,8 @@
       "They were designed before the campus was built."
      ],
      "answer": 2,
-     "why": "Sie folgen den Wegen, die Studierende tatsächlich gehen."
+     "why": "Sie folgen den Wegen, die Studierende tatsächlich gehen.",
+     "skill": "infer"
     }
    ]
   },
@@ -1765,7 +3609,8 @@
       "To explain a concept and how the problem can be addressed"
      ],
      "answer": 3,
-     "why": "Begriff erklären + Lösungen (Regeln, Ostrom)."
+     "why": "Begriff erklären + Lösungen (Regeln, Ostrom).",
+     "skill": "main"
     },
     {
      "q": "Why does each farmer keep adding cows?",
@@ -1776,7 +3621,8 @@
       "The pasture keeps growing."
      ],
      "answer": 0,
-     "why": "Nutzen privat, Kosten geteilt."
+     "why": "Nutzen privat, Kosten geteilt.",
+     "skill": "detail"
     },
     {
      "q": "Why does the speaker mention traffic on public roads?",
@@ -1787,7 +3633,8 @@
       "To describe Ostrom's research"
      ],
      "answer": 1,
-     "why": "Aufzählung moderner Beispiele."
+     "why": "Aufzählung moderner Beispiele.",
+     "skill": "purpose"
     },
     {
      "q": "What did Elinor Ostrom find?",
@@ -1798,7 +3645,8 @@
       "Private ownership is the only solution that really works."
      ],
      "answer": 2,
-     "why": "Lokale Regeln und gegenseitige Kontrolle funktionieren."
+     "why": "Lokale Regeln und gegenseitige Kontrolle funktionieren.",
+     "skill": "detail"
     }
    ]
   },
@@ -1818,7 +3666,8 @@
       "The different ways birds navigate during migration"
      ],
      "answer": 3,
-     "why": "Mehrere Orientierungshilfen der Zugvögel."
+     "why": "Mehrere Orientierungshilfen der Zugvögel.",
+     "skill": "main"
     },
     {
      "q": "What did the planetarium experiment show?",
@@ -1829,7 +3678,8 @@
       "The birds ignored the projected sky completely."
      ],
      "answer": 0,
-     "why": "Gedrehter Himmel → andere Flugrichtung."
+     "why": "Gedrehter Himmel → andere Flugrichtung.",
+     "skill": "detail"
     },
     {
      "q": "According to the speaker, what may help birds sense the magnetic field?",
@@ -1840,7 +3690,8 @@
       "Their feathers"
      ],
      "answer": 1,
-     "why": "„special proteins in birds' eyes“."
+     "why": "„special proteins in birds' eyes“.",
+     "skill": "detail"
     },
     {
      "q": "What do birds do on cloudy nights?",
@@ -1851,7 +3702,8 @@
       "They use the sun instead."
      ],
      "answer": 2,
-     "why": "Sterne verdeckt → Magnetfeld."
+     "why": "Sterne verdeckt → Magnetfeld.",
+     "skill": "detail"
     }
    ]
   },
@@ -1871,7 +3723,8 @@
       "The tendency for initial information to influence judgments"
      ],
      "answer": 3,
-     "why": "Anker-Effekt: erste Information prägt das Urteil."
+     "why": "Anker-Effekt: erste Information prägt das Urteil.",
+     "skill": "main"
     },
     {
      "q": "Why does the speaker mention the wheel experiment?",
@@ -1882,7 +3735,8 @@
       "To show that people are good at estimating"
      ],
      "answer": 0,
-     "why": "Zufallszahl verzerrte die Schätzungen."
+     "why": "Zufallszahl verzerrte die Schätzungen.",
+     "skill": "purpose"
     },
     {
      "q": "What advice does the speaker mention for salary negotiations?",
@@ -1893,7 +3747,8 @@
       "Always wait for the employer's offer"
      ],
      "answer": 1,
-     "why": "„making the first offer yourself, provided you've done your research“."
+     "why": "„making the first offer yourself, provided you've done your research“.",
+     "skill": "detail"
     },
     {
      "q": "What does the speaker imply about the real estate agents?",
@@ -1904,7 +3759,8 @@
       "Their experience protected them from the bias."
      ],
      "answer": 2,
-     "why": "Beeinflusst, obwohl sie es bestritten."
+     "why": "Beeinflusst, obwohl sie es bestritten.",
+     "skill": "infer"
     }
    ]
   },
@@ -1924,7 +3780,8 @@
       "Using tree rings to date events and reconstruct the past"
      ],
      "answer": 3,
-     "why": "Dendrochronologie und ihre Anwendungen."
+     "why": "Dendrochronologie und ihre Anwendungen.",
+     "skill": "main"
     },
     {
      "q": "Why does the speaker compare ring patterns to a barcode?",
@@ -1935,7 +3792,8 @@
       "To show that all trees have the same number of rings"
      ],
      "answer": 0,
-     "why": "Unverwechselbares Muster, das man abgleichen kann."
+     "why": "Unverwechselbares Muster, das man abgleichen kann.",
+     "skill": "purpose"
     },
     {
      "q": "How have scientists created records that go back more than 12,000 years?",
@@ -1946,7 +3804,8 @@
       "By studying modern weather records"
      ],
      "answer": 1,
-     "why": "„By chaining samples together“."
+     "why": "„By chaining samples together“.",
+     "skill": "detail"
     },
     {
      "q": "What does the speaker imply about radiocarbon dating?",
@@ -1957,7 +3816,8 @@
       "It can only be used on trees."
      ],
      "answer": 2,
-     "why": "Baumringe korrigierten Fehler von bis zu mehreren Jahrhunderten."
+     "why": "Baumringe korrigierten Fehler von bis zu mehreren Jahrhunderten.",
+     "skill": "infer"
     }
    ]
   },
@@ -1977,7 +3837,8 @@
       "The history of February"
      ],
      "answer": 1,
-     "why": "Thema im ersten Satz."
+     "why": "Thema im ersten Satz.",
+     "skill": "main"
     },
     {
      "q": "How long does the Earth take to travel around the sun?",
@@ -1988,7 +3849,8 @@
       "Exactly 365 days"
      ],
      "answer": 2,
-     "why": "„about three hundred sixty-five and a quarter days“."
+     "why": "„about three hundred sixty-five and a quarter days“.",
+     "skill": "detail"
     },
     {
      "q": "How often is an extra day added?",
@@ -1999,7 +3861,8 @@
       "Every four years"
      ],
      "answer": 3,
-     "why": "„every four years“."
+     "why": "„every four years“.",
+     "skill": "detail"
     },
     {
      "q": "What would happen without leap years?",
@@ -2010,7 +3873,8 @@
       "Days would slowly get longer and longer."
      ],
      "answer": 0,
-     "why": "Der Sommer würde irgendwann im heutigen Herbst beginnen."
+     "why": "Der Sommer würde irgendwann im heutigen Herbst beginnen.",
+     "skill": "detail"
     }
    ]
   },
@@ -2030,7 +3894,8 @@
       "Water"
      ],
      "answer": 1,
-     "why": "„a sweet liquid called nectar“."
+     "why": "„a sweet liquid called nectar“.",
+     "skill": "detail"
     },
     {
      "q": "Why do bees fan the nectar with their wings?",
@@ -2041,7 +3906,8 @@
       "To make it sweeter"
      ],
      "answer": 2,
-     "why": "„to dry it“."
+     "why": "„to dry it“.",
+     "skill": "detail"
     },
     {
      "q": "What do the bees do last?",
@@ -2052,7 +3918,8 @@
       "Cover the cells with wax"
      ],
      "answer": 3,
-     "why": "„Finally, the bees cover each cell with wax“."
+     "why": "„Finally, the bees cover each cell with wax“.",
+     "skill": "detail"
     },
     {
      "q": "What does the speaker say about a single bee?",
@@ -2063,7 +3930,8 @@
       "It makes about a teaspoon of honey every single day."
      ],
      "answer": 0,
-     "why": "Nur etwa 1/12 Teelöffel im ganzen Leben."
+     "why": "Nur etwa 1/12 Teelöffel im ganzen Leben.",
+     "skill": "detail"
     }
    ]
   },
@@ -2083,7 +3951,8 @@
       "People panic in emergencies."
      ],
      "answer": 1,
-     "why": "Definition am Anfang."
+     "why": "Definition am Anfang.",
+     "skill": "detail"
     },
     {
      "q": "What did the experiments in the 1960s show?",
@@ -2094,7 +3963,8 @@
       "Groups helped faster than individuals."
      ],
      "answer": 2,
-     "why": "Allein → schnell geholfen; mit anderen → oft nichts."
+     "why": "Allein → schnell geholfen; mit anderen → oft nichts.",
+     "skill": "detail"
     },
     {
      "q": "According to the speaker, what does diffusion of responsibility mean?",
@@ -2105,7 +3975,8 @@
       "Each person feels less responsible when many people are present."
      ],
      "answer": 3,
-     "why": "Verantwortung verteilt sich."
+     "why": "Verantwortung verteilt sich.",
+     "skill": "vocab"
     },
     {
      "q": "What does the speaker recommend if you need help in a crowd?",
@@ -2116,7 +3987,8 @@
       "Call several people at once"
      ],
      "answer": 0,
-     "why": "„pointing to one specific person and asking them directly“."
+     "why": "„pointing to one specific person and asking them directly“.",
+     "skill": "detail"
     }
    ]
   },
@@ -2136,7 +4008,8 @@
       "How potatoes are grown"
      ],
      "answer": 1,
-     "why": "Begriff und Folgen des Columbian Exchange."
+     "why": "Begriff und Folgen des Columbian Exchange.",
+     "skill": "main"
     },
     {
      "q": "Why does the speaker mention the potato?",
@@ -2147,7 +4020,8 @@
       "To show that most Europeans rejected new foods from abroad"
      ],
      "answer": 2,
-     "why": "Mehr Kalorien pro Acre → Bevölkerungswachstum."
+     "why": "Mehr Kalorien pro Acre → Bevölkerungswachstum.",
+     "skill": "purpose"
     },
     {
      "q": "According to the speaker, how did horses affect some Plains peoples?",
@@ -2158,7 +4032,8 @@
       "They made a mobile, bison-hunting way of life possible."
      ],
      "answer": 3,
-     "why": "„enabled some Plains peoples to adopt a highly mobile, bison-hunting culture“."
+     "why": "„enabled some Plains peoples to adopt a highly mobile, bison-hunting culture“.",
+     "skill": "detail"
     },
     {
      "q": "What does the speaker imply about the spread of disease?",
@@ -2169,7 +4044,8 @@
       "It affected Europeans more than indigenous peoples."
      ],
      "answer": 0,
-     "why": "„often before the newcomers themselves had arrived“."
+     "why": "„often before the newcomers themselves had arrived“.",
+     "skill": "infer"
     }
    ]
   },
@@ -2189,7 +4065,8 @@
       "The profit gained from a decision"
      ],
      "answer": 1,
-     "why": "Definition im zweiten Satz."
+     "why": "Definition im zweiten Satz.",
+     "skill": "detail"
     },
     {
      "q": "Why does the speaker mention graduate school?",
@@ -2200,7 +4077,8 @@
       "To explain how salaries are calculated"
      ],
      "answer": 2,
-     "why": "Das entgangene Gehalt ist der größere, unsichtbare Kostenpunkt."
+     "why": "Das entgangene Gehalt ist der größere, unsichtbare Kostenpunkt.",
+     "skill": "purpose"
     },
     {
      "q": "According to the speaker, what happens when people ignore hidden costs?",
@@ -2211,7 +4089,8 @@
       "They may make poor decisions that seem reasonable."
      ],
      "answer": 3,
-     "why": "„decisions that look sensible on paper but aren't“."
+     "why": "„decisions that look sensible on paper but aren't“.",
+     "skill": "detail"
     },
     {
      "q": "What does the speaker imply about the professional who paints her own house?",
@@ -2222,7 +4101,692 @@
       "She should paint more often."
      ],
      "answer": 0,
-     "why": "Ökonomisch zahlt sie mehr, obwohl kein Geld fließt."
+     "why": "Ökonomisch zahlt sie mehr, obwohl kein Geld fließt.",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "tk13",
+   "level": 1,
+   "voice": "W",
+   "title": "Why the Sea Is Salty",
+   "text": "Have you ever wondered why the sea is salty while rivers are not? Today I'll explain. The story begins with rain. Rainwater is slightly acidic, so when it falls on rocks, it slowly breaks them down. This releases tiny amounts of minerals, including salt. Rivers then carry these minerals to the ocean. Now, river water does contain a little salt, but so little that we cannot taste it. So why is the ocean so much saltier? The answer is the sun. The sun heats the ocean, and water evaporates, which means it rises into the air. But the salt cannot evaporate. It stays behind. This has been happening for billions of years, so the salt has slowly built up. Today, about three and a half percent of sea water is salt. That is why drinking it makes you even thirstier.",
+   "questions": [
+    {
+     "q": "What is the talk mainly about?",
+     "options": [
+      "Why people should not drink river water",
+      "How the sun affects the weather at sea",
+      "Why ocean water contains so much salt",
+      "How rain turns into river water"
+     ],
+     "answer": 2,
+     "why": "Thema: Warum das Meer salzig ist und Flüsse nicht.",
+     "skill": "main"
+    },
+    {
+     "q": "Where does the salt in the ocean originally come from?",
+     "options": [
+      "From plants that grow in rivers",
+      "From the bottom of the deep sea",
+      "From the air above the ocean",
+      "From rocks that rain breaks down"
+     ],
+     "answer": 3,
+     "why": "Regen löst Mineralien aus Gestein, Flüsse tragen sie ins Meer.",
+     "skill": "detail"
+    },
+    {
+     "q": "Why can't we taste the salt in river water?",
+     "options": [
+      "There is too little of it.",
+      "It sinks to the bottom.",
+      "Rain washes it away.",
+      "It evaporates in the sun."
+     ],
+     "answer": 0,
+     "why": "„so little that we cannot taste it“.",
+     "skill": "detail"
+    },
+    {
+     "q": "What happens to the salt when sea water evaporates?",
+     "options": [
+      "It rises into the air.",
+      "It remains in the ocean.",
+      "It falls back as rain.",
+      "It is carried into rivers."
+     ],
+     "answer": 1,
+     "why": "„the salt cannot evaporate. It stays behind.“",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "tk14",
+   "level": 1,
+   "voice": "M",
+   "title": "The First Postage Stamp",
+   "text": "Today, sending a letter is simple. You buy a stamp, put it on the envelope, and drop it in a mailbox. But it wasn't always like this. In Britain before 1840, the person who received a letter had to pay for it, not the person who sent it. And the price depended on how far the letter had traveled. This caused problems. Postage was expensive, and many people simply refused to accept their letters, so the post office lost money. A teacher named Rowland Hill suggested a better idea. The sender should pay in advance, and the price should be the same for any distance within the country. To show that the sender had paid, a small piece of paper was stuck on the letter. This was the first postage stamp, called the Penny Black, because it cost one penny and was printed in black. The idea was so successful that other countries soon copied it.",
+   "questions": [
+    {
+     "q": "What is the talk mainly about?",
+     "options": [
+      "How letters were carried across Britain",
+      "Why people stopped writing letters by hand",
+      "How a new way of paying for mail began",
+      "Why sending letters is expensive today"
+     ],
+     "answer": 2,
+     "why": "Es geht um die Einführung der Briefmarke und der Vorauszahlung.",
+     "skill": "main"
+    },
+    {
+     "q": "Before 1840, who usually paid for a letter in Britain?",
+     "options": [
+      "The local post office",
+      "The teacher of the town",
+      "The person who wrote it",
+      "The person who received it"
+     ],
+     "answer": 3,
+     "why": "Der Empfänger zahlte, nicht der Absender.",
+     "skill": "detail"
+    },
+    {
+     "q": "What did Rowland Hill suggest?",
+     "options": [
+      "One price, paid in advance by the sender",
+      "Lower prices for letters sent a long way",
+      "A fine for people who refused their letters",
+      "Free delivery of letters within each city"
+     ],
+     "answer": 0,
+     "why": "Absender zahlt vorab, gleicher Preis für jede Entfernung.",
+     "skill": "detail"
+    },
+    {
+     "q": "Why was the first stamp called the Penny Black?",
+     "options": [
+      "Because of the city where it was printed",
+      "Because of its price and its color",
+      "Because of the name of its inventor",
+      "Because it was used on dark envelopes"
+     ],
+     "answer": 1,
+     "why": "Ein Penny, schwarz gedruckt.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "tk15",
+   "level": 1,
+   "voice": "W",
+   "title": "How Owls Hunt at Night",
+   "text": "Most birds hunt during the day, but owls are different. They hunt at night, and their bodies are perfectly built for it. First, owls have very large eyes that collect a lot of light, so they can see well even when it is almost dark. However, their eyes cannot move. To look around, an owl must turn its whole head, and it can turn it much farther than we can. Second, owls have excellent hearing. In many owls, one ear is a little higher than the other. Because of this, a sound reaches each ear at a slightly different time, and the owl can tell exactly where a mouse is, even under snow. Finally, owls fly almost silently. The edges of their feathers are soft, which breaks up the air and reduces noise. So the mouse doesn't hear the owl coming until it is too late.",
+   "questions": [
+    {
+     "q": "What is the talk mainly about?",
+     "options": [
+      "Differences between owls and other night animals",
+      "Reasons why owls sleep during the day",
+      "Body features that help owls hunt in the dark",
+      "The kinds of animals that owls like to eat"
+     ],
+     "answer": 2,
+     "why": "Augen, Gehör und leiser Flug als Anpassungen an die Nachtjagd.",
+     "skill": "main"
+    },
+    {
+     "q": "Why must an owl turn its head to look around?",
+     "options": [
+      "Its ears are in the way.",
+      "Its eyes are too small.",
+      "Its neck is very short.",
+      "Its eyes cannot move."
+     ],
+     "answer": 3,
+     "why": "„their eyes cannot move“.",
+     "skill": "detail"
+    },
+    {
+     "q": "How does having one ear higher than the other help an owl?",
+     "options": [
+      "It can find the exact place a sound comes from.",
+      "It can hear sounds from much farther away.",
+      "It can keep its balance while turning its head.",
+      "It can fly without making any noise at all."
+     ],
+     "answer": 0,
+     "why": "Der Schall erreicht die Ohren zeitversetzt → genaue Ortung.",
+     "skill": "detail"
+    },
+    {
+     "q": "Why can owls fly so quietly?",
+     "options": [
+      "Their wings are smaller than those of other birds.",
+      "The edges of their feathers are soft.",
+      "They fly very slowly and close to the ground.",
+      "They only hunt when it is snowing."
+     ],
+     "answer": 1,
+     "why": "Weiche Federkanten brechen den Luftstrom.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "tk16",
+   "level": 1,
+   "voice": "M",
+   "title": "How Glass Is Recycled",
+   "text": "Let's talk about what happens to a glass bottle after you put it in a recycling bin. First, trucks take the glass to a recycling center. There, workers and machines remove things that are not glass, like metal caps and plastic. Next, the glass is sorted by color: clear, green, and brown. This step is important because mixing colors would produce glass of poor quality. After that, the glass is crushed into small pieces and washed. These pieces are then melted in a very hot oven and shaped into new bottles and jars. Here is the best part. Glass can be recycled again and again without losing quality. Also, melting old glass needs less energy than making new glass from sand. So when you recycle one bottle, you save energy and reduce waste at the same time.",
+   "questions": [
+    {
+     "q": "What is the speaker mainly describing?",
+     "options": [
+      "The cost of collecting waste",
+      "The history of glass bottles",
+      "The steps of recycling glass",
+      "The best way to wash bottles at home"
+     ],
+     "answer": 2,
+     "why": "Der Weg der Flasche von der Tonne bis zur neuen Flasche.",
+     "skill": "main"
+    },
+    {
+     "q": "Why is glass sorted by color?",
+     "options": [
+      "Green glass melts at a lower heat.",
+      "Brown glass cannot be recycled.",
+      "Clear glass is worth more money.",
+      "Mixed colors would lower the quality."
+     ],
+     "answer": 3,
+     "why": "„mixing colors would produce glass of poor quality“.",
+     "skill": "detail"
+    },
+    {
+     "q": "What does the speaker call \"the best part\"?",
+     "options": [
+      "Glass can be recycled many times without getting worse.",
+      "Glass pieces can be melted in a normal oven.",
+      "New bottles are much cheaper than bottles made from sand.",
+      "Recycling centers no longer need any workers."
+     ],
+     "answer": 0,
+     "why": "„again and again without losing quality“.",
+     "skill": "detail"
+    },
+    {
+     "q": "Why does recycling glass save energy?",
+     "options": [
+      "Sorting by color is done by hand.",
+      "Melting old glass takes less energy than making new glass.",
+      "Crushed glass does not need to be heated.",
+      "Recycling trucks use far less fuel than other kinds of trucks."
+     ],
+     "answer": 1,
+     "why": "„needs less energy than making new glass from sand“.",
+     "skill": "detail"
+    }
+   ]
+  },
+  {
+   "id": "tk17",
+   "level": 2,
+   "voice": "W",
+   "title": "Keystone Species",
+   "text": "In ecology, some species matter far more than their numbers would suggest. We call them keystone species. The name comes from architecture: the keystone is the stone at the top of an arch, and if you remove it, the whole arch collapses. A classic example is the sea otter on the Pacific coast of North America. Sea otters eat sea urchins, and sea urchins eat kelp, a kind of giant seaweed. Kelp forests provide food and shelter for hundreds of species of fish and other animals. In the nineteenth century, otters were hunted for their fur until very few remained. Without otters, the number of urchins exploded, and they ate entire kelp forests, leaving bare rock behind. The fish disappeared as well. When otters were later protected and returned, the kelp recovered surprisingly quickly. So the lesson is this: protecting one species sometimes protects a whole ecosystem. And the opposite is true, too. Losing a single keystone species can set off a chain reaction that nobody predicted.",
+   "questions": [
+    {
+     "q": "What is the talk mainly about?",
+     "options": [
+      "The reasons why sea otters were hunted in the past",
+      "Different methods of protecting forests under the sea",
+      "Species that have an unusually large effect on their ecosystem",
+      "Animals that are far more numerous than scientists once expected"
+     ],
+     "answer": 2,
+     "why": "Schlüsselarten: großer Einfluss trotz geringer Zahl.",
+     "skill": "main"
+    },
+    {
+     "q": "Why does the speaker mention an arch?",
+     "options": [
+      "To describe the shape of a kelp forest",
+      "To show how otters build their homes",
+      "To compare ecology with engineering jobs",
+      "To explain where the term comes from"
+     ],
+     "answer": 3,
+     "why": "Der Schlussstein (keystone) hält den Bogen zusammen – daher der Name.",
+     "skill": "purpose"
+    },
+    {
+     "q": "What happened after sea otters were nearly wiped out?",
+     "options": [
+      "Sea urchins multiplied and destroyed the kelp.",
+      "Sea urchins disappeared along with the otters.",
+      "Fish began to eat the kelp instead of urchins.",
+      "Kelp forests spread to new parts of the coast."
+     ],
+     "answer": 0,
+     "why": "Ohne Otter explodierte die Zahl der Seeigel, sie fraßen die Kelpwälder.",
+     "skill": "detail"
+    },
+    {
+     "q": "What can be inferred about the areas where otters returned?",
+     "options": [
+      "The kelp there had to be planted by people.",
+      "The number of sea urchins there went down.",
+      "The fish there never came back.",
+      "The otters there were hunted once again."
+     ],
+     "answer": 1,
+     "why": "Der Kelp erholte sich – also wurden die Seeigel wieder von Ottern gefressen.",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "tk18",
+   "level": 2,
+   "voice": "M",
+   "title": "Jet Lag and the Body Clock",
+   "text": "Almost everything in your body follows a daily rhythm of roughly twenty-four hours: when you feel sleepy, when you get hungry, even your body temperature. This internal clock is called the circadian rhythm, and it's controlled by a small region of the brain that responds mainly to light. Normally, the clock stays in step with the sun. But when you fly across several time zones, your clock is still set to the place you left. That mismatch is jet lag. You're wide awake at three in the morning and exhausted at lunchtime. Interestingly, most people find flying east harder than flying west. Why? Flying west makes your day longer, and it's easier for the body to stay up late than to fall asleep early. As a rule of thumb, the body adjusts by about one hour per day. You can speed this up by getting sunlight at the right time. After an eastward flight, for example, morning light helps move your clock forward. Eating meals on local time seems to help as well.",
+   "questions": [
+    {
+     "q": "What is the talk mainly about?",
+     "options": [
+      "Why the sun rises at different times",
+      "Why long flights make people hungry",
+      "How the body's internal clock causes jet lag",
+      "How pilots avoid becoming tired"
+     ],
+     "answer": 2,
+     "why": "Innere Uhr und ihr Missverhältnis zur Ortszeit.",
+     "skill": "main"
+    },
+    {
+     "q": "According to the speaker, what mainly controls the body clock?",
+     "options": [
+      "Exercise",
+      "Meals",
+      "Temperature",
+      "Light"
+     ],
+     "answer": 3,
+     "why": "Die Hirnregion reagiert „mainly to light“.",
+     "skill": "detail"
+    },
+    {
+     "q": "Why is flying east usually harder than flying west?",
+     "options": [
+      "Falling asleep early is harder than staying up late.",
+      "Flights to the east usually take much longer.",
+      "The body clock runs faster on eastward flights.",
+      "There is far less sunlight in the east in the morning."
+     ],
+     "answer": 0,
+     "why": "Nach Westen wird der Tag länger; länger wach bleiben fällt leichter.",
+     "skill": "detail"
+    },
+    {
+     "q": "About how long would a traveler probably need to adjust after crossing six time zones?",
+     "options": [
+      "Three days",
+      "Six days",
+      "Twelve days",
+      "One day"
+     ],
+     "answer": 1,
+     "why": "Faustregel: etwa eine Stunde pro Tag.",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "tk19",
+   "level": 2,
+   "voice": "W",
+   "title": "The Printing Press",
+   "text": "Before the middle of the fifteenth century, books in Europe were copied by hand. A single book could take months to finish, so books were rare and extremely expensive. Most people never owned one. Then, around 1450, Johannes Gutenberg developed a printing press that used movable metal type. That means each letter was a separate piece of metal that could be arranged, used, and then rearranged for the next page. Suddenly a workshop could produce hundreds of copies in the time a scribe needed for one. The effects went far beyond cheaper books. As prices fell, more people had a reason to learn to read. Scientists could share their results with colleagues in other countries and check each other's work. And ideas that challenged those in power spread faster than authorities could stop them. Now, Gutenberg didn't invent printing itself. Printing with movable type had been used in China and Korea centuries earlier. What made his press so influential in Europe was partly the alphabet: with only a few dozen letters, movable type was far more practical.",
+   "questions": [
+    {
+     "q": "Why were books rare in Europe before 1450?",
+     "options": [
+      "Authorities destroyed books they disliked.",
+      "Most people were not allowed to own books.",
+      "Every copy had to be written by hand.",
+      "Paper had not yet been invented."
+     ],
+     "answer": 2,
+     "why": "„copied by hand“ – ein Buch dauerte Monate.",
+     "skill": "detail"
+    },
+    {
+     "q": "According to the speaker, what is movable type?",
+     "options": [
+      "Handwriting that imitates printed letters",
+      "Pages that are carved from one piece of metal",
+      "A machine that moves paper through a press",
+      "Separate letters that can be arranged and used again"
+     ],
+     "answer": 3,
+     "why": "Jeder Buchstabe ist ein eigenes Metallstück, das neu angeordnet wird.",
+     "skill": "detail"
+    },
+    {
+     "q": "Why does the speaker mention China and Korea?",
+     "options": [
+      "To point out that Gutenberg was not the first to print this way",
+      "To explain where Gutenberg bought his metal",
+      "To describe how the printing press later reached other continents",
+      "To show that books were cheaper in Asia"
+     ],
+     "answer": 0,
+     "why": "Druck mit beweglichen Lettern gab es dort Jahrhunderte früher.",
+     "skill": "purpose"
+    },
+    {
+     "q": "What does the speaker imply about the alphabet?",
+     "options": [
+      "It changed a great deal after the press was introduced.",
+      "A small number of characters made movable type efficient.",
+      "It was invented in order to make printing possible.",
+      "It was much harder to print than Chinese or Korean writing."
+     ],
+     "answer": 1,
+     "why": "„with only a few dozen letters, movable type was far more practical“.",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "tk20",
+   "level": 2,
+   "voice": "M",
+   "title": "Why Prices End in Ninety-Nine",
+   "text": "Why do so many prices end in ninety-nine? A jacket costs forty-nine ninety-nine, not fifty dollars. Stores have done this for more than a century, and research suggests it really works. The main explanation is called the left-digit effect. We read numbers from left to right, and our brains form a judgment as soon as we see the first digit. So forty-nine ninety-nine feels like forty-something, even though it's only one cent less than fifty. In one well-known experiment, a dress was offered at thirty-four, thirty-nine, and forty-four dollars. Surprisingly, it sold best at thirty-nine, even though thirty-four was cheaper. There's a second effect as well. Prices ending in nine signal a bargain, so shoppers assume the item is a good deal. But that signal can backfire. Luxury brands tend to avoid such prices and use round numbers instead, because a round price suggests quality. So the next time you see a price tag, think about what the store is trying to tell you.",
+   "questions": [
+    {
+     "q": "What is the talk mainly about?",
+     "options": [
+      "Why luxury products cost more than they used to",
+      "How people learn to read numbers from left to right",
+      "Why prices ending in nine influence shoppers",
+      "How stores decide which products to put on sale"
+     ],
+     "answer": 2,
+     "why": "Es geht um die Wirkung von 99er-Preisen.",
+     "skill": "main"
+    },
+    {
+     "q": "What is the left-digit effect?",
+     "options": [
+      "People add up prices from left to right.",
+      "People prefer prices that are written on the left.",
+      "People forget the last digits of a price quickly.",
+      "People judge a price mostly by its first digit."
+     ],
+     "answer": 3,
+     "why": "Das Urteil entsteht, sobald man die erste Ziffer sieht.",
+     "skill": "detail"
+    },
+    {
+     "q": "Why does the speaker mention the experiment with the dress?",
+     "options": [
+      "To show that a price ending in nine can beat a lower price",
+      "To prove that most shoppers simply choose the cheapest item",
+      "To suggest that experiments on prices are unreliable",
+      "To explain why clothing stores use round prices"
+     ],
+     "answer": 0,
+     "why": "Für 39 Dollar verkaufte sich das Kleid besser als für 34.",
+     "skill": "purpose"
+    },
+    {
+     "q": "What can be inferred about luxury brands?",
+     "options": [
+      "They sell more when their prices end in nine.",
+      "They do not want their products to look like bargains.",
+      "They believe shoppers ignore the first digit.",
+      "They change their prices more often than other brands."
+     ],
+     "answer": 1,
+     "why": "Runde Preise signalisieren Qualität; 9er-Preise signalisieren Schnäppchen.",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "tk21",
+   "level": 3,
+   "voice": "W",
+   "title": "The Sunk Cost Fallacy",
+   "text": "Imagine you've paid eighty dollars for a concert ticket, and on the night of the show you feel ill and it's pouring rain. Many of us would drag ourselves there anyway, reasoning that otherwise the money would be wasted. Economists call this the sunk cost fallacy. A sunk cost is money, time, or effort that has already been spent and cannot be recovered. Rationally, it should have no bearing on what we do next, since the eighty dollars is gone whether we attend or not. The only relevant question is which option will make us better off from this point on. Yet people routinely let past investments dictate future choices. Companies pour additional funds into failing projects because abandoning them would mean admitting the earlier spending was a mistake. Psychologists attribute this partly to loss aversion, our tendency to feel losses more intensely than equivalent gains, and partly to a desire to appear consistent. Interestingly, some studies suggest that young children and even animals are less prone to this error than adults, presumably because adults have absorbed the rule 'don't be wasteful' and apply it where it doesn't belong. I'm not saying persistence is always irrational. But the justification for continuing should lie in future benefits, never in what has already been spent.",
+   "questions": [
+    {
+     "q": "What is the main purpose of the talk?",
+     "options": [
+      "To compare how companies and individuals save money",
+      "To describe the best way to recover money that has already been spent",
+      "To explain why past spending wrongly influences decisions",
+      "To argue that people should never give up on a project"
+     ],
+     "answer": 2,
+     "why": "Thema: versunkene Kosten bestimmen fälschlich künftige Entscheidungen.",
+     "skill": "main"
+    },
+    {
+     "q": "Why does the speaker mention the concert ticket?",
+     "options": [
+      "To suggest that people should plan for bad weather",
+      "To give an example of a sensible financial choice",
+      "To show that concerts have become too expensive",
+      "To illustrate the fallacy with an everyday situation"
+     ],
+     "answer": 3,
+     "why": "Alltagsbeispiel zum Einstieg.",
+     "skill": "purpose"
+    },
+    {
+     "q": "According to the speaker, why do companies keep funding failing projects?",
+     "options": [
+      "Stopping would mean admitting that earlier spending was a mistake.",
+      "Their managers are unaware of how much has been spent.",
+      "They are legally required to complete every project they start.",
+      "They expect that the losses will be covered by insurance."
+     ],
+     "answer": 0,
+     "why": "„abandoning them would mean admitting the earlier spending was a mistake“.",
+     "skill": "detail"
+    },
+    {
+     "q": "What does the speaker imply about adults?",
+     "options": [
+      "They are less affected by losses than animals are.",
+      "A rule they have learned leads them into the error.",
+      "They make better financial decisions than children do.",
+      "They usually recognize the fallacy as soon as it occurs."
+     ],
+     "answer": 1,
+     "why": "Erwachsene wenden „don't be wasteful“ an, wo es nicht passt.",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "tk22",
+   "level": 3,
+   "voice": "M",
+   "title": "Wegener and Continental Drift",
+   "text": "In 1912, a German meteorologist named Alfred Wegener proposed that the continents had once been joined in a single landmass, which he called Pangaea, and had since drifted apart. His evidence was considerable. The coastlines of South America and Africa fit together like puzzle pieces. Fossils of the same reptiles turned up on both sides of the Atlantic, although these animals could not possibly have crossed an ocean. And rock formations in Scotland matched those in eastern North America. Nevertheless, most geologists dismissed the idea, some of them with open hostility. Part of the resistance was that Wegener was an outsider to the field. But the more serious objection was that he could offer no convincing mechanism. What force could possibly push continents through solid ocean floor? Wegener's own suggestions were easily shown to be far too weak. The answer emerged only in the 1950s and 60s, when surveys of the sea floor revealed that new crust forms along mid-ocean ridges and spreads outward. Continents don't plow through the ocean floor; they ride on enormous plates that move with it. Wegener had died in 1930 on an expedition in Greenland, decades before his central claim was vindicated. His story is a reminder that being right about what happens is not enough if you cannot explain how.",
+   "questions": [
+    {
+     "q": "What is the talk mainly about?",
+     "options": [
+      "An expedition that proved the continents are still moving",
+      "A disagreement about the age of rocks on two continents",
+      "A theory that was rejected until its mechanism was discovered",
+      "A scientist who changed his field in order to study reptile fossils"
+     ],
+     "answer": 2,
+     "why": "Wegeners Kontinentaldrift wurde erst anerkannt, als der Mechanismus bekannt war.",
+     "skill": "main"
+    },
+    {
+     "q": "What was the most serious objection to Wegener's idea?",
+     "options": [
+      "He had collected his evidence from only one continent.",
+      "His fossils turned out to belong to different animals.",
+      "He had no training in the study of the weather.",
+      "He could not explain what moves the continents."
+     ],
+     "answer": 3,
+     "why": "„he could offer no convincing mechanism“.",
+     "skill": "detail"
+    },
+    {
+     "q": "What did surveys of the sea floor reveal?",
+     "options": [
+      "New crust forms at ocean ridges and spreads outward.",
+      "Reptile fossils are also found under the Atlantic.",
+      "The continents plow slowly through the ocean floor.",
+      "The ocean floor is older than the continents."
+     ],
+     "answer": 0,
+     "why": "Meeresbodenspreizung an den mittelozeanischen Rücken.",
+     "skill": "detail"
+    },
+    {
+     "q": "What point does the speaker make at the end of the talk?",
+     "options": [
+      "Wegener would certainly have been believed if he had only lived a few more years, until the 1950s.",
+      "Evidence that something happens may not convince people without an explanation of how.",
+      "Scientists from outside a field usually turn out to be right in the end.",
+      "Theories should be accepted as soon as some supporting evidence exists."
+     ],
+     "answer": 1,
+     "why": "„being right about what happens is not enough if you cannot explain how“.",
+     "skill": "infer"
+    }
+   ]
+  },
+  {
+   "id": "tk23",
+   "level": 3,
+   "voice": "W",
+   "title": "Language and Color",
+   "text": "Does the language you speak shape the way you see the world? A strong version of this idea, that language determines thought, has largely been abandoned. But a weaker version has gained experimental support, and color is the best-studied example. Languages divide the color spectrum differently. English has a single basic word, blue, covering shades from pale to dark. Russian, by contrast, has two separate basic terms: one for light blue and one for dark blue. Speakers must choose between them every time they mention the color. In one experiment, researchers showed Russian and English speakers three blue squares and asked which of the bottom two matched the top one. When the two candidate squares fell on opposite sides of the Russian boundary, Russian speakers answered faster. English speakers showed no such advantage. Here's the telling detail. When the Russian speakers had to silently repeat a string of numbers during the task, which keeps the language system busy, their advantage vanished. That suggests language wasn't changing what their eyes detected. Rather, it was offering a quick label that helped them decide. So the sensible conclusion is a modest one: language doesn't imprison thought, but it can nudge perception in measurable ways.",
+   "questions": [
+    {
+     "q": "What is the main idea of the talk?",
+     "options": [
+      "Speakers of different languages have different eyesight.",
+      "Experiments on color have so far failed to produce any clear results.",
+      "Language has a limited but measurable influence on perception.",
+      "Russian is better suited than English for describing colors."
+     ],
+     "answer": 2,
+     "why": "Fazit: Sprache bestimmt das Denken nicht, kann die Wahrnehmung aber leicht beeinflussen.",
+     "skill": "main"
+    },
+    {
+     "q": "According to the speaker, how does Russian differ from English?",
+     "options": [
+      "It has no word for dark colors.",
+      "It uses the same word for blue and green.",
+      "It names colors after objects.",
+      "It has two basic words for blue."
+     ],
+     "answer": 3,
+     "why": "Je ein Grundwort für Hellblau und Dunkelblau.",
+     "skill": "detail"
+    },
+    {
+     "q": "Why does the speaker mention that participants repeated numbers?",
+     "options": [
+      "To show that the advantage depended on language being available",
+      "To suggest that the task was too difficult for most of the people",
+      "To explain how the researchers measured reaction time",
+      "To prove that Russian speakers are better at arithmetic"
+     ],
+     "answer": 0,
+     "why": "War das Sprachsystem beschäftigt, verschwand der Vorteil.",
+     "skill": "purpose"
+    },
+    {
+     "q": "What is the speaker's view of the claim that language determines thought?",
+     "options": [
+      "It applies only to color.",
+      "It goes too far.",
+      "It has never been tested.",
+      "It is finally being proven."
+     ],
+     "answer": 1,
+     "why": "„has largely been abandoned“; nur die schwache Version ist belegt.",
+     "skill": "attitude"
+    }
+   ]
+  },
+  {
+   "id": "tk24",
+   "level": 3,
+   "voice": "M",
+   "title": "Cane Toads in Australia",
+   "text": "Today's case study is a cautionary tale from Australia. In the 1930s, sugarcane farmers in Queensland were losing crops to beetles whose larvae feed on the roots of the cane. Pesticides of the day were ineffective, so in 1935 the government imported about a hundred cane toads from Hawaii, where they were believed to control similar pests. The scheme failed almost at once. The beetles lived high on the cane stalks, well out of reach of a toad that cannot climb, and the larvae were buried underground. Meanwhile the toads thrived. They breed rapidly, eat nearly anything, and, crucially, carry a poison in glands behind the head. Native predators such as snakes and large lizards had never encountered this poison and died after attacking them. With little to hold them back, the toads have spread across more than a million square kilometers and now number in the hundreds of millions. There are, admittedly, small signs of adaptation. Some snake populations appear to have evolved smaller mouths, which prevents them from swallowing the larger, more poisonous toads, and certain birds have learned to eat only the safe parts. Still, the broader lesson stands: introducing a species to solve a problem demands rigorous testing in advance, which in this case was almost entirely skipped.",
+   "questions": [
+    {
+     "q": "Why were cane toads brought to Australia?",
+     "options": [
+      "To provide food for snakes and large lizards",
+      "To test a poison that could be used on farms",
+      "To eat beetles that were damaging sugarcane",
+      "To replace native animals that had died out"
+     ],
+     "answer": 2,
+     "why": "Sie sollten die Zuckerrohrkäfer bekämpfen.",
+     "skill": "detail"
+    },
+    {
+     "q": "Why did the plan fail?",
+     "options": [
+      "The toads could not survive the local climate.",
+      "The beetles were poisonous to the toads.",
+      "The toads were quickly killed by the pesticides of the day.",
+      "The toads could not reach the beetles or their larvae."
+     ],
+     "answer": 3,
+     "why": "Käfer oben an den Halmen, Larven unter der Erde; Kröten klettern nicht.",
+     "skill": "detail"
+    },
+    {
+     "q": "Why does the speaker mention snakes with smaller mouths?",
+     "options": [
+      "As an example of native animals adapting to the toads",
+      "As a reason why the toads were introduced",
+      "As proof that the toads will soon disappear",
+      "As evidence that the toads' poison has become much weaker"
+     ],
+     "answer": 0,
+     "why": "„small signs of adaptation“.",
+     "skill": "purpose"
+    },
+    {
+     "q": "What does the speaker imply about the decision made in 1935?",
+     "options": [
+      "It worked well for the first few years.",
+      "It was made without adequate research.",
+      "It was the only option the farmers had.",
+      "It was opposed by the government."
+     ],
+     "answer": 1,
+     "why": "Gründliche Tests vorab wurden „almost entirely skipped“.",
+     "skill": "infer"
     }
    ]
   }
